@@ -47,7 +47,7 @@ export default function Home() {
         {value === "We Customize" &&
           <div>
           <h2 className='text-[52px] font-[900] leading-[60px] text-[#0F143A]'>We Customize</h2>
-          <p className='text-[28px] font-[400] leading-[38px] text-[#0F143A] opacity-[72%]'>We customize to your exact needs; your brand, your design, your pride.</p>
+          <p className='text-[28px] font-[400] leading-[38px] text-[#0F143A] opacity-[72%]'>We customize to your exact needs; your brand, your design, your pride</p>
         </div>
         }
         {value === "We Deliver" &&
