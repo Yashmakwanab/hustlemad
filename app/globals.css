@@ -25,3 +25,36 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.ant-input{
+  background-color: transparent;
+  border: 1px solid rgba(15, 20, 58, 0.8);
+  height: 40px;
+}
+
+.numberInput .ant-input{
+  height: auto;
+}
+
+.ant-form-item-label label{
+  font-size: 22px !important;
+  color: rgba(15, 20, 58, 0.8) !important;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1279px) {
+  .ant-form-item-label label{
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .ant-form-item-label label{
+    font-size: 18px !important;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .ant-form-item-label label{
+    font-size: 14px !important;
+  }
+}
