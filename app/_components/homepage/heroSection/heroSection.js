@@ -25,13 +25,13 @@ function useWindowSize() {
         height: window.innerHeight,
       });
     }
-    
+
     // Add event listener
     window.addEventListener("resize", handleResize);
-     
+
     // Call handler right away so state gets updated with initial window size
     handleResize();
-    
+
     // Remove event listener on cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []); // Empty array ensures that effect is only run on mount
@@ -44,33 +44,33 @@ const HeroSection = () => {
   };
   return (
     <div className="flex justify-center bg-[#B3FFFA]">
-    <div className={`${style.hero_section} w-full flex-col-reverse flex lg:flex-row container mt-14 relative px-[32px]`}>
-      <div className={`${style.hero_text_section} w-full flex flex-col	items-center lg:items-start`}>
-        <h1 className={`${style.hero_title}  text-[32px] 6xl:text-[76px] 5xl:text-[72px]  md:text-[64px] text-center lg:text-left`}>
-          <span>Mindful</span> <span className={style.underline}>Swag</span> for
-          your Tribe!
-        </h1>
-        <p className={`${style.tagline}  6xl:text-[36px] 5xl:text-[32px] 2xl:text-[28px] sm:text-[14px] text-center lg:text-left`}>
-          We curate new-age Swag Pack, so you don't have to.
-        </p>
-        <ButtonPrimary content={"Get Started"} handleClick={handleClick} />
-      </div>
-      
+      <div className={`${style.hero_section} w-full flex-col-reverse flex lg:flex-row container mt-14 relative px-[32px]`}>
+        <div className={`${style.hero_text_section} w-full flex flex-col	items-center lg:items-start`}>
+          <h1 className={`${style.hero_title}  text-[32px] 6xl:text-[76px] 5xl:text-[72px]  md:text-[64px] text-center lg:text-left`}>
+            <span>Mindful</span> <span className={style.underline}>Swag</span> for
+            your Tribe!
+          </h1>
+          <p className={`${style.tagline} 6xl:text-[36px] 5xl:text-[32px] 2xl:text-[28px] sm:text-[14px] text-center lg:text-left`}>
+            We curate new-age Swag Pack, so you dont have to.
+          </p>
+          <ButtonPrimary content={"Get Started"} handleClick={handleClick} />
+        </div>
+
         {size.width > 1024 ?
-        <div className={style.hero_image_section}> 
-        <div className={style.hero_circle_images}>
-          <Circular />
-        </div>
-        <div className={style.hero_image_container}>
-          <Image
-            className={style.hero_image}
-            src={hero_person}
-            alt="our services"
-          />
-        </div>
-        </div> : <><SmallHero/></> }
-    
-    </div>
+          <div className={style.hero_image_section}>
+            <div className={style.hero_circle_images}>
+              <Circular />
+            </div>
+            <div className={style.hero_image_container}>
+              <Image
+                className={style.hero_image}
+                src={hero_person}
+                alt="our services"
+              />
+            </div>
+          </div> : <><SmallHero /></>}
+
+      </div>
     </div>
   );
 };
