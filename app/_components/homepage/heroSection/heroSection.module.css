@@ -1,0 +1,60 @@
+.hero_section {
+    /* background-color: #000 ; */
+    color: #0F143A;
+    align-items: center;
+    font-family: 'taglineFont', sans-serif !important;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  
+
+}
+.hero_text_section {
+  max-width: 700px;
+flex-grow: 1;
+    gap:2em;
+}
+
+.hero_title {
+    font-family: 'headerFont', sans-serif !important;
+    line-height: 1.2;
+
+}
+.hero_title span {
+    color: #2A32FF;
+}
+.tagline{
+    opacity: 0.6;
+}
+
+.underline {
+    color: #0F143A !important;
+    background: url('../../../../public/Images/heroSectionSvgs/hero_underline.svg');
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+
+}
+
+
+/* circle images */
+/* CircleComponent.module.css */
+.hero_image_section{
+    width: 100%;
+    display: flex;
+  max-width: 700px;
+}
+.hero_circle_images{
+  display: flex;
+  flex-basis: 1;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+}
+.hero_image_container{
+/* width: 50%; */
+width: 80%;
+display: flex;
+align-items: flex-end;
+}
+
+

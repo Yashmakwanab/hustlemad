@@ -1,13 +1,11 @@
 "use client"
-import React, { useState } from 'react';
-import OurServices from './Components/landingPage/ourServices';
-import RequestForm from './Components/landingPage/requestForm';
+import React from 'react';
+import Home from './(routes)/home/page'
 
-export default function Home() {
+export default function App() {
   return (
     <main>
-      <OurServices />
-      <RequestForm />
+      <Home />
     </main>
   )
 }
