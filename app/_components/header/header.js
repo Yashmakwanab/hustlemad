@@ -137,11 +137,12 @@ const Header = ({ setHeader }) => {
                                 <Link href={`/`} legacyBehavior>
                                     <a target="" className="mr-[5px] py-6 cursor-pointer">
                                         <Image
-                                            src="/images/landingPage/mainLogo.svg"
+                                            src="/images/landingPage/mainLogoHustle.svg"
                                             alt="Logo"
                                             layout='fixed'
                                             width={148}
-                                            height={78} />
+                                            height={78} 
+                                        />
                                     </a>
                                 </Link>
                             </div>
