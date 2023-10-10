@@ -216,7 +216,7 @@ const Header = ({ setHeader }) => {
                             <Link href={`/`} legacyBehavior>
                                 <a target="" className='cursor-pointer !h-[48px] !w-[100px] flex items-center'>
                                     <Image
-                                        src="/images/landingPage/mainLogoHustle.svg"
+                                        src="/Images/landingPage/mainLogoHustle.svg"
                                         alt="Logo"
                                         layout='fixed'
                                         height={72}
@@ -232,7 +232,7 @@ const Header = ({ setHeader }) => {
                                     className="mr-[20px]"
                                 >
                                     <Image
-                                        src="/images/landingPage/phone.svg"
+                                        src="/Images/landingPage/phone.svg"
                                         alt="Logo"
                                         layout='fixed'
                                         height={20}
@@ -247,7 +247,7 @@ const Header = ({ setHeader }) => {
                                         className="text-[39px]"
                                     >
                                         <Image
-                                            src="/images/landingPage/mobileBar.svg"
+                                            src="/Images/landingPage/mobileBar.svg"
                                             alt="Logo"
                                             layout='fixed'
                                             height={20}
@@ -263,7 +263,7 @@ const Header = ({ setHeader }) => {
                                         className="text-[39px] "
                                     >
                                         <Image
-                                            src="/images/landingPage/closeIcon.svg"
+                                            src="/Images/landingPage/closeIcon.svg"
                                             alt="Logo"
                                             layout='fixed'
                                             height={20}
