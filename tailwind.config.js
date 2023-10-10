@@ -20,7 +20,11 @@ module.exports = {
       'xl': '1280px',
       '2xl': '1536px',
       '3xl': '1720px'
-    }
+    },
+    fontFamily: {
+      recoleta: ['Recoleta'],
+      mazzard: ['Mazzard'],
+    },
   },
   plugins: [],
 }

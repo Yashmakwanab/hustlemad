@@ -16,6 +16,19 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+@font-face {
+  font-family: 'Recoleta';
+  src: url('../public/font/Recoleta-Black.woff');
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mazzard';
+  src: url('../public/font/MazzardH-Regular.woff') format('woff');
+  font-weight: 500;
+  font-display: swap;
+}
 
 @font-face {
   font-family: 'headerFont';
@@ -26,7 +39,7 @@
 @font-face {
   font-family: 'taglineFont';
   src:
-    url("../public/font2/MazzardH-Regular.woff") format("woff"),
+    url("../public/font/MazzardH-Regular.woff") format("woff"),
 }
 
 *{
@@ -48,16 +61,19 @@ body {
   background-color: transparent;
   border: 1px solid rgba(15, 20, 58, 0.8);
   height: 40px;
+  @apply font-mazzard;
 }
 
 .numberInput .ant-input{
   height: auto;
+  @apply font-mazzard;
 }
 
 .ant-form-item-label label{
   font-size: 22px !important;
   color: rgba(15, 20, 58, 0.8) !important;
   font-weight: 500;
+  @apply font-mazzard;
 }
 
 @media screen and (max-width: 1279px) {

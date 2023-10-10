@@ -20,19 +20,19 @@ const RequestForm = () => {
     return (
         <div className='bg-[#E7FFCE] flex justify-center px-[16px]'>
             <div className='container py-[36px] xl:py-[80px] max-w-[520px]  lg:max-w-[880px] xl:max-w-[1040px] 2xl:max-w-[1560px]'>
-                <h1 className='flex justify-center text-[24px] sm:text-[40px] lg:text-[48px] xl:text-[52px] font-[700] leading-[32px] sm:leading-[54px] lg:leading-[65px] xl:leading-[70px] underline underline-offset-4 text-[#0F143A] mb-[28px] xl:mb-[80px]'>Request Information</h1>
+                <h1 className='font-recoleta flex justify-center text-[24px] sm:text-[40px] lg:text-[48px] xl:text-[52px] font-[700] leading-[32px] sm:leading-[54px] lg:leading-[65px] xl:leading-[70px] underline underline-offset-4 text-[#0F143A] mb-[28px] xl:mb-[80px]'>Request Information</h1>
                 <Form
                     form={form}
                     layout="vertical"
                     name="register"
                     onFinish={onFinish}
                     initialValues={{
-                        prefix: '+91',
+                        preference: 'Custom Pack',
                     }}
                     scrollToFirstError
                     requiredMark={false}
                 >
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap:10 lg:gap-24'>
+                    <div className='grid grid-cols-1 lg:grid-cols-2 gap:10 lg:gap-24 font-mazzard'>
                         <Form.Item
                             name="name"
                             label="Enter your Full Name"
@@ -85,7 +85,7 @@ const RequestForm = () => {
                                 },
                             ]}
                         >
-                            <Select placeholder="select your preference" defaultValue="Custom Pack" className='[&>*]:!border-[#0f143acc] h-[40px]'>
+                            <Select placeholder="select your preference" className='[&>*]:!border-[#0f143acc] h-[40px] !font-mazzard'>
                                 <Option value="Custom Pack">Custom Pack</Option>
                                 <Option value="Other">Other Option</Option>
                                 <Option value="Other">Other Option</Option>

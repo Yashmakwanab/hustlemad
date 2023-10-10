@@ -6,7 +6,7 @@ import Image from 'next/image';
 import './style.css'
 const SmallHero = () => {
  
-    return (<Image src={hero_person2} />
+    return (<Image src={hero_person2} alt='Person Image' />
   );
 };
 
