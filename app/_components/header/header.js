@@ -9,33 +9,33 @@ import { Button } from 'antd'
 const menuItems = [
     {
         label: 'Home',
-        subMenuItemsUrl: ['/'],
+        subMenuItemsUrl: ['/home'],
     },
     {
         label: 'Comapany',
-        subMenuItems: ['Our Story', 'Who We Are', 'People', 'Careers'],
-        subMenuItemsUrl: ['/about#OurStory', '/about#WhoWeAre', '/about#People', '/about#Careers'],
+        subMenuItems: ['About Us', 'Contact Us', 'FAQs'],
+        subMenuItemsUrl: ['/about#OurStory', '/about#WhoWeAre', '/about#People'],
     },
     {
         label: 'Build a Box',
-        subMenuItemsUrl: ['/'],
+        subMenuItemsUrl: ['/box'],
     },
     {
         label: 'Our Clients',
-        subMenuItemsUrl: ['/'],
+        subMenuItemsUrl: ['/clients'],
     },
     {
         label: 'Partners',
-        subMenuItems: ['Tap List', 'Food Menu', 'Bakery'],
-        subMenuItemsUrl: ['/tap-list', '/food', '/bakery'],
+        subMenuItems: ['Our Partners', 'Be our Partner'],
+        subMenuItemsUrl: ['/tap-list', '/food'],
     },
     {
         label: 'Web3 & Communities',
-        subMenuItemsUrl: ['/'],
+        subMenuItemsUrl: ['/web'],
     },
     {
         label: 'Latest Works',
-        subMenuItemsUrl: ['/'],
+        subMenuItemsUrl: ['/works'],
     },
 ]
 const menuItemsMob = [
@@ -44,19 +44,25 @@ const menuItemsMob = [
         subMenuItemsUrl: ['/'],
     },
     {
-        label: 'About',
-        subMenuItems: ['Our Story', 'Who We Are', 'People', 'Careers'],
-        subMenuItemsUrl: ['/about#OurStory', '/about#WhoWeAre', '/about#People', '/about#Careers'],
+        label: 'Build a Box',
+        subMenuItemsUrl: ['/box'],
     },
     {
-        label: 'Visit',
-        subMenuItems: ['Calendar', 'Reservations', 'Book an Event', 'FAQs'],
-        subMenuItemsUrl: ['/visit#calendar', 'https://resy.com/cities/chi/guinness-open-gate-brewery', '/book-event', '/contact#faqs'],
+        label: 'Our Clients',
+        subMenuItemsUrl: ['/clients'],
     },
     {
-        label: 'Food & Beer',
-        subMenuItems: ['Tap List', 'Food Menu', 'Bakery'],
-        subMenuItemsUrl: ['/tap-list', '/food', '/bakery'],
+        label: 'Partners',
+        subMenuItems: ['Our Partners', 'Be our Partner'],
+        subMenuItemsUrl: ['/tap-list', '/food'],
+    },
+    {
+        label: 'Web3 & Communities',
+        subMenuItemsUrl: ['/web'],
+    },
+    {
+        label: 'Latest Works',
+        subMenuItemsUrl: ['/works'],
     },
 ]
 const Header = ({ setHeader }) => {
@@ -103,17 +109,6 @@ const Header = ({ setHeader }) => {
         }
     }, [show])
 
-    const conversionWorksScript = () => {
-        const wndw = window
-        wndw.dataLayer = wndw.dataLayer || []
-        wndw.dataLayer.push({
-            event: 'customEvent',
-            eventAction: 'Social network',
-            eventLabel: 'URL',
-            'gtm.uniqueEventId': 37152,
-        })
-    }
-
     const toggleSubMenu = (index) => {
         if (activeMenuIndex === index) {
             setActiveMenuIndex(null)
@@ -126,31 +121,37 @@ const Header = ({ setHeader }) => {
     return (
         <>
             <header
-                className={`main-header z-[999] mx-auto flex min-h-[77px] w-full max-w-[1920px] justify-center lg:block  ${show ? 'mx-auto' : ''
+                className={`main-header z-[999] mx-auto flex md:min-h-[77px] w-full max-w-[1920px] justify-center lg:block  ${show ? 'mx-auto' : ''
                     }`}
             >
                 {/* desktop */}
-                <div className="flex hidden w-full justify-center lg:inline-flex">
+                <div className="flex hidden w-full justify-center md:inline-flex">
                     <div className="w-full">
                         <div className="flex justify-between mx-[40px]">
-                            <div className="flex">
-                                <Link href={`/`} legacyBehavior>
-                                    <a target="" className="mr-[5px] py-6 cursor-pointer">
+                            <div className="grid grid-cols-1 nxl:grid-cols-5 font-mazzard w-full nxl:w-fit">
+                                <div className='col-span-1 flex justify-between'>
+                                <Link href={`/`} legacyBehavior >
+                                    <a target="" className="mr-[40px] py-[25px] cursor-pointer">
                                         <Image
                                             src="/Images/landingPage/mainLogoHustle.svg"
                                             alt="Logo"
                                             layout='fixed'
                                             width={148}
-                                            height={78} 
+                                            height={78}
                                         />
                                     </a>
                                 </Link>
+                                <div className="flex items-center nxl:hidden">
+                                <Button type="primary" htmlType="submit" className='[&>*]:py-[3px] h-auto bg-[#0F143A] px-7 text-[14px] font-[500] text-center font-mazzard'>
+                                    Schedule a Call
+                                </Button>
                             </div>
-                            <div className="flex font-mazzard">
+                                </div>
+                                <div className='col-span-4 flex py-[24px] nxl:py-0 border-t'>
                                 {menuItems.map((menuItem, index) => (
                                     <button
                                         key={`menu-item-${index}`}
-                                        className={`font-mazzard z-99 relative flex cursor-pointer items-center pr-[27px] lg:px-[8px] text-center text-[17px] font-[411] leading-[85%] tracking-[-0.025em]  lg:pr-[25px] lg:pl-[5px] spbp:px-[25px] lg:text-[19px] ${activeMenuIndex === index ? 'active-header' : ''
+                                        className={`font-mazzard z-99 relative flex cursor-pointer items-center pr-[21px] lg:px-[8px] text-center text-[14px] font-[411] leading-[85%] tracking-[-0.025em] lg:pr-[25px] lg:pl-[5px] spbp:px-[25px] xl:text-[16px] ${activeMenuIndex === index ? 'active-header' : ''
                                             }`}
                                         onClick={() => {
                                             toggleSubMenu(index)
@@ -168,12 +169,12 @@ const Header = ({ setHeader }) => {
                                     >
                                         {menuItem.label}
                                         {menuItem.subMenuItems && showDesktop === true && activeHeaderIndex === index && (
-                                            <div className="absolute top-24 pt-5">
-                                                <div className="box-arrow left-0 flex !min-h-[200px] !w-[253px] flex-col rounded-[8px] !bg-black !p-[20px] !pb-[1px]">
+                                            <div className="absolute top-16 border-solid border-[1px]">
+                                                <div className="box-arrow left-0 flex !w-[253px] flex-col rounded-[8px] !bg-white">
                                                     {menuItem.subMenuItems.map((subMenuItem, subIndex) => (
                                                         <div
                                                             key={`${index}-${subIndex}`}
-                                                            className={`!mb-[36px] cursor-pointer !rounded font-mazzard text-[22px] !text-[19px] font-[500] leading-[16px] tracking-[-0.025em] !text-[white] hover:underline focus:!outline focus:outline-white ${activeMenuIndex === index ? 'active-header' : ''
+                                                            className={`cursor-pointer mx-[14px] my-[8px] !rounded font-mazzard text-[22px] !text-[19px] font-[500] leading-[16px] tracking-[-0.025em] !text-[black] hover:underline focus:!outline focus:outline-white ${activeMenuIndex === index ? 'active-header' : ''
                                                                 }`}
                                                             onClick={() => {
                                                                 setShowDesktop(false)
@@ -183,7 +184,7 @@ const Header = ({ setHeader }) => {
                                                             <Link
                                                                 legacyBehavior
                                                                 href={`${menuItem.subMenuItemsUrl[subIndex]}`}
-                                                                className="!mb-[36px] !rounded focus:outline focus:outline-white"
+                                                                className="!rounded focus:outline focus:outline-white"
                                                             >
                                                                 <a target="" className="flex h-[29px] items-center px-[12px] py-[5px]">
                                                                     {subMenuItem}
@@ -196,8 +197,9 @@ const Header = ({ setHeader }) => {
                                         )}
                                     </button>
                                 ))}
+                                </div>
                             </div>
-                            <div className="flex items-center">
+                            <div className=" items-center hidden nxl:flex">
                                 <Button type="primary" htmlType="submit" className='[&>*]:py-[3px] h-auto bg-[#0F143A] px-7 text-[14px] font-[500] text-center font-mazzard'>
                                     Schedule a Call
                                 </Button>
@@ -207,51 +209,77 @@ const Header = ({ setHeader }) => {
                 </div>
                 {/* Mobile */}
                 <div
-                    className={`relative z-[9999] inline-block w-full w-full lg:hidden`}
+                    className={`relative z-[9999] inline-block w-full w-full md:hidden`}
                 >
                     <div className="flex flex-col">
-                        <div className="flex h-[77px] items-center justify-between">
+                        <div className="flex items-center justify-between mx-[20px]">
                             <Link href={`/`} legacyBehavior>
-                                <a target="" className='cursor-pointer !mt-[6px] !h-[72px] !w-[136px]'>
+                                <a target="" className='cursor-pointer !h-[48px] !w-[100px] flex items-center'>
                                     <Image
-                                        src="/images/landingPage/mainLogo.svg"
+                                        src="/images/landingPage/mainLogoHustle.svg"
                                         alt="Logo"
                                         layout='fixed'
                                         height={72}
                                         width={136} />
                                 </a>
                             </Link>
-                            {!show && (
+                            <div className='flex'>
                                 <button
                                     onClick={() => {
                                         setShow(true)
                                         setHeader(true)
                                     }}
-                                    className="text-[39px] "
+                                    className="mr-[20px]"
                                 >
-                                    <RxHamburgerMenu />
+                                    <Image
+                                        src="/images/landingPage/phone.svg"
+                                        alt="Logo"
+                                        layout='fixed'
+                                        height={20}
+                                        width={20} />
                                 </button>
-                            )}
-                            {show && (
-                                <button
-                                    onClick={() => {
-                                        setShow(false)
-                                        setHeader(false)
-                                    }}
-                                    className="text-[39px] "
-                                >
-                                    <MdOutlineClose />
-                                </button>
-                            )}
+                                {!show && (
+                                    <button
+                                        onClick={() => {
+                                            setShow(true)
+                                            setHeader(true)
+                                        }}
+                                        className="text-[39px]"
+                                    >
+                                        <Image
+                                            src="/images/landingPage/mobileBar.svg"
+                                            alt="Logo"
+                                            layout='fixed'
+                                            height={20}
+                                            width={20} />
+                                    </button>
+                                )}
+                                {show && (
+                                    <button
+                                        onClick={() => {
+                                            setShow(false)
+                                            setHeader(false)
+                                        }}
+                                        className="text-[39px] "
+                                    >
+                                        <Image
+                                            src="/images/landingPage/closeIcon.svg"
+                                            alt="Logo"
+                                            layout='fixed'
+                                            height={20}
+                                            width={20} />
+                                    </button>
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>
                 {show && (
                     <div
-                        className={`fixed absolute top-0 left-0 z-[999] inline-block flex h-[100vh] w-full w-full justify-start bg-black pt-4 pb-2 lg:hidden lg:pl-8 ${show ? 'bg-SwishMob1 bg-gradient mx-auto mt-0 bg-cover  bg-center bg-no-repeat' : ''
+                        className={`fixed absolute top-0 left-0 z-[999] inline-block flex h-[100vh] w-full w-full justify-start bg-white pt-4 pb-2 lg:hidden lg:pl-8 ${show ? 'bg-SwishMob1 bg-gradient mx-auto mt-0 bg-cover  bg-center bg-no-repeat' : ''
                             }`}
                     >
-                        <div className="mt-[110px] flex w-full px-[40px] flex-col overflow-y-auto [&>*:first-child]:mt-[50px]">
+                        {/* <div className="mt-[110px] flex w-full px-[40px] flex-col overflow-y-auto [&>*:first-child]:mt-[50px]">
                             {menuItemsMob.map((menuItem, index) => (
                                 <React.Fragment key={index}>
                                     <button
@@ -421,25 +449,7 @@ const Header = ({ setHeader }) => {
                                     </div>
                                 </a>
                             </Link>
-                            <div className="mt-[50px] flex items-center justify-start pb-[200px] ">
-                                <a href="https://www.facebook.com/guinnessbrewerychi" onClick={conversionWorksScript} target="_blank" className="mr-[23px] cursor-pointer">
-                                    <Image
-                                        src="/images/Header/fbMob.png"
-                                        alt="Facebook Logo"
-                                        layout='fixed'
-                                        height={41}
-                                        width={16} />
-                                </a>
-                                <a href="https://www.instagram.com/guinnessbrewerychi/" onClick={conversionWorksScript} target="_blank" className='mx-[23px] cursor-pointer'>
-                                    <Image
-                                        src="/images/Header/instaMob.png"
-                                        alt="Instagram Logo"
-                                        layout='fixed'
-                                        height={41}
-                                        width={41} />
-                                </a>
-                            </div>
-                        </div>
+                        </div> */}
                     </div>
                 )}
             </header>

@@ -46,7 +46,7 @@ export default function OurServices() {
       <div className='w-full grid grid-cols-1 lg:grid-cols-2 container mt-14 relative px-[16px]'>
         <div className='w-full grid grid-cols-2 place-content-center mb-44 sm:mb-9 lg:mb-0'>
           {Services.map((Service, index) => (
-            <>
+            <React.Fragment key={index}>
               {index !== 0 &&
                 <div key={index} style={{ backgroundColor: `${Service.circleColor}`,borderColor: `${Service.circleBorder}` }} className={`${index === 1 ? "mr-auto sm:!mr-[50px] lg:!mr-auto" : index === 3 ? "mr-auto sm:!mr-[133px] lg:!mr-auto" : index === 2 ? "ml-auto sm:!ml-[50px] lg:ml-auto" : index === 4 ? "ml-auto sm:!ml-[133px] lg:ml-auto" : ""} mx-auto sm:mx-auto lg:!mx-0 transition duration-300 w-[140px] h-[140px] sm:w-[170px] sm:h-[170px] lg:w-[180px] lg:h-[180px] 2xl:w-[220px] 2xl:h-[220px] 3xl:w-[240px] 3xl:h-[240px] mb-[50px] flex flex-col place-content-center p-4 hover:p-3 rounded-full text-center hover:!bg-[#FFF] hover:border-[4px] hover:xl:border-[6px] hover:!border-[${Service.circleBorder}] cursor-pointer relative`} onMouseEnter={() => setValue(Service.title)} onMouseLeave={() => setValue("Our Services")}
                 >
@@ -54,7 +54,7 @@ export default function OurServices() {
                   <p className='font-mazzard text-[10px] sm:text-[12px] xl:text-[14px] font-[400] leading-[13px] sm:leading-[16px] xl:leading-[19px] text-[#0F143A] opacity-[72%]'>{Service.description}</p>
                 </div>
               }
-            </>
+            </React.Fragment>
           ))}
         </div>
         <div className='order-first lg:order-last'>
