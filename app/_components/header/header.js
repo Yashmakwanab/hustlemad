@@ -132,7 +132,7 @@ const Header = ({ setHeader }) => {
                 {/* desktop */}
                 <div className="flex hidden w-full justify-center lg:inline-flex">
                     <div className="w-full">
-                        <div className="flex justify-between">
+                        <div className="flex justify-between mx-[40px]">
                             <div className="flex">
                                 <Link href={`/`} legacyBehavior>
                                     <a target="" className="mr-[5px] py-6 cursor-pointer">
@@ -144,10 +144,12 @@ const Header = ({ setHeader }) => {
                                             height={78} />
                                     </a>
                                 </Link>
+                            </div>
+                            <div className="flex font-mazzard">
                                 {menuItems.map((menuItem, index) => (
                                     <button
                                         key={`menu-item-${index}`}
-                                        className={`font-salt z-99 relative flex cursor-pointer items-center pr-[27px] lg:px-[8px] text-center font-ttNormsPro text-[17px] font-[411] leading-[85%] tracking-[-0.025em]  lg:pr-[25px] lg:pl-[5px] spbp:px-[25px] lg:text-[19px] ${activeMenuIndex === index ? 'active-header' : ''
+                                        className={`font-mazzard z-99 relative flex cursor-pointer items-center pr-[27px] lg:px-[8px] text-center text-[17px] font-[411] leading-[85%] tracking-[-0.025em]  lg:pr-[25px] lg:pl-[5px] spbp:px-[25px] lg:text-[19px] ${activeMenuIndex === index ? 'active-header' : ''
                                             }`}
                                         onClick={() => {
                                             toggleSubMenu(index)
@@ -170,7 +172,7 @@ const Header = ({ setHeader }) => {
                                                     {menuItem.subMenuItems.map((subMenuItem, subIndex) => (
                                                         <div
                                                             key={`${index}-${subIndex}`}
-                                                            className={`!mb-[36px] cursor-pointer !rounded font-ttNormsPro text-[22px] !text-[19px] font-[411] leading-[16px] tracking-[-0.025em] !text-[white] hover:underline focus:!outline focus:outline-white ${activeMenuIndex === index ? 'active-header' : ''
+                                                            className={`!mb-[36px] cursor-pointer !rounded font-mazzard text-[22px] !text-[19px] font-[500] leading-[16px] tracking-[-0.025em] !text-[white] hover:underline focus:!outline focus:outline-white ${activeMenuIndex === index ? 'active-header' : ''
                                                                 }`}
                                                             onClick={() => {
                                                                 setShowDesktop(false)
@@ -194,11 +196,10 @@ const Header = ({ setHeader }) => {
                                     </button>
                                 ))}
                             </div>
-                            <div className="flex">
-                                <Button type="primary" htmlType="submit" className='bg-[#0F143A] py-3 px-7 text-[14px] sm:text-[18px] lg:text-[20px] xl:text-[20px] font-[500] text-center'>
-                                    Submit Request
+                            <div className="flex items-center">
+                                <Button type="primary" htmlType="submit" className='[&>*]:py-[3px] h-auto bg-[#0F143A] px-7 text-[14px] font-[500] text-center font-mazzard'>
+                                    Schedule a Call
                                 </Button>
-
                             </div>
                         </div>
                     </div>
@@ -246,14 +247,14 @@ const Header = ({ setHeader }) => {
                 </div>
                 {show && (
                     <div
-                        className={`fixed absolute top-0 left-0 z-[999] inline-block flex h-[100vh] w-full w-full justify-start bg-black pt-4 pb-2  lg:hidden lg:pl-8 ${show ? 'bg-SwishMob1 bg-gradient mx-auto mt-0 bg-cover  bg-center bg-no-repeat' : ''
+                        className={`fixed absolute top-0 left-0 z-[999] inline-block flex h-[100vh] w-full w-full justify-start bg-black pt-4 pb-2 lg:hidden lg:pl-8 ${show ? 'bg-SwishMob1 bg-gradient mx-auto mt-0 bg-cover  bg-center bg-no-repeat' : ''
                             }`}
                     >
                         <div className="mt-[110px] flex w-full px-[40px] flex-col overflow-y-auto [&>*:first-child]:mt-[50px]">
                             {menuItemsMob.map((menuItem, index) => (
                                 <React.Fragment key={index}>
                                     <button
-                                        className="flex w-full cursor-pointer items-center text-start font-knockout text-[61px] font-medium uppercase leading-[72px] tracking-[-0.025em] "
+                                        className="flex w-full cursor-pointer items-center text-start font-mazzard text-[61px] font-medium uppercase leading-[72px] tracking-[-0.025em] "
                                         onClick={() => {
                                             toggleSubMenu1(index)
                                             headerActiveColor(index)
@@ -300,7 +301,7 @@ const Header = ({ setHeader }) => {
                                                 showSubMenu[index] &&
                                                 menuItem.subMenuItems.map((subMenuItem, subIndex) => (
                                                     <div
-                                                        className={`mb-[27px] flex w-full cursor-pointer items-center text-start font-ttNormsPro text-[30px] font-[411] leading-[85.842%] tracking-[-0.025em] `}
+                                                        className={`mb-[27px] flex w-full cursor-pointer items-center text-start font-mazzard text-[30px] font-[411] leading-[85.842%] tracking-[-0.025em] `}
                                                         key={subIndex}
                                                         onClick={() => {
                                                             setShow(false)

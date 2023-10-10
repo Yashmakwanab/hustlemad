@@ -48,10 +48,10 @@ export default function OurServices() {
           {Services.map((Service, index) => (
             <>
               {index !== 0 &&
-                <div key={index} className={`${index === 1 ? "mr-auto sm:!mr-[50px] lg:!mr-auto" : index === 3 ? "mr-auto sm:!mr-[133px] lg:!mr-auto" : index === 2 ? "ml-auto sm:!ml-[50px] lg:ml-auto" : index === 4 ? "ml-auto sm:!ml-[133px] lg:ml-auto" : ""} mx-auto sm:mx-auto lg:!mx-0 transition duration-300 w-[140px] h-[140px] sm:w-[170px] sm:h-[170px] lg:w-[180px] lg:h-[180px] 2xl:w-[220px] 2xl:h-[220px] 3xl:w-[240px] 3xl:h-[240px] mb-[50px] flex flex-col place-content-center p-4 hover:p-3 bg-[${Service.circleColor}] rounded-full text-center hover:bg-[#FFF] hover:border-[4px] hover:xl:border-[6px] hover:border-[${Service.circleBorder}] cursor-pointer relative`} onMouseEnter={() => setValue(Service.title)} onMouseLeave={() => setValue("Our Services")}
+                <div key={index} style={{ backgroundColor: `${Service.circleColor}`,borderColor: `${Service.circleBorder}` }} className={`${index === 1 ? "mr-auto sm:!mr-[50px] lg:!mr-auto" : index === 3 ? "mr-auto sm:!mr-[133px] lg:!mr-auto" : index === 2 ? "ml-auto sm:!ml-[50px] lg:ml-auto" : index === 4 ? "ml-auto sm:!ml-[133px] lg:ml-auto" : ""} mx-auto sm:mx-auto lg:!mx-0 transition duration-300 w-[140px] h-[140px] sm:w-[170px] sm:h-[170px] lg:w-[180px] lg:h-[180px] 2xl:w-[220px] 2xl:h-[220px] 3xl:w-[240px] 3xl:h-[240px] mb-[50px] flex flex-col place-content-center p-4 hover:p-3 rounded-full text-center hover:!bg-[#FFF] hover:border-[4px] hover:xl:border-[6px] hover:!border-[${Service.circleBorder}] cursor-pointer relative`} onMouseEnter={() => setValue(Service.title)} onMouseLeave={() => setValue("Our Services")}
                 >
-                  <div className='text-[14px] sm:text-[18px] xl:text-[22px] font-[600] leading-[30px] text-[#0F143A] opacity-[72%]'>{Service.title}</div>
-                  <p className='text-[10px] sm:text-[12px] xl:text-[14px] font-[400] leading-[13px] sm:leading-[16px] xl:leading-[19px] text-[#0F143A] opacity-[72%]'>{Service.description}</p>
+                  <div className='font-mazzard text-[14px] sm:text-[18px] xl:text-[22px] font-[600] leading-[30px] text-[#0F143A] opacity-[72%] mb-1'>{Service.title}</div>
+                  <p className='font-mazzard text-[10px] sm:text-[12px] xl:text-[14px] font-[400] leading-[13px] sm:leading-[16px] xl:leading-[19px] text-[#0F143A] opacity-[72%]'>{Service.description}</p>
                 </div>
               }
             </>
@@ -62,8 +62,8 @@ export default function OurServices() {
             <div key={index}>
               {value === Service.title &&
                 <div className={`text-center lg:text-start transition duration-300`}>
-                  <h2 className='text-[24px] sm:text-[40px] lg:text-[48px] xl:text-[52px] font-[900] leading-[27px] sm:leading-[46px] lg:leading-[55px] xl:leading-[60px] text-[#0F143A] mb-2 sm:mb-3 lg:mb-4 xl:mb-6'>{Service.title}</h2>
-                  <p className='text-[14px] sm:text-[20px] xl:text-[24px] 3xl:text-[28px] font-[400] leading-[19px] sm:leading-[27px] xl:leading-[32px] 3xl:leading-[38px] text-[#0F143A] opacity-[72%] mb-10'>{Service.description}</p>
+                  <h2 className='font-recoleta text-[24px] sm:text-[40px] lg:text-[48px] xl:text-[52px] font-[900] leading-[27px] sm:leading-[46px] lg:leading-[55px] xl:leading-[60px] text-[#0F143A] mb-2 sm:mb-3 lg:mb-4 xl:mb-6'>{Service.title}</h2>
+                  <p className='font-mazzard text-[14px] sm:text-[20px] xl:text-[24px] 3xl:text-[28px] font-[400] leading-[19px] sm:leading-[27px] xl:leading-[32px] 3xl:leading-[38px] text-[#0F143A] opacity-[72%] mb-10'>{Service.description}</p>
                   <img src={Service.src} alt={Service.title} className='w-[200px] sm:w-[240px] lg:w-[300px] 2xl:w-[332px] 3xl:w-[372px] absolute bottom-0 left-1/2 transform -translate-x-1/2 lg:-translate-x-0' />
                 </div>
               }
