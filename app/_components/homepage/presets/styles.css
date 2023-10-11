@@ -8,12 +8,15 @@
 .swiper-slide {
     text-align: center;
     font-size: 18px;
+
     height: auto;
-    padding: 20px 0;
+    padding: 20px 0px;
     background: #fff;
     width: 100%;
-    max-width: 400px;
+    max-width: auto;
     padding: 20px;
+    max-width: 350px;
+
     border-radius: 24px 6px 24px 6px;
 
     /* Center slide text vertically */

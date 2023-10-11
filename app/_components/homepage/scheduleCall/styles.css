@@ -1,0 +1,28 @@
+.schedule_container {
+    background-color: #FFDFFE;
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+
+.schedule_content {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.tagline {
+    font-weight: 400;
+}
+
+.ctc_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+}
