@@ -12,7 +12,7 @@ const Card = () => {
       <div className="presetImageContainer">
         <Image className="presetImage" src={presetPhoto} />
       </div>
-      <hr class="solid" />
+      <hr className="solid" />
       <div>
         <h3 className="font-recoleta underline productTitle">Basic Pack</h3>
         <p className="text-[18px]">
@@ -20,7 +20,7 @@ const Card = () => {
           Papercoal A5 Notebook, Parker pen, Premium Boxing, Pan-India Shipping
         </p>
       </div>
-      <hr class="solid" />
+      <hr className="solid" />
       <ButtonPrimary
         handleClick={handleClick}
         content={

@@ -4,6 +4,9 @@ import RequestForm from '@/app/_components/homepage/requestForm';
 // import Carousel from '@/app/_components/homepage/carousel';
 import HeroSection from '@/app/_components/homepage/heroSection/heroSection';
 import PresetSection from '@/app/_components/homepage/presetSection';
+import ScheduleSection from '@/app/_components/homepage/scheduleSection';
+import ClientSection from '@/app/_components/homepage/ClientSection';
+import Testimonials from '@/app/_components/homepage/testimonials/testimonials';
 
 const Home = () => {
     return (
@@ -11,6 +14,9 @@ const Home = () => {
             <div>
                 <HeroSection/>
                 <OurServices />
+                <ScheduleSection />
+                <ClientSection />
+                <Testimonials/>
                 <PresetSection/>
                 <RequestForm />
                 {/* <Carousel/> */}

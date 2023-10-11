@@ -1,0 +1,419 @@
+.testimonial {
+  background: #ffffff;
+  padding-bottom: 56px;
+  position: relative;
+}
+
+.rabbit {
+  margin-left: calc(50% - 12px + 266px);
+  margin-top: 46px;
+}
+
+.testimonial h1 {
+  margin-top: 72px;
+  margin-bottom: 35px;
+  font-weight: 700px;
+  text-align: center;
+}
+
+.arrowT {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: -20px;
+  top: 0;
+}
+
+.leftdiv {
+  position: absolute;
+  bottom: 0;
+  left: -30px;
+}
+
+.leftdiv img {
+  width: 232px;
+  height: 232px;
+}
+
+.rightdiv {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.rightdiv img {
+  width: 360px;
+  height: 240px;
+}
+
+.middlediv {
+  margin-top: 0px;
+  width: 640px;
+  margin-left: calc(50% - 320px);
+}
+
+.speechboxp2 {
+  position: relative;
+  height: 440px;
+  display: flex;
+}
+
+.bubble {
+  position: absolute;
+  width: 640px;
+  height: 440px;
+  z-index: 1;
+}
+
+.writingp2 {
+  margin-left: 60px;
+  margin-right: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+}
+
+.writingp2 p {
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.016em;
+}
+
+.writingp2 img {
+  margin-top: 32px;
+  /* width: 360px;
+  height: 6px; */
+  padding-bottom: 24px;
+}
+
+.writingp2 h2 {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.writingp2 h3 {
+  font-style: normal;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+}
+
+.lowerContent {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftarrow img {
+  margin-right: 28px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.rightarrow img {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  margin-left: 28px;
+}
+
+.leftmostpersondiv img {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(15, 20, 58, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 60px;
+}
+
+.leftpersondiv img {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(15, 20, 58, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 60px;
+}
+
+.middlepersondiv img {
+  width: 84px;
+  height: 84px;
+  border: 4px solid #142845;
+  border-radius: 50%;
+  margin-right: 60px;
+}
+
+.rightpersondiv img {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(15, 20, 58, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.rightmostpersondiv img {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(15, 20, 58, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 60px;
+}
+
+
+@media only screen and (min-width: 1720px) {
+  .leftdiv img {
+    width: 288px;
+    height: 288px;
+  }
+
+  .rightdiv img {
+    width: 432px;
+    height: 288px;
+  }
+
+  .arrowT {
+    width: 420px;
+    height: 420px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .arrowT {
+    width: 360px;
+    height: 360px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .testimonial h1 {
+    font-size: 40px;
+  }
+
+  .rabbit {
+    margin-left: calc(50% - 12px + 222px);
+    margin-top: 36px;
+  }
+
+  .arrowT {
+   width: 120px;
+   height: 120px;
+  }
+
+  .leftdiv img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .rightdiv img {
+    width: 240px;
+    height: 160px;
+  }
+
+  .middlediv {
+    width: 560px;
+    margin-left: calc(50% - 280px);
+    margin-top: -50px;
+  }
+
+  .speechboxp2 {
+    position: relative;
+    height: 480px !important;
+    display: flex;
+  }
+
+  .bubble {
+    position: absolute;
+    width: 560px;
+    height: 480px !important;
+  }
+
+  .writingp2 {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .writingp2 p {
+    font-size: 20px;
+  }
+
+  .writingp2 h2 {
+    font-size: 20px;
+  }
+
+  .lowerContent {
+    margin-top: -20px;
+  }
+
+  .leftmostpersondiv {
+    display: none;
+  }
+
+  .rightmostpersondiv {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:880px) {
+  .rightdiv img {
+    width: 240px;
+    height: 160px;
+  }
+
+  .writingp2 {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  .writingp2 {
+    margin-left: 35px;
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (max-width:720px) {
+  .writingp2 {
+    margin-left: 40px;
+    margin-right: 0px;
+  }
+}
+
+@media only screen and (max-width:690px) {
+  .testimonial {
+    padding-bottom: 0px;
+  }
+
+  .testimonial h1 {
+    font-size: 24px;
+    margin-top: 56px;
+    margin-bottom: 20px;
+  }
+
+  .rabbit {
+    margin-left: calc(50% + 130px);
+    margin-top: 30px;
+    width: 8px;
+    height: 10px;
+  }
+
+  .arrowT {
+    width: 80px;
+    height: 80px;
+  }
+
+  .leftdiv img {
+    width: 108px;
+    height: 108px;
+  }
+
+  .rightdiv img {
+    width: 150px;
+    height: 100px;
+  }
+
+  .middlediv {
+    width: 320px;
+    margin-top: -30px;
+    margin-left: calc(50% - 160px);
+  }
+
+  .speechboxp2 {
+    height: 272px !important;
+  }
+
+  .bubble {
+    width: 320px;
+    height: 272px !important;
+  }
+
+  .writingp2 {
+    margin-top: -6px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 280px;
+  }
+
+  .writingp2 p {
+    font-size: 12px;
+  }
+
+  .writingp2 img {
+    width: 240px;
+    margin-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .writingp2 h2 {
+    font-size: 14px;
+    line-height: 100%;
+  }
+
+  .writingp2 h3 {
+    font-size: 12px;
+    line-height: 116%;
+    margin: 0px 0px 6px 0px;
+  }
+
+  .lowerContent {
+    margin-top: -10px;
+    padding-bottom: 24px;
+  }
+
+  .leftpersondiv img {
+    width: 32px;
+    height: 32px;
+    margin-right: 40px;
+    border: 1px solid #474646;
+  }
+
+  .middlepersondiv img {
+    width: 40px;
+    height: 40px;
+    margin-right: 40px;
+    border: 2px solid #141313;
+  }
+
+  .rightpersondiv img {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #474646;
+  }
+
+  .leftarrow img {
+    margin-right: 24px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+
+  .rightarrow img {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin-left: 24px;
+  }
+}
+
+@media only screen and (max-width:450px) {
+  .writingp2 {
+    margin-right: 35px;
+    margin-left: 35px;
+  }
+}
+
+@media only screen and (max-width:400px) {
+  .writingp2 {
+    margin-right: 19px;
+    margin-left: 19px;
+  }
+}
