@@ -7,6 +7,7 @@ import PresetSection from '@/app/_components/homepage/presetSection';
 import ScheduleSection from '@/app/_components/homepage/scheduleSection';
 import ClientSection from '@/app/_components/homepage/ClientSection';
 import Testimonials from '@/app/_components/homepage/testimonials/testimonials';
+import Partners from '@/app/_components/homepage/partners';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <div>
                 <HeroSection/>
                 <OurServices />
+                <Partners/>
                 <ScheduleSection />
                 <ClientSection />
                 <Testimonials/>

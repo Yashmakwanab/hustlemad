@@ -9,22 +9,27 @@ const ScheduleCall = () => {
     console.log("btn clicked");
   };
   return (
-    <div className="schedule_container pt-[25px]">
-      <div className="schedule_content flex-col-reverse md:flex-row">
-        <div>
-          <Image src={scheduleImage} />
-        </div>
-        <div className="ctc_section ">
-          <h2 className="font-recoleta text-center text-[24px] sm:text-[30px] md:text-[40px] font-[900] leading-[27px] sm:leading-[40px] xl:leading-[44px] text-[#0F143A] ">
-            Wanna know more?
-          </h2>
-          <p
-            className={`tagline 6xl:text-[36px] 5xl:text-[32px] 2xl:text-[28px] sm:text-[28px] text-center lg:text-left text-[#0F143A] `}
-          >
-            Find a time that fits your Schedule...
-          </p>
+    <div className="relative">
+            <div className="absolute top-0 w-full">
+        <img src="/Images/landingPage/greenBorder.svg" className="w-full absolute top-[-1px] md:top-[-4px] xl:top-[-8px]" />
+      </div>
+      <div className="schedule_container pt-[25px]">
+        <div className="schedule_content flex-col-reverse md:flex-row">
+          <div>
+            <Image src={scheduleImage} />
+          </div>
+          <div className="ctc_section ">
+            <h2 className="font-recoleta text-center text-[24px] sm:text-[30px] md:text-[40px] font-[900] leading-[27px] sm:leading-[40px] xl:leading-[44px] text-[#0F143A] ">
+              Wanna know more?
+            </h2>
+            <p
+              className={`tagline 6xl:text-[36px] 5xl:text-[32px] 2xl:text-[28px] sm:text-[28px] text-center lg:text-left text-[#0F143A] `}
+            >
+              Find a time that fits your Schedule...
+            </p>
 
-          <ButtonPrimary handleClick={handleClick} content={"Book Now"} />
+            <ButtonPrimary handleClick={handleClick} content={"Book Now"} />
+          </div>
         </div>
       </div>
     </div>

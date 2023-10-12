@@ -1,6 +1,5 @@
 .client_container {
     background-color: #FFFDC5;
-
     display: flex;
     width: 100%;
     align-items: flex-end;
@@ -17,7 +16,7 @@
 }
 
 .slider {
-    height: 60px;
+    height: 80px;
     position: relative;
     width: 100%;
     display: grid;
