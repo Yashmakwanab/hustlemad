@@ -1,11 +1,22 @@
 .client_container {
     background-color: #FFFDC5;
     display: flex;
+    flex-direction: column;
     width: 100%;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
 
 }
+
+.underlineCtm {
+    color: #0F143A !important;
+    background: url('../../../../public/Images/heroSectionSvgs/client_underline.svg');
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: contain;
+
+}
+
 
 .client_content {
     display: flex;

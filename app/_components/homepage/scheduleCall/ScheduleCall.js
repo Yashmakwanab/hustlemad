@@ -10,7 +10,7 @@ const ScheduleCall = () => {
   };
   return (
     <div className="relative">
-            <div className="absolute top-0 w-full">
+      <div className="absolute top-0 w-full">
         <img src="/Images/landingPage/greenBorder.svg" className="w-full absolute top-[-1px] md:top-[-4px] xl:top-[-8px]" alt="Green Border" />
       </div>
       <div className="schedule_container pt-[25px]">

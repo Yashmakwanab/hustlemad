@@ -1,47 +1,39 @@
 "use client";
 import ButtonPrimary from "../../commonComponents/ButtonPrimary";
-import hero_person from "../../../../public/Images/heroSectionSvgs/hero_person.png";
 import style from "./heroSection.module.css";
-import Image from "next/image";
-import Circular from "./BigHero/circular";
+
 import { useEffect, useState } from "react";
 import SmallHero from "./SmallHero/SmallHero";
+import BigHero from "./BigHero/BigHero";
 
-function useWindowSize() {
-  // Initialize state with undefined width/height so server and client renders match
-  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
-  const [windowSize, setWindowSize] = useState({
-    width: undefined,
-    height: undefined,
-  });
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
   useEffect(() => {
-    // only execute all the code below in client side
-    // Handler to call on window resize
     function handleResize() {
-      // Set window width/height to state
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
+      setWindowDimensions(getWindowDimensions());
     }
 
-    // Add event listener
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-    // Call handler right away so state gets updated with initial window size
-    handleResize();
-
-    // Remove event listener on cleanup
-    return () => window.removeEventListener("resize", handleResize);
-  }, []); // Empty array ensures that effect is only run on mount
-  return windowSize;
+  return windowDimensions;
 }
+
 const HeroSection = () => {
-  const size = useWindowSize();
+  const { height, width } = useWindowDimensions();
   const handleClick = () => {
     console.log("hello");
   };
+  console.log(width)
   return (
     <div className="flex justify-center bg-[#B3FFFA]">
       <div className={`${style.hero_section} w-full flex-col-reverse flex lg:flex-row container mt-14 relative px-[32px]`}>
@@ -56,19 +48,8 @@ const HeroSection = () => {
           <ButtonPrimary content={"Get Started"} handleClick={handleClick} />
         </div>
 
-        {size.width > 1024 ?
-          <div className={style.hero_image_section}>
-            <div className={style.hero_circle_images}>
-              <Circular />
-            </div>
-            <div className={style.hero_image_container}>
-              <Image
-                className={style.hero_image}
-                src={hero_person}
-                alt="Our Services"
-              />
-            </div>
-          </div> : <><SmallHero /></>}
+        {width > 1024 ?
+          <BigHero /> : <><SmallHero /></>}
 
       </div>
     </div>

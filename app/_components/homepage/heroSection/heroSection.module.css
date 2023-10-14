@@ -5,13 +5,14 @@
     font-family: 'taglineFont', sans-serif !important;
     justify-content: space-between;
     margin-bottom: 16px;
-  
+
 
 }
+
 .hero_text_section {
-  max-width: 700px;
-flex-grow: 1;
-    gap:2em;
+    max-width: 700px;
+    flex-grow: 1;
+    gap: 2em;
 }
 
 .hero_title {
@@ -19,10 +20,12 @@ flex-grow: 1;
     line-height: 1.2;
 
 }
+
 .hero_title span {
     color: #2A32FF;
 }
-.tagline{
+
+.tagline {
     opacity: 0.6;
 }
 
@@ -31,30 +34,31 @@ flex-grow: 1;
     background: url('../../../../public/Images/heroSectionSvgs/hero_underline.svg');
     background-repeat: no-repeat;
     background-position-y: bottom;
+    background-size: contain;
 
 }
 
 
 /* circle images */
 /* CircleComponent.module.css */
-.hero_image_section{
+.hero_image_section {
     width: 100%;
     display: flex;
-  max-width: 700px;
-}
-.hero_circle_images{
-  display: flex;
-  flex-basis: 1;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-
-}
-.hero_image_container{
-/* width: 50%; */
-width: 80%;
-display: flex;
-align-items: flex-end;
+    max-width: 700px;
 }
 
+.hero_circle_images {
+    display: flex;
+    flex-basis: 1;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 
+}
+
+.hero_image_container {
+    /* width: 50%; */
+    width: 80%;
+    display: flex;
+    align-items: flex-end;
+}

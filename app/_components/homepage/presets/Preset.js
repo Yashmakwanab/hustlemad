@@ -49,34 +49,34 @@ export default function Preset() {
         }}
         className="mySwiper"
       >
-        <SwiperSlide>
+        <SwiperSlide className="max-w-[280px] md:max-w-[320px] xl:max-w-[400px] ">
           <Card />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="max-w-[280px] md:max-w-[320px] xl:max-w-[400px] ">
           <Card />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="max-w-[280px] md:max-w-[320px] xl:max-w-[400px] ">
           <Card />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="max-w-[280px] md:max-w-[320px] xl:max-w-[400px] ">
           <Card />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="max-w-[280px] md:max-w-[320px] xl:max-w-[400px] ">
           <Card />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="max-w-[280px] md:max-w-[320px] xl:max-w-[400px] ">
           <Card />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="max-w-[280px] md:max-w-[320px] xl:max-w-[400px] ">
           <Card />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="max-w-[280px] md:max-w-[320px] xl:max-w-[400px] ">
           <Card />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="max-w-[280px] md:max-w-[320px] xl:max-w-[400px] ">
           <Card />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="max-w-[280px] md:max-w-[320px] xl:max-w-[400px] ">
           <Card />
         </SwiperSlide>
       </Swiper>
