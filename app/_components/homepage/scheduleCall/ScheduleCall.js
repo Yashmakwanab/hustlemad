@@ -11,12 +11,12 @@ const ScheduleCall = () => {
   return (
     <div className="relative">
             <div className="absolute top-0 w-full">
-        <img src="/Images/landingPage/greenBorder.svg" className="w-full absolute top-[-1px] md:top-[-4px] xl:top-[-8px]" />
+        <img src="/Images/landingPage/greenBorder.svg" className="w-full absolute top-[-1px] md:top-[-4px] xl:top-[-8px]" alt="Green Border" />
       </div>
       <div className="schedule_container pt-[25px]">
         <div className="schedule_content flex-col-reverse md:flex-row">
           <div>
-            <Image src={scheduleImage} />
+            <Image src={scheduleImage} alt="Schedule Image" />
           </div>
           <div className="ctc_section ">
             <h2 className="font-recoleta text-center text-[24px] sm:text-[30px] md:text-[40px] font-[900] leading-[27px] sm:leading-[40px] xl:leading-[44px] text-[#0F143A] ">

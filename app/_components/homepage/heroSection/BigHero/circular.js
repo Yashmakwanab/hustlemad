@@ -32,7 +32,6 @@ const ImageCircle = ({ images }) => {
 
         return (
           <Image
-
             key={index}
             src={image}
             alt={`Image ${index + 1}`}

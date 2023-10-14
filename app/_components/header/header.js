@@ -1,458 +1,222 @@
 "use client"
-import React, { useState, useEffect } from 'react'
-import { MdOutlineClose } from 'react-icons/md'
-import { RxHamburgerMenu } from 'react-icons/rx'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Button } from 'antd'
 
 const menuItems = [
     {
         label: 'Home',
-        subMenuItemsUrl: ['/home'],
+        directUrl: ['/'],
     },
     {
         label: 'Comapany',
+        directUrl: '',
         subMenuItems: ['About Us', 'Contact Us', 'FAQs'],
-        subMenuItemsUrl: ['/about#OurStory', '/about#WhoWeAre', '/about#People'],
+        subMenuItemsUrl: ['/about', '/contact', '/faq'],
+        subMenuItemsImage: ['/Images/landingPage/homeIcon.png', '/Images/landingPage/phoneIcon.png', '/Images/landingPage/faqIcon.png'],
     },
     {
         label: 'Build a Box',
-        subMenuItemsUrl: ['/box'],
+        directUrl: ['/catalogue'],
     },
     {
         label: 'Our Clients',
-        subMenuItemsUrl: ['/clients'],
+        directUrl: ['/clients'],
     },
     {
         label: 'Partners',
+        directUrl: '',
         subMenuItems: ['Our Partners', 'Be our Partner'],
-        subMenuItemsUrl: ['/tap-list', '/food'],
+        subMenuItemsUrl: ['/partner', '/allcompanies'],
+        subMenuItemsImage: ['/Images/landingPage/handIcon.png', '/Images/landingPage/growthIcon.png'],
     },
     {
         label: 'Web3 & Communities',
-        subMenuItemsUrl: ['/web'],
+        directUrl: ['/web'],
     },
     {
         label: 'Latest Works',
-        subMenuItemsUrl: ['/works'],
+        directUrl: ['/works'],
     },
 ]
-const menuItemsMob = [
-    {
-        label: 'Home',
-        subMenuItemsUrl: ['/'],
-    },
-    {
-        label: 'Build a Box',
-        subMenuItemsUrl: ['/box'],
-    },
-    {
-        label: 'Our Clients',
-        subMenuItemsUrl: ['/clients'],
-    },
-    {
-        label: 'Partners',
-        subMenuItems: ['Our Partners', 'Be our Partner'],
-        subMenuItemsUrl: ['/tap-list', '/food'],
-    },
-    {
-        label: 'Web3 & Communities',
-        subMenuItemsUrl: ['/web'],
-    },
-    {
-        label: 'Latest Works',
-        subMenuItemsUrl: ['/works'],
-    },
-]
-const Header = ({ setHeader }) => {
-    const [height, setHeight] = useState(0)
+const Header = () => {
     const [show, setShow] = useState(false)
-    const [showDesktop, setShowDesktop] = useState(false)
-    const [showSubMenu, setShowSubMenu] = useState(Array(menuItemsMob.length).fill(false))
-    const [activeMenuIndex, setActiveMenuIndex] = useState(null)
     const [activeHeader, setActiveHeader] = useState(0)
-    const [activeHeaderIndex, setActiveHeaderIndex] = useState(null)
-
-    const [windowWidth, setWindowWidth] = useState(0)
-
-    const setWindowDimensions = () => {
-        setWindowWidth(window.innerWidth)
-    }
-    useEffect(() => {
-        window.addEventListener('resize', setWindowDimensions)
-        return () => {
-            window.removeEventListener('resize', setWindowDimensions)
-        }
-    }, [])
-
-    useEffect(() => {
-        if (windowWidth >= 1024) {
-            setShow(false)
-        }
-    })
-
-    const toggleSubMenu1 = (index) => {
-        const updatedSubMenu = showSubMenu.map((value, i) => (i === index ? !value : false))
-        setShowSubMenu(updatedSubMenu)
-        setActiveHeader(index)
-    }
-    const headerActiveColor = (index) => {
-        setActiveHeader(index)
-    }
-
-    useEffect(() => {
-        if (show) {
-            document.body.classList.add('overheader')
-        } else {
-            document.body.classList.remove('overheader')
-        }
-    }, [show])
-
-    const toggleSubMenu = (index) => {
-        if (activeMenuIndex === index) {
-            setActiveMenuIndex(null)
-        } else {
-            setActiveMenuIndex(index)
-            setActiveHeaderIndex(index)
-        }
-    }
+    const [activeHeaderIndex, setActiveHeaderIndex] = useState()
 
     return (
         <>
-            <header
-                className={`main-header z-[999] mx-auto flex md:min-h-[77px] w-full max-w-[1920px] justify-center lg:block  ${show ? 'mx-auto' : ''
-                    }`}
-            >
-                {/* desktop */}
-                <div className="flex hidden w-full justify-center md:inline-flex">
-                    <div className="w-full">
-                        <div className="flex justify-between mx-[40px]">
-                            <div className="grid grid-cols-1 nxl:grid-cols-5 font-mazzard w-full nxl:w-fit">
-                                <div className='col-span-1 flex justify-between'>
-                                <Link href={`/`} legacyBehavior >
-                                    <a target="" className="mr-[40px] py-[25px] cursor-pointer">
-                                        <Image
-                                            src="/Images/landingPage/mainLogoHustle.svg"
-                                            alt="Logo"
-                                            layout='fixed'
-                                            width={148}
-                                            height={78}
-                                        />
+            <div className='nxl:px-[40px] bg-white fixed w-full z-[9999999999]'>
+                <div className="flex justify-between items-center">
+                    <div className="grid grid-cols-1 nxl:grid-cols-5 w-full nxl:w-fit">
+                        <div className="items-center py-[12px] nxl:py-[25px] col-span-1 flex justify-between border-b-[1px] border-solid nxl:border-none px-[20px] md:px-[40px] nxl:px-0">
+                            <Link className="flex items-center" href="/">
+                                <img
+                                    src="/Images/landingPage/mainLogoHustle.svg"
+                                    alt="Hustle Logo"
+                                    className='w-[100px] md:w-[110px] nxl:w-[148px] h-[20px] md:h-[22px] nxl:h-[30px]'
+                                />
+                            </Link>
+                            <div className="hidden md:flex nxl:hidden">
+                                <div className="cursor-pointer">
+                                    <a href="/" target="_blank">
+                                        <div className="font-mazzard flex bg-[#0F143A] text-white py-[9px] xl:py-[12px] px-[15px] xl:px-[20px] text-[14px] xl:text-[16px] font-600 rounded-[4px] items-center">
+                                            <img src="/Images/landingPage/phoneWhite.svg" className="text-white w-[16px] h-[16px] mr-[12px]" alt="Phone Logo" />
+                                            <p>Schedule a Call </p>
+                                        </div>
                                     </a>
-                                </Link>
-                                <div className="flex items-center nxl:hidden">
-                                <Button type="primary" htmlType="submit" className='[&>*]:py-[3px] h-auto bg-[#0F143A] px-7 text-[14px] font-[500] text-center font-mazzard'>
-                                    Schedule a Call
-                                </Button>
-                            </div>
                                 </div>
-                                <div className='col-span-4 flex py-[24px] nxl:py-0 border-t'>
+                            </div>
+                            <div className='flex items-center md:hidden'>
+                                <a className='mr-[24px] cursor-pointer'>
+                                    <img src="/Images/landingPage/phone.svg" alt="Phone Logo" />
+                                </a>
+                                <a className='cursor-pointer' onClick={() => setShow(true)}>
+                                    <img src="/Images/landingPage/mobileBar.svg" alt="Navbar Logo" />
+                                </a>
+                            </div>
+                        </div>
+                        <div className="items-center col-span-4 px-[40px] nxl:px-0 py-[10px] nxl:py-0 justify-center hidden md:flex">
+                            <ul className="flex z-[99999999]">
                                 {menuItems.map((menuItem, index) => (
-                                    <button
-                                        key={`menu-item-${index}`}
-                                        className={`font-mazzard z-99 relative flex cursor-pointer items-center pr-[21px] lg:px-[8px] text-center text-[14px] font-[411] leading-[85%] tracking-[-0.025em] lg:pr-[25px] lg:pl-[5px] spbp:px-[25px] xl:text-[16px] ${activeMenuIndex === index ? 'active-header' : ''
-                                            }`}
-                                        onClick={() => {
-                                            toggleSubMenu(index)
-                                            setShowDesktop(true)
-                                        }}
-                                        tabIndex={0}
-                                        onMouseEnter={() => {
-                                            setShowDesktop(true)
-                                            toggleSubMenu(index)
-                                        }}
-                                        onMouseLeave={() => {
-                                            setShowDesktop(false)
-                                            toggleSubMenu(index)
-                                        }}
-                                    >
-                                        {menuItem.label}
-                                        {menuItem.subMenuItems && showDesktop === true && activeHeaderIndex === index && (
-                                            <div className="absolute top-16 border-solid border-[1px]">
-                                                <div className="box-arrow left-0 flex !w-[253px] flex-col rounded-[8px] !bg-white">
-                                                    {menuItem.subMenuItems.map((subMenuItem, subIndex) => (
-                                                        <div
-                                                            key={`${index}-${subIndex}`}
-                                                            className={`cursor-pointer mx-[14px] my-[8px] !rounded font-mazzard text-[22px] !text-[19px] font-[500] leading-[16px] tracking-[-0.025em] !text-[black] hover:underline focus:!outline focus:outline-white ${activeMenuIndex === index ? 'active-header' : ''
-                                                                }`}
-                                                            onClick={() => {
-                                                                setShowDesktop(false)
-                                                                toggleSubMenu(index)
-                                                            }}
-                                                        >
-                                                            <Link
-                                                                legacyBehavior
-                                                                href={`${menuItem.subMenuItemsUrl[subIndex]}`}
-                                                                className="!rounded focus:outline focus:outline-white"
-                                                            >
-                                                                <a target="" className="flex h-[29px] items-center px-[12px] py-[5px]">
-                                                                    {subMenuItem}
-                                                                </a>
-                                                            </Link>
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        )}
-                                    </button>
+                                    <React.Fragment key={index}>
+                                        {menuItem.directUrl !== "" ?
+                                            <li className='mx-[7px] lg:mx-[14px] xl:mx-[11px] 2xl:mx-[14px] font-mazzard text-[14px] text-[#001636EB] font-[600] mt-[12px]' onClick={() => setActiveHeader(index)}>
+                                                <Link className="" href={`${menuItem.directUrl}`}>
+                                                    <div className={`text-[14px] xl:text-[16px] ${activeHeader === index ? "text-[#FF4A8CFA]" : "text-[#001636EB]"} `}>{menuItem.label}</div>
+                                                    {activeHeader === index &&
+                                                        <img
+                                                            src="/Images/landingPage/headerBorder.svg"
+                                                            alt="Header Border"
+                                                            width="50px"
+                                                        />
+                                                    }
+                                                </Link>
+                                            </li>
+                                            :
+                                            <li className="mx-[7px] lg:mx-[14px] nxl:mx-[10px] xl:mx-[11px] 2xl:mx-[14px]  font-mazzard relative text-[14px] cursor-pointer text-[#001636EB] font-[600] mt-[12px]" onMouseEnter={() => setActiveHeaderIndex(index)} onMouseLeave={() => setActiveHeaderIndex(null)} onClick={() => setActiveHeader(index)}>
+                                                <div className={`text-[14px] xl:text-[16px] ${activeHeader === index ? "text-[#FF4A8CFA]" : "text-[#001636EB] pb-[10px]"} `}>{menuItem.label}</div>
+                                                {activeHeader === index &&
+                                                    <img
+                                                        src="/Images/landingPage/headerBorder.svg"
+                                                        alt="Header Border"
+                                                        width="50px"
+                                                    />
+                                                }
+                                                {activeHeaderIndex === index &&
+                                                    <div className={`drop-shadow-lg absolute w-[172px] bg-white border-solid border-[1px] border-[#0F143AB8] rounded-[4px] ${activeHeaderIndex === 1 ? "ml-[-37px]" : activeHeaderIndex === 4 ? "ml-[-51px]" : ""  }`}>
+                                                        <div className="absolute top-[-15px] right-[50%] after:content-[url('/Images/landingPage/upperArrow.png')] after:inline-block after:h-full after:w-full"></div>
+                                                        {menuItem.subMenuItems.map((subMenuItem, subIndex) => (
+                                                            <div key={subIndex} className='border-b-[1px] px-[14px] border-[#0F143AB8] last:border-none' onMouseEnter={() => setActiveHeaderIndex(index)}>
+                                                                <Link className="" href={`${menuItem.subMenuItemsUrl[subIndex]}`} aria-current="page">
+                                                                    <div className="py-[7px] flex">
+                                                                        <Image width={24} height={24} className='mr-[12px]' src={`${menuItem.subMenuItemsImage[subIndex]}`} alt="Header Logo"/>
+                                                                        <div className="flex items-center">{subMenuItem}</div>
+                                                                    </div>
+                                                                </Link>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                }
+                                            </li>
+                                        }
+                                    </React.Fragment>
                                 ))}
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="hidden nxl:flex">
+                        <div className="cursor-pointer">
+                            <a href="/" target="_blank">
+                                <div className="font-mazzard flex bg-[#0F143A] text-white py-[9px] xl:py-[12px] px-[15px] xl:px-[20px] text-[14px] xl:text-[16px] font-600 rounded-[4px] items-center">
+                                    <img src="/Images/landingPage/phoneWhite.svg" className="text-white w-[16px] h-[16px] mr-[12px]" alt='Phone White'/>
+                                    <p>Schedule a Call </p>
                                 </div>
-                            </div>
-                            <div className=" items-center hidden nxl:flex">
-                                <Button type="primary" htmlType="submit" className='[&>*]:py-[3px] h-auto bg-[#0F143A] px-7 text-[14px] font-[500] text-center font-mazzard'>
-                                    Schedule a Call
-                                </Button>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
-                {/* Mobile */}
-                <div
-                    className={`relative z-[9999] inline-block w-full w-full md:hidden`}
-                >
-                    <div className="flex flex-col">
-                        <div className="flex items-center justify-between mx-[20px]">
-                            <Link href={`/`} legacyBehavior>
-                                <a target="" className='cursor-pointer !h-[48px] !w-[100px] flex items-center'>
+            </div>
+            {/* #mobile */}
+            <div>
+                {
+                    show &&
+                    <div className='fixed h-[100vh] bg-white w-full z-[9999999999999] px-[22px] py-[14px] md:hidden'>
+                        <div className='flex justify-end cursor-pointer' onClick={() => setShow(false)}><Image src="/Images/landingPage/closeIcon.svg" width={20} height={20} /></div>
+                        <div className="grid grid-cols-1 nxl:grid-cols-5 w-full nxl:w-fit px-[12px]">
+                            <div className="items-center py-[12px] col-span-1 flex justify-between mb-[10px]">
+                                <Link className="flex items-center" href="/">
                                     <Image
                                         src="/Images/landingPage/mainLogoHustle.svg"
-                                        alt="Logo"
-                                        layout='fixed'
-                                        height={72}
-                                        width={136} />
-                                </a>
-                            </Link>
-                            <div className='flex'>
-                                <button
-                                    onClick={() => {
-                                        setShow(true)
-                                        setHeader(true)
-                                    }}
-                                    className="mr-[20px]"
-                                >
-                                    <Image
-                                        src="/Images/landingPage/phone.svg"
-                                        alt="Logo"
-                                        layout='fixed'
-                                        height={20}
-                                        width={20} />
-                                </button>
-                                {!show && (
-                                    <button
-                                        onClick={() => {
-                                            setShow(true)
-                                            setHeader(true)
-                                        }}
-                                        className="text-[39px]"
-                                    >
-                                        <Image
-                                            src="/Images/landingPage/mobileBar.svg"
-                                            alt="Logo"
-                                            layout='fixed'
-                                            height={20}
-                                            width={20} />
-                                    </button>
-                                )}
-                                {show && (
-                                    <button
-                                        onClick={() => {
-                                            setShow(false)
-                                            setHeader(false)
-                                        }}
-                                        className="text-[39px] "
-                                    >
-                                        <Image
-                                            src="/Images/landingPage/closeIcon.svg"
-                                            alt="Logo"
-                                            layout='fixed'
-                                            height={20}
-                                            width={20} />
-                                    </button>
-                                )}
+                                        alt="Hustle Logo"
+                                        width={160}
+                                        height={32}
+                                    />
+                                </Link>
+                            </div>
+                            <div className="items-center col-span-4 py-[10px] justify-center">
+                                <ul className="flex flex-col z-[99999999]">
+                                    {menuItems.map((menuItem, index) => (
+                                        <React.Fragment key={index}>
+                                            {menuItem.directUrl !== "" ?
+                                                <li className='font-mazzard text-[#001636EB] font-[600] mt-[32px]' onClick={() => {
+                                                    setActiveHeader(index)
+                                                    setShow(false)
+                                                }
+                                                }>
+                                                    <Link className="" href={`${menuItem.directUrl}`}>
+                                                        <div className={`w-fit text-[22px] ${activeHeader === index ? "text-[#FF4A8CFA] border-b-[1px] border-[#FF4A8CFA]" : "text-[#001636EB]"} `}>{menuItem.label}</div>
+                                                    </Link>
+                                                </li>
+                                                :
+                                                <li className="font-mazzard relative cursor-pointer text-[#001636EB] font-[600] mt-[32px]" onMouseEnter={() => setActiveHeaderIndex(index)} onMouseLeave={() => setActiveHeaderIndex(null)} onClick={() => {
+                                                    setActiveHeader(index)
+                                                }}>
+                                                    <div className={`w-fit text-[22px] ${activeHeader === index ? "text-[#FF4A8CFA] border-b-[1px] border-[#FF4A8CFA]" : "text-[#001636EB]"} `}>{menuItem.label}</div>
+                                                    {activeHeaderIndex === index &&
+                                                        <div className="absolute z-[99999999999] w-[172px] bg-white border-solid border-[1px] border-[#0F143AB8] rounded-[4px]">
+                                                            <div className="absolute top-[-17px] right-[50%] after:content-[url('/Images/landingPage/upperArrow.png')] after:inline-block after:h-full after:w-full"></div>
+                                                            {menuItem.subMenuItems.map((subMenuItem, subIndex) => (
+                                                                <div key={subIndex} className='border-b-[1px] px-[14px] border-[#0F143AB8] last:border-none' onMouseEnter={() => setActiveHeaderIndex(index)} onClick={() => setShow(false)}>
+                                                                    <Link className="" href={`${menuItem.subMenuItemsUrl[subIndex]}`} aria-current="page">
+                                                                        <div className="py-[7px] flex">
+                                                                            <Image width={24} height={24} className='mr-[12px]' alt="Header Logo" src={`${menuItem.subMenuItemsImage[subIndex]}`} />
+                                                                            <div className="flex items-center text-[14px]">{subMenuItem}</div>
+                                                                        </div>
+                                                                    </Link>
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                    }
+                                                </li>
+                                            }
+                                        </React.Fragment>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="w-[89%] absolute bottom-0">
+                            <div className='flex justify-end mr-[-30px] xs:mr-[-46px] sm:mr-[-60px] '>
+                            <Image src="/Images/landingPage/mobileNavbar.svg" alt="Navbar Logo" width={240} height={240} />
+                                </div>
+                            <div className="flex justify-between px-[12px] font-mazzard text-[#0F143A] border-t-[1px] py-[18px]">
+                                <div className="flex">
+                                    <Image src="/Images/landingPage/caption.svg" alt="Caption Logo" width={16} height={16} />
+                                    <p className='ml-[12px] text-[12px]'>2023 by Hustlemad Brands Pvt Ltd</p>
+                                </div>
+                                <div className='flex'>
+                                    <a href="https://twitter.com/hustlemad_" target="_blank" className='mr-[6px]'>
+                                        <Image src="/Images/landingPage/twitter.svg" alt="Twitter Logo" width={16} height={16} />
+                                    </a>
+                                    <a href="https://www.instagram.com/hustlemad/" target="_blank">
+                                        <Image src="/Images/landingPage/instagram.svg" alt="Instagram Logo" width={16} height={16} />
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                {show && (
-                    <div
-                        className={`fixed absolute top-0 left-0 z-[999] inline-block flex h-[100vh] w-full w-full justify-start bg-white pt-4 pb-2 lg:hidden lg:pl-8 ${show ? 'bg-SwishMob1 bg-gradient mx-auto mt-0 bg-cover  bg-center bg-no-repeat' : ''
-                            }`}
-                    >
-                        {/* <div className="mt-[110px] flex w-full px-[40px] flex-col overflow-y-auto [&>*:first-child]:mt-[50px]">
-                            {menuItemsMob.map((menuItem, index) => (
-                                <React.Fragment key={index}>
-                                    <button
-                                        className="flex w-full cursor-pointer items-center text-start font-mazzard text-[61px] font-medium uppercase leading-[72px] tracking-[-0.025em] "
-                                        onClick={() => {
-                                            toggleSubMenu1(index)
-                                            headerActiveColor(index)
-                                            if (menuItem.label === 'Home') {
-                                                setShow(false)
-                                                setHeader(false)
-                                                location.href = '/'
-                                            }
-                                        }}
-                                    >
-                                        {menuItem.label === 'Home' ? (
-                                            <Link href={'/'} legacyBehavior>
-                                                <a target="" href="/" onClick={() => setShow(false)} tabIndex={-1}>
-                                                    <span className='sr-only'>{menuItem.label}</span>
-                                                    <div
-                                                        onClick={() => setShow(false)}
-                                                        className={activeHeader === index ? 'text-[#B9965B]' : ''}
-                                                    >
-                                                        {menuItem.label}
-                                                    </div>
-                                                </a>
-                                            </Link>
-                                        ) : (
-                                            <div className='flex'>
-                                                <span className='sr-only'>{menuItem.label}</span>
-                                                <div className={activeHeader === index ? 'text-[#B9965B]' : ''}>
-                                                    {menuItem.label}</div>
-                                                <div className='text-end ml-4 mt-[6px]'>
-                                                    <Image
-                                                        src="/images/Event/downArrow.svg"
-                                                        alt="downArrow"
-                                                        layout='fixed'
-                                                        height={41}
-                                                        width={50} />
-                                                </div>
-
-                                            </div>
-
-                                        )}
-                                    </button>
-                                    {menuItem.subMenuItems && showSubMenu[index] && (
-                                        <div className="mt-[35px] mb-[30px]">
-                                            {menuItem.subMenuItems &&
-                                                showSubMenu[index] &&
-                                                menuItem.subMenuItems.map((subMenuItem, subIndex) => (
-                                                    <div
-                                                        className={`mb-[27px] flex w-full cursor-pointer items-center text-start font-mazzard text-[30px] font-[411] leading-[85.842%] tracking-[-0.025em] `}
-                                                        key={subIndex}
-                                                        onClick={() => {
-                                                            setShow(false)
-                                                            setHeader(false)
-                                                        }}
-                                                    >
-                                                        <span className='sr-only'>{subMenuItem}</span>
-                                                        <Link href={`${menuItem.subMenuItemsUrl[subIndex]}`} legacyBehavior>
-                                                            {subMenuItem !== "Reservations" ?
-                                                                <a target="">
-                                                                    {subMenuItem}
-                                                                </a>
-                                                                :
-                                                                <a target="blank" className='flex'>
-                                                                    {subMenuItem}
-                                                                    <div className='ml-4'>
-                                                                        <Image
-                                                                            src="/images/Header/externalLinkIcon.png"
-                                                                            alt="downArrow"
-                                                                            layout='fixed'
-                                                                            className='ml-2'
-                                                                            height={22}
-                                                                            width={22} />
-                                                                    </div>
-                                                                </a>
-                                                            }
-                                                        </Link>
-                                                    </div>
-                                                ))}
-                                        </div>
-                                    )}
-                                </React.Fragment>
-                            ))}
-                            <Link href={`/contact#faqs`} legacyBehavior>
-                                <a
-                                    target=""
-                                    onClick={() => {
-                                        setShow(false)
-                                        setActiveHeader(21)
-                                        setHeader(false)
-                                    }}
-                                >
-                                    <div
-                                        className="flex w-full cursor-pointer items-center text-start font-knockout text-[61px] font-medium uppercase leading-[72px] tracking-[-0.025em] "
-                                        onClick={() => {
-                                            setShow(false)
-                                            setActiveHeader(21)
-                                        }}
-                                    >
-                                        <span className='sr-only'>Faqs</span>
-                                        <div className={activeHeader === 21 ? 'text-[#B9965B]' : ''}>Faqs</div>
-                                    </div>
-                                </a>
-                            </Link>
-                            <Link href={`/contact`} legacyBehavior>
-                                <a
-                                    target=""
-                                    onClick={() => {
-                                        setShow(false)
-                                        setActiveHeader(22)
-                                        setHeader(false)
-                                    }}
-                                >
-                                    <div
-                                        className={`flex w-full cursor-pointer items-center text-start font-knockout text-[61px] font-medium uppercase leading-[72px] tracking-[-0.025em] `}
-                                        onClick={() => {
-                                            setShow(false)
-                                            setActiveHeader(22)
-                                        }}
-                                    >
-                                        <span className='sr-only'>Contact US</span>
-                                        <div className={activeHeader === 22 ? 'text-[#B9965B]' : ''}>Contact US</div>
-                                    </div>
-                                </a>
-                            </Link>
-                            <Link href={`/#newsLetterSection`} legacyBehavior>
-                                <a
-                                    target=""
-                                    href="/#newsLetterSection"
-                                    onClick={() => {
-                                        setShow(false)
-                                        setActiveHeader(23)
-                                        setHeader(false)
-                                    }}
-                                >
-                                    <div
-                                        className="flex w-full cursor-pointer items-center text-start font-knockout text-[61px] font-medium uppercase leading-[72px] tracking-[-0.025em] "
-                                        onClick={() => {
-                                            setShow(false)
-                                            setActiveHeader(23)
-                                        }}
-                                    >
-                                        <span className='sr-only'>NEWSLETTER</span>
-                                        <div className={activeHeader === 23 ? 'text-[#B9965B]' : ''}>NEWSLETTER</div>
-                                    </div>
-                                </a>
-                            </Link>
-                            <Link href={`/about#Careers`} legacyBehavior>
-                                <a
-                                    target=""
-                                    onClick={() => {
-                                        setShow(false)
-                                        setActiveHeader(24)
-                                        setHeader(false)
-                                    }}
-                                >
-                                    <div
-                                        className={`flex w-full cursor-pointer items-center text-start font-knockout text-[61px] font-medium uppercase leading-[72px] tracking-[-0.025em] `}
-                                        onClick={() => {
-                                            setShow(false)
-                                            setActiveHeader(24)
-                                        }}
-                                    >
-                                        <span className='sr-only'>careers</span>
-                                        <div className={activeHeader === 24 ? 'text-[#B9965B]' : ''}>careers</div>
-                                    </div>
-                                </a>
-                            </Link>
-                        </div> */}
-                    </div>
-                )}
-            </header>
+                }
+            </div>
         </>
     )
 }

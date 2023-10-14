@@ -36,7 +36,7 @@ const Client = () => {
         </div>
       </div>
       <div className="absolute bottom-0 w-full">
-        <img src="/Images/landingPage/purpleBorder.svg" className="w-full absolute bottom-[-1px] md:bottom-[-4px] xl:bottom-[-8px]" />
+        <img src="/Images/landingPage/purpleBorder.svg" className="w-full absolute bottom-[-1px] md:bottom-[-4px] xl:bottom-[-8px]" alt="Purple Border" />
       </div>
     </div>
   );

@@ -66,7 +66,6 @@ function Testimonials() {
     <>
       <div className={Testimonialstyles.testimonial}>
         <div className={Testimonialstyles.testimonialheading}>
-          {/* <img className={Testimonialstyles.rabbit} src={rabbit} alt=""></img> */}
           <h1 className='font-recoleta text-[44px] text-[#0F143A]'>Our Clients love us 3,000</h1>
           <img className={Testimonialstyles.arrowT} src="/Images/landingPage/horn.svg" alt="horn" />
         </div>
@@ -96,7 +95,7 @@ function Testimonials() {
               <img src={testimonials[index - 1]?.image || testimonials[testimonials.length + index - 1]?.image} alt="avtar" onClick={() => setIndex((index - 1) >= 0 ? index - 1 : testimonials.length - 1)} />
             </div>
             <div className={Testimonialstyles.middlepersondiv}>
-              <img src={testimonials[index]?.image} alt="" />
+              <img src={testimonials[index]?.image} alt="avtar" />
             </div>
             <div className={Testimonialstyles.rightpersondiv}>
               <img src={testimonials[index + 1]?.image || testimonials[index - testimonials.length + 1]?.image} alt="avtar" onClick={() => setIndex((index + 1) < testimonials.length ? index + 1 : 0)} />

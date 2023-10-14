@@ -65,7 +65,7 @@ const HeroSection = () => {
               <Image
                 className={style.hero_image}
                 src={hero_person}
-                alt="our services"
+                alt="Our Services"
               />
             </div>
           </div> : <><SmallHero /></>}

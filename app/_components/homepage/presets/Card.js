@@ -10,7 +10,7 @@ const Card = () => {
   return (
     <div className="card">
       <div className="presetImageContainer">
-        <Image className="presetImage" src={presetPhoto} />
+        <Image className="presetImage" src={presetPhoto} alt="Preset Image" />
       </div>
       <hr className="solid" />
       <div>

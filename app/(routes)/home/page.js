@@ -12,7 +12,7 @@ import Partners from '@/app/_components/homepage/partners';
 const Home = () => {
     return (
         <>
-            <div>
+            <div className='pt-[44px] md:pt-[127px] nxl:pt-[80px]'>
                 <HeroSection/>
                 <OurServices />
                 <Partners/>
