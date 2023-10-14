@@ -43,8 +43,14 @@ export default function OurServices() {
   const [value, setValue] = useState('Our Services');
   return (
     <main className={`transition duration-300 flex flex-col items-center justify-between ${value === "We Procure" ? "bg-[#F7DCFF]" : value === "We Customize" ? "bg-[#C6F5FF]" : value === "We Deliver" ? "bg-[#C7FFDE]" : value === "We Process" ? "bg-[#FFE8BC]" : "bg-[#FAFFC6]"} `}>
-      <div className='w-full grid grid-cols-1 lg:grid-cols-2 container mt-14 relative px-[16px]'>
+      <div className='w-full grid grid-cols-1 lg:grid-cols-2 container mt-14 relative'>
         <div className='w-full grid grid-cols-2 place-content-center mb-44 sm:mb-9 lg:mb-0'>
+          <img src='/Images/landingPage/seviceArrowOne.svg' alt="arrow" className='hidden lg:flex w-[44px] nxl:w-[68px] absolute top-[15%] nxl:top-[13%] 2xl:top-[14%] ml-[calc(19%-2px)] nxl:ml-[calc(17%-2px)] xl:ml-[calc(17%-4px)] 2xl:ml-[calc(17%+8px)]'/>
+          <img src='/Images/landingPage/seviceArrowTwo.svg' alt="arrow" className='hidden lg:flex w-[44px] nxl:w-[52px] absolute top-[41%] nxl:top-[40%] 2xl:top-[42%] ml-[calc(30%-2px)] nxl:ml-[calc(29%-2px)] xl:ml-[calc(29%-4px)] 2xl:ml-[calc(29%+8px)]'/>
+          <img src='/Images/landingPage/serviceArrowThree.svg' alt="arrow" className='hidden lg:flex w-[54px] nxl:w-[85px] absolute bottom-[28%] nxl:bottom-[28%] 2xl:bottom-[27%] ml-[calc(18%+4px)] nxl:ml-[calc(17%-7px)] xl:ml-[calc(17%-9px)] 2xl:ml-[calc(17%+1px)]'/>
+          <img src='/Images/landingPage/serviceCenterArrow.svg' alt="arrow" className='absolute w-[36px] xs:w-[44px] sm:w-[61px] top-[25%] sm:top-[34%] ml-[calc(45%-0px)] xs:ml-[calc(45%-0px)] sm:ml-[calc(46%-4px)] md:ml-[calc(46%+1px)] lg:hidden'/>
+          <img src='/Images/landingPage/serviceRightArrow.svg' alt="arrow" className='absolute w-[36px] sm:w-[49px] top-[39.5%] xs:top-[40%] sm:top-[52%] ml-[calc(68%-0px)] xs:ml-[calc(68%-0px)] sm:ml-[calc(72%-4px)] md:ml-[calc(69%+1px)] lg:hidden'/>
+          <img src='/Images/landingPage/serviceLeftArrow.svg' alt="arrow" className='absolute w-[36px] sm:w-[49px] top-[39.5%] xs:top-[40%] sm:top-[52%] ml-[calc(21%-0px)] xs:ml-[calc(21%-0px)] sm:ml-[calc(22%-4px)] md:ml-[calc(26%+1px)] lg:hidden'/>
           {Services.map((Service, index) => (
             <React.Fragment key={index}>
               {index !== 0 &&
@@ -61,7 +67,7 @@ export default function OurServices() {
           {Services.map((Service, index) => (
             <div key={index}>
               {value === Service.title &&
-                <div className={`text-center lg:text-start transition duration-300`}>
+                <div className={`text-center lg:text-start transition duration-300 px-[16px]`}>
                   <h2 className='font-recoleta text-[24px] sm:text-[40px] lg:text-[48px] xl:text-[52px] font-[900] leading-[27px] sm:leading-[46px] lg:leading-[55px] xl:leading-[60px] text-[#0F143A] mb-2 sm:mb-3 lg:mb-4 xl:mb-6'>{Service.title}</h2>
                   <p className='font-mazzard text-[14px] sm:text-[20px] xl:text-[24px] 3xl:text-[28px] font-[400] leading-[19px] sm:leading-[27px] xl:leading-[32px] 3xl:leading-[38px] text-[#0F143A] opacity-[72%] mb-10'>{Service.description}</p>
                   <img src={Service.src} alt={Service.title} className='w-[200px] sm:w-[240px] lg:w-[300px] 2xl:w-[332px] 3xl:w-[372px] absolute bottom-0 left-1/2 transform -translate-x-1/2 lg:-translate-x-0' />

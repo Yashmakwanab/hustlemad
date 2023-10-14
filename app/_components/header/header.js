@@ -46,7 +46,7 @@ const Header = () => {
 
     return (
         <>
-            <div className='nxl:px-[40px] bg-white fixed w-full z-[9999999999]'>
+            <div className='nxl:px-[40px] bg-white fixed w-full z-[99999999]'>
                 <div className="flex justify-between items-center">
                     <div className="grid grid-cols-1 nxl:grid-cols-5 w-full nxl:w-fit">
                         <div className="items-center py-[12px] nxl:py-[25px] col-span-1 flex justify-between border-b-[1px] border-solid nxl:border-none px-[20px] md:px-[40px] nxl:px-0">
@@ -77,7 +77,7 @@ const Header = () => {
                             </div>
                         </div>
                         <div className="items-center col-span-4 px-[40px] nxl:px-0 py-[10px] nxl:py-0 justify-center hidden md:flex">
-                            <ul className="flex z-[99999999]">
+                            <ul className="flex z-[999999999]">
                                 {menuItems.map((menuItem, index) => (
                                     <React.Fragment key={index}>
                                         {menuItem.directUrl !== "" ?
@@ -141,7 +141,7 @@ const Header = () => {
             <div>
                 {
                     show &&
-                    <div className='fixed h-[100vh] bg-white w-full z-[9999999999999] px-[22px] py-[14px] md:hidden'>
+                    <div className='fixed h-[100vh] bg-white w-full z-[9999999999] px-[22px] py-[14px] md:hidden'>
                         <div className='flex justify-end cursor-pointer' onClick={() => setShow(false)}><Image src="/Images/landingPage/closeIcon.svg" width={20} height={20} /></div>
                         <div className="grid grid-cols-1 nxl:grid-cols-5 w-full nxl:w-fit px-[12px]">
                             <div className="items-center py-[12px] col-span-1 flex justify-between mb-[10px]">
@@ -154,7 +154,7 @@ const Header = () => {
                                     />
                                 </Link>
                             </div>
-                            <div className="items-center col-span-4 py-[10px] justify-center">
+                            <div className="items-center col-span-4 py-[10px] justify-center z-[999999999999999]">
                                 <ul className="flex flex-col z-[99999999]">
                                     {menuItems.map((menuItem, index) => (
                                         <React.Fragment key={index}>

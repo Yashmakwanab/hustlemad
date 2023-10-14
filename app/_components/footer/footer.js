@@ -20,7 +20,7 @@ export default function Footer() {
 
           <div className={style.link_container}>
             <div className={style.links}>
-              <h6 className={style.footer_links_header}>Company</h6>
+              <div className={style.footer_links_header}>Company</div>
               <p>
                 <a className={`${style.footer_social_link} text-reset`}>Catalogue</a>
               </p>
@@ -36,7 +36,7 @@ export default function Footer() {
             </div>
             <div className={style.footer_last}>
               <div className={style.links}>
-                <h6 className={style.footer_links_header}>Contact</h6>
+                <div className={style.footer_links_header}>Contact</div>
                 <p>
                   <a className={`${style.footer_social_link} text-reset`}>Schedule a Call</a>
                 </p>
@@ -49,7 +49,7 @@ export default function Footer() {
 
               </div>
               <div className={style.links}>
-                <h6 className={style.footer_links_header}>Legal</h6>
+                <div className={style.footer_links_header}>Legal</div>
                 <p>
                   <a className={`${style.footer_social_link} text-reset`}>Privacy Policy</a>
                 </p>
