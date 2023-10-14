@@ -16,16 +16,16 @@ const Client = () => {
     <div className="client_container">
 
 
-      <h2 className="font-recoleta text-center text-[24px]  sm:text-[40px] lg:text-[48px] xl:text-[52px] font-[900] leading-[27px] sm:leading-[46px] lg:leading-[55px] xl:leading-[60px] text-[#0F143A] mb-2 sm:mb-3 lg:mb-4 xl:mb-6  mt-2 sm:mt-3 lg:mt-4 xl:mt-6">
+      <h2 className="font-recoleta text-center text-[24px]  sm:text-[40px] lg:text-[48px] xl:text-[52px] font-[900] leading-[27px] sm:leading-[46px] lg:leading-[55px] xl:leading-[60px] text-[#0F143A] pt-[20px] pb-[10px] ">
         Brewing <span className="underlineCtm">Fresh</span> swag for
       </h2>
-      <MarqeeComponent scrollingContent={<div style={{ display: 'flex', padding: '50px 0px', alignItems: 'center', gap: '1em' }}><Image src={IIMB} alt="logo" />
-        <Image src={Frame} alt="logo" />
-        <Image src={Easyat} alt="logo" />
-        <Image src={Groww} alt="logo" />
-        <Image src={Deliveroo} alt="logo" />
-        <Image src={CapTable} alt="logo" />
-        <Image src={ExcelenciaLogo} alt="logo" /></div>} />
+      <MarqeeComponent scrollingContent={<div className=" pt-[15px] pb-[15px] md:pt-[25px] md:pb-[25px] xl:pt-[35px] xl:pb-[35px] 2xl:pt-[55px] 2xl:pb-[55px]" style={{ display: 'flex', alignItems: 'center', gap: '1em' }}><Image src={IIMB} alt="logo" className="marque_images" />
+        <Image src={Frame} alt="logo" className="marque_images" />
+        <Image src={Easyat} alt="logo" className="marque_images" />
+        <Image src={Groww} alt="logo" className="marque_images" />
+        <Image src={Deliveroo} alt="logo" className="marque_images" />
+        <Image src={CapTable} alt="logo" className="marque_images" />
+        <Image src={ExcelenciaLogo} alt="logo" className="marque_images" /></div>} />
     </div>
   );
 };

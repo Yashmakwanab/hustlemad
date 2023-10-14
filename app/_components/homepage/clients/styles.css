@@ -8,6 +8,12 @@
 
 }
 
+.marque_images {
+    width: 150px;
+    height: 50px;
+    object-fit: contain;
+}
+
 .underlineCtm {
     color: #0F143A !important;
     background: url('../../../../public/Images/heroSectionSvgs/client_underline.svg');

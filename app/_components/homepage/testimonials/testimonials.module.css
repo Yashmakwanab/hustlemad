@@ -2,6 +2,7 @@
   background: #ffffff;
   padding-bottom: 56px;
   position: relative;
+  overflow: hidden;
 }
 
 .rabbit {
@@ -204,8 +205,8 @@
   }
 
   .arrowT {
-   width: 120px;
-   height: 120px;
+    width: 120px;
+    height: 120px;
   }
 
   .leftdiv img {
@@ -408,6 +409,10 @@
   .writingp2 {
     margin-right: 35px;
     margin-left: 35px;
+  }
+
+  .rightdiv {
+    right: -70px;
   }
 }
 
