@@ -324,7 +324,7 @@
 
   .leftdiv img {
     width: 150px;
-    height: 150px;
+    height: 100px;
   }
 
   .rightdiv img {
@@ -424,7 +424,7 @@
   }
 
   .rightdiv {
-    right: --59px;
+    right: -59px;
   }
 
   .testimonial .leftdiv img {

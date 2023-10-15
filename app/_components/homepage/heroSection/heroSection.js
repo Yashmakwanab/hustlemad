@@ -6,38 +6,14 @@ import { useEffect, useState } from "react";
 import SmallHero from "./SmallHero/SmallHero";
 import BigHero from "./BigHero/BigHero";
 
-function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height
-  };
-}
-function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-    }
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  return windowDimensions;
-}
-
 const HeroSection = () => {
-  const { height, width } = useWindowDimensions();
   const handleClick = () => {
     console.log("hello");
   };
-  console.log(width)
   return (
     <div className="flex justify-center bg-[#B3FFFA]">
-      <div className={`${style.hero_section} w-full flex-col-reverse flex lg:flex-row container mt-14 relative px-[32px]`}>
-        <div className={`${style.hero_text_section} w-full flex flex-col	items-center lg:items-start`}>
+      <div className={`${style.hero_section} w-full grid grid-cols-1 lg:grid-cols-2 container mt-14 relative px-[32px]`}>
+        <div className={`${style.hero_text_section} w-full flex flex-col	items-center lg:items-start order-last lg:order-first`}>
           <h1 className={`${style.hero_title}  text-[32px] 6xl:text-[76px] 5xl:text-[72px]  md:text-[64px] text-center lg:text-left`}>
             <span>Mindful</span> <span className={style.underline}>Swag</span> for
             your Tribe!
@@ -47,9 +23,12 @@ const HeroSection = () => {
           </p>
           <ButtonPrimary content={"Get Started"} handleClick={handleClick} />
         </div>
-
-        {width > 1024 ?
-          <BigHero /> : <><SmallHero /></>}
+        <div >
+          <div className="hidden lg:block">
+            <BigHero />
+          </div>
+          <div className="block lg:hidden"><SmallHero /></div>
+        </div>
 
       </div>
     </div>
