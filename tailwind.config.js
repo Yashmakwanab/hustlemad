@@ -26,6 +26,7 @@ module.exports = {
     fontFamily: {
       recoleta: ['Recoleta'],
       mazzard: ['Mazzard'],
+      mazzardMedium: ['MazzardMedium'],
     },
   },
   plugins: [],

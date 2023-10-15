@@ -10,7 +10,7 @@ import {
 } from 'antd';
 const { Option } = Select;
 
-const RequestForm = () => {
+const WebRequestForm = () => {
     const [form] = Form.useForm();
     const onFinish = (values) => {
         console.log('Received values of form: ', values);
@@ -18,9 +18,9 @@ const RequestForm = () => {
     };
 
     return (
-        <div className='bg-[#E7FFCE] flex justify-center px-[16px] relative'>
+        <div className='bg-[#F8D82F] flex justify-center px-[16px] web-form rounded-t-[60px] md:rounded-t-[80px]'>
             <div className='container py-[36px] xl:py-[80px] max-w-[520px]  lg:max-w-[880px] xl:max-w-[1040px] 2xl:max-w-[1400px]'>
-                <h1 className='font-recoleta flex justify-center text-[24px] sm:text-[40px] lg:text-[48px] xl:text-[52px] font-[700] leading-[32px] sm:leading-[54px] lg:leading-[65px] xl:leading-[70px] underline underline-offset-[11px] text-[#0F143A] mb-[28px] xl:mb-[80px] decoration-4'>Request Information</h1>
+                <h1 className='font-recoleta flex justify-center text-[24px] sm:text-[40px] lg:text-[48px] xl:text-[52px] font-[700] leading-[32px] sm:leading-[54px] lg:leading-[65px] xl:leading-[70px] underline underline-offset-[5px] text-[#0F143A] mb-[28px] xl:mb-[80px] decoration-2'>Request Information</h1>
                 <Form
                     form={form}
                     layout="vertical"
@@ -63,38 +63,6 @@ const RequestForm = () => {
                     </div>
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap:10 lg:gap-24'>
                         <Form.Item
-                            name="swagpacks"
-                            label="How many Swag packs do you want?"
-                            rules={[
-                                {
-                                    required: true,
-                                    message: 'Please input number!',
-                                    whitespace: true,
-                                },
-                            ]}
-                        >
-                            <Input placeholder="Enter quantity" />
-                        </Form.Item>
-                        <Form.Item
-                            name="preference"
-                            label="Swag Pack of preference"
-                            rules={[
-                                {
-                                    required: true,
-                                    message: 'Please select preference!',
-                                },
-                            ]}
-                        >
-                            <Select suffixIcon={<span className="custom-select-arrow" />} placeholder="select your preference" className='[&>*]:!border-[#0f143acc] [&>div]:!border-[2px] !font-mazzard'>
-                                <Option value="Custom">Custom Pack</Option>
-                                <Option value="Essential">Essential Box</Option>
-                                <Option value="Delight">Delight Box</Option>
-                                <Option value="Patriot">The Patriot Box</Option>
-                            </Select>
-                        </Form.Item>
-                    </div>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap:10 lg:gap-24'>
-                        <Form.Item
                             name="email"
                             label="Work Email Address"
                             rules={[
@@ -120,24 +88,17 @@ const RequestForm = () => {
                                 },
                             ]}
                         >
-                            <Input
-                                prefix="+91-"
-                                placeholder='Phone Number'
-                                className='!bg-transparent [&>*:!bg-transparent] !border-[#0f143acc] !border-[2px] !text-[20px] px-[10px] py-[10px] numberInput'
-                            />
+                            <Input placeholder='Phone Number' />
                         </Form.Item>
                     </div>
                     <Form.Item className='m-0 flex justify-center'>
-                        <Button type="primary" htmlType="submit" className='font-mazzardMedium  bg-[#0F143A] py-3 px-7 text-[14px] sm:text-[18px] lg:text-[20px] xl:text-[26px] font-[500] h-full text-center xl:mt-4'>
+                        <Button type="primary" htmlType="submit" className='font-mazzardMedium  bg-[#000000] py-3 px-7 text-[14px] sm:text-[18px] lg:text-[20px] xl:text-[26px] font-[500] h-full text-center xl:mt-10 shadow-[-5px_5px_0px_0px_#FAA500]'>
                             Submit Request
                         </Button>
                     </Form.Item>
                 </Form>
             </div >
-            <div className="z-[99] absolute bottom-0 w-full">
-                <img src="/Images/landingPage/footerBorder.svg" className="w-full absolute top-[-4px] md:top-[-7px] xl:top-[-9px]" alt="Footer Border" />
-            </div>
         </div >
     );
 };
-export default RequestForm;
+export default WebRequestForm;

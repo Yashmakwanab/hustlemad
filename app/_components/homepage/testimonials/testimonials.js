@@ -76,12 +76,12 @@ function Testimonials() {
           <div className={Testimonialstyles.speechboxp2}>
             <img className={Testimonialstyles.bubble} src="/Images/landingPage/container.svg" alt="container" />
             <div className={Testimonialstyles.writingp2}>
-              <p className='font-mazzard text-[24px] text-[#0F143A]'>
+              <p className='font-mazzardMedium text-[24px] text-[#0F143A]'>
                 {testimonials[index]?.description}
               </p>
               <img src="/Images/landingPage/border.svg" alt="border" />
-              <h2 className='font-mazzard text-[24px] text-[#0F143A]'>{testimonials[index]?.name}</h2>
-              <h3 className='font-mazzard text-[20px] text-[#0F143A] opacity-80'>{testimonials[index]?.companyName}</h3>
+              <h2 className='font-mazzardMedium text-[24px] text-[#0F143A]'>{testimonials[index]?.name}</h2>
+              <h3 className='font-mazzardMedium text-[20px] text-[#0F143A] opacity-80'>{testimonials[index]?.companyName}</h3>
             </div>
           </div>
           <div className={Testimonialstyles.lowerContent}>
