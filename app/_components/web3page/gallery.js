@@ -3,7 +3,7 @@ import './styles.css'
 const OurGallery = () => {
     return (
         <div className=' pb-20'>
-            <h1 className="font-spaceMonoBold text-white text-center  text-[24px] lg:text-[36px]  xl:text-[40px] xll:text-[48px] pb-20"> Our Gallery</h1>
+            <h1 className="font-spaceMonoBold text-white text-center  text-[24px] lg:text-[36px]  xl:text-[40px] xll:text-[48px] pb-5 pt-5 md:pb-10"> Our Gallery</h1>
             <div className='hidden lg:block'>
                 <div className='flex gap-[15px] pl-20 pr-20'>
                     <div className='gallery_container'>
@@ -41,12 +41,12 @@ const OurGallery = () => {
 
                 <div class="parentMobile1">
                     <div class="div1Mobile">  <img className='w-full ' src={'/Images/web3Page/gallery1.png'} /></div>
-                    <div class="div2Mobile"> <img className='w-full ' src={'/Images/web3Page/gallery1.png'} /> </div>
+                    <div class="div2Mobile"> <img className='w-full ' src={'/Images/web3Page/gallery2.png'} /> </div>
                 </div>
-                <img className='w-full ' src={'/Images/web3Page/gallery1.png'} />
+                <img className='w-full ' src={'/Images/web3Page/gallery5.png'} />
                 <div class="parentMobile1">
-                    <div class="div1Mobile">  <img className='w-full ' src={'/Images/web3Page/gallery1.png'} /></div>
-                    <div class="div2Mobile"> <img className='w-full ' src={'/Images/web3Page/gallery1.png'} /> </div>
+                    <div class="div1Mobile">  <img className='w-full ' src={'/Images/web3Page/gallery3.png'} /></div>
+                    <div class="div2Mobile"> <img className='w-full ' src={'/Images/web3Page/gallery4.png'} /> </div>
                 </div>
 
             </div>
