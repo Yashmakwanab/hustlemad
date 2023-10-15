@@ -86,7 +86,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: #ffffff;
-  color: #777;
+  color: #777777;
 }
 
 .ant-input {
