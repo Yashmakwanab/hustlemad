@@ -35,7 +35,7 @@ const Web3Hero = () => {
                         Growing a Community can be tough !!
                     </h1>
                     <h1 className='font-spaceMonoBold text-[28px]  md:text-[40px] nxl:text-[44px]  text-white text-center	lg:text-left'>
-                        Don't worry!! We will be with you, every step of the way.
+                        Don&apos;t worry!! We will be with you, every step of the way.
                     </h1>
 
                 </div>
