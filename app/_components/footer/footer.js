@@ -58,8 +58,23 @@ export default function Footer() {
 
           </div>
         </section>
+        <div className="w-full mt-2">
 
-        <div className={style.footer_footer}>Follow along on our Journey!</div>
+          <div className="flex justify-between px-[12px] font-mazzard text-[#0F143A] border-t-[2px] py-[18px]">
+            <div className="flex">
+              <Image src="/Images/landingPage/caption.svg" alt="Caption Logo" width={16} height={16} />
+              <p className='ml-[12px] text-[12px]'>Follow along on our Journey!</p>
+            </div>
+            <div className='flex'>
+              <a href="https://twitter.com/hustlemad_" target="_blank" className='mr-[6px]'>
+                <Image src="/Images/landingPage/twitter.svg" alt="Twitter Logo" width={16} height={16} />
+              </a>
+              <a href="https://www.instagram.com/hustlemad/" target="_blank">
+                <Image src="/Images/landingPage/instagram.svg" alt="Instagram Logo" width={16} height={16} />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
