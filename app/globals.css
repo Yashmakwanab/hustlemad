@@ -25,14 +25,14 @@
 
 @font-face {
   font-family: 'SpaceMonoBold';
-  src: url('../public/font/Recoleta-Black.woff');
+  src: url('../public/font/SpaceMono-Regular.ttf');
   font-weight: 900;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'SpaceMonoRegular';
-  src: url('../public/font/Recoleta-Regular.ttf');
+  src: url('../public/font/SpaceMono-Regular.ttf');
   font-weight: 400;
   font-display: swap;
 }
