@@ -52,6 +52,20 @@
 }
 
 @font-face {
+  font-family: 'SpaceMono';
+  src: url('../public/font/spacemono/SpaceMono-Regular.ttf');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SpaceMonoBold';
+  src: url('../public/font/spacemono/SpaceMono-Bold.ttf');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'headerFont';
   src:
     url("../public/font/Recoleta-Black.woff") format("woff"),
@@ -89,7 +103,7 @@ body {
   border-radius: 8px;
   font-size: 20px;
   padding: 10px 20px;
-  @apply font-mazzard shadow-[-4px_4px_0px_0px_#272727];
+  @apply font-spaceMono shadow-[-4px_4px_0px_0px_#272727];
 }
 
 .ant-select-selector {
@@ -128,7 +142,7 @@ body {
   font-size: 22px !important;
   color: #0E003D !important;
   font-weight: 500;
-  @apply font-mazzardMedium;
+  @apply font-spaceMonoBold;
 }
 
 @media screen and (max-width: 1279px) {

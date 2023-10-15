@@ -27,8 +27,8 @@ module.exports = {
       recoleta: ['Recoleta'],
       mazzard: ['Mazzard'],
       mazzardMedium: ['MazzardMedium'],
+      spaceMono: ['SpaceMono'],
       spaceMonoBold: ['SpaceMonoBold'],
-      spaceMonoRegular: ['SpaceMonoRegular']
     },
   },
   plugins: [],
