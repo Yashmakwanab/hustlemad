@@ -1,6 +1,8 @@
 'use client'
 
-const Page = () => {
+import Image from "next/image";
+
+const NewPage = () => {
     return (
         <div className='flex justify-center'>
             <div className='container grid nxl:flex my-[48px] sm:my-[85px] nxl:my-[100px] 2xl:my-[123px] nxl:max-w-[952px] xl:max-w-[1072px] 2xl:max-w-[1288px]'>
@@ -31,4 +33,4 @@ const Page = () => {
     );
 }
 
-export default Page;
+export default NewPage;

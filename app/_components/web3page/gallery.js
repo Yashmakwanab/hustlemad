@@ -41,12 +41,12 @@ const OurGallery = () => {
 
                 <div class="parentMobile1">
                     <div class="div1Mobile">  <img className='w-full ' src={'/Images/web3Page/gallery1.png'} /></div>
-                    <div class="div2Mobile"> <img className='w-full ' src={'/Images/web3Page/gallery1.png'} /> </div>
+                    <div class="div2Mobile"> <img className='w-full ' src={'/Images/web3Page/gallery2.png'} /> </div>
                 </div>
-                <img className='w-full ' src={'/Images/web3Page/gallery1.png'} />
+                <img className='w-full ' src={'/Images/web3Page/gallery5.png'} />
                 <div class="parentMobile1">
-                    <div class="div1Mobile">  <img className='w-full ' src={'/Images/web3Page/gallery1.png'} /></div>
-                    <div class="div2Mobile"> <img className='w-full ' src={'/Images/web3Page/gallery1.png'} /> </div>
+                    <div class="div1Mobile">  <img className='w-full ' src={'/Images/web3Page/gallery3.png'} /></div>
+                    <div class="div2Mobile"> <img className='w-full ' src={'/Images/web3Page/gallery4.png'} /> </div>
                 </div>
 
             </div>
