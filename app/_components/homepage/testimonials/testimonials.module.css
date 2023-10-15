@@ -192,7 +192,17 @@
     width: 360px;
     height: 360px;
   }
+
+
 }
+
+@media only screen and (max-width: 1400px) {
+  .rightdiv {
+    right: -56px;
+  }
+}
+
+
 
 @media only screen and (max-width: 1000px) {
   .testimonial h1 {
@@ -313,8 +323,8 @@
   }
 
   .leftdiv img {
-    width: 108px;
-    height: 108px;
+    width: 150px;
+    height: 150px;
   }
 
   .rightdiv img {
@@ -403,6 +413,8 @@
     cursor: pointer;
     margin-left: 24px;
   }
+
+
 }
 
 @media only screen and (max-width:450px) {
@@ -412,7 +424,19 @@
   }
 
   .rightdiv {
-    right: -70px;
+    right: --59px;
+  }
+
+  .testimonial .leftdiv img {
+    height: 50px;
+  }
+
+  .leftdiv {
+    left: -55px;
+  }
+
+  .rightdiv img {
+    height: 50px;
   }
 }
 
