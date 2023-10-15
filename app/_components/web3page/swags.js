@@ -4,7 +4,7 @@ const Swags = () => {
     return (
         <>
             <div className='h-[100vh]'>
-                This is about page
+                This is about page ok
             </div>
         </>
     )
