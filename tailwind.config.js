@@ -29,7 +29,7 @@ module.exports = {
       mazzard: ['Mazzard'],
       mazzardMedium: ['MazzardMedium'],
       spaceMonoBold: ['SpaceMonoBold'],
-      spaceMonoRegular: ['SpaceMonoRegular']
+      spaceMono: ['spaceMono']
     },
   },
   plugins: [],

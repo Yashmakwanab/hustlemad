@@ -31,7 +31,7 @@
 }
 
 @font-face {
-  font-family: 'SpaceMonoRegular';
+  font-family: 'spaceMono';
   src: url('../public/font/SpaceMono-Regular.ttf');
   font-weight: 400;
   font-display: swap;
@@ -97,70 +97,70 @@ body {
   @apply font-mazzard;
 }
 
+
+
 .web-form .ant-input {
+  background-color: white;
+  border: 2px solid #0E003D;
+  border-radius: 8px;
+  font-size: 20px;
+  padding: 10px 20px;
+  @apply font-spaceMono shadow-[-4px_4px_0px_0px_#272727];
+}
 
-  .web-form .ant-input {
-    background-color: white;
-    border: 2px solid #0E003D;
-    border-radius: 8px;
-    font-size: 20px;
-    padding: 10px 20px;
-    @apply font-spaceMono shadow-[-4px_4px_0px_0px_#272727];
-  }
+.ant-select-selector {
+  @apply !h-auto !text-[20px] !px-[20px] !py-[10px]
+}
 
-  .ant-select-selector {
-    @apply !h-auto !text-[20px] !px-[20px] !py-[10px]
-  }
+.ant-select-arrow {
+  @apply !top-[86%] !right-[5%]
+}
 
-  .ant-select-arrow {
-    @apply !top-[86%] !right-[5%]
-  }
+.ant-select, .ant-select-selection-item, .ant-select-item-option, .ant-input-prefix {
+  @apply !font-mazzardMedium text-[#0F143A];
+}
 
-  .ant-select, .ant-select-selection-item, .ant-select-item-option, .ant-input-prefix {
-    @apply !font-mazzardMedium text-[#0F143A];
-  }
+.custom-select-arrow {
+  background-image: url('../public/Images/landingPage/downArrowForm.svg');
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  width: 16px;
+  height: 16px;
+}
 
-  .custom-select-arrow {
-    background-image: url('../public/Images/landingPage/downArrowForm.svg');
-    background-size: 16px 16px;
-    background-repeat: no-repeat;
-    background-position: right center;
-    width: 16px;
-    height: 16px;
-  }
+.numberInput .ant-input {
+  @apply font-mazzard h-auto;
+}
 
-  .numberInput .ant-input {
-    @apply font-mazzard h-auto;
-  }
+.ant-form-item-label label {
+  font-size: 22px !important;
+  color: rgba(15, 20, 58, 0.8) !important;
+  font-weight: 500;
+  @apply font-mazzardMedium;
+}
 
+.web-form .ant-form-item-label label {
+  font-size: 22px !important;
+  color: #0E003D !important;
+  font-weight: 500;
+  @apply font-spaceMonoBold;
+}
+
+@media screen and (max-width: 1279px) {
   .ant-form-item-label label {
-    font-size: 22px !important;
-    color: rgba(15, 20, 58, 0.8) !important;
-    font-weight: 500;
-    @apply font-mazzardMedium;
+    font-size: 20px !important;
   }
+}
 
-  .web-form .ant-form-item-label label {
-    font-size: 22px !important;
-    color: #0E003D !important;
-    font-weight: 500;
-    @apply font-spaceMonoBold;
+@media screen and (max-width: 1023px) {
+  .ant-form-item-label label {
+    font-size: 18px !important;
   }
+}
 
-  @media screen and (max-width: 1279px) {
-    .ant-form-item-label label {
-      font-size: 20px !important;
-    }
+@media screen and (max-width: 639px) {
+  .ant-form-item-label label {
+    font-size: 14px !important;
   }
-
-  @media screen and (max-width: 1023px) {
-    .ant-form-item-label label {
-      font-size: 18px !important;
-    }
-  }
-
-  @media screen and (max-width: 639px) {
-    .ant-form-item-label label {
-      font-size: 14px !important;
-    }
-  }
+}

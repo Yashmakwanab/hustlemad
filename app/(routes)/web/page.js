@@ -12,9 +12,9 @@ const Web = () => {
         <>
             <div className='pt-[44px] md:pt-[127px] nxl:pt-[80px] bg-black'>
                 <Web3Hero />
-                <Swags />
                 <Web3Logo />
                 <PurpleStrip bgColor={"#DA47EF"} />
+                <Swags />
                 <PurpleStrip bgColor={"#8647EF"} />
                 <Communities />
                 <OurGallery />

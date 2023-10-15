@@ -14,12 +14,12 @@ import { FreeMode } from "swiper/modules";
 
 export default function Web3Logo() {
     return (
-        <div className="pt-20 mt-20 pb-10 bg-[#fff] flex flex-col ">
-            <h2 className="font-spaceMonoRegular pl-5 pr-5 text-center text-[24px] sm:text-[40px] lg:text-[48px] xl:text-[52px] font-[900] leading-[27px] sm:leading-[46px] lg:leading-[55px] xl:leading-[60px] text-[#0F143A] mb-2 sm:mb-3 lg:mb-4 xl:mb-6">
+        <div className="pt-10 mt-20  bg-[#fff] flex flex-col ">
+            <h2 className="font-spaceMono pl-5 pr-5 text-center text-[24px] sm:text-[40px] lg:text-[48px] xl:text-[52px] font-[900] leading-[27px] sm:leading-[46px] lg:leading-[55px] xl:leading-[60px] text-[#0F143A] mb-2 sm:mb-3 lg:mb-4 xl:mb-6">
                 We work with some of the Best!
             </h2>
             <Swiper
-                slidesPerView={5}
+                slidesPerView={4}
                 spaceBetween={30}
                 loop={true}
                 freeMode={true}
@@ -29,8 +29,12 @@ export default function Web3Logo() {
                 }}
                 breakpoints={{
 
-                    "@1.50": {
+                    "@0.75": {
                         slidesPerView: 5,
+
+                    },
+                    "@1.50": {
+                        slidesPerView: 6,
 
                     },
                 }}
