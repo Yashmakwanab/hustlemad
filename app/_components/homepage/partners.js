@@ -102,7 +102,7 @@ export default function Partners() {
                                 {value === index &&
                                     <div className='grid grid-cols-4 2xl:grid-cols-8 border-[2px] border-[#2A3DA0] border-solid rounded-[6px]'>
                                         {Partnervvv.images.map((image, index) => (
-                                            <div  key={index} className='font-mazzard text-[20px] text-[#0F143ACC] font-[400] border-[#2A3DA0] border-r-[2px]'>
+                                            <div  key={index} className='font-mazzard text-[20px] text-[#0F143ACC] font-[400] border-[#2A3DA0] border-[1px]'>
                                                 <img src={image} alt="Logo" className='w-[84px] sm:w-[143px] lg:w-[208px] 2xl:w-[182px] h-[52px] sm:h-[110px] lg:h-[160px] 2xl:h-[140px]' />
                                             </div>
                                         ))}

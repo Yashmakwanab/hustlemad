@@ -47,8 +47,8 @@ const Header = () => {
     return (
         <>
             <div className='nxl:px-[40px] bg-white fixed w-full z-[99999999]'>
-                <div className="flex justify-between items-center">
-                    <div className="grid grid-cols-1 nxl:grid-cols-5 w-full nxl:w-fit">
+                <div className="grid grid-cols-1 nxl:flex justify-between items-center">
+                    <div className="w-full nxl:w-fit">
                         <div className="items-center py-[12px] nxl:py-[25px] col-span-1 flex justify-between border-b-[1px] border-solid nxl:border-none px-[20px] md:px-[40px] nxl:px-0">
                             <Link className="flex items-center" href="/">
                                 <img
@@ -60,7 +60,7 @@ const Header = () => {
                             <div className="hidden md:flex nxl:hidden">
                                 <div className="cursor-pointer">
                                     <a href="/" target="_blank">
-                                        <div className="font-mazzard flex bg-[#0F143A] text-white py-[9px] xl:py-[12px] px-[15px] xl:px-[20px] text-[14px] xl:text-[16px] font-600 rounded-[4px] items-center">
+                                        <div className="font-MazzardMedium flex bg-[#0F143A] text-white py-[9px] xl:py-[12px] px-[15px] xl:px-[20px] text-[14px] xl:text-[16px] font-600 rounded-[4px] items-center">
                                             <img src="/Images/landingPage/phoneWhite.svg" className="text-white w-[16px] h-[16px] mr-[12px]" alt="Phone Logo" />
                                             <p>Schedule a Call </p>
                                         </div>
@@ -76,60 +76,52 @@ const Header = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="items-center col-span-4 px-[40px] nxl:px-0 py-[10px] nxl:py-0 justify-center hidden md:flex">
-                            <ul className="flex z-[999999999]">
-                                {menuItems.map((menuItem, index) => (
-                                    <React.Fragment key={index}>
-                                        {menuItem.directUrl !== "" ?
-                                            <li className='mx-[7px] lg:mx-[14px] xl:mx-[11px] 2xl:mx-[14px] font-mazzard text-[14px] text-[#001636EB] font-[600] mt-[12px]' onClick={() => setActiveHeader(index)}>
-                                                <Link className="" href={`${menuItem.directUrl}`}>
-                                                    <div className={`text-[14px] xl:text-[16px] ${activeHeader === index ? "text-[#FF4A8CFA]" : "text-[#001636EB]"} `}>{menuItem.label}</div>
-                                                    {activeHeader === index &&
-                                                        <img
-                                                            src="/Images/landingPage/headerBorder.svg"
-                                                            alt="Header Border"
-                                                            width="50px"
-                                                        />
-                                                    }
-                                                </Link>
-                                            </li>
-                                            :
-                                            <li className="mx-[7px] lg:mx-[14px] nxl:mx-[10px] xl:mx-[11px] 2xl:mx-[14px]  font-mazzard relative text-[14px] cursor-pointer text-[#001636EB] font-[600] mt-[12px]" onMouseEnter={() => setActiveHeaderIndex(index)} onMouseLeave={() => setActiveHeaderIndex(null)} onClick={() => setActiveHeader(index)}>
-                                                <div className={`text-[14px] xl:text-[16px] ${activeHeader === index ? "text-[#FF4A8CFA]" : "text-[#001636EB] pb-[10px]"} `}>{menuItem.label}</div>
+                    </div>
+                    <div className="items-center col-span-4 px-[40px] nxl:px-0 py-[10px] nxl:py-0 justify-center hidden md:flex">
+                        <ul className="flex z-[999999999]">
+                            {menuItems.map((menuItem, index) => (
+                                <React.Fragment key={index}>
+                                    {menuItem.directUrl !== "" ?
+                                        <li className='min-w-min mx-[7px] lg:mx-[14px] xl:mx-[11px] 2xl:mx-[14px] font-mazzardMedium text-[14px] text-[#001636EB] mt-[12px] relative' onClick={() => setActiveHeader(index)}>
+                                            <Link className="" href={`${menuItem.directUrl}`}>
+                                                <div className={`text-[14px] xl:text-[16px] ${activeHeader === index ? "text-[#FF4A8CFA]" : "text-[#001636EB]"} `}>{menuItem.label}</div>
                                                 {activeHeader === index &&
-                                                    <img
-                                                        src="/Images/landingPage/headerBorder.svg"
-                                                        alt="Header Border"
-                                                        width="50px"
-                                                    />
+                                                    <div className="h-full absolute bottom-[-23px] left-0 w-full bg-top bg-no-repeat bg-contain" style={{ backgroundImage: 'url("/Images/landingPage/headerBorder.svg")'}}></div>
                                                 }
-                                                {activeHeaderIndex === index &&
-                                                    <div className={`drop-shadow-lg absolute w-[172px] bg-white border-solid border-[1px] border-[#0F143AB8] rounded-[4px] ${activeHeaderIndex === 1 ? "ml-[-37px]" : activeHeaderIndex === 4 ? "ml-[-51px]" : ""  }`}>
-                                                        <div className="absolute top-[-15px] right-[50%] after:content-[url('/Images/landingPage/upperArrow.png')] after:inline-block after:h-full after:w-full"></div>
-                                                        {menuItem.subMenuItems.map((subMenuItem, subIndex) => (
-                                                            <div key={subIndex} className='border-b-[1px] px-[14px] border-[#0F143AB8] last:border-none' onMouseEnter={() => setActiveHeaderIndex(index)}>
-                                                                <Link className="" href={`${menuItem.subMenuItemsUrl[subIndex]}`} aria-current="page">
-                                                                    <div className="py-[7px] flex">
-                                                                        <Image width={24} height={24} className='mr-[12px]' src={`${menuItem.subMenuItemsImage[subIndex]}`} alt="Header Logo"/>
-                                                                        <div className="flex items-center">{subMenuItem}</div>
-                                                                    </div>
-                                                                </Link>
-                                                            </div>
-                                                        ))}
-                                                    </div>
+                                            </Link>
+                                        </li>
+                                        :
+                                        <li className="min-w-min mx-[7px] lg:mx-[14px] nxl:mx-[10px] xl:mx-[11px] 2xl:mx-[14px] font-mazzardMedium relative text-[14px] cursor-pointer text-[#001636EB] mt-[12px]" onMouseEnter={() => setActiveHeaderIndex(index)} onMouseLeave={() => setActiveHeaderIndex(null)} onClick={() => setActiveHeader(index)}>
+                                            <div className={`text-[14px] xl:text-[16px] ${activeHeader === index ? "text-[#FF4A8CFA]" : "text-[#001636EB] pb-[10px]"} `}>{menuItem.label}</div>
+                                            {activeHeader === index &&
+                                                    <div className="h-full absolute bottom-[-23px] left-0 w-full bg-top bg-no-repeat bg-contain" style={{ backgroundImage: 'url("/Images/landingPage/headerBorder.svg")' }}></div>
                                                 }
-                                            </li>
-                                        }
-                                    </React.Fragment>
-                                ))}
-                            </ul>
-                        </div>
+                                            {activeHeaderIndex === index &&
+                                                <div className={`drop-shadow-lg absolute w-[172px] bg-white border-solid border-[1px] border-[#0F143AB8] rounded-[4px] ${activeHeaderIndex === 1 ? "ml-[-37px]" : activeHeaderIndex === 4 ? "ml-[-51px]" : ""}`}>
+                                                    <div className="absolute top-[-15px] right-[50%] after:content-[url('/Images/landingPage/upperArrow.png')] after:inline-block after:h-full after:w-full"></div>
+                                                    {menuItem.subMenuItems.map((subMenuItem, subIndex) => (
+                                                        <div key={subIndex} className='border-b-[1px] px-[14px] border-[#0F143AB8] last:border-none' onMouseEnter={() => setActiveHeaderIndex(index)}>
+                                                            <Link className="" href={`${menuItem.subMenuItemsUrl[subIndex]}`} aria-current="page">
+                                                                <div className="py-[7px] flex">
+                                                                    <Image width={24} height={24} className='mr-[12px]' src={`${menuItem.subMenuItemsImage[subIndex]}`} alt="Header Logo" />
+                                                                    <div className="flex items-center">{subMenuItem}</div>
+                                                                </div>
+                                                            </Link>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            }
+                                        </li>
+                                    }
+                                </React.Fragment>
+                            ))}
+                        </ul>
                     </div>
                     <div className="hidden nxl:flex">
                         <div className="cursor-pointer">
                             <a href="/" target="_blank">
-                                <div className="font-mazzard flex bg-[#0F143A] text-white py-[9px] xl:py-[12px] px-[15px] xl:px-[20px] text-[14px] xl:text-[16px] font-600 rounded-[4px] items-center">
-                                    <img src="/Images/landingPage/phoneWhite.svg" className="text-white w-[16px] h-[16px] mr-[12px]" alt='Phone White'/>
+                                <div className="font-mazzardMedium flex bg-[#0F143A] text-white py-[9px] xl:py-[12px] px-[15px] xl:px-[20px] text-[14px] xl:text-[16px] font-600 rounded-[4px] items-center">
+                                    <img src="/Images/landingPage/phoneWhite.svg" className="text-white w-[16px] h-[16px] mr-[12px]" alt='Phone White' />
                                     <p>Schedule a Call </p>
                                 </div>
                             </a>
@@ -197,8 +189,8 @@ const Header = () => {
                         </div>
                         <div className="w-[89%] absolute bottom-0">
                             <div className='flex justify-end mr-[-30px] xs:mr-[-46px] sm:mr-[-60px] '>
-                            <Image src="/Images/landingPage/mobileNavbar.svg" alt="Navbar Logo" width={240} height={240} />
-                                </div>
+                                <Image src="/Images/landingPage/mobileNavbar.svg" alt="Navbar Logo" width={240} height={240} />
+                            </div>
                             <div className="flex justify-between px-[12px] font-mazzard text-[#0F143A] border-t-[1px] py-[18px]">
                                 <div className="flex">
                                     <Image src="/Images/landingPage/caption.svg" alt="Caption Logo" width={16} height={16} />

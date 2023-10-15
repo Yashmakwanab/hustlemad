@@ -7,10 +7,6 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <div className="relative">
-      <div className="absolute top-0 w-full">
-        <img src="/Images/landingPage/footerBorder.svg" className="w-full absolute top-[-2px] md:top-[-8px] xl:top-[-12px]" alt="Footer Border" />
-      </div>
-
       <div className={style.footer_section}>
         <section className={style.footer_middle}>
           <div className={style.hustlemad_logo_container}>
