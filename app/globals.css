@@ -31,7 +31,7 @@
 }
 
 @font-face {
-  font-family: 'SpaceMonoRegular';
+  font-family: 'spaceMono';
   src: url('../public/font/SpaceMono-Regular.ttf');
   font-weight: 400;
   font-display: swap;
@@ -96,6 +96,8 @@ body {
   padding: 10px 20px;
   @apply font-mazzard;
 }
+
+
 
 .web-form .ant-input {
   background-color: white;

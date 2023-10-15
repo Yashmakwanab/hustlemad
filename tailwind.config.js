@@ -28,8 +28,8 @@ module.exports = {
       recoleta: ['Recoleta'],
       mazzard: ['Mazzard'],
       mazzardMedium: ['MazzardMedium'],
-      spaceMono: ['SpaceMono'],
       spaceMonoBold: ['SpaceMonoBold'],
+      spaceMono: ['spaceMono']
     },
   },
   plugins: [],

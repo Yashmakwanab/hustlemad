@@ -2,8 +2,8 @@
 import './styles.css'
 const OurGallery = () => {
     return (
-        <div className=' pb-20'>
-            <h1 className="font-spaceMonoBold text-white text-center  text-[24px] lg:text-[36px]  xl:text-[40px] xll:text-[48px] pb-20"> Our Gallery</h1>
+        <div className=' pb-20 flex flex-col w-full items-center'>
+            <h1 className="font-spaceMonoBold  text-white text-center  text-[24px] lg:text-[36px]  xl:text-[40px] xll:text-[48px] pb-5 pt-5 md:pb-10"> Our Gallery</h1>
             <div className='hidden lg:block'>
                 <div className='flex gap-[15px] pl-20 pr-20'>
                     <div className='gallery_container'>
