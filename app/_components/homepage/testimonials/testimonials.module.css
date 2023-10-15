@@ -202,6 +202,18 @@
   }
 }
 
+@media only screen and (max-width: 1200px) {
+  .leftdiv img {
+    width: 230px;
+    height: 147px;
+  }
+
+  .rightdiv img {
+    width: 230px;
+    height: 147px;
+  }
+}
+
 
 
 @media only screen and (max-width: 1000px) {
@@ -219,15 +231,11 @@
     height: 120px;
   }
 
-  .leftdiv img {
-    width: 160px;
-    height: 160px;
+  .leftdiv {
+    left: -20px;
   }
 
-  .rightdiv img {
-    width: 240px;
-    height: 160px;
-  }
+
 
   .middlediv {
     width: 560px;
@@ -274,14 +282,21 @@
 }
 
 @media only screen and (max-width:880px) {
-  .rightdiv img {
-    width: 240px;
-    height: 160px;
-  }
+
 
   .writingp2 {
     margin-left: 40px;
     margin-right: 40px;
+  }
+
+  .leftdiv img {
+    width: 160px;
+    height: 100px;
+  }
+
+  .rightdiv img {
+    width: 240px;
+    height: 100px;
   }
 }
 
@@ -302,6 +317,10 @@
 @media only screen and (max-width:690px) {
   .testimonial {
     padding-bottom: 0px;
+  }
+
+  .rightdiv {
+    right: -20px;
   }
 
   .testimonial h1 {
@@ -417,6 +436,26 @@
 
 }
 
+@media only screen and (max-width:550px) {
+
+
+  .rightdiv {
+    right: -35px;
+  }
+
+  .testimonial .leftdiv img {
+    height: 70px;
+  }
+
+  .leftdiv {
+    left: -55px;
+  }
+
+  .rightdiv img {
+    height: 70px;
+  }
+}
+
 @media only screen and (max-width:450px) {
   .writingp2 {
     margin-right: 35px;
@@ -424,7 +463,7 @@
   }
 
   .rightdiv {
-    right: -59px;
+    right: -49px;
   }
 
   .testimonial .leftdiv img {
@@ -432,7 +471,7 @@
   }
 
   .leftdiv {
-    left: -55px;
+    left: -45px;
   }
 
   .rightdiv img {
