@@ -93,7 +93,7 @@ const RequestForm = () => {
                             </Select>
                         </Form.Item>
                     </div>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap:10 lg:gap-24'>
+                    <div className='grid grid-cols-1 lg:grid-cols-2 gap:10 lg:gap-24 sm:mt-[16px] lg:mt-0'>
                         <Form.Item
                             name="email"
                             label="Work Email Address"
@@ -123,7 +123,7 @@ const RequestForm = () => {
                             <Input
                                 prefix="+91-"
                                 placeholder='Phone Number'
-                                className='!bg-transparent [&>*:!bg-transparent] !border-[#0f143acc] !border-[2px] !text-[20px] px-[10px] py-[10px] numberInput'
+                                className='!bg-transparent [&>*:!bg-transparent] !border-[#0f143acc] !border-[2px] !text-[14px] sm:!text-[20px] px-[10px] py-[7px] sm:py-[10px] numberInput'
                             />
                         </Form.Item>
                     </div>
