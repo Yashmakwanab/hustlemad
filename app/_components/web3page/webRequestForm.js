@@ -18,7 +18,7 @@ const WebRequestForm = () => {
     };
 
     return (
-        <div className='bg-[#F8D82F] flex justify-center px-[16px] web-form rounded-t-[60px] md:rounded-t-[80px]'>
+        <div className='bg-[#F8D82F] flex justify-center px-[16px] web-form rounded-t-[40px] md:rounded-t-[80px]'>
             <div className='container py-[36px] xl:py-[80px] max-w-[520px]  lg:max-w-[880px] xl:max-w-[1040px] 2xl:max-w-[1400px]'>
                 <h1 className='font-spaceMonoBold flex justify-center text-[24px] sm:text-[40px] lg:text-[48px] xl:text-[52px] font-[700] leading-[32px] sm:leading-[54px] lg:leading-[65px] xl:leading-[70px] underline underline-offset-[5px] text-[#0F143A] mb-[28px] xl:mb-[80px] decoration-2'>Request Information</h1>
                 <Form
