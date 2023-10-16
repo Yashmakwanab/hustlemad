@@ -97,8 +97,6 @@ body {
   @apply font-mazzard;
 }
 
-
-
 .web-form .ant-input {
   background-color: white;
   border: 2px solid #0E003D;
@@ -109,11 +107,11 @@ body {
 }
 
 .ant-select-selector {
-  @apply !h-auto !text-[20px] !px-[20px] !py-[10px]
+  @apply !h-auto !text-[20px] !px-[20px] !py-[3px] sm:!py-[10px]
 }
 
 .ant-select-arrow {
-  @apply !top-[86%] !right-[5%]
+  @apply !top-[67%] sm:!top-[86%] !right-[5%]
 }
 
 .ant-select, .ant-select-selection-item, .ant-select-item-option, .ant-input-prefix {
@@ -158,7 +156,7 @@ body {
 
 @media screen and (max-width: 1279px) {
   .ant-form-item-label label,.web-form .ant-form-item-label label, .web-form .ant-input, .ant-input {
-    font-size: 22px !important;
+    font-size: 21px !important;
   }
   .ant-input, .web-form .ant-input  {
     padding: 10px 20px;
@@ -180,5 +178,8 @@ body {
   }
   .ant-input, .web-form .ant-input  {
     padding: 7px 20px;
+  }
+  .ant-select, .ant-select-selection-item {
+    font-size: 14px !important;
   }
 }
