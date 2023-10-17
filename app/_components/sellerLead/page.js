@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React from 'react';
 import {
     Col,
     Row,
@@ -9,18 +9,24 @@ import {
     Select,
 } from 'antd';
 
-const WebRequestForm = () => {
+const SellerLead = () => {
     const [form] = Form.useForm();
     const onFinish = (values) => {
         console.log('Received values of form: ', values);
         form.resetFields();
     };
-
     return (
-        <div className='bg-[#F8D82F] flex justify-center px-[16px] web-form rounded-t-[40px] md:rounded-t-[80px]'>
-            <div className='container py-[36px] xl:py-[80px] max-w-[520px]  lg:max-w-[880px] xl:max-w-[1040px] 2xl:max-w-[1400px]'>
-                <h1 className='font-spaceMonoBold flex justify-center text-[24px] sm:text-[40px] lg:text-[48px] xl:text-[52px] font-[700] leading-[32px] sm:leading-[54px] lg:leading-[65px] xl:leading-[70px] underline underline-offset-[5px] text-[#0F143A] mb-[28px] xl:mb-[80px] decoration-2'>Request Information</h1>
-                <Form
+        <>
+            <div className='h-[100vh] pt-[44px] md:pt-[127px] nxl:pt-[80px] bg-[#D3FFD5B8] flex justify-center'>
+                <div className='container max-w-[1264px]'>
+
+                <div className='grid grid-cols-2 gap-32'>
+                    <div>
+                        <h1 className='font-recoleta text-[48px] text-[#0F143A] leading-[82px] mb-[36px]'>We enable <span className='text-[#05C03D] underline underline-offset-[8px]'>100+</span> D2C brands generate B2B orders</h1>
+                        <p className='font-mazzardMedium text-[28px] text-[#0F143A] leading-[42px]'>Let us <span className='text-[#00BC38] underline underline-offset-[7px]'>grow your revenue</span> while you build your brand</p>
+                    </div>
+                    <div className='max-w[[480px]'>
+                    <Form
                     form={form}
                     layout="vertical"
                     name="register"
@@ -31,7 +37,7 @@ const WebRequestForm = () => {
                     scrollToFirstError
                     requiredMark={false}
                 >
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap:10 lg:gap-24 font-mazzard'>
+                    <div className='font-mazzard'>
                         <Form.Item
                             name="name"
                             label="Enter your Full Name"
@@ -59,8 +65,6 @@ const WebRequestForm = () => {
                         >
                             <Input placeholder="Company Name" />
                         </Form.Item>
-                    </div>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap:10 lg:gap-24'>
                         <Form.Item
                             name="email"
                             label="Email Address"
@@ -96,8 +100,11 @@ const WebRequestForm = () => {
                         </Button>
                     </Form.Item>
                 </Form>
-            </div >
-        </div >
-    );
-};
-export default WebRequestForm;
+                    </div>
+                </div>
+                </div>
+            </div>
+        </>
+    )
+}
+export default SellerLead
