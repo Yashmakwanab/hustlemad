@@ -60,7 +60,7 @@ const Swags = () => {
         setIndex(prevIndex => {
           return (prevIndex + 1 < swags.length) ? (prevIndex + 1) : 0
         });
-      }, 10000);
+      }, 5000);
     }
     Changing()
 
