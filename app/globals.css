@@ -115,6 +115,10 @@ body {
   @apply font-mazzardMedium;
 }
 
+.ant-input:focus{
+  background-color: #FFFFFF;
+}
+
 .sellerLead .ant-form-item{
   margin-bottom: 32px;
 }
