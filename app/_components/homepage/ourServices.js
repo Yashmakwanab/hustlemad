@@ -44,7 +44,7 @@ export default function OurServices() {
   return (
     <main className={`transition duration-300 flex flex-col items-center justify-between ${value === "We Procure" ? "bg-[#F7DCFF]" : value === "We Customize" ? "bg-[#C6F5FF]" : value === "We Deliver" ? "bg-[#C7FFDE]" : value === "We Process" ? "bg-[#FFE8BC]" : "bg-[#FAFFC6]"} `}>
       <div className='w-full grid grid-cols-1 lg:grid-cols-2 container mt-14 relative'>
-        <div className='w-full grid grid-cols-2 place-content-center mb-44 sm:mb-9 lg:mb-0'>
+        <div className='lg:ml-[32px] nxl:ml-[45px] w-full grid grid-cols-2 place-content-center mb-44 sm:mb-9 lg:mb-0'>
           <img src='/Images/landingPage/seviceArrowOne.svg' alt="arrow" className='hidden lg:flex w-[44px] nxl:w-[68px] absolute top-[15%] nxl:top-[13%] 2xl:top-[14%] ml-[calc(19%-2px)] nxl:ml-[calc(17%-2px)] xl:ml-[calc(17%-4px)] 2xl:ml-[calc(17%+8px)]' />
           <img src='/Images/landingPage/seviceArrowTwo.svg' alt="arrow" className='hidden lg:flex w-[44px] nxl:w-[52px] absolute top-[41%] nxl:top-[40%] 2xl:top-[42%] ml-[calc(30%-2px)] nxl:ml-[calc(29%-2px)] xl:ml-[calc(29%-4px)] 2xl:ml-[calc(29%+8px)]' />
           <img src='/Images/landingPage/serviceArrowThree.svg' alt="arrow" className='hidden lg:flex w-[54px] nxl:w-[85px] absolute bottom-[28%] nxl:bottom-[28%] 2xl:bottom-[27%] ml-[calc(18%+4px)] nxl:ml-[calc(17%-7px)] xl:ml-[calc(17%-9px)] 2xl:ml-[calc(17%+1px)]' />
