@@ -41,7 +41,7 @@ const menuItems = [
 ]
 const Header = () => {
     const [show, setShow] = useState(false)
-    const [activeHeader, setActiveHeader] = useState(0)
+    const [activeHeader, setActiveHeader] = useState(5)
     const [activeHeaderIndex, setActiveHeaderIndex] = useState()
 
     return (
@@ -82,20 +82,17 @@ const Header = () => {
                             {menuItems.map((menuItem, index) => (
                                 <React.Fragment key={index}>
                                     {menuItem.directUrl !== "" ?
-                                        <li className='min-w-min mx-[7px] lg:mx-[14px] xl:mx-[11px] 2xl:mx-[14px] font-mazzardMedium text-[14px] text-[#001636EB] mt-[12px] relative' onClick={() => setActiveHeader(index)}>
+                                        <li className='min-w-min mx-[7px] lg:mx-[14px] xl:mx-[11px] 2xl:mx-[14px] font-mazzardMedium text-[14px] text-[#001636EB] mt-[12px] relative'>
                                             <Link className="" href={`${menuItem.directUrl}`}>
-                                                <div className={`text-[14px] xl:text-[16px] ${activeHeader === index ? "text-[#FF4A8CFA]" : "text-[#001636EB]"} `}>{menuItem.label}</div>
-                                                {activeHeader === index &&
-                                                    <div className="h-full absolute bottom-[-23px] left-0 w-full bg-top bg-no-repeat bg-contain" style={{ backgroundImage: 'url("/Images/landingPage/headerBorder.svg")'}}></div>
+                                                <div className={`text-[14px] xl:text-[16px] ${index === 5 ? "text-[#FF4A8CFA]" : "text-[#001636EB]"} `}>{menuItem.label}</div>
+                                                {index === 5 &&
+                                                    <div className="h-full absolute bottom-[-23px] left-0 w-full bg-top bg-no-repeat bg-contain" style={{ backgroundImage: 'url("/Images/landingPage/headerBorder.svg")' }}></div>
                                                 }
                                             </Link>
                                         </li>
                                         :
-                                        <li className="min-w-min mx-[7px] lg:mx-[14px] nxl:mx-[10px] xl:mx-[11px] 2xl:mx-[14px] font-mazzardMedium relative text-[14px] cursor-pointer text-[#001636EB] mt-[12px]" onMouseEnter={() => setActiveHeaderIndex(index)} onMouseLeave={() => setActiveHeaderIndex(null)} onClick={() => setActiveHeader(index)}>
-                                            <div className={`text-[14px] xl:text-[16px] ${activeHeader === index ? "text-[#FF4A8CFA]" : "text-[#001636EB] pb-[10px]"} `}>{menuItem.label}</div>
-                                            {activeHeader === index &&
-                                                    <div className="h-full absolute bottom-[-23px] left-0 w-full bg-top bg-no-repeat bg-contain" style={{ backgroundImage: 'url("/Images/landingPage/headerBorder.svg")' }}></div>
-                                                }
+                                        <li className="min-w-min mx-[7px] lg:mx-[14px] nxl:mx-[10px] xl:mx-[11px] 2xl:mx-[14px] font-mazzardMedium relative text-[14px] cursor-pointer text-[#001636EB] mt-[12px]" onMouseEnter={() => setActiveHeaderIndex(index)} onMouseLeave={() => setActiveHeaderIndex(null)}>
+                                            <div className={`text-[14px] xl:text-[16px] text-[#001636EB] pb-[10px]`}>{menuItem.label}</div>
                                             {activeHeaderIndex === index &&
                                                 <div className={`drop-shadow-lg absolute w-[172px] bg-white border-solid border-[1px] border-[#0F143AB8] rounded-[4px] ${activeHeaderIndex === 1 ? "ml-[-37px]" : activeHeaderIndex === 4 ? "ml-[-51px]" : ""}`}>
                                                     <div className="absolute top-[-15px] right-[50%] after:content-[url('/Images/landingPage/upperArrow.png')] after:inline-block after:h-full after:w-full"></div>
@@ -152,7 +149,6 @@ const Header = () => {
                                         <React.Fragment key={index}>
                                             {menuItem.directUrl !== "" ?
                                                 <li className='font-mazzard text-[#001636EB] font-[600] mt-[32px]' onClick={() => {
-                                                    setActiveHeader(index)
                                                     setShow(false)
                                                 }
                                                 }>
@@ -161,9 +157,7 @@ const Header = () => {
                                                     </Link>
                                                 </li>
                                                 :
-                                                <li className="font-mazzard relative cursor-pointer text-[#001636EB] font-[600] mt-[32px]" onMouseEnter={() => setActiveHeaderIndex(index)} onMouseLeave={() => setActiveHeaderIndex(null)} onClick={() => {
-                                                    setActiveHeader(index)
-                                                }}>
+                                                <li className="font-mazzard relative cursor-pointer text-[#001636EB] font-[600] mt-[32px]" onMouseEnter={() => setActiveHeaderIndex(index)} onMouseLeave={() => setActiveHeaderIndex(null)}>
                                                     <div className={`w-fit text-[22px] ${activeHeader === index ? "text-[#FF4A8CFA] border-b-[1px] border-[#FF4A8CFA]" : "text-[#001636EB]"} `}>{menuItem.label}</div>
                                                     {activeHeaderIndex === index &&
                                                         <div className="absolute z-[99999999999] w-[172px] bg-white border-solid border-[1px] border-[#0F143AB8] rounded-[4px]">

@@ -97,8 +97,6 @@ body {
   @apply font-mazzard;
 }
 
-
-
 .web-form .ant-input {
   background-color: white;
   border: 2px solid #0E003D;
@@ -109,11 +107,11 @@ body {
 }
 
 .ant-select-selector {
-  @apply !h-auto !text-[20px] !px-[20px] !py-[10px]
+  @apply !h-auto !text-[20px] !px-[20px] !py-[3px] sm:!py-[10px] !mb-2
 }
 
 .ant-select-arrow {
-  @apply !top-[86%] !right-[5%]
+  @apply !top-[67%] sm:!top-[86%] !right-[5%]
 }
 
 .ant-select, .ant-select-selection-item, .ant-select-item-option, .ant-input-prefix {
@@ -134,33 +132,54 @@ body {
 }
 
 .ant-form-item-label label {
-  font-size: 22px !important;
+  font-size: 24px !important;
   color: rgba(15, 20, 58, 0.8) !important;
   font-weight: 500;
   @apply font-mazzardMedium;
 }
 
 .web-form .ant-form-item-label label {
-  font-size: 22px !important;
+  font-size: 24px !important;
   color: #0E003D !important;
   font-weight: 500;
   @apply font-spaceMonoBold;
 }
 
+@media screen and (max-width: 1600px) {
+  .ant-form-item-label label,.web-form .ant-form-item-label label, .web-form .ant-input, .ant-input {
+    font-size: 24px !important;
+  }
+  .ant-input, .web-form .ant-input  {
+    padding: 10px 20px;
+  }
+}
+
 @media screen and (max-width: 1279px) {
-  .ant-form-item-label label {
-    font-size: 20px !important;
+  .ant-form-item-label label,.web-form .ant-form-item-label label, .web-form .ant-input, .ant-input {
+    font-size: 21px !important;
+  }
+  .ant-input, .web-form .ant-input  {
+    padding: 10px 20px;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  .ant-form-item-label label {
-    font-size: 18px !important;
+  .ant-form-item-label label,.web-form .ant-form-item-label label, .web-form .ant-input, .ant-input {
+    font-size: 22px !important;
+  }
+  .ant-input, .web-form .ant-input  {
+    padding: 10px 20px;
   }
 }
 
 @media screen and (max-width: 639px) {
-  .ant-form-item-label label {
+  .ant-form-item-label label,.web-form .ant-form-item-label label, .web-form .ant-input, .ant-input {
+    font-size: 14px !important;
+  }
+  .ant-input, .web-form .ant-input  {
+    padding: 7px 20px;
+  }
+  .ant-select, .ant-select-selection-item {
     font-size: 14px !important;
   }
 }

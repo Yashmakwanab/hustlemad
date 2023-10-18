@@ -60,7 +60,7 @@ const Swags = () => {
         setIndex(prevIndex => {
           return (prevIndex + 1 < swags.length) ? (prevIndex + 1) : 0
         });
-      }, 10000);
+      }, 5000);
     }
     Changing()
 
@@ -92,7 +92,7 @@ const Swags = () => {
           </div>
           <div className='w-[100%] nxl:w-[40%] flex justify-center nxl:justify-end mb-[40px] nxl:mb-0'>
             <div className='w-[234px] sm:w-[312px] 2xl:w-[364px] h-[270px] sm:h-[360px] 2xl:h-[360px]'>
-              <Image width={364} height={360} className='mr-[12px]' src={swags[index]?.image} alt='Swag Image' />
+              <Image width={364} height={360} className='mr-[12px]' src={swags[index]?.image} alt='Swag Image' priority />
             </div>
           </div>
         </div>
