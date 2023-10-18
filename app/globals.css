@@ -103,7 +103,20 @@ body {
   border-radius: 8px;
   font-size: 20px;
   padding: 10px 20px;
+  margin-bottom: 32px;
   @apply font-spaceMono shadow-[-4px_4px_0px_0px_#272727];
+}
+
+.sellerLead .ant-input {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 2px solid #00691F;
+  font-size: 20px;
+  padding: 16px 20px;
+  @apply font-mazzardMedium;
+}
+
+.sellerLead .ant-form-item{
+  margin-bottom: 32px;
 }
 
 .ant-select-selector {
@@ -149,6 +162,9 @@ body {
   .ant-form-item-label label,.web-form .ant-form-item-label label, .web-form .ant-input, .ant-input {
     font-size: 24px !important;
   }
+  .sellerLead .ant-input {
+    font-size: 20px !important;
+  }
   .ant-input, .web-form .ant-input  {
     padding: 10px 20px;
   }
@@ -157,6 +173,9 @@ body {
 @media screen and (max-width: 1279px) {
   .ant-form-item-label label,.web-form .ant-form-item-label label, .web-form .ant-input, .ant-input {
     font-size: 21px !important;
+  }
+  .sellerLead .ant-input {
+    font-size: 20px !important;
   }
   .ant-input, .web-form .ant-input  {
     padding: 10px 20px;
@@ -167,6 +186,9 @@ body {
   .ant-form-item-label label,.web-form .ant-form-item-label label, .web-form .ant-input, .ant-input {
     font-size: 22px !important;
   }
+  .sellerLead .ant-input {
+    font-size: 20px !important;
+  }
   .ant-input, .web-form .ant-input  {
     padding: 10px 20px;
   }
@@ -175,6 +197,10 @@ body {
 @media screen and (max-width: 639px) {
   .ant-form-item-label label,.web-form .ant-form-item-label label, .web-form .ant-input, .ant-input {
     font-size: 14px !important;
+  }
+  .sellerLead .ant-input {
+    font-size: 16px !important;
+    padding: 9px 18px;
   }
   .ant-input, .web-form .ant-input  {
     padding: 7px 20px;
