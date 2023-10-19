@@ -121,9 +121,11 @@ body {
   padding: 16px 20px;
   @apply font-mazzardMedium;
 }
-
-.ant-input:focus{
-  background-color: #FFFFFF;
+.ant-input-affix-wrapper {
+  background-color: transparent;
+}
+.ant-input:focus, .ant-input-affix-wrapper:focus{
+  background-color: #FFFFFF !important;
 }
 
 .sellerLead .ant-form-item{

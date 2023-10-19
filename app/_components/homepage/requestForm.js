@@ -123,12 +123,12 @@ const RequestForm = () => {
                             <Input
                                 prefix="+91-"
                                 placeholder='Phone Number'
-                                className='!bg-transparent [&>*:!bg-transparent] !border-[#0f143acc] !border-[2px] !text-[14px] sm:!text-[20px] px-[10px] py-[7px] sm:py-[10px] numberInput'
+                                className='!border-[#0f143acc] !border-[2px] !text-[14px] sm:!text-[20px] px-[10px] py-[7px] sm:py-[10px] numberInput'
                             />
                         </Form.Item>
                     </div>
                     <Form.Item className='m-0 flex justify-center'>
-                        <Button type="primary" htmlType="submit" className='font-mazzardMedium  bg-[#0F143A] py-3 px-7 text-[14px] sm:text-[18px] lg:text-[20px] xl:text-[26px] font-[500] h-full text-center xl:mt-4'>
+                        <Button type="primary" htmlType="submit" className='font-mazzardMedium bg-[#0F143A] py-3 px-7 text-[14px] sm:text-[18px] lg:text-[20px] xl:text-[26px] font-[500] h-full text-center xl:mt-4'>
                             Submit Request
                         </Button>
                     </Form.Item>
