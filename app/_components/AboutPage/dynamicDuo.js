@@ -3,7 +3,6 @@ import Image from "next/image";
 import style from "./style.module.css";
 import "./style.css";
 import React from "react";
-import Flippy, { FrontSide, BackSide } from "react-flippy";
 
 const DynamicDuo = () => {
   return (
@@ -17,7 +16,7 @@ const DynamicDuo = () => {
           Meet your Swag Partners!
         </p>
       </div>
-      <div className="flex flex-col gap-[3em]  items-center justify-center sm:gap-10  md:gap-20 sm:flex-row">
+      {/* <div className="flex flex-col gap-[3em]  items-center justify-center sm:gap-10  md:gap-20 sm:flex-row">
         <Flippy flipOnHover={true} flipDirection="horizontal">
           <FrontSide className={style.card}>
             <div className="flex flex-col">
@@ -106,7 +105,7 @@ const DynamicDuo = () => {
             </div>
           </BackSide>
         </Flippy>
-      </div>
+      </div> */}
     </div>
   );
 };
