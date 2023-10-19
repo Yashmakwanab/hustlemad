@@ -37,6 +37,7 @@ const OurCoreServices = () => {
         {data.map((data, index) => {
           return (
             <div
+              key={index}
               className={`flex items-center justify-center gap-5 w-full sm:max-w-[90%] nxl:flex-col  ${
                 index % 2 == 0 ? style.alternateFlex : ""
               }`}
