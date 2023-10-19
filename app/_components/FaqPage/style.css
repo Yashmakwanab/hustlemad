@@ -1,0 +1,26 @@
+.faq_container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+background-color: #A5FFEF;
+padding: 20px;
+border-radius: 44px;
+border: 1px solid #0F143A;
+}
+
+.faq_content {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.tagline {
+    font-weight: 400;
+}
+
+.ctc_section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
