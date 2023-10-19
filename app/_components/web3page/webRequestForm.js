@@ -8,7 +8,6 @@ import {
     Input,
     Select,
 } from 'antd';
-const { Option } = Select;
 
 const WebRequestForm = () => {
     const [form] = Form.useForm();
