@@ -19,7 +19,7 @@ const FaqHero = () => {
           <p
             className={` text-[#0F143A] max-w-[600px] font-mazzardMedium opacity-80 text-center text-[14px] md:text-[24px]  font-normal`}
           >
-            Don't worry, you're not alone! Here are some of the top questions we
+            Dont worry, youre not alone! Here are some of the top questions we
             get asked all of the time.
           </p>
         </div>
