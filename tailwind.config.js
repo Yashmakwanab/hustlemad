@@ -24,7 +24,7 @@ module.exports = {
       'xll': '1400px',
       '2xl': '1536px',
       '3xl': '1720px',
-      '4xl': '1920px',
+      '4xl': '1921px',
       '5xl': '2100px',
     },
     fontFamily: {
