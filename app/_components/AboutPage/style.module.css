@@ -1,0 +1,127 @@
+.quote {
+    position: relative;
+    max-width: 1080PX;
+    margin: auto 20px;
+}
+
+.quote::before {
+    content: "";
+    width: 40PX;
+    height: 40PX;
+    background-repeat: no-repeat;
+    background-image: url('/Images/aboutPage/quoteleft.svg');
+    position: absolute;
+    background-size: contain;
+    top: 5%;
+    left: -7%;
+}
+
+.quote::after {
+    content: "";
+    background-repeat: no-repeat;
+
+    width: 40PX;
+    height: 40PX;
+    background-image: url('/Images/aboutPage/quoteright.svg');
+    position: absolute;
+    background-size: contain;
+    top: 5%;
+    right: -7%;
+}
+
+@media screen and (max-width: 900px) {
+
+
+    .quote::before {
+        width: 30PX;
+        height: 30PX;
+    }
+
+    .quote::after {
+        width: 30PX;
+        height: 30PX;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .quote::before {
+        width: 20px;
+        height: 20px;
+    }
+
+    .quote::after {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+
+    .quote::before {
+        width: 15px;
+        height: 15px;
+    }
+
+    .quote::after {
+        width: 15px;
+        height: 15px;
+    }
+}
+.alternateFlex{
+    flex-direction: row-reverse;
+    text-align: left;
+}
+.alternateBox{
+    align-items: start;
+}
+@media screen and (min-width: 1180px) {
+    .alternateFlex{
+        flex-direction: column;
+        text-align: center;
+    }
+    .alternateBox{
+        align-items: center;
+    }
+}
+
+
+/* card */
+.card{
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid black;
+position: relative;
+}
+.card2{
+    width: 100%;
+
+    border-radius: 20px;
+    border: 2px solid black;
+position: relative;
+}
+.card::before{
+position: absolute;
+content: '';
+height: 22px;
+width: 22px;
+border: 2px solid black;
+top: -10px;
+left: -8px;
+background-color: #FFCE1F;
+border-radius: 50%;
+}
+
+.card2::before{
+position: absolute;
+content: '';
+height: 22px;
+width: 22px;
+border: 2px solid black;
+top: -10px;
+left: -8px;
+background-color: #82D2FF;
+border-radius: 50%;
+}

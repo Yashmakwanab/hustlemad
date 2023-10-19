@@ -52,6 +52,13 @@
 }
 
 @font-face {
+  font-family: 'MazzardSemiBold';
+  src: url('../public/font/mazzard/MazzardH-SemiBold.ttf');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'SpaceMono';
   src: url('../public/font/spacemono/SpaceMono-Regular.ttf');
   font-weight: 400;
@@ -146,40 +153,66 @@ body {
 }
 
 @media screen and (max-width: 1600px) {
-  .ant-form-item-label label,.web-form .ant-form-item-label label, .web-form .ant-input, .ant-input {
+
+  .ant-form-item-label label,
+  .web-form .ant-form-item-label label,
+  .web-form .ant-input,
+  .ant-input {
     font-size: 24px !important;
   }
-  .ant-input, .web-form .ant-input  {
+
+  .ant-input,
+  .web-form .ant-input {
     padding: 10px 20px;
   }
 }
 
 @media screen and (max-width: 1279px) {
-  .ant-form-item-label label,.web-form .ant-form-item-label label, .web-form .ant-input, .ant-input {
+
+  .ant-form-item-label label,
+  .web-form .ant-form-item-label label,
+  .web-form .ant-input,
+  .ant-input {
     font-size: 21px !important;
   }
-  .ant-input, .web-form .ant-input  {
+
+  .ant-input,
+  .web-form .ant-input {
     padding: 10px 20px;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  .ant-form-item-label label,.web-form .ant-form-item-label label, .web-form .ant-input, .ant-input {
+
+  .ant-form-item-label label,
+  .web-form .ant-form-item-label label,
+  .web-form .ant-input,
+  .ant-input {
     font-size: 22px !important;
   }
-  .ant-input, .web-form .ant-input  {
+
+  .ant-input,
+  .web-form .ant-input {
     padding: 10px 20px;
   }
 }
 
 @media screen and (max-width: 639px) {
-  .ant-form-item-label label,.web-form .ant-form-item-label label, .web-form .ant-input, .ant-input {
+
+  .ant-form-item-label label,
+  .web-form .ant-form-item-label label,
+  .web-form .ant-input,
+  .ant-input {
     font-size: 14px !important;
   }
-  .ant-input, .web-form .ant-input  {
+
+  .ant-input,
+  .web-form .ant-input {
     padding: 7px 20px;
   }
-  .ant-select, .ant-select-selection-item {
+
+  .ant-select,
+  .ant-select-selection-item {
     font-size: 14px !important;
   }
 }
