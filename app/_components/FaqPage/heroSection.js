@@ -15,7 +15,7 @@ function Accordion({ title, content }) {
     >
       <div
         className={`${
-          expanded ? " pb-4" : ""
+          expanded ? "pb-4" : ""
         }  px-6 py-8 xl:px-10 text-left items-center select-none flex justify-between flex-row`}
       >
         <h5 className="flex-1 text-[#0F143A] font-recoleta w-full text-[16px]  md:text-[22px] nxl:text-[28px] xl:text-[28px]   max-w-[90%] ">
@@ -93,7 +93,7 @@ const FaqHero = () => {
             <div className="faq_content items-center flex-col-reverse sm:flex-row  ">
               <div className="ctc_section w-full sm:w-[50%] items-center sm:items-start  ">
                 <h2 className="font-recoleta text-center sm:text-left text-[24px] sm:text-[30px] md:text-[40px] font-[600] leading-[27px] sm:leading-[40px] xl:leading-[44px] text-[#0F143A] ">
-                  Can't find what you're looking for?
+                  Cant find what youre looking for?
                 </h2>
                 <p
                   className={`tagline font-mazzardMedium text-[12px] md:text-[16px] lg:text-[20px] 2xl:text-[24px] md:leading-[30px]   lg:text-left text-[#0F143A]  text-center sm:text-left `}
