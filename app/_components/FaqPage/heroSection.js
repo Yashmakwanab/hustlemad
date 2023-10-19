@@ -10,7 +10,7 @@ function Accordion({ title, content }) {
 
   return (
     <div
-      className="my-2 sm:my-4 md:my-6 shadow-sm cursor-pointer bg-white  border-[1px] border-[#001636ac] rounded-[28px] flex flex-col	"
+      className=" my-3 shadow-sm cursor-pointer bg-white  border-[1px] border-[#001636ac] rounded-[12px] flex flex-col	"
       onClick={toggleExpanded}
     >
       <div
@@ -62,8 +62,8 @@ const FaqHero = () => {
             get asked all of the time.
           </p>
         </div>
-        <div className="max-w-[1000px] flex flex-col m-5 mt-[-10px]   md:mt-[-50px] gap-10 mb-20">
-          <div className="max-w-[1000px] flex flex-col m-2 sm:m-5 mt-[-10px]  md:mt-[-50px] gap-2 ">
+        <div className="max-w-[1000px] flex flex-col m-5 gap-10 mb-20">
+          <div className=" flex flex-col   md:mt-[-50px]  ">
             <Accordion
               title="Alright, but what exactly do you do?"
               content={
@@ -96,7 +96,7 @@ const FaqHero = () => {
                   Can't find what you're looking for?
                 </h2>
                 <p
-                  className={`tagline font-mazzardMedium 6xl:text-[36px]  2xl:text-[24px] leading-[24px]  lg:text-left text-[#0F143A]  text-center sm:text-left `}
+                  className={`tagline font-mazzardMedium text-[12px] md:text-[16px] lg:text-[20px] 2xl:text-[24px] md:leading-[30px]   lg:text-left text-[#0F143A]  text-center sm:text-left `}
                 >
                   You can post your question. Our team will reach out to you as
                   soon as possible!
@@ -111,7 +111,7 @@ const FaqHero = () => {
               <img
                 src="/Images/faq/faqFooter.png"
                 alt="Schedule Image"
-                className="max-h-[250px]"
+                className="max-h-[250px] max-w-[250px]"
               />
             </div>
           </div>

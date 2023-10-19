@@ -12,15 +12,18 @@ border: 1px solid #0F143A;
     display: flex;
     gap: 2em;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
-.tagline {
-    font-weight: 400;
-}
 
 .ctc_section {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 1.2em
+}
+@media screen and (min-width: 768px) {
+    .faq_container{
+        padding: 40px;
+    }
+ 
 }
