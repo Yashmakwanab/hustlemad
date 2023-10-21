@@ -20,7 +20,7 @@ const ContactUs = () => {
         <div className="bg-[#D6FFF5] pt-[64px] pb-[80px] flex justify-center contactForm">
             <div className='max-w-[328px] sm:max-w-[572px] lg:max-w-[828px] xl:max-w-[1044px]'>
                 <div className='flex items-center w-[196px] sm:w-[236px] lg:w-[276px] xl:w-[316px] h-[112px] sm:h-[140px] lg:h-[168px] xl:h-[196px] m-auto mb-[16px] sm:mb-[24px] xl:mb-[32px]'>
-                    <Image src='/Images/contact/contactPhone.svg' alt="Phone Image" width={316} height={196} />
+                    <Image src='/Images/contact/contactPhone.svg' alt="Phone Image" width={316} height={196} priority />
                 </div>
                 <h1 className='font-recoleta font-[600] text-[#0F143A] text-center text-[24px] sm:text-[36px] lg:text-[44px] xl:text-[52px] mb-[12px] sm:mb-[16px] xl:mb-[20px]'>Contact Us</h1>
                 <p className='font-mazzardMedium text-[#0F143ACC] text-center text-[14px] sm:text-[16px] lg:text-[20px] xl:text-[24px] mb-[28px] sm:mb-[40px] lg:mb-[48px] xl:mb-[80px]'>Any Questions or Remarks? Just write us a message!</p>
@@ -34,10 +34,11 @@ const ContactUs = () => {
                         </div>
                         <div className='w-[160px] sm:w-[180px] lg:w-[260px] xl:w-[320px] h-[160px] sm:h-[180px] lg:h-[260px] xl:h-[320px] justify-self-center sm:justify-self-end order-first sm:order-last mb-[28px] sm:mb-0'>
                             <Image
-                                src="/Images/contact/contactgirl.svg"
+                                src="/Images/contact/contactGirlImage.svg"
                                 alt="Contact Girl"
                                 width={320}
                                 height={320}
+                                priority
                             />
                         </div>
                     </div>
