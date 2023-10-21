@@ -114,6 +114,14 @@ body {
   @apply font-spaceMono shadow-[-4px_4px_0px_0px_#272727];
 }
 
+.contactForm .ant-input {
+  background-color: white;
+  border: 2px solid rgba(15, 20, 58, 0.4);
+  font-size: 20px;
+  padding: 16px 20px;
+  @apply font-mazzardMedium;
+}
+
 .sellerLead .ant-input {
   background-color: rgba(255, 255, 255, 0.4);
   border: 2px solid #00691F;
@@ -179,7 +187,7 @@ body {
   .ant-input {
     font-size: 24px !important;
   }
-  .sellerLead .ant-input {
+  .sellerLead .ant-input, .contactForm .ant-input {
     font-size: 20px !important;
   }
   .ant-input, .web-form .ant-input  {
@@ -195,7 +203,7 @@ body {
   .ant-input {
     font-size: 21px !important;
   }
-  .sellerLead .ant-input {
+  .sellerLead .ant-input, .contactForm .ant-input {
     font-size: 20px !important;
   }
   .ant-input, .web-form .ant-input  {
@@ -211,7 +219,7 @@ body {
   .ant-input {
     font-size: 22px !important;
   }
-  .sellerLead .ant-input {
+  .sellerLead .ant-input, .contactForm .ant-input {
     font-size: 20px !important;
   }
   .ant-input, .web-form .ant-input  {
@@ -227,7 +235,7 @@ body {
   .ant-input {
     font-size: 14px !important;
   }
-  .sellerLead .ant-input {
+  .sellerLead .ant-input, .contactForm .ant-input {
     font-size: 16px !important;
     padding: 9px 18px;
   }

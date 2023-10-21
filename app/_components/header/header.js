@@ -131,7 +131,7 @@ const Header = () => {
                 {
                     show &&
                     <div className='fixed h-[100vh] bg-white w-full z-[9999999999] px-[22px] py-[14px] md:hidden'>
-                        <div className='flex justify-end cursor-pointer' onClick={() => setShow(false)}><Image src="/Images/landingPage/closeIcon.svg" width={20} height={20} /></div>
+                        <div className='flex justify-end cursor-pointer' onClick={() => setShow(false)}><Image alt="Close Icon" src="/Images/landingPage/closeIcon.svg" width={20} height={20} /></div>
                         <div className="grid grid-cols-1 nxl:grid-cols-5 w-full nxl:w-fit px-[12px]">
                             <div className="items-center py-[12px] col-span-1 flex justify-between mb-[10px]">
                                 <Link className="flex items-center" href="/">
@@ -160,7 +160,7 @@ const Header = () => {
                                                 <li className="font-mazzard relative cursor-pointer text-[#001636EB] font-[600] mt-[32px]" onMouseEnter={() => setActiveHeaderIndex(index)} onMouseLeave={() => setActiveHeaderIndex(null)}>
                                                     <div className={`w-fit text-[22px] ${activeHeader === index ? "text-[#FF4A8CFA] border-b-[1px] border-[#FF4A8CFA]" : "text-[#001636EB]"} `}>{menuItem.label}</div>
                                                     {activeHeaderIndex === index &&
-                                                        <div className="absolute z-[99999999999] w-[172px] bg-white border-solid border-[1px] border-[#0F143AB8] rounded-[4px]">
+                                                        <div className="absolute z-[99999999999] w-[172px] bg-white border-solid border-[1px] border-[#0F143AB8] rounded-[4px] mt-[10px] md:mt-0">
                                                             <div className="absolute top-[-17px] right-[50%] after:content-[url('/Images/landingPage/upperArrow.png')] after:inline-block after:h-full after:w-full"></div>
                                                             {menuItem.subMenuItems.map((subMenuItem, subIndex) => (
                                                                 <div key={subIndex} className='border-b-[1px] px-[14px] border-[#0F143AB8] last:border-none' onMouseEnter={() => setActiveHeaderIndex(index)} onClick={() => setShow(false)}>

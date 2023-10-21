@@ -44,6 +44,7 @@ const OurCoreServices = () => {
             >
               <img
                 className="w-[30%]  nxl:w-[70%] max-w-[240px]"
+                alt="Image"
                 src={data.image}
               />
 

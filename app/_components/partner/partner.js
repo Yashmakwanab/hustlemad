@@ -29,7 +29,7 @@ const PartnersData = [
     '/Images/landingPage/partnereleven.svg',
 ];
 
-export default function Partners() {
+const Partners = () => {
     return (
         <div className="pt-[68px] sm:pt-[78px] pb-[73px] sm:pb-[98px] bg-[url('/Images/landingPage/partnerBackground.svg')]">
             <div className='flex justify-center items-center'>
@@ -39,11 +39,11 @@ export default function Partners() {
             </div>
             </div>
             <h1 className='font-recoleta font-[700] text-[#0F143A] text-center text-[24px] sm:text-[48px] md:text-[60px] mb-[36px] sm:mb-[52px]'>We get you the Best</h1>
-            <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 nxl:grid-cols-4 xl:grid-cols-5 3xl:grid-cols-6 5xl:grid-cols-7 items-center justify-center w-fit m-auto'>
+            <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 nxl:grid-cols-4 xll:grid-cols-5 3xl:grid-cols-6 5xl:grid-cols-7 items-center justify-center w-fit m-auto'>
                 {
                     PartnersData.map((data, index) => (
-                        <div key={index} className='bg-white w-[130px] sm:w-[182px] lg:w-[260px] h-[100px] sm:h-[140px] lg:h-[200px] outline outline-offset-[-2px] outline-[#001636EB]'>
-                            <Image src={PartnersData[index]} alt="ss" width={260} height={200} />
+                        <div key={index} className='bg-white w-[130px] sm:w-[182px] lg:w-[260px] h-[100px] sm:h-[140px] lg:h-[200px] outline outline-offset-[-1px] lg:outline-offset-[-2px] outline-[#001636EB]'>
+                            <Image src={PartnersData[index]} alt="Partners Image" width={260} height={200} />
                         </div>
                     ))
                 }
@@ -51,3 +51,5 @@ export default function Partners() {
         </div>
     )
 }
+
+export default Partners;

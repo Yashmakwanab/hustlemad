@@ -57,7 +57,7 @@ export default function OurServices() {
                 <div key={index} style={{ backgroundColor: `${Service.circleColor}`, borderColor: `${Service.circleBorder}` }} className={`${index === 1 ? "mr-auto sm:!mr-[50px] lg:!mr-auto" : index === 3 ? "mr-auto sm:!mr-[133px] lg:!mr-auto" : index === 2 ? "ml-auto sm:!ml-[50px] lg:ml-auto" : index === 4 ? "ml-auto sm:!ml-[133px] lg:ml-auto" : ""} mx-auto sm:mx-auto lg:!mx-0 transition duration-300 w-[140px] h-[140px] sm:w-[170px] sm:h-[170px] lg:w-[180px] lg:h-[180px] 2xl:w-[220px] 2xl:h-[220px] 3xl:w-[240px] 3xl:h-[240px] mb-[50px] flex flex-col place-content-center p-4 hover:p-3 rounded-full text-center hover:!bg-[#FFF] hover:border-[4px] hover:xl:border-[6px] hover:!border-[${Service.circleBorder}] cursor-pointer relative`} onMouseEnter={() => setValue(Service.title)} onMouseLeave={() => setValue("Our Services")}
                 >
                   <div className='font-mazzard text-[14px] sm:text-[18px] xl:text-[22px] font-[600] leading-[30px] text-[#0F143A] opacity-[72%] mb-1'>{Service.title}</div>
-                  <p className='font-mazzard text-[10px] sm:text-[12px] xl:text-[14px] font-[400] leading-[13px] sm:leading-[16px] xl:leading-[19px] text-[#0F143A] opacity-[72%]'>{Service.description}</p>
+                  <p className='font-mazzard text-[10px] sm:text-[12px] xl:text-[13px] 2xl:text-[14px] font-[400] leading-[13px] sm:leading-[16px] xl:leading-[19px] text-[#0F143A] opacity-[72%]'>{Service.description}</p>
                 </div>
               }
             </React.Fragment>
