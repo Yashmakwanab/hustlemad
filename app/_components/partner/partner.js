@@ -42,8 +42,8 @@ const Partners = () => {
             <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 nxl:grid-cols-4 xll:grid-cols-5 3xl:grid-cols-6 5xl:grid-cols-7 items-center justify-center w-fit m-auto'>
                 {
                     PartnersData.map((data, index) => (
-                        <div key={index} className='bg-white w-[130px] sm:w-[182px] lg:w-[260px] h-[100px] sm:h-[140px] lg:h-[200px] outline outline-offset-[-1px] lg:outline-offset-[-2px] outline-[#001636EB]'>
-                            <Image src={PartnersData[index]} alt="Partners Image" width={260} height={200} />
+                        <div key={index} className='bg-white w-[130px] sm:w-[182px] lg:w-[260px] h-[100px] sm:h-[140px] lg:h-[200px] outline outline-offset-[-1px] lg:outline-offset-[-2px] outline-[#001636EB] cursor-pointer'>
+                            <Image src={PartnersData[index]} alt="Partners Image" width={260} height={200} className='hover:scale-125 duration-300' />
                         </div>
                     ))
                 }
