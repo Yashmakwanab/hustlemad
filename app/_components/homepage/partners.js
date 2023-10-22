@@ -84,15 +84,11 @@ export default function Partners() {
               to serve you better.
             </h1>
             <ImageWrapper
-              width={50}
-              height={50}
               src="/Images/landingPage/star.webp"
               alt="star"
-              className="w-[32px] sm:w-[48px] lg:w-[64px] h-[24px] sm:h-[36px] lg:h-[48px] absolute right-[-40px] sm:right-[-65px] lg:right-[-85px] top-[-17px] sm:top-[-30px]"
+              className="w-[32px] sm:w-[48px] lg:w-[64px] h-[24px] sm:h-[36px] lg:h-[48px] absolute right-[-30px] sm:right-[-65px] lg:right-[-85px] top-[-17px] sm:top-[-30px]"
             />
             <ImageWrapper
-              width={50}
-              height={50}
               src="/Images/landingPage/star.webp"
               alt="star"
               className="w-[32px] sm:w-[48px] lg:w-[64px] h-[24px] sm:h-[36px] lg:h-[48px] absolute left-[-29px] sm:left-[-43px] lg:left-[-75px] bottom-[6px]"
@@ -113,8 +109,6 @@ export default function Partners() {
                   {value === index && (
                     <div className="w-[71px] sm:w-full">
                       <ImageWrapper
-                        width={100}
-                        height={100}
                         src="/Images/landingPage/underline.webp"
                         alt="underline"
                       />
@@ -135,8 +129,6 @@ export default function Partners() {
                         className="font-mazzard text-[20px] text-[#0F143ACC] font-[400] border-[#2A3DA0] border-[1px]"
                       >
                         <ImageWrapper
-                          width={200}
-                          height={200}
                           src={image}
                           alt="Logo"
                           className="w-[84px] sm:w-[143px] lg:w-[208px] 2xl:w-[182px] h-[52px] sm:h-[110px] lg:h-[160px] 2xl:h-[140px]"

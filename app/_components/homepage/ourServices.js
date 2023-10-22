@@ -47,7 +47,7 @@ export default function OurServices() {
   const [value, setValue] = useState("Our Services");
   return (
     <main
-      className={`transition duration-300 flex flex-col items-center justify-between ${
+      className={`transition  sectionPadding duration-300 flex flex-col items-center justify-between ${
         value === "We Procure"
           ? "bg-[#F7DCFF]"
           : value === "We Customize"
@@ -59,8 +59,8 @@ export default function OurServices() {
           : "bg-[#FAFFC6]"
       } `}
     >
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2 container mt-14 relative">
-        <div className="lg:ml-[32px] nxl:ml-[45px] w-full grid grid-cols-2 place-content-center mb-44 sm:mb-9 lg:mb-0">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 container relative max-w-[1800px]">
+        <div className=" w-full grid grid-cols-2 place-content-center mb-44 sm:mb-9 lg:mb-0">
           <ImageWrapper
             width={500}
             height={500}
@@ -139,22 +139,22 @@ export default function OurServices() {
             </React.Fragment>
           ))}
         </div>
-        <div className="order-first lg:order-last">
+        <div className="order-first lg:order-last  ">
           {Services.map((Service, index) => (
             <div key={index}>
               {value === Service.title && (
                 <div
                   className={`text-center lg:text-start transition duration-300 px-[16px]`}
                 >
-                  <h2 className="font-recoleta text-[24px] sm:text-[40px] lg:text-[48px] xl:text-[52px] font-[900] leading-[27px] sm:leading-[46px] lg:leading-[55px] xl:leading-[60px] text-[#0F143A] mb-2 sm:mb-3 lg:mb-4 xl:mb-6">
-                    {Service.title}
-                  </h2>
-                  <p className="font-mazzard text-[14px] sm:text-[20px] xl:text-[24px] 3xl:text-[28px] font-[400] leading-[19px] sm:leading-[27px] xl:leading-[32px] 3xl:leading-[38px] text-[#0F143A] opacity-[72%] mb-10">
-                    {Service.description}
-                  </p>
+                  <div className="min-h-[120px]">
+                    <h2 className="font-recoleta text-[24px] sm:text-[40px] lg:text-[48px] xl:text-[52px] font-[900] leading-[27px] sm:leading-[46px] lg:leading-[55px] xl:leading-[60px] text-[#0F143A] mb-2 sm:mb-3 lg:mb-4 xl:mb-6">
+                      {Service.title}
+                    </h2>
+                    <p className="font-mazzard m-auto lg:mx-0 max-w-[600px] text-[14px] sm:text-[20px] xl:text-[24px] 3xl:text-[28px] font-[400] leading-[19px] sm:leading-[27px] xl:leading-[32px] 3xl:leading-[38px] text-[#0F143A] opacity-[72%] mb-10">
+                      {Service.description}
+                    </p>
+                  </div>
                   <ImageWrapper
-                    width={1000}
-                    height={500}
                     src={Service.src}
                     alt={Service.title}
                     className="w-[200px] sm:w-[240px] lg:w-[300px] 2xl:w-[332px] 3xl:w-[372px] absolute bottom-0 left-1/2 transform -translate-x-1/2 lg:-translate-x-0"

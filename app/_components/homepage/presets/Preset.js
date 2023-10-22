@@ -16,7 +16,7 @@ import Card from "./Card";
 
 export default function Preset() {
   return (
-    <div className="pt-20 pb-10 bg-[#CEF6FF]">
+    <div className="pt-10 pb-10 bg-[#CEF6FF]">
       <h2 className="font-recoleta text-center text-[24px] sm:text-[40px] lg:text-[48px] xl:text-[52px] font-[900] leading-[27px] sm:leading-[46px] lg:leading-[55px] xl:leading-[60px] text-[#0F143A] mb-2 sm:mb-3 lg:mb-4 xl:mb-6">
         Preset Packs
       </h2>

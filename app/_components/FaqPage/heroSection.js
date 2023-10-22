@@ -4,6 +4,7 @@ import { useState } from "react";
 import ButtonPrimary from "../commonComponents/ButtonPrimary";
 import "./style.css";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
+import Link from "next/link";
 
 function Accordion({ title, content }) {
   const [expanded, setExpanded] = useState(false);
@@ -11,7 +12,7 @@ function Accordion({ title, content }) {
 
   return (
     <div
-      className="my-2 sm:my-4 md:my-6 shadow-sm cursor-pointer bg-white  border-[1px] border-[#001636ac] rounded-[28px] flex flex-col	"
+      className="my-2 sm:my-4 md:my-2 shadow-sm cursor-pointer bg-white  border-[1px] border-[#001636ac] rounded-[16px] flex flex-col	"
       onClick={toggleExpanded}
     >
       <div
@@ -25,7 +26,7 @@ function Accordion({ title, content }) {
         <div className="flex-none pl-2 ">
           {expanded ? (
             <ImageWrapper
-              src="/Images/faq/cross.svg"
+              src="/Images/faq/cross.webp"
               alt="faq"
               width={100}
               height={100}
@@ -33,7 +34,7 @@ function Accordion({ title, content }) {
             />
           ) : (
             <ImageWrapper
-              src="/Images/faq/plus.svg"
+              src="/Images/faq/plus.webp"
               alt="faq"
               width={100}
               height={100}
@@ -63,9 +64,9 @@ const FaqHero = () => {
     <div>
       {" "}
       <div className="relative">
-        <div className="p-5 md:p-20 flex flex-col gap-2 items-center">
+        <div className=" flex flex-col gap-2 items-center">
           <ImageWrapper
-            src="/Images/faq/faqHero.png"
+            src="/Images/faq/faqHero.webp"
             alt="faq"
             width={200}
             height={200}
@@ -80,8 +81,8 @@ const FaqHero = () => {
             get asked all of the time.
           </p>
         </div>
-        <div className="max-w-[1000px] flex flex-col m-5 mt-[-10px]   md:mt-[-50px] gap-10 mb-20">
-          <div className="max-w-[1000px] flex flex-col m-2 sm:m-5 mt-[-10px]  md:mt-[-50px] gap-2 ">
+        <div className="max-w-[1000px] flex flex-col m-5 ]   gap-10 mb-20">
+          <div className="max-w-[1000px] flex flex-col m-2  gap-0 ">
             <Accordion
               title="Alright, but what exactly do you do?"
               content={
@@ -107,31 +108,32 @@ const FaqHero = () => {
               }
             />
           </div>
-          <div className="faq_container pt-[25px]">
-            <div className="faq_content items-center flex-col-reverse sm:flex-row  ">
+          <div className="faq_container sm:pt-[55px] sm:px-[55px] sm:pb-[30px] pt-[30px] px-[30px] pb-[30px]">
+            <div className="faq_content items-center justify-between flex-col-reverse sm:flex-row gap-10 ">
               <div className="ctc_section w-full sm:w-[50%] items-center sm:items-start  ">
                 <h2 className="font-recoleta text-center sm:text-left text-[24px] sm:text-[30px] md:text-[40px] font-[600] leading-[27px] sm:leading-[40px] xl:leading-[44px] text-[#0F143A] ">
                   Cant find what youre looking for?
                 </h2>
                 <p
-                  className={`tagline font-mazzardMedium 6xl:text-[36px]  2xl:text-[24px] leading-[24px]  lg:text-left text-[#0F143A]  text-center sm:text-left `}
+                  className={`tagline font-mazzardMedium 6xl:text-[36px]  2xl:text-[24px] leading-[24px] 2xl:leading-[36px]  lg:text-left text-[#0F143A]  text-center sm:text-left `}
                 >
                   You can post your question. Our team will reach out to you as
                   soon as possible!
                 </p>
 
-                <ButtonPrimary
-                  className={"font-recoleta"}
-                  handleClick={handleClick}
-                  content={"Contact Us"}
-                />
+                <Link
+                  href="contact"
+                  className={
+                    "w-fit font-recoleta bg-[#0F143A] px-[24px] lg:px-[32px] py-[8px] lg:py-[11px] xl:py-[7px] rounded-[6px] text-[14px] sm:text-[18px] lg:text-[24px] text-[#FFFFFF] flex m-auto sm:m-0 leading-[16px] sm:leading-[21px] lg:leading-[28px] xl:leading-[33px]"
+                  }
+                >
+                  Contact Us
+                </Link>
               </div>
               <ImageWrapper
-                src="/Images/faq/faqFooter.png"
+                src="/Images/faq/faqFooter.webp"
                 alt="Schedule Image"
                 className="max-h-[250px]"
-                width={100}
-                height={100}
               />
             </div>
           </div>

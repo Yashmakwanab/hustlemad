@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+* {
+  /* border: 2px solid red; */
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,71 +19,69 @@
 }
 
 @font-face {
-  font-family: 'Recoleta';
-  src: url('../public/font/Recoleta-Black.woff');
+  font-family: "Recoleta";
+  src: url("../public/font/Recoleta-Black.woff");
   font-weight: 900;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'SpaceMonoBold';
-  src: url('../public/font/SpaceMono-Regular.ttf');
+  font-family: "SpaceMonoBold";
+  src: url("../public/font/SpaceMono-Regular.ttf");
   font-weight: 900;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'spaceMono';
-  src: url('../public/font/SpaceMono-Regular.ttf');
+  font-family: "spaceMono";
+  src: url("../public/font/SpaceMono-Regular.ttf");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Mazzard';
-  src: url('../public/font/mazzard/MazzardH-Regular.ttf');
+  font-family: "Mazzard";
+  src: url("../public/font/mazzard/MazzardH-Regular.ttf");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'MazzardMedium';
-  src: url('../public/font/mazzard/MazzardH-Medium.ttf');
+  font-family: "MazzardMedium";
+  src: url("../public/font/mazzard/MazzardH-Medium.ttf");
   font-weight: 500;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'MazzardSemiBold';
-  src: url('../public/font/mazzard/MazzardH-SemiBold.ttf');
+  font-family: "MazzardSemiBold";
+  src: url("../public/font/mazzard/MazzardH-SemiBold.ttf");
   font-weight: 600;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'SpaceMono';
-  src: url('../public/font/spacemono/SpaceMono-Regular.ttf');
+  font-family: "SpaceMono";
+  src: url("../public/font/spacemono/SpaceMono-Regular.ttf");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'SpaceMonoBold';
-  src: url('../public/font/spacemono/SpaceMono-Bold.ttf');
+  font-family: "SpaceMonoBold";
+  src: url("../public/font/spacemono/SpaceMono-Bold.ttf");
   font-weight: 700;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'headerFont';
-  src:
-    url("../public/font/Recoleta-Black.woff") format("woff"),
+  font-family: "headerFont";
+  src: url("../public/font/Recoleta-Black.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'taglineFont';
-  src:
-    url("../public/font/MazzardH-Regular.woff") format("woff"),
+  font-family: "taglineFont";
+  src: url("../public/font/MazzardH-Regular.woff") format("woff");
 }
 
 * {
@@ -95,6 +95,9 @@ body {
   background: #ffffff;
   color: #777777;
 }
+.sectionPadding {
+  @apply px-[16px] md:px-[32px] lg:px-[64] xl:px-[96px] pt-[20px] md:pt-[26px] lg:pt-[36px] xl:pt-[64px];
+}
 
 .ant-input {
   background-color: transparent;
@@ -106,7 +109,7 @@ body {
 
 .web-form .ant-input {
   background-color: white;
-  border: 2px solid #0E003D;
+  border: 2px solid #0e003d;
   border-radius: 8px;
   font-size: 20px;
   padding: 10px 20px;
@@ -124,7 +127,7 @@ body {
 
 .sellerLead .ant-input {
   background-color: rgba(255, 255, 255, 0.4);
-  border: 2px solid #00691F;
+  border: 2px solid #00691f;
   font-size: 20px;
   padding: 16px 20px;
   @apply font-mazzardMedium;
@@ -132,28 +135,33 @@ body {
 .ant-input-affix-wrapper {
   background-color: transparent;
 }
-.contactForm .ant-input:focus, .sellerLead .ant-input:focus,.web-form .ant-input:focus{
-  background-color: #FFFFFF !important;
+.contactForm .ant-input:focus,
+.sellerLead .ant-input:focus,
+.web-form .ant-input:focus {
+  background-color: #ffffff !important;
 }
 
-.sellerLead .ant-form-item{
+.sellerLead .ant-form-item {
   margin-bottom: 32px;
 }
 
 .ant-select-selector {
-  @apply !h-auto !text-[20px] !px-[20px] !py-[3px] sm:!py-[10px] !mb-2
+  @apply !h-auto !text-[20px] !px-[20px] !py-[3px] sm:!py-[10px] !mb-2;
 }
 
 .ant-select-arrow {
-  @apply !top-[67%] sm:!top-[86%] !right-[5%]
+  @apply !top-[67%] sm:!top-[86%] !right-[5%];
 }
 
-.ant-select, .ant-select-selection-item, .ant-select-item-option, .ant-input-prefix {
+.ant-select,
+.ant-select-selection-item,
+.ant-select-item-option,
+.ant-input-prefix {
   @apply !font-mazzardMedium text-[#0F143A];
 }
 
 .custom-select-arrow {
-  background-image: url('../public/Images/landingPage/downArrowForm.webp');
+  background-image: url("../public/Images/landingPage/downArrowForm.svg");
   background-size: 16px 16px;
   background-repeat: no-repeat;
   background-position: right center;
@@ -174,72 +182,76 @@ body {
 
 .web-form .ant-form-item-label label {
   font-size: 24px !important;
-  color: #0E003D !important;
+  color: #0e003d !important;
   font-weight: 500;
   @apply font-spaceMonoBold;
 }
 
 @media screen and (max-width: 1600px) {
-
   .ant-form-item-label label,
   .web-form .ant-form-item-label label,
   .web-form .ant-input,
   .ant-input {
     font-size: 24px !important;
   }
-  .sellerLead .ant-input, .contactForm .ant-input {
+  .sellerLead .ant-input,
+  .contactForm .ant-input {
     font-size: 20px !important;
   }
-  .ant-input, .web-form .ant-input  {
+  .ant-input,
+  .web-form .ant-input {
     padding: 10px 20px;
   }
 }
 
 @media screen and (max-width: 1279px) {
-
   .ant-form-item-label label,
   .web-form .ant-form-item-label label,
   .web-form .ant-input,
   .ant-input {
     font-size: 21px !important;
   }
-  .sellerLead .ant-input, .contactForm .ant-input {
+  .sellerLead .ant-input,
+  .contactForm .ant-input {
     font-size: 20px !important;
   }
-  .ant-input, .web-form .ant-input  {
+  .ant-input,
+  .web-form .ant-input {
     padding: 10px 20px;
   }
 }
 
 @media screen and (max-width: 1023px) {
-
   .ant-form-item-label label,
   .web-form .ant-form-item-label label,
   .web-form .ant-input,
   .ant-input {
     font-size: 22px !important;
   }
-  .sellerLead .ant-input, .contactForm .ant-input {
+  .sellerLead .ant-input,
+  .contactForm .ant-input {
     font-size: 20px !important;
   }
-  .ant-input, .web-form .ant-input  {
+  .ant-input,
+  .web-form .ant-input {
     padding: 10px 20px;
   }
 }
 
 @media screen and (max-width: 639px) {
-
   .ant-form-item-label label,
   .web-form .ant-form-item-label label,
   .web-form .ant-input,
   .ant-input {
     font-size: 14px !important;
   }
-  .sellerLead .ant-input, .contactForm .ant-input {
+  .sellerLead .ant-input,
+  .contactForm .ant-input {
     font-size: 16px !important;
     padding: 9px 18px;
   }
-  .ant-input, .web-form .ant-input  {
+  .ant-input,
+  .web-form .ant-input {
     padding: 7px 20px;
   }
 

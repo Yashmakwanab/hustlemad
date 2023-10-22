@@ -8,6 +8,7 @@ import shoes from "../../../../../public/Images/heroSectionSvgs/shoes.webp";
 import gift from "../../../../../public/Images/heroSectionSvgs/gift.webp";
 import React from "react";
 import Image from "next/image";
+import ImageWrapper from "@/app/_components/ImageWrapper/ImageWrapper";
 const images = [briefcase, shirt, book, shoes, cups]; // Import or define your image sources
 
 const ImageCircle = ({ images }) => {
@@ -31,9 +32,9 @@ const ImageCircle = ({ images }) => {
         const y = radius * Math.sin(angle);
 
         return (
-          <Image
+          <ImageWrapper
             key={index}
-            src={image}
+            src={image.src}
             alt={`Image ${index + 1}`}
             className="image-circle-image"
             style={{
@@ -56,7 +57,7 @@ function Circular() {
   return (
     <>
       <ImageCircle images={images} />
-      <Image className="hero_image" src={gift} alt="our services" />
+      <ImageWrapper className="hero_image" src={gift.src} alt="our services" />
     </>
   );
 }

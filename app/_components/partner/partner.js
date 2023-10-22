@@ -56,7 +56,7 @@ const Partners = () => {
             className="bg-white w-[130px] sm:w-[182px] lg:w-[260px] h-[100px] sm:h-[140px] lg:h-[200px] outline outline-offset-[-1px] lg:outline-offset-[-2px] outline-[#001636EB]"
           >
             <ImageWrapper
-              src={PartnersData[index].src}
+              src={PartnersData[index]}
               alt="Partners Image"
               width={260}
               height={200}

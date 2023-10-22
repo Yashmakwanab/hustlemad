@@ -11,7 +11,7 @@ const WeLoveSwag = () => {
           <div
             className="h-full absolute bottom-[-100%] left-0 w-full bg-top bg-no-repeat bg-contain"
             style={{
-              backgroundImage: 'url("/Images/aboutPage/swagBorder.svg")',
+              backgroundImage: 'url("/Images/aboutPage/swagBorder.webp")',
             }}
           ></div>
         </h1>

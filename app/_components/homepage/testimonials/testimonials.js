@@ -68,8 +68,6 @@ function Testimonials() {
             Our Clients love us 3,000
           </h1>
           <ImageWrapper
-            width={300}
-            height={300}
             className={Testimonialstyles.arrowT}
             src="/Images/landingPage/horn.webp"
             alt="horn"
@@ -77,19 +75,15 @@ function Testimonials() {
         </div>
         <div className={Testimonialstyles.rightdiv}>
           <ImageWrapper
-            width={300}
-            height={300}
-            src="/Images/landingPage/rightHand1.webp"
+            src="/Images/landingPage/rightHand1.svg"
             alt="rightHand"
           />
         </div>
         <div className={Testimonialstyles.middlediv}>
           <div className={Testimonialstyles.speechboxp2}>
             <ImageWrapper
-              width={2000}
-              height={1000}
               className={Testimonialstyles.bubble}
-              src="/Images/landingPage/container.webp"
+              src="/Images/landingPage/container.svg"
               alt="container"
             />
             <div className={Testimonialstyles.writingp2}>
@@ -97,8 +91,6 @@ function Testimonials() {
                 {testimonials[index]?.description}
               </p>
               <ImageWrapper
-                width={2000}
-                height={2000}
                 src="/Images/landingPage/border.webp"
                 alt="border"
               />
@@ -113,9 +105,7 @@ function Testimonials() {
           <div className={Testimonialstyles.lowerContent}>
             <div className={Testimonialstyles.leftarrow}>
               <ImageWrapper
-                width={50}
-                height={50}
-                src="/Images/landingPage/leftArrow.webp"
+                src="/Images/landingPage/leftArrow.svg"
                 alt="leftArrow"
                 onClick={() =>
                   setIndex(index - 1 >= 0 ? index - 1 : testimonials.length - 1)
@@ -124,8 +114,6 @@ function Testimonials() {
             </div>
             <div className={Testimonialstyles.leftmostpersondiv}>
               <ImageWrapper
-                width={50}
-                height={50}
                 src={
                   testimonials[index - 2]?.image ||
                   testimonials[testimonials.length + index - 2]?.image
@@ -146,17 +134,10 @@ function Testimonials() {
                 onClick={() =>
                   setIndex(index - 1 >= 0 ? index - 1 : testimonials.length - 1)
                 }
-                width={50}
-                height={50}
               />
             </div>
             <div className={Testimonialstyles.middlepersondiv}>
-              <ImageWrapper
-                width={50}
-                height={50}
-                src={testimonials[index]?.image}
-                alt="avtar"
-              />
+              <ImageWrapper src={testimonials[index]?.image} alt="avtar" />
             </div>
             <div className={Testimonialstyles.rightpersondiv}>
               <ImageWrapper
@@ -168,8 +149,6 @@ function Testimonials() {
                 onClick={() =>
                   setIndex(index + 1 < testimonials.length ? index + 1 : 0)
                 }
-                width={50}
-                height={50}
               />
             </div>
             <div className={Testimonialstyles.rightmostpersondiv}>
@@ -182,30 +161,21 @@ function Testimonials() {
                 onClick={() =>
                   setIndex(index + 2 < testimonials.length ? index + 2 : 1)
                 }
-                width={50}
-                height={50}
               />
             </div>
             <div className={Testimonialstyles.rightarrow}>
               <ImageWrapper
-                src="/Images/landingPage/rightArrow.webp"
+                src="/Images/landingPage/rightArrow.svg"
                 alt="rightArrow"
                 onClick={() =>
                   setIndex(index + 1 < testimonials.length ? index + 1 : 0)
                 }
-                width={50}
-                height={50}
               />
             </div>
           </div>
         </div>
         <div className={Testimonialstyles.leftdiv}>
-          <ImageWrapper
-            width={300}
-            height={300}
-            src="/Images/landingPage/leftHand.webp"
-            alt="leftHand"
-          />
+          <ImageWrapper src="/Images/landingPage/leftHand.svg" alt="leftHand" />
         </div>
       </div>
     </>

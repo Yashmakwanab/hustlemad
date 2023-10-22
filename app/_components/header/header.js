@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
 
 const menuItems = [
@@ -34,8 +33,8 @@ const menuItems = [
     subMenuItems: ["Our Partners", "Be our Partner"],
     subMenuItemsUrl: ["/partner", "/allcompanies"],
     subMenuItemsImage: [
-      "/Images/landingPage/handIcon.png",
-      "/Images/landingPage/growthIcon.png",
+      "/Images/landingPage/handIcon.webp",
+      "/Images/landingPage/growthIcon.webp",
     ],
   },
   {
@@ -214,9 +213,9 @@ const Header = () => {
               className="flex justify-end cursor-pointer"
               onClick={() => setShow(false)}
             >
-              <Image
+              <ImageWrapper
                 alt="Close Icon"
-                src="/Images/landingPage/closeIcon.svg"
+                src="/Images/landingPage/closeIcon.webp"
                 width={20}
                 height={20}
               />
@@ -224,7 +223,7 @@ const Header = () => {
             <div className="grid grid-cols-1 nxl:grid-cols-5 w-full nxl:w-fit px-[12px]">
               <div className="items-center py-[12px] col-span-1 flex justify-between mb-[10px]">
                 <Link className="flex items-center" href="/">
-                  <Image
+                  <ImageWrapper
                     src="/Images/landingPage/mainLogoHustle.svg"
                     alt="Hustle Logo"
                     width={160}
@@ -289,7 +288,7 @@ const Header = () => {
                                       aria-current="page"
                                     >
                                       <div className="py-[7px] flex">
-                                        <Image
+                                        <ImageWrapper
                                           width={24}
                                           height={24}
                                           className="mr-[12px]"
@@ -315,21 +314,14 @@ const Header = () => {
             </div>
             <div className="w-[89%] absolute bottom-0">
               <div className="flex justify-end mr-[-30px] xs:mr-[-46px] sm:mr-[-60px] ">
-                <Image
-                  src="/Images/landingPage/mobileNavbar.svg"
+                <ImageWrapper
+                  src="/Images/landingPage/mobileNavbar.webp"
                   alt="Navbar Logo"
-                  width={240}
-                  height={240}
+                  className=" h-[200px] sm:h-[240px]"
                 />
               </div>
               <div className="flex justify-between px-[12px] font-mazzard text-[#0F143A] border-t-[1px] py-[18px]">
                 <div className="flex">
-                  <Image
-                    src="/Images/landingPage/caption.svg"
-                    alt="Caption Logo"
-                    width={16}
-                    height={16}
-                  />
                   <p className="ml-[12px] text-[12px]">
                     2023 by Hustlemad Brands Pvt Ltd
                   </p>
@@ -340,22 +332,20 @@ const Header = () => {
                     target="_blank"
                     className="mr-[6px]"
                   >
-                    <Image
-                      src="/Images/landingPage/twitter.svg"
+                    <ImageWrapper
+                      src="/Images/landingPage/twitter.webp"
                       alt="Twitter Logo"
-                      width={16}
-                      height={16}
+                      className="w-[24px]"
                     />
                   </a>
                   <a
                     href="https://www.instagram.com/hustlemad/"
                     target="_blank"
                   >
-                    <Image
-                      src="/Images/landingPage/instagram.svg"
+                    <ImageWrapper
+                      src="/Images/landingPage/instagram.webp"
                       alt="Instagram Logo"
-                      width={16}
-                      height={16}
+                      className="w-[24px]"
                     />
                   </a>
                 </div>

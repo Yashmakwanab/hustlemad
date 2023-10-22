@@ -3,6 +3,7 @@ import Image from "next/image";
 import ButtonPrimary from "../../commonComponents/ButtonPrimary";
 import presetPhoto from "./../../../../public/Images/landingPage/preset.png";
 import "./styles.css";
+import ImageWrapper from "../../ImageWrapper/ImageWrapper";
 const Card = () => {
   const handleClick = () => {
     console.log("btn clicked");
@@ -10,7 +11,11 @@ const Card = () => {
   return (
     <div className="card">
       <div className="presetImageContainer">
-        <Image className="presetImage" src={presetPhoto} alt="Preset Image" />
+        <ImageWrapper
+          className="presetImage"
+          src={presetPhoto.src}
+          alt="Preset Image"
+        />
       </div>
       <hr className="solid" />
       <div>
@@ -22,7 +27,6 @@ const Card = () => {
       </div>
       <hr className="solid" />
       <div>
-
         <ButtonPrimary
           handleClick={handleClick}
           content={
@@ -32,7 +36,9 @@ const Card = () => {
           }
         />
       </div>
-      <span className="max-w-[280px] md:max-w-[320px] xl:max-w-[400px]">**Excl. of taxes</span>
+      <span className="max-w-[280px] md:max-w-[320px] xl:max-w-[400px]">
+        **Excl. of taxes
+      </span>
     </div>
   );
 };

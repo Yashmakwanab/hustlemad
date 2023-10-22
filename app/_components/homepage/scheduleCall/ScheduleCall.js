@@ -11,7 +11,7 @@ const ScheduleCall = () => {
   };
   return (
     <div className="relative ">
-      <div className="absolute top-0 w-full">
+      <div className="absolute top-0 w-full ">
         <ImageWrapper
           width={2000}
           height={100}

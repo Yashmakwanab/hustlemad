@@ -1,81 +1,80 @@
-.hustlemad_logo_container{
-    display: flex;
-    flex-direction: column;
-color: #0F143A;
-font-weight: 500;
-gap: 0.5em;
+.hustlemad_logo_container {
+  display: flex;
+  flex-direction: column;
+  color: #0f143a;
+  font-weight: 500;
+  gap: 0.5em;
 }
-.hustlemad_logo{
-    width: 180px;
+.hustlemad_logo {
+  width: 180px;
 }
-.footer_section{
-    padding: 1.5em;
-    background-color: white;
-    color: #888;
+.footer_section {
+  padding: 1.5em;
+  background-color: white;
+  color: #888;
+  font-family: "mazzard";
 }
-.footer_footer{
-    margin: 0px 40px;
-    border-top: 2px solid #ccc;
-    padding:20px;
+.footer_footer {
+  margin: 0px 40px;
+  border-top: 2px solid #ccc;
+  padding: 20px;
 }
-.footer_middle{
-    display: flex;
-    padding: 2em;
-    margin: 0px 40px;
-    justify-content: space-between;
+.footer_middle {
+  display: flex;
+  /* padding: 2em; */
+  margin: 0px 40px;
+  justify-content: space-between;
 }
-.link_container{
-    display: flex;
-    gap: 2em;
+.link_container {
+  display: flex;
+  gap: 2em;
 }
-.footer_links_header{
-    font-weight: 900;
-    color: #0F143A;
-    align-self: center;
-    border-bottom: 2px solid #0F143A;
+.footer_links_header {
+  font-weight: 900;
+  color: #0f143a;
+  display: inline-block;
+  @apply underline underline-offset-4
+  /* align-self: center; */;
 }
-.links{
-    display: flex;
-    gap: 1em;
-    flex-direction: column;
+.links {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
 }
-.footer_social_link{
-   color: #0F143A99;
-   font-size: 16px;
-
+.footer_social_link {
+  color: #0f143a99;
+  font-size: 16px;
 }
-.footer_last{
-    gap:2em
+.footer_last {
+  gap: 2em;
 }
 @media only screen and (min-width: 800px) {
-    
-    .footer_last {
-      display: flex;
-      gap: 2em;
-    }
+  .footer_last {
+    display: flex;
+    gap: 2em;
   }
+}
 @media only screen and (max-width: 800px) {
-    .footer_last {
-      display: flex;
-      flex-direction: column;
-    }
-   
+  .footer_last {
+    display: flex;
+    flex-direction: column;
   }
+}
 @media only screen and (max-width: 600px) {
-    .link_container{
-        flex-direction: column;
-    }
-   .footer_middle{
+  .link_container {
+    flex-direction: column;
+  }
+  .footer_middle {
     flex-direction: column;
     align-items: center;
     gap: 1em;
-   }
-   .links{
+  }
+  .links {
     align-items: center;
     justify-content: center;
     text-align: center;
-   }
-   .footer_links_header{
-    text-align: center;
-   }
   }
+  .footer_links_header {
+    text-align: center;
+  }
+}
