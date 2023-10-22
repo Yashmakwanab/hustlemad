@@ -11,7 +11,7 @@ export default function PolicyPage() {
       </h1>
       <div>
         <article className=" font-mazzardSemiBold leading-[26px] sm:leading-[32px] md:leading-[36px] nxl:leading-[40px] text-[16px] sm:text-[20px] md:text-[24px] nxl:text-[30px]  text-justify text-[#0F143A] ">
-          We value the trust you place in us. That's why we insist upon the
+          We value the trust you place in us. That&#39;s why we insist upon the
           highest standards for secure transactions and customer information
           privacy. Please read the following statement to learn about our
           information gathering and dissemination practices.
@@ -78,7 +78,7 @@ export default function PolicyPage() {
               information by choosing not to use a particular service or feature
               on the Website. We may automatically track certain information
               about you based upon your behaviour on our Website. We use this
-              information to do internal research on our users' demographics,
+              information to do internal research on our users&#39; demographics,
               interests, and behaviour to better understand, protect and serve
               our users. This information is compiled and analysed on an
               aggregated basis. This information may include the URL that you
@@ -89,15 +89,15 @@ export default function PolicyPage() {
           </li>
           <li>
             <article className="text-[12px] font-mazzard leading-[20px] sm:leading-[24px] md:leading-[28px] nxl:leading-[32px] sm:text-[14px] md:text-[16px] nxl:text-[20px]  text-justify">
-              We use data collection devices such as "cookies" on certain pages
+              We use data collection devices such as &#34;cookies&#34; on certain pages
               of the Website to help analyse our web page flow, measure
-              promotional effectiveness, and promote trust and safety. "Cookies"
+              promotional effectiveness, and promote trust and safety. &#34;Cookies&#34;
               are small files placed on your hard drive that assist us in
               providing our services. We offer certain features that are only
-              available through the use of a "cookie". We also use cookies to
+              available through the use of a &#34;cookie&#34;. We also use cookies to
               allow you to enter your password less frequently during a session.
               Cookies can also help us provide information that is targeted to
-              your interests. Most cookies are "session cookies," meaning that
+              your interests. Most cookies are &#34;session cookies,&#34; meaning that
               they are automatically deleted from your hard drive at the end of
               a session. You are always free to decline our cookies if your
               browser permits, although in that case you may not be able to use
@@ -107,7 +107,7 @@ export default function PolicyPage() {
           </li>
           <li>
             <article className="text-[12px] font-mazzard leading-[20px] sm:leading-[24px] md:leading-[28px] nxl:leading-[32px] sm:text-[14px] md:text-[16px] nxl:text-[20px]  text-justify">
-              Additionally, you may encounter "cookies" or other similar devices
+              Additionally, you may encounter &#34;cookies&#34; or other similar devices
               on certain pages of the Website that are placed by third parties.
               We do not control the use of cookies by third parties.
             </article>
@@ -184,7 +184,7 @@ export default function PolicyPage() {
             <article className="text-[12px] font-mazzard leading-[20px] sm:leading-[24px] md:leading-[28px] nxl:leading-[32px] sm:text-[14px] md:text-[16px] nxl:text-[20px]  text-justify">
               In our efforts to continually improve our product and service
               offerings, we collect and analyze demographic and profile data
-              about our users' activity on our Website.
+              about our users&#39; activity on our Website.
             </article>
           </li>
           <li>
@@ -211,11 +211,11 @@ export default function PolicyPage() {
                 Cookies
               </h2>
               <article className="text-[12px] font-mazzard leading-[20px] sm:leading-[24px] md:leading-[28px] nxl:leading-[32px] sm:text-[14px] md:text-[16px] nxl:text-[20px]  text-justify">
-                A "cookie" is a small piece of information stored by a web
+                A &#34;cookie&#34; is a small piece of information stored by a web
                 server on a web browser so it can be later read back from that
                 browser. Cookies are useful for enabling the browser to remember
                 information specific to a given user. We place both permanent
-                and temporary cookies in your computer's hard drive. The cookies
+                and temporary cookies in your computer&#39;s hard drive. The cookies
                 do not contain any of your personally identifiable information.
               </article>
             </div>
