@@ -132,7 +132,7 @@ body {
 .ant-input-affix-wrapper {
   background-color: transparent;
 }
-.ant-input:focus, .ant-input-affix-wrapper:focus{
+.contactForm .ant-input:focus, .sellerLead .ant-input:focus,.web-form .ant-input:focus{
   background-color: #FFFFFF !important;
 }
 

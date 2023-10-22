@@ -16,67 +16,68 @@ const DynamicDuo = () => {
           Meet your Swag Partners!
         </p>
       </div>
-      {/* <div className="flex flex-col gap-[3em]  items-center justify-center sm:gap-10  md:gap-20 sm:flex-row">
-        <Flippy flipOnHover={true} flipDirection="horizontal">
-          <FrontSide className={style.card}>
-            <div className="flex flex-col">
-              <img
-                src={"/Images/aboutPage/adityaImage.png"}
-                className="pt-6 pl-4 pr-4 pb-2"
-              />
-              <p className="font-recoleta text-[#001636] text-[20px] md:text-[26px] text-center opacity-80    ">
-                Aditya Agrawal
-              </p>
-            </div>
-          </FrontSide>
-          <BackSide className={style.card2}>
-            <div>
-              <div className="text-container bg-[#E3FFC0]">
-                <p className="text-center text-[#001636] font-mazzardMedium ">
-                  Aditya is a true blue first-principles guy. An avid trekker,
-                  he has worked at the intersection of finance & tech for 7
-                  years. Take your half baked ideas to him and you've lost him.
+      <div className="flex flex-col gap-[3em]  items-center justify-center sm:gap-10  md:gap-20 sm:flex-row">
+        <div className="flip-card" tabIndex="0">
+          <div className="flip-card-inner">
+            <div className="flip-card-front">
+              <div className="flex flex-col">
+                <img
+                  src={"/Images/aboutPage/adityaImage.png"}
+                  className="pt-6 pl-4 pr-4 pb-2"
+                />
+                <p className="font-recoleta text-[#001636] text-[20px] md:text-[26px] text-center opacity-80">
+                  Aditya Agrawal
                 </p>
-                <div className="flex items-center gap-2 pb-2">
-                  <div className="flex items-end justify-center ]">
-                    <img
-                      src="/Images/aboutPage/twiter.svg"
-                      alt="Twitter Logo"
-                    />
-                  </div>
-                  <div className="flex items-end justify-center">
-                    <img src="/Images/aboutPage/mail.svg" alt="Twitter Logo" />
-                  </div>
-                  <div className="flex items-end justify-center">
-                    <img
-                      src="/Images/aboutPage/linkedin.svg"
-                      alt="Twitter Logo"
-                    />
+              </div>
+            </div>
+            <div className="flip-card-back">
+              <div className="pt-6 pl-4 pr-4">
+                <div className="text-container bg-[#E3FFC0] w-[350px] h-[360px] mb-2">
+                  <p className="text-center text-[#001636] font-mazzardMedium text-[24px]">
+                  Aditya is a true blue first-principles guy. An avid trekker, he has worked at the intersection of finance & tech for 7 years. Take your half baked ideas to him and you’ve lost him.
+                  </p>
+                  <div className="flex items-center gap-2 pb-2">
+                    <div className="flex items-end justify-center ]">
+                      <img
+                        src="/Images/aboutPage/twiter.svg"
+                        alt="Twitter Logo"
+                      />
+                    </div>
+                    <div className="flex items-end justify-center">
+                      <img src="/Images/aboutPage/mail.svg" alt="Twitter Logo" />
+                    </div>
+                    <div className="flex items-end justify-center">
+                      <img
+                        src="/Images/aboutPage/linkedin.svg"
+                        alt="Twitter Logo"
+                      />
+                    </div>
                   </div>
                 </div>
+                <p className="font-recoleta text-[#001636] text-[20px] md:text-[26px] text-center opacity-80">
+                  Aditya Agrawal
+                </p>
               </div>
-              <p className="font-recoleta text-[#001636]   text-[20px] md:text-[26px] text-center  opacity-80">
-                Aditya Agrawal
-              </p>
             </div>
-          </BackSide>
-        </Flippy>
-        <Flippy flipOnHover={true} flipDirection="horizontal">
-          <FrontSide className={style.card}>
+          </div>
+        </div>
+        <div className="flip-card" tabIndex="0">
+          <div className="flip-card-inner">
+            <div className="flip-card-front">
             <div className="flex flex-col">
               <img
                 src={"/Images/aboutPage/anuragImage.png"}
                 className="pt-6 pl-4 pr-4 pb-2"
               />
-              <p className="font-recoleta text-[#001636] text-[20px] md:text-[26px] text-center opacity-80    ">
+              <p className="font-recoleta text-[#001636] text-[20px] md:text-[26px] text-center opacity-80">
                 Anurag Singh
               </p>
             </div>
-          </FrontSide>
-          <BackSide className={style.card2}>
-            <div>
-              <div className="text-container bg-[#FFDCC8]">
-                <p className="text-center text-[#001636] font-mazzardMedium ">
+            </div>
+            <div className="flip-card-back">
+            <div className="pt-6 pl-4 pr-4">
+              <div className="text-container bg-[#FFDCC8] w-[196px]  sm:w-[350px] h-[212px] sm:h-[360px] mb-2">
+                <p className="text-center text-[#001636] font-mazzardMedium text-[24px]">
                   Brand logo quiz winner. Loves music, football & motor-racing.
                   Reach out to Anurag for all your crazy ideas, you will find
                   the perfect audience in him.
@@ -99,13 +100,14 @@ const DynamicDuo = () => {
                   </div>
                 </div>
               </div>
-              <p className="font-recoleta text-[#001636]   text-[20px] md:text-[26px] text-center  opacity-80">
+              <p className="font-recoleta text-[#001636] text-[20px] md:text-[26px] text-center  opacity-80">
                 Anurag Singh
               </p>
             </div>
-          </BackSide>
-        </Flippy>
-      </div> */}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

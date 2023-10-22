@@ -17,9 +17,9 @@ export default function TermsPage() {
           Hustlemad (www.hustlemad.com) is a website (the “Website”) operated by
           Hustlemad Brands Private Limited (Indian Private Limited Company) (the
           “Website Owner”). The Website Owner, including subsidiaries and
-          affiliates (or "we" or "us" or "our") provides the information
+          affiliates (or &#34;we&#34; or &#34;us&#34; or &#34;our&#34;) provides the information
           contained on this Website or any of the pages comprising the Website
-          to visitors ("Visitors") (cumulatively referred to as "you" or "your"
+          to visitors (&#34;Visitors&#34;) (cumulatively referred to as &#34;you&#34; or &#34;your&#34;
           hereinafter) subject to the terms and conditions set out in these
           Website terms and conditions, the privacy policy and any other
           relevant terms and conditions, policies and notices which may be
@@ -28,7 +28,7 @@ export default function TermsPage() {
           website or by using any facilities or services made available through
           it or by transacting through or on it, you are agreeing to the terms
           and conditions that appear below (all of which are called the
-          "Agreement"). This Agreement is made between you and us.
+            &#34;Agreement&#34;). This Agreement is made between you and us.
         </article>
       </div>
       <div>
@@ -131,8 +131,8 @@ export default function TermsPage() {
         <article className="text-[12px] font-mazzard leading-[20px] sm:leading-[24px] md:leading-[28px] nxl:leading-[32px] sm:text-[14px] md:text-[16px] nxl:text-[20px]  text-justify">
           In a credit card transaction, you must use your own credit card. We
           will not be liable for any credit card fraud. The liability to use a
-          card fraudulently will be on the user and the onus to 'prove
-          otherwise' shall be exclusively on the user.
+          card fraudulently will be on the user and the onus to &#39;prove
+          otherwise&#39; shall be exclusively on the user.
         </article>
       </div>
       <div>
@@ -141,7 +141,7 @@ export default function TermsPage() {
         </h2>
         <article className="text-[12px] font-mazzard leading-[20px] sm:leading-[24px] md:leading-[28px] nxl:leading-[32px] sm:text-[14px] md:text-[16px] nxl:text-[20px]  text-justify">
           The trademarks, names, logos and service marks (collectively
-          "trademarks") displayed on this website are registered and
+            &#34;trademarks&#34;) displayed on this website are registered and
           unregistered trademarks of the Website Owner and the suppliers of the
           products listed on the Website. Nothing contained on this website
           should be construed as granting any license or right to use any
@@ -203,7 +203,7 @@ export default function TermsPage() {
           which may be suffered by you or any third party (including your
           company), as a result of or which may be attributable, directly or
           indirectly, to your access and use of the website, any information
-          contained on the website, your or your company's personal information
+          contained on the website, your or your company&#39;s personal information
           or material and information transmitted over our system. In
           PARTICULAR, neither the Website Owner nor any third party or data or
           content provider shall be liable in any way to you or to any other
@@ -290,7 +290,7 @@ export default function TermsPage() {
                 conditions, policies or notices. You acknowledge that by
                 visiting the website from time to time, you shall become bound
                 to the current version of the relevant terms and conditions (the
-                "current version") and, unless stated in the current version,
+                  &#34;current version&#34;) and, unless stated in the current version,
                 all previous versions shall be superseded by the current
                 version. You shall be responsible for reviewing the then current
                 version each time you visit the website.
