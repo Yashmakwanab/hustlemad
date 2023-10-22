@@ -1,6 +1,9 @@
 import LatestWork from "@/app/_components/WorkPage/work";
 import React from "react";
 
+import LatestWork from "@/app/_components/WorkPage/work";
+import React from "react";
+
 const Works = () => {
   return (
     <>
