@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ButtonPrimary from "../commonComponents/ButtonPrimary";
 import "./style.css";
+import ImageWrapper from "../ImageWrapper/ImageWrapper";
 
 function Accordion({ title, content }) {
   const [expanded, setExpanded] = useState(false);
@@ -23,9 +24,21 @@ function Accordion({ title, content }) {
         </h5>
         <div className="flex-none pl-2 ">
           {expanded ? (
-            <img src="/Images/faq/cross.svg" alt="faq" className="w-[24px]" />
+            <ImageWrapper
+              src="/Images/faq/cross.svg"
+              alt="faq"
+              width={100}
+              height={100}
+              className="w-[24px]"
+            />
           ) : (
-            <img src="/Images/faq/plus.svg" alt="faq" className="w-[24px]" />
+            <ImageWrapper
+              src="/Images/faq/plus.svg"
+              alt="faq"
+              width={100}
+              height={100}
+              className="w-[24px]"
+            />
           )}
         </div>
       </div>
@@ -51,7 +64,12 @@ const FaqHero = () => {
       {" "}
       <div className="relative">
         <div className="p-5 md:p-20 flex flex-col gap-2 items-center">
-          <img src="/Images/faq/faqHero.png" alt="faq" />
+          <ImageWrapper
+            src="/Images/faq/faqHero.png"
+            alt="faq"
+            width={200}
+            height={200}
+          />
           <h1 className="font-recoleta relative  text-center  text-[24px] lg:text-[36px]  xl:text-[40px] xll:text-[48px] 2xl:text-[52px] text-[#0F143A]">
             Frequently Asked Questions
           </h1>
@@ -108,10 +126,12 @@ const FaqHero = () => {
                   content={"Contact Us"}
                 />
               </div>
-              <img
+              <ImageWrapper
                 src="/Images/faq/faqFooter.png"
                 alt="Schedule Image"
                 className="max-h-[250px]"
+                width={100}
+                height={100}
               />
             </div>
           </div>

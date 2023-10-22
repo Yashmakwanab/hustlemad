@@ -1,21 +1,22 @@
 "use client";
 import Image from "next/image";
 import style from "./style.module.css";
+import ImageWrapper from "../ImageWrapper/ImageWrapper";
 const data = [
   {
-    image: "/Images/aboutPage/qualityBox.svg",
+    image: "/Images/aboutPage/qualityBox.webp",
     title: "Quality",
     values:
       "Quality swag is a great culture enabler in a company. It not just delights your team but also inspires them to be #BetterEveryday. ",
   },
   {
-    image: "/Images/aboutPage/costBox.svg",
+    image: "/Images/aboutPage/costBox.webp",
     title: "Cost",
     values:
       "We save hundreds of your human hours that go in the mundanity of swag design, curation, procurement, storage & distribution. ",
   },
   {
-    image: "/Images/aboutPage/deliveryBox.svg",
+    image: "/Images/aboutPage/deliveryBox.webp",
     title: "Delivery",
     values:
       "We are not a vendor, we are your partner in growth. We effectively manage end-to-end procurement operations to keep you lean. ",
@@ -42,7 +43,9 @@ const OurCoreServices = () => {
                 index % 2 == 0 ? style.alternateFlex : ""
               }`}
             >
-              <img
+              <ImageWrapper
+                width={300}
+                height={300}
                 className="w-[30%]  nxl:w-[70%] max-w-[240px]"
                 alt="Image"
                 src={data.image}
@@ -69,10 +72,12 @@ const OurCoreServices = () => {
         })}
       </div>
       <div className="absolute bottom-0 w-full z-[99]">
-        <img
-          src="/Images/landingPage/purpleBorder.svg"
+        <ImageWrapper
+          src="/Images/landingPage/purpleBorder.webp"
           className="w-full absolute bottom-[-1px] md:top-[-4px] xl:top-[-8px]"
           alt="Green Border"
+          width={1000}
+          height={200}
         />
       </div>
     </div>

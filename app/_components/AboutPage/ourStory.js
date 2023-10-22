@@ -1,4 +1,5 @@
 "use client";
+import ImageWrapper from "../ImageWrapper/ImageWrapper";
 import style from "./style.module.css";
 const OurStory = () => {
   return (
@@ -33,7 +34,9 @@ const OurStory = () => {
         swag while you focus on doing what you do the best!
       </p>
       <div className="absolute bottom-0 w-full z-[99]">
-        <img
+        <ImageWrapper
+          width={2000}
+          height={200}
           src="/Images/landingPage/purpleBorder.svg"
           className="w-full absolute bottom-[-1px] md:top-[-4px] xl:top-[-8px]"
           alt="Green Border"

@@ -153,7 +153,7 @@ body {
 }
 
 .custom-select-arrow {
-  background-image: url('../public/Images/landingPage/downArrowForm.svg');
+  background-image: url('../public/Images/landingPage/downArrowForm.webp');
   background-size: 16px 16px;
   background-repeat: no-repeat;
   background-position: right center;
