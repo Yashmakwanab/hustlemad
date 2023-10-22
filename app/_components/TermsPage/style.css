@@ -1,0 +1,31 @@
+.terms_title {
+    text-decoration: underline;
+}
+.terms_subTitle {
+    position: relative;
+    margin-bottom: 0.5em;
+    display: inline-block !important;
+}
+.terms_subTitle::after{
+    content: '';
+    width: 100%;
+    height:2px;
+    position: absolute;
+    bottom: 0.1em;
+    left: 0%;
+    background-color: black;
+}
+.terms_list_title  {
+    position: relative;
+    margin-bottom: 0.5em;
+    display: inline-block !important;
+}
+.terms_list_title::after{
+    content: '';
+    width: 100%;
+    height:1.5px;
+    position: absolute;
+    bottom: 0.1em;
+    left: 0%;
+    background-color: black;
+}

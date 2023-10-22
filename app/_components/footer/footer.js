@@ -3,6 +3,7 @@ import React from "react";
 import logo from "./../../../public/Images/landingPage/Hustlemad_logo.svg";
 import style from "./footer.module.css";
 import Image from "next/image";
+import Link from "next/link";
 export default function Footer() {
   return (
     <div className="relative">
@@ -20,24 +21,29 @@ export default function Footer() {
           <div className={style.link_container}>
             <div className={style.links}>
               <div className={style.footer_links_header}>Company</div>
-              <p>
-                <a className={`${style.footer_social_link} text-reset`}>
-                  Catalogue
-                </a>
-              </p>
+              <Link
+                className={`${style.footer_social_link} text-reset`}
+                href="/catalogue"
+              >
+                Catalogue
+              </Link>
               <p>
                 <a className={`${style.footer_social_link} text-reset`}>
                   Blogs
                 </a>
               </p>
-              <p>
-                <a className={`${style.footer_social_link} text-reset`}>
-                  About Us
-                </a>
-              </p>
-              <p>
-                <a className={`${style.footer_social_link} text-reset`}>FAQs</a>
-              </p>
+              <Link
+                className={`${style.footer_social_link} text-reset`}
+                href="/about"
+              >
+                About Us
+              </Link>
+              <Link
+                className={`${style.footer_social_link} text-reset`}
+                href="/faq"
+              >
+                FAQs
+              </Link>
             </div>
             <div className={style.footer_last}>
               <div className={style.links}>
@@ -47,11 +53,13 @@ export default function Footer() {
                     Schedule a Call
                   </a>
                 </p>
-                <p>
-                  <a className={`${style.footer_social_link} text-reset`}>
-                    Be our Partner
-                  </a>
-                </p>
+                <Link
+                  className={`${style.footer_social_link} text-reset`}
+                  href="/partner"
+                >
+                  Be our Partner
+                </Link>
+
                 <p>
                   <a className={`${style.footer_social_link} text-reset`}>
                     Contact Us
@@ -60,16 +68,19 @@ export default function Footer() {
               </div>
               <div className={style.links}>
                 <div className={style.footer_links_header}>Legal</div>
-                <p>
-                  <a className={`${style.footer_social_link} text-reset`}>
-                    Privacy Policy
-                  </a>
-                </p>
-                <p>
-                  <a className={`${style.footer_social_link} text-reset`}>
-                    Terms of Use
-                  </a>
-                </p>
+
+                <Link
+                  className={`${style.footer_social_link} text-reset`}
+                  href="/policy"
+                >
+                  Privacy Policy
+                </Link>
+                <Link
+                  className={`${style.footer_social_link} text-reset`}
+                  href="/terms"
+                >
+                  Terms of Use
+                </Link>
               </div>
             </div>
           </div>
