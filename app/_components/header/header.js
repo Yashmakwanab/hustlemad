@@ -343,7 +343,7 @@ const Header = () => {
                     target="_blank"
                   >
                     <ImageWrapper
-                      src="/Images/landingPage/instagram.webp"
+                      src="/Images/landingPage/instagram.svg"
                       alt="Instagram Logo"
                       className="w-[24px]"
                     />

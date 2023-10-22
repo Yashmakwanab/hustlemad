@@ -100,14 +100,14 @@ export default function Footer() {
                 className="mr-[6px]"
               >
                 <ImageWrapper
-                  src="/Images/landingPage/twitter.webp"
+                  src="/Images/landingPage/twitter.svg"
                   alt="Twitter Logo"
                   className="w-[22px] h-[22px]"
                 />
               </a>
               <a href="https://www.instagram.com/hustlemad/" target="_blank">
                 <ImageWrapper
-                  src="/Images/landingPage/instagram.webp"
+                  src="/Images/landingPage/instagram.svg"
                   alt="Instagram Logo"
                   className="w-[22px] h-[22px]"
                 />
