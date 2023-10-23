@@ -110,7 +110,7 @@ const FaqHero = () => {
           </div>
           <div className="faq_container sm:pt-[55px] sm:px-[55px] sm:pb-[30px] pt-[30px] px-[30px] pb-[30px]">
             <div className="faq_content items-center justify-between flex-col-reverse sm:flex-row gap-10 ">
-              <div className="ctc_section w-full sm:w-[50%] items-center sm:items-start  ">
+              <div className="ctc_section w-full sm:w-[50%] items-center sm:!items-start">
                 <h2 className="font-recoleta text-center sm:text-left text-[24px] sm:text-[30px] md:text-[40px] font-[600] leading-[27px] sm:leading-[40px] xl:leading-[44px] text-[#0F143A] ">
                   Cant find what youre looking for?
                 </h2>
