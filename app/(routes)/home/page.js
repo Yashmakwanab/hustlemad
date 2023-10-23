@@ -17,7 +17,13 @@ const Home = () => {
         <OurServices />
         <Partners />
         <ScheduleSection />
-        <ClientSection />
+        <ClientSection
+          title={
+            <>
+              Brewing <span className="underlineCtm">Fresh</span> swag for
+            </>
+          }
+        />
         <Testimonials />
         <PresetSection />
         <RequestForm />

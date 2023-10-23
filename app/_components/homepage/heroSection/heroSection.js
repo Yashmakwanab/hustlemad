@@ -11,7 +11,7 @@ const HeroSection = () => {
     console.log("hello");
   };
   return (
-    <div className="flex justify-center bg-[#B3FFFA]">
+    <div className="flex justify-center bg-[#B3FFFA] sectionBottomPadding">
       <div
         className={`${style.hero_section} w-full grid grid-cols-1 lg:grid-cols-2 container relative sectionPadding`}
       >
@@ -19,13 +19,13 @@ const HeroSection = () => {
           className={`${style.hero_text_section} w-full flex flex-col	items-center lg:items-start order-last lg:order-first`}
         >
           <h1
-            className={`${style.hero_title}  text-[32px] 6xl:text-[76px] 5xl:text-[72px]  md:text-[64px] text-center lg:text-left`}
+            className={`${style.hero_title} max-w-[540px]  text-[32px] 6xl:text-[76px] 5xl:text-[72px]  md:text-[64px] text-center lg:text-left`}
           >
             <span>Mindful</span> <span className={style.underline}>Swag</span>{" "}
             for your Tribe!
           </h1>
           <p
-            className={`${style.tagline} 6xl:text-[36px] 5xl:text-[32px] 2xl:text-[28px] sm:text-[14px] text-center lg:text-left`}
+            className={`${style.tagline} sm:text-[14px] md:text-[28px]  max-w-[540px]   text-center lg:text-left`}
           >
             We curate new-age Swag Pack, so you dont have to.
           </p>

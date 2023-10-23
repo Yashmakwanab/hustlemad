@@ -22,7 +22,7 @@
 .footer_middle {
   display: flex;
   /* padding: 2em; */
-  margin: 0px 40px;
+  margin: 2em 40px;
   justify-content: space-between;
 }
 .link_container {

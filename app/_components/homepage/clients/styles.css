@@ -13,14 +13,6 @@
   object-fit: contain;
 }
 
-.underlineCtm {
-  color: #0f143a !important;
-  background: url("../../../../public/Images/heroSectionSvgs/client_underline.webp");
-  background-repeat: no-repeat;
-  background-position-y: bottom;
-  background-size: contain;
-}
-
 .client_content {
   display: flex;
   gap: 2em;

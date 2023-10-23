@@ -10,11 +10,11 @@ import "./styles.css";
 import MarqeeComponent from "../../commonComponents/MarqeeComponent";
 import ImageWrapper from "../../ImageWrapper/ImageWrapper";
 
-const Client = () => {
+const Client = ({title}) => {
   return (
     <div className="client_container py-5 md:py-10">
       <h2 className="font-recoleta text-center text-[24px]  sm:text-[40px] lg:text-[48px] xl:text-[52px] font-[900] leading-[27px] sm:leading-[46px] lg:leading-[55px] xl:leading-[60px] text-[#0F143A] pt-[20px] pb-[10px] ">
-        Brewing <span className="underlineCtm">Fresh</span> swag for
+        {title}
       </h2>
       <MarqeeComponent
         scrollingContent={

@@ -7,7 +7,7 @@ import Link from "next/link";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
 export default function Footer() {
   return (
-    <div className="relative max-w-[1400px] m-auto">
+    <div className="relative max-w-[1400px] m-auto ">
       <div className={style.footer_section}>
         <section className={style.footer_middle}>
           <div className={style.hustlemad_logo_container}>

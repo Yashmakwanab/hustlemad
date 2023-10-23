@@ -3,10 +3,10 @@
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
 import Client from "./clients/Clients";
 
-const ClientSection = () => {
+const ClientSection = ({ title }) => {
   return (
     <div className="relative">
-      <Client />
+      <Client title={title} />
       <div className="absolute bottom-0 w-full z-[99]">
         <ImageWrapper
           width={1000}

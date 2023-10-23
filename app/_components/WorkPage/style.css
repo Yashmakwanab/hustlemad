@@ -132,9 +132,7 @@
 .titleGrid4 {
   grid-area: 4 / 6 / 5 / 7;
 }
-.titleGrid1 img {
-  /* width: -webkit-fill-available; */
-}
+
 .titleGrid2 div {
   width: -webkit-fill-available;
 }
@@ -144,49 +142,75 @@
 .titleGrid4 img {
   width: -webkit-fill-available;
 }
-/* .handpaint {
-  color: #0f143a !important;
+
+/*  */
+.swiper {
+  margin: auto !important;
+}
+.speechboxp2 {
   position: relative;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  width: 440px;
+  height: 300px;
+  display: flex;
 }
-.handpaint::after {
-  content: "";
-  height: 50%;
+.bubble {
   position: absolute;
-  width: 50%;
-  top: -50%;
-  left: 90%;
-  background-image: url("./../../../public/Images/landingPage/work_handpaint.webp");
-  background-repeat: no-repeat;
-  line-height: 1.2;
-  background-size: contain;
+  width: 440px;
+  height: 300px;
+  z-index: 1;
 }
-.handpaint::before {
-  content: "";
-  height: 50%;
-  position: absolute;
-  width: 50%;
-  top: -50%;
-  left: -20%;
-  background-image: url("./../../../public/Images/landingPage/work_rocket_image.webp");
-  background-repeat: no-repeat;
-  line-height: 1.2;
-  background-size: contain;
-}
-.downArrow {
-  color: #0f143a !important;
+.writingp2 {
+  margin-left: 50px;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
+  z-index: 5;
 }
-.downArrow::after {
-  content: "";
-  height: 100px;
-  position: absolute;
-  width: 100px;
-  bottom: -100px;
-  left: 90%;
-  background-image: url("./../../../public/Images/landingPage/workTitleDownArrow.webp");
-  background-repeat: no-repeat;
-  line-height: 1.2;
-  background-size: contain;
-} */
+
+.writingp2 p {
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.016em;
+}
+
+.swiper-slide {
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  font-size: 18px;
+  height: auto;
+  background: #fff;
+  width: auto !important;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 639px) {
+  .speechboxp2 {
+    width: 400px;
+    height: 200px;
+  }
+  .bubble {
+    width: 400px;
+    height: 200px;
+  }
+  .writingp2 {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+}
+@media screen and (max-width: 424px) {
+  .speechboxp2 {
+    width: 360px;
+    height: 160px;
+  }
+  .bubble {
+    width: 360px;
+    height: 160px;
+  }
+}
