@@ -1,8 +1,6 @@
 "use client";
 import ButtonPrimary from "../../commonComponents/ButtonPrimary";
 import style from "./heroSection.module.css";
-
-import { useEffect, useState } from "react";
 import SmallHero from "./SmallHero/SmallHero";
 import BigHero from "./BigHero/BigHero";
 

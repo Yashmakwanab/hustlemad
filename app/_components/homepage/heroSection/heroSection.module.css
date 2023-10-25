@@ -1,5 +1,4 @@
 .hero_section {
-  /* background-color: #000 ; */
   color: #0f143a;
   align-items: center;
   font-family: "taglineFont", sans-serif !important;
@@ -51,7 +50,6 @@
 }
 
 .hero_image_container {
-  /* width: 50%; */
   width: 80%;
   display: flex;
   align-items: flex-end;

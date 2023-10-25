@@ -1,5 +1,4 @@
 "use client";
-
 import ScheduleCall from "./scheduleCall/ScheduleCall";
 
 const ScheduleSection = () => {

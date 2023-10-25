@@ -66,7 +66,7 @@ export default function OurServices() {
             height={500}
             src="/Images/landingPage/seviceArrowOne.webp"
             alt="arrow"
-            className="hidden lg:flex w-[44px] nxl:w-[68px] absolute top-[15%] nxl:top-[13%] 2xl:top-[14%] ml-[calc(19%-2px)] nxl:ml-[calc(17%-2px)] xl:ml-[calc(17%-4px)] 2xl:ml-[calc(17%+8px)]"
+            className="hidden lg:flex w-[44px] nxl:w-[68px] absolute top-[15%] nxl:top-[13%] 2xl:top-[14%] ml-[calc(20%-2px)] nxl:ml-[calc(17%-2px)] xl:ml-[calc(17%-4px)] 2xl:ml-[calc(17%+8px)]"
           />
           <ImageWrapper
             width={500}
@@ -80,7 +80,7 @@ export default function OurServices() {
             height={500}
             src="/Images/landingPage/serviceArrowThree.webp"
             alt="arrow"
-            className="hidden lg:flex w-[54px] nxl:w-[85px] absolute bottom-[28%] nxl:bottom-[28%] 2xl:bottom-[27%] ml-[calc(18%+4px)] nxl:ml-[calc(17%-7px)] xl:ml-[calc(17%-9px)] 2xl:ml-[calc(17%+1px)]"
+            className="hidden lg:flex w-[54px] nxl:w-[85px] absolute bottom-[28%] nxl:bottom-[28%] 2xl:bottom-[27%] ml-[calc(19%+4px)] nxl:ml-[calc(17%-7px)] xl:ml-[calc(17%-9px)] 2xl:ml-[calc(17%+1px)]"
           />
           <ImageWrapper
             width={500}
@@ -94,14 +94,14 @@ export default function OurServices() {
             height={500}
             src="/Images/landingPage/serviceRightArrow.webp"
             alt="arrow"
-            className="absolute w-[36px] sm:w-[49px] top-[39.5%] xs:top-[40%] sm:top-[52%] ml-[calc(68%-0px)] xs:ml-[calc(68%-0px)] sm:ml-[calc(72%-4px)] md:ml-[calc(69%+1px)] lg:hidden"
+            className="absolute w-[36px] sm:w-[49px] top-[39.5%] xs:top-[40%] sm:top-[50%] ml-[calc(68%-0px)] xs:ml-[calc(68%-0px)] sm:ml-[calc(72%-4px)] md:ml-[calc(69%+1px)] lg:hidden"
           />
           <ImageWrapper
             width={500}
             height={500}
             src="/Images/landingPage/serviceLeftArrow.webp"
             alt="arrow"
-            className="absolute w-[36px] sm:w-[49px] top-[39.5%] xs:top-[40%] sm:top-[52%] ml-[calc(21%-0px)] xs:ml-[calc(21%-0px)] sm:ml-[calc(22%-4px)] md:ml-[calc(26%+1px)] lg:hidden"
+            className="absolute w-[36px] sm:w-[49px] top-[39.5%] xs:top-[40%] sm:top-[50%] ml-[calc(21%-0px)] xs:ml-[calc(21%-0px)] sm:ml-[calc(22%-4px)] md:ml-[calc(26%+1px)] lg:hidden"
           />
           {Services.map((Service, index) => (
             <React.Fragment key={index}>

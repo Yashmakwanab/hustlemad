@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
 
 const swags = [
@@ -118,7 +117,6 @@ const Swags = () => {
                 className="mr-[12px]"
                 src={swags[index]?.image}
                 alt="Swag Image"
-                priority
               />
             </div>
           </div>

@@ -1,14 +1,27 @@
 "use client";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "./style.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import required modules
-import { FreeMode } from "swiper/modules";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
+
 const ClientLovesUs = () => {
   const Reviews = [
+    {
+      review:
+        "Love the quality of merchandise. Very excited for the team to see them. Great fit! 🙌",
+      reviewer: "Ankur, Magikbricks",
+    },
+    {
+      review:
+        "Love the quality of merchandise. Very excited for the team to see them. Great fit! 🙌",
+      reviewer: "Ankur, Magikbricks",
+    },
+    {
+      review:
+        "Love the quality of merchandise. Very excited for the team to see them. Great fit! 🙌",
+      reviewer: "Ankur, Magikbricks",
+    },
     {
       review:
         "Love the quality of merchandise. Very excited for the team to see them. Great fit! 🙌",

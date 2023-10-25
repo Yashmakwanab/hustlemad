@@ -16,6 +16,7 @@
   width: 412px;
   height: 512px;
   perspective: 1000px;
+  cursor: pointer;
 }
 .dot {
   position: relative;
@@ -61,6 +62,8 @@
   .description{
     font-size: 22px;
     line-height: 32px;
+    margin-bottom: 20px;
+    line-height: 36px;
   }
   .container-gap{
     gap: 100px;

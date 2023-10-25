@@ -131,7 +131,7 @@ export default function Partners() {
                         <ImageWrapper
                           src={image}
                           alt="Logo"
-                          className="w-[84px] sm:w-[143px] lg:w-[208px] 2xl:w-[182px] h-[52px] sm:h-[110px] lg:h-[160px] 2xl:h-[140px]"
+                          className="w-[84px] sm:w-[143px] lg:w-[208px] 2xl:w-[182px] h-[52px] sm:h-[110px] lg:h-[160px] 2xl:h-[140px] hover:scale-125 cursor-pointer duration-300"
                         />
                       </div>
                     ))}

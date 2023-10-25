@@ -5,6 +5,7 @@ import style from "./footer.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
+
 export default function Footer() {
   return (
     <div className="relative max-w-[1400px] m-auto ">
@@ -18,7 +19,6 @@ export default function Footer() {
             />
             <p className="text-center md:text-left">Based in Bengaluru ❤️</p>
           </div>
-
           <div className={`${style.link_container}  `}>
             <div className={style.links}>
               <div className={style.footer_links_header}>Company</div>

@@ -1,5 +1,4 @@
 "use client";
-
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
 
 const Web3Hero = () => {

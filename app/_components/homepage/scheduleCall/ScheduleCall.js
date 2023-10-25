@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import scheduleImage from "./../../../../public/Images/landingPage/scheduleCall.webp";
 import ButtonPrimary from "../../commonComponents/ButtonPrimary";
 import "./styles.css";
@@ -28,7 +27,6 @@ const ScheduleCall = ({
           />
         </div>
       )}
-
       <div
         className={`schedule_container sectionPadding ${
           bgColor === "purple" ? "bg-[#FFDFFE]" : "bg-[#FFF9D7]"
@@ -52,7 +50,6 @@ const ScheduleCall = ({
             >
               {subTitle}
             </p>
-
             <ButtonPrimary handleClick={handleClick} content={buttonContent} />
           </div>
         </div>

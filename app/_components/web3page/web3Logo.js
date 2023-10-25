@@ -1,15 +1,9 @@
 "use client";
-
-import React, { useRef, useState } from "react";
-// Import Swiper React components
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "./styles.css";
-
-// import required modules
 import { FreeMode } from "swiper/modules";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
 
@@ -36,7 +30,7 @@ export default function Web3Logo() {
             slidesPerView: 6,
           },
         }}
-        className="mySwiper"
+        className="mySwiper uniq-value"
       >
         <SwiperSlide className=" ">
           <ImageWrapper

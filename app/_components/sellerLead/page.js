@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { Button, Form, Input } from "antd";
-import Image from "next/image";
 import TextArea from "antd/es/input/TextArea";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
 

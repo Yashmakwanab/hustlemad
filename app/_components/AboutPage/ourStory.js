@@ -1,6 +1,6 @@
 "use client";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
-import style from "./style.module.css";
+
 const OurStory = () => {
   return (
     <div className="p-10 md:p-20 flex flex-col gap-5 xl:gap-10 items-center bg-[#fff] relative">

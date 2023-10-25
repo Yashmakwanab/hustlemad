@@ -1,5 +1,4 @@
 "use client";
-
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
 import Client from "./clients/Clients";
 

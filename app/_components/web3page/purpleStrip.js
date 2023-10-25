@@ -1,5 +1,4 @@
 "use client";
-
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
 import MarqeeComponent from "../commonComponents/MarqeeComponent";
 
@@ -17,19 +16,19 @@ const PurpleStrip = ({ bgColor }) => {
           >
             <ImageWrapper
               alt="strip Images"
-              className="w-[50%]  "
+              className="w-[50%]"
               src={"/Images/web3Page/perple1.png"}
             />
             <p className="text-[25px]">🚀</p>
             <ImageWrapper
               alt="strip Images"
-              className="w-[50%]  "
+              className="w-[50%]"
               src={"/Images/web3Page/perple2.png"}
             />
             <p className="text-[25px]">🚀</p>
             <ImageWrapper
               alt="strip Images"
-              className="w-[50%]  "
+              className="w-[50%]"
               src={"/Images/web3Page/perple3.png"}
             />
             <p className="text-[25px]">🚀</p>
@@ -41,22 +40,22 @@ const PurpleStrip = ({ bgColor }) => {
             <p className="text-[25px]">🚀</p>
             <ImageWrapper
               alt="strip Images"
-              className="w-[50%]  "
+              className="w-[50%]"
               src={"/Images/web3Page/perple5.png"}
             />
             <p className="text-[25px]">🚀</p>
             <ImageWrapper
               alt="strip Images"
-              className="w-[50%]  "
+              className="w-[50%]"
               src={"/Images/web3Page/perple6.png"}
             />
             <p className="text-[25px]">🚀</p>
             <ImageWrapper
               alt="strip Images"
-              className="w-[50%]  "
+              className="w-[50%]"
               src={"/Images/web3Page/perple7.png"}
             />
-            <p className="text-[25px]">🚀</p>
+            <p className="text-[25px] pr-8">🚀</p>
           </div>
         }
       />

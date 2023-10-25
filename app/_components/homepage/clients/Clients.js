@@ -12,7 +12,7 @@ import ImageWrapper from "../../ImageWrapper/ImageWrapper";
 
 const Client = ({title}) => {
   return (
-    <div className="client_container py-5 md:py-10">
+    <div className="client_container py-5 md:py-10 md:pb-6 lg:py-10 lg:pb-6">
       <h2 className="font-recoleta text-center text-[24px]  sm:text-[40px] lg:text-[48px] xl:text-[52px] font-[900] leading-[27px] sm:leading-[46px] lg:leading-[55px] xl:leading-[60px] text-[#0F143A] pt-[20px] pb-[10px] ">
         {title}
       </h2>

@@ -1,5 +1,6 @@
 "use client";
 import style from "./style.module.css";
+
 const ButtonPrimary = ({ handleClick, content, className }) => {
   return (
     <button

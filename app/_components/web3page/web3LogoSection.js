@@ -1,7 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import { Col, Row, Button, Form, Input, Select } from "antd";
-const { Option } = Select;
+import React from "react";
+import { Button, Form, Input } from "antd";
 
 const Web3LogoSection = () => {
   const [form] = Form.useForm();

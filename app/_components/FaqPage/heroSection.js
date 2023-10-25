@@ -1,7 +1,5 @@
 "use client";
-
 import { useState } from "react";
-import ButtonPrimary from "../commonComponents/ButtonPrimary";
 import "./style.css";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
 import Link from "next/link";

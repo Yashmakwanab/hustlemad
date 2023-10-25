@@ -9,8 +9,9 @@
 
 .marque_images {
   width: 200px;
-  height: 50px;
+  height: 78px;
   object-fit: contain;
+  margin: 0px 30px;
 }
 
 .client_content {
@@ -92,6 +93,11 @@
 
   .slide {
     width: 80px;
+  }
+
+  .marque_images {
+    height: 50px;
+    margin: 0px 10px;
   }
 
   @keyframes scroll {

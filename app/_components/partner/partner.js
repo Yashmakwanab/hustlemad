@@ -60,6 +60,7 @@ const Partners = () => {
               alt="Partners Image"
               width={260}
               height={200}
+              className="hover:scale-125 cursor-pointer duration-300"
             />
           </div>
         ))}

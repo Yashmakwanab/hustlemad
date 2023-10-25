@@ -9,7 +9,7 @@ const menuItems = [
     directUrl: ["/"],
   },
   {
-    label: "Comapany",
+    label: "Company",
     directUrl: "",
     subMenuItems: ["About Us", "Contact Us", "FAQs"],
     subMenuItemsUrl: ["/about", "/contact", "/faq"],

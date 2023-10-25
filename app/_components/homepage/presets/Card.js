@@ -1,9 +1,9 @@
 "use client";
-import Image from "next/image";
 import ButtonPrimary from "../../commonComponents/ButtonPrimary";
 import presetPhoto from "./../../../../public/Images/landingPage/preset.png";
 import "./styles.css";
 import ImageWrapper from "../../ImageWrapper/ImageWrapper";
+
 const Card = () => {
   const handleClick = () => {
     console.log("btn clicked");

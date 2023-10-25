@@ -1,7 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import "./style.css";
-
 import ClientLovesUs from "./clientLovesUs";
 import ClientSection from "../homepage/ClientSection";
 import ScheduleCall from "../homepage/scheduleCall/ScheduleCall";

@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import { Col, Row, Button, Form, Input, Select } from "antd";
+import React from "react";
+import { Button, Form, Input, Select } from "antd";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
 const { Option } = Select;
 
@@ -123,7 +123,7 @@ const RequestForm = () => {
               <Input
                 prefix="+91-"
                 placeholder="Phone Number"
-                className="!border-[#0f143acc] !border-[2px] !text-[14px] sm:!text-[20px] px-[10px] py-[7px] sm:py-[10px] numberInput"
+                className="border-[#0f143acc] !border-[2px] !text-[14px] sm:!text-[20px] px-[10px] py-[7px] sm:py-[10px] numberInput"
               />
             </Form.Item>
           </div>
@@ -143,7 +143,7 @@ const RequestForm = () => {
           src="/Images/landingPage/footerBorder.webp"
           width={2000}
           height={10}
-          className="w-full absolute top-[-4px] md:top-[-7px] xl:top-[-9px]"
+          className="w-full absolute top-[-4px] md:top-[-7px] xl:top-[-12px]"
           alt="Footer Border"
         />
       </div>

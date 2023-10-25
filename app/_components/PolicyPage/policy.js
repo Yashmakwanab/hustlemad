@@ -1,7 +1,5 @@
-"use client";
 import "./style.css";
-import React, { useRef, useState } from "react";
-// Import Swiper React components
+import React from "react";
 
 export default function PolicyPage() {
   return (

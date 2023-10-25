@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./style.css";
 import book from "../../../../../public/Images/heroSectionSvgs/book.webp";
 import briefcase from "../../../../../public/Images/heroSectionSvgs/briefcase.webp";
@@ -7,13 +6,12 @@ import shirt from "../../../../../public/Images/heroSectionSvgs/shirt.webp";
 import shoes from "../../../../../public/Images/heroSectionSvgs/shoes.webp";
 import gift from "../../../../../public/Images/heroSectionSvgs/gift.webp";
 import React from "react";
-import Image from "next/image";
 import ImageWrapper from "@/app/_components/ImageWrapper/ImageWrapper";
-const images = [briefcase, shirt, book, shoes, cups]; // Import or define your image sources
+const images = [briefcase, shirt, book, shoes, cups];
 
 const ImageCircle = ({ images }) => {
   const numImages = images.length;
-  const radius = 120; // Adjust the radius as needed
+  const radius = 120;
   const angleStep = (2 * Math.PI) / numImages;
 
   return (
@@ -21,16 +19,15 @@ const ImageCircle = ({ images }) => {
       className="image-circle-container"
       style={{
         position: "relative",
-        width: "300px", // Set your desired container size
-        height: "300px", // Set your desired container size
-        animation: "rotateAnimation 10s linear infinite", // Adjust animation duration and delay as needed
+        width: "300px",
+        height: "300px",
+        animation: "rotateAnimation 10s linear infinite",
       }}
     >
       {images.map((image, index) => {
         const angle = index * angleStep;
         const x = radius * Math.cos(angle);
         const y = radius * Math.sin(angle);
-
         return (
           <ImageWrapper
             key={index}
@@ -38,11 +35,11 @@ const ImageCircle = ({ images }) => {
             alt={`Image ${index + 1}`}
             className="image-circle-image"
             style={{
-              width: "110px", // Set your desired image size
+              width: "110px",
               position: "absolute",
-              left: `calc(50% - 50px + ${x}px)`, // Center the image horizontally
-              top: `calc(50% - 50px + ${y}px)`, // Center the image vertically
-              animation: "counterRotateAnimation 10s linear infinite", // Adjust animation duration and delay as needed
+              left: `calc(50% - 50px + ${x}px)`,
+              top: `calc(50% - 50px + ${y}px)`,
+              animation: "counterRotateAnimation 10s linear infinite",
             }}
           />
         );
@@ -52,8 +49,6 @@ const ImageCircle = ({ images }) => {
 };
 
 function Circular() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <ImageCircle images={images} />

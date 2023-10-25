@@ -1,6 +1,7 @@
 "use client";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
 import style from "./style.module.css";
+
 const WeLoveSwag = () => {
   return (
     <div className="relative">

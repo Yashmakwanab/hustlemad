@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { Button, Form, Input } from "antd";
-import Image from "next/image";
 import TextArea from "antd/es/input/TextArea";
 import Link from "next/link";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
@@ -22,7 +21,6 @@ const ContactUs = () => {
             alt="Phone Image"
             width={316}
             height={196}
-            priority
           />
         </div>
         <h1 className="font-recoleta font-[600] text-[#0F143A] text-center text-[24px] sm:text-[36px] lg:text-[44px] xl:text-[52px] mb-[12px] sm:mb-[16px] xl:mb-[20px]">
@@ -52,7 +50,6 @@ const ContactUs = () => {
                 alt="Contact Girl"
                 width={320}
                 height={320}
-                priority
               />
             </div>
           </div>

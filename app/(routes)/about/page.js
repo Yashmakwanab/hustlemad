@@ -9,7 +9,6 @@ const About = () => {
     <>
       <div className="pt-[44px] md:pt-[127px] nxl:pt-[80px] ">
         <WeLoveSwag />
-
         <OurStory />
         <OurCoreServices />
         <DynamicDuo />
