@@ -148,11 +148,14 @@ body {
   margin-bottom: 32px;
 }
 
-.ant-select-selector {
+.home-select .ant-select-selector {
   @apply !h-auto !text-[20px] !px-[20px] !py-[3px] sm:!py-[10px] !mb-2;
 }
+.cart-select .ant-select-selector {
+  @apply !border-none;
+}
 
-.ant-select-arrow {
+.home-select .ant-select-arrow {
   @apply !top-[67%] sm:!top-[86%] !right-[5%];
 }
 
@@ -170,6 +173,23 @@ body {
   background-position: right center;
   width: 16px;
   height: 16px;
+}
+
+.custom-select-cart {
+  background-image: url("../public/Images/Catlog/cart-arrow.svg");
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  width: 16px;
+  height: 16px;
+}
+
+.cart-dropdown{
+  width: 90px !important;
+}
+.cart-dropdown .ant-select-item-option-content{
+  justify-content: center;
+  display: flex
 }
 
 .numberInput .ant-input {
@@ -269,4 +289,22 @@ body {
   .ant-select-selection-item {
     font-size: 14px !important;
   }
+}
+.overflow-style::-webkit-scrollbar-track {
+  border: none;
+  margin: 0px 0px;
+  background-color: transparent;
+}
+
+.overflow-style::-webkit-scrollbar {
+  width: 4px;
+  margin-left: -10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.overflow-style::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #0F143A;
+  border: 1px solid rgba(15, 20, 58, 0.08);
 }

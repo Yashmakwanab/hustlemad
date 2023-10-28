@@ -2,6 +2,7 @@ import Header from './_components/header/header'
 import Footer from './_components/footer/footer'
 import './globals.css'
 import Head from 'next/head'
+import Prvider from './redux/provider/Prvider'
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,11 +13,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head />
-
       <body>
-        <Header />
-        {children}
-        <Footer />
+        <Prvider>
+          <Header />
+            {children}
+          <Footer />
+        </Prvider>
       </body>
     </html>
   )

@@ -74,6 +74,7 @@ const RequestForm = () => {
             <Form.Item
               name="preference"
               label="Swag Pack of preference"
+              className="home-select"
               rules={[
                 {
                   required: true,

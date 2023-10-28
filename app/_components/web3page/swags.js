@@ -75,7 +75,7 @@ const Swags = () => {
     return () => {
       clearInterval(intervalId);
     };
-  }, [swags, index]);
+  }, [index]);
 
   return (
     <>

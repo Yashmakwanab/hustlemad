@@ -45,7 +45,7 @@ const menuItems = [
     label: "Latest Works",
     directUrl: ["/works"],
   },
-];
+  ];
 const Header = () => {
   const [show, setShow] = useState(false);
   const [activeHeader, setActiveHeader] = useState(5);
@@ -53,7 +53,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="nxl:px-[40px] bg-white fixed w-full z-[99999999]">
+      <div className="nxl:px-[40px] bg-white fixed w-full z-[99999999] shadow-md">
         <div className="grid grid-cols-1 nxl:flex justify-between items-center">
           <div className="w-full nxl:w-fit">
             <div className="items-center py-[12px] nxl:py-[25px] col-span-1 flex justify-between border-b-[1px] border-solid nxl:border-none px-[20px] md:px-[40px] nxl:px-0">

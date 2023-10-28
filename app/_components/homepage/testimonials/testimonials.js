@@ -58,7 +58,7 @@ function Testimonials() {
     return () => {
       clearInterval(intervalId);
     };
-  }, [testimonials, index]);
+  }, [index]);
 
   return (
     <>
