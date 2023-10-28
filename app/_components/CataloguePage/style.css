@@ -1,0 +1,60 @@
+.catalogue_container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.catalogue_container1 {
+  grid-area: 1 / 1 / 6 / 3;
+  width: -webkit-fill-available;
+}
+.catalogue_container2 {
+  grid-area: 1 / 3 / 6 / 11;
+  width: -webkit-fill-available;
+}
+.catalogue_container3 {
+  grid-area: 1 / 11 / 6 / 13;
+  width: -webkit-fill-available;
+}
+
+.sidebar {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+/* cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.card {
+  width: 240px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  height: 310px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.product_detail {
+  height: 90px;
+}
+.title_container {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.product_image_container {
+  width: 100%;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.product_image {
+  width: 125px;
+  height: 150px;
+}
