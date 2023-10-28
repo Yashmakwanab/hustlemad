@@ -1,4 +1,5 @@
 "use client";
+import Cartpage from "../cart/cart";
 import AllProduct from "./components/allProducts";
 import SideBarCatalogue from "./components/sidebar";
 import "./style.css";
@@ -14,8 +15,8 @@ export default function CataloguePage() {
       <div className="catalogue_container2 py-8">
         <AllProduct selected={selected} setSelected={setSelected} />
       </div>
-      <div className="catalogue_container3 fixed bg-[#ff0] w-[100x] flex h-[100vh] items-center justify-center">
-        cart
+      <div className="catalogue_container3 fixed w-[300x] flex h-[100vh] items-center justify-center">
+        <Cartpage/>
       </div>
     </div>
   );

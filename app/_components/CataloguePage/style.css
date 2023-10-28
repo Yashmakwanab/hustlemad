@@ -8,7 +8,7 @@
 
 .catalogue_container1 {
   grid-area: 1 / 1 / 6 / 3;
-  width: -webkit-fill-available;
+  /* width: -webkit-fill-available; */
 }
 .catalogue_container2 {
   grid-area: 1 / 3 / 6 / 11;

@@ -2,8 +2,12 @@
 import React, { useState, useEffect } from "react";
 import "./../style.css";
 import ImageWrapper from "../../ImageWrapper/ImageWrapper";
+import { useDispatch } from 'react-redux';
+import { add } from '../../../redux/slice/cartSlice';
+
 const AllProduct = () => {
   const [products, setproducts] = useState([]);
+  const dispatch =useDispatch();
 
   const getproducts = async () => {
     const res = await fetch("https://fakestoreapi.com/products");
@@ -11,13 +15,14 @@ const AllProduct = () => {
     setproducts(data);
   };
 
-  // const handleadd = (product) => {
-  //   dispatch(add(product));
-  // };
+  const handleadd = (product) => {
+    dispatch(add(product));
+  };
 
   useEffect(() => {
     getproducts();
   }, []);
+
   return (
     <div className="productsWrapper w-full cards">
       {products.map((product) => (
@@ -39,7 +44,7 @@ const AllProduct = () => {
                   {product.title}
                 </h4>
               </div>
-              <div className="add_cart flex w-[13%] cursor-pointer">
+              <div className="add_cart flex w-[13%] cursor-pointer" onClick={()=>handleadd(product)}>
                 <ImageWrapper
                   src={"/Images/categories/plus.webp"}
                   className={"w-[24px] h-[24px] cursor-pointer"}

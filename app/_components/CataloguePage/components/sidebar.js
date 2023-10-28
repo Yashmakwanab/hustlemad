@@ -113,7 +113,7 @@ const Categories = ({ selected, setSelected }) => {
 const SideBarCatalogue = ({ selected, setSelected }) => {
   console.log(selected);
   return (
-    <div className="sidebar flex flex-col gap-5 xl:gap-10 max-w-[250px]  bg-[#fff] relative h-[100vh] ">
+    <div className="sidebar flex flex-col gap-5 xl:gap-10 w-[250px] bg-[#fff] relative h-[100vh] ">
       <Categories selected={selected} setSelected={setSelected} />
     </div>
   );
