@@ -4,6 +4,7 @@ import { remove } from '../../redux/slice/cartSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import ImageWrapper from '../ImageWrapper/ImageWrapper';
 import { Select } from 'antd';
+import Link from 'next/link';
 
 const Cartpage = () => {
     const [quantity, setQuantity] = useState(100);
@@ -46,7 +47,7 @@ const Cartpage = () => {
                             </div>
                             <div className='flex items-center'>
                                 <button className='' onClick={() => handleremove(item.id)}><ImageWrapper
-                                    src={"/Images/catlog/deleteIcon.svg"}
+                                    src={"/Images/catlog/delete-icon.svg"}
                                     className="w-[18px] h-[18px]"
                                 /></button>
                             </div>
@@ -116,7 +117,7 @@ const Cartpage = () => {
                         <div className='text-[#343434CC] font-mazzardSemiBold text-[12px] leading-[14px]'><span className='text-[#0F143A] font-mazzardSemiBold text-[16px] leading-[18px]'><span className='font-[600]'>₹ </span>{totalEstimate.toFixed(2)}</span> + <span>TBD</span></div>
                     </div>
                     <div className='flex justify-center mb-[12px]'>
-                        <button className='text-white font-mazzardMedium text-[14px] leading-[17px] bg-[#0F143A] py-[8px] px-[40px] rounded-[6px]'>Continue</button>
+                        <Link href="/order" className='text-white font-mazzardMedium text-[14px] leading-[17px] bg-[#0F143A] py-[8px] px-[40px] rounded-[6px]'>Continue</Link>
                     </div>
                     <div className='flex justify-center'>
                         <p className='text-[#343434CC] font-mazzard text-[10px] leading-[12px] opacity-90'>Total est. doesn&#39;t include taxes and shipping fees</p>

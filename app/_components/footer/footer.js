@@ -5,10 +5,15 @@ import style from "./footer.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
+import { usePathname } from 'next/navigation';
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isCataloguePage = pathname === '/catalogue';
+  const isOrderPage = pathname === '/order';
+
   return (
-    <div className="relative max-w-[1400px] m-auto ">
+    <div className={`${isCataloguePage || isOrderPage ? "hidden" : "" } relative max-w-[1400px] m-auto`}>
       <div className={style.footer_section}>
         <section className={style.footer_middle}>
           <div className={style.hustlemad_logo_container}>
