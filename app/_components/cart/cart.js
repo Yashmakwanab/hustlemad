@@ -26,7 +26,7 @@ const Cartpage = () => {
     const totalEstimate = pricePerPack * quantity
 
     return (
-        <div className='w-[300px] fixed right-0 shadow-md h-full'>
+        <div className='w-[300px] fixed right-0 shadow-md h-full top-0 mt-[127px] nxl:mt-[80px]'>
             <div className='flex justify-center pt-[20px] pb-[12px] border-b-[1px]'>
                 <div className='text-[#0F143A] font-mazzardMedium text-[18px] leading-[18px] mr-[8px]'>Your Swag Pack</div>
                 <div className='text-[#2A32FF] font-recoleta text-[18px] leading-[18px] font-[500]'>[{cartitems.length}]</div>

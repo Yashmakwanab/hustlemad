@@ -110,6 +110,14 @@ body {
   @apply font-mazzard;
 }
 
+.order-form .ant-input {
+  background-color: transparent;
+  border: 2px solid rgba(15, 20, 58, 0.8);
+  font-size: 18px;
+  padding: 8px 20px;
+  @apply font-mazzard;
+}
+
 .web-form .ant-input {
   background-color: white;
   border: 2px solid #0e003d;
@@ -209,12 +217,30 @@ body {
   font-weight: 500;
   @apply font-spaceMonoBold;
 }
+
+.order-form .ant-form-item-label label,.custom-label {
+  font-size: 18px !important;
+  color: rgba(15, 20, 58, 0.8) !important;
+  font-weight: 500;
+  @apply font-mazzardMedium;
+}
 .underlineCtm {
   color: #0f143a !important;
   background: url("../public/Images/heroSectionSvgs/client_underline.webp");
   background-repeat: no-repeat;
   background-position-y: bottom;
   background-size: contain;
+}
+
+.order-form .ant-picker {
+  background-color: transparent;
+  border: 2px solid rgba(15, 20, 58, 0.8);
+  font-size: 18px;
+  padding: 8px 20px;
+  @apply font-mazzard;
+}
+.order-form .ant-picker #register_date{
+  font-size: 18px;
 }
 
 @media screen and (max-width: 1600px) {
