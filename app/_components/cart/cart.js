@@ -47,7 +47,7 @@ const Cartpage = () => {
                             </div>
                             <div className='flex items-center'>
                                 <button className='' onClick={() => handleremove(item.id)}><ImageWrapper
-                                    src={"/Images/catlog/delete-icon.svg"}
+                                    src={"/Images/Catlog/delete-icon.svg"}
                                     className="w-[18px] h-[18px]"
                                 /></button>
                             </div>
