@@ -65,7 +65,7 @@ const Category = ({
       onClick={() => setSelected(lable)}
       className="cursor-pointer select-none"
     >
-      <div className="flex items-center gap-4 pl-10">
+      <div className="flex items-center gap-4 px-[20px]">
         <div
           className={`w-[40px] h-[40px] flex items-center rounded-full justify-center border-2`}
           style={{
@@ -113,7 +113,7 @@ const Categories = ({ selected, setSelected }) => {
 const SideBarCatalogue = ({ selected, setSelected }) => {
   console.log(selected);
   return (
-    <div className="sidebar flex flex-col gap-5 xl:gap-10 w-[250px] bg-[#fff] relative h-[100vh] ">
+    <div className="sidebar flex flex-col gap-5 xl:gap-10 w-[250px] bg-[#fff] relative h-[100vh] shadow-md">
       <Categories selected={selected} setSelected={setSelected} />
     </div>
   );
