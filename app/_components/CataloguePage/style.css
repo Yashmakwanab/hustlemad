@@ -6,9 +6,11 @@
   grid-row-gap: 0px;
 }
 .swag_pack_button {
-  background-color: black;
-  height: 500px;
-  width: 500px;
+  background-color: #0f143a;
+  top: 245px;
+  height: 70px;
+  border-radius: 0px 0px 0px 12px;
+  width: 250px;
 }
 
 .catalogue_container1 {
@@ -40,7 +42,7 @@
   gap: 30px;
   justify-content: center;
 }
-.card {
+.product_card {
   width: 240px;
   border-radius: 12px;
   display: flex;
@@ -84,5 +86,22 @@
   .swiper-button-next::after {
     font-size: 20px !important;
     color: #0f143a66;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .swag_pack_button {
+    width: 100vw;
+    top: 92% !important;
+    border-radius: 12px 12px 0px 0px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .swag_pack_container {
+    width: 100vw;
+    border-radius: 16px 16px 0px 0px;
+    bottom: 65px !important;
+  }
+  .swag_pack_content {
+    width: 100vw;
   }
 }

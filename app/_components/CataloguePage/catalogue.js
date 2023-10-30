@@ -18,11 +18,8 @@ export default function CataloguePage() {
         <div className="catalogue_container2 px-8">
           <AllProduct selected={selected} setSelected={setSelected} />
         </div>
-        <div className="catalogue_container3 relative">
+        <div className="catalogue_container3 relative fixed">
           <Cartpage />
-          <div className="swag_pack_button fixed nxl:hidden right-0">
-            <p>Expand Swag Pack</p>
-          </div>
         </div>
       </div>
     </>

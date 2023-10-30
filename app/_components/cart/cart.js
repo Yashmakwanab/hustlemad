@@ -8,6 +8,7 @@ import Link from "next/link";
 import "./style.css";
 const Cartpage = () => {
   const [quantity, setQuantity] = useState(100);
+
   const dispatch = useDispatch();
   const cartitems = useSelector((state) => state.cart);
 
