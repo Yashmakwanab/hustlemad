@@ -1,10 +1,11 @@
 "use client";
 import React, { useState } from 'react'
 import { remove } from '../../redux/slice/cartSlice';
-import { useDispatch, useSelector } from 'react-redux';
 import ImageWrapper from '../ImageWrapper/ImageWrapper';
 import { Select } from 'antd';
 import Link from 'next/link';
+import { useDispatch, useSelector } from 'react-redux';
+import { setTotalEstimate, setTotalPrice } from '../../redux/slice/globleSlice';
 
 const Cartpage = () => {
     const [quantity, setQuantity] = useState(100);
@@ -25,6 +26,9 @@ const Cartpage = () => {
 
     const totalEstimate = pricePerPack * quantity
 
+    dispatch(setTotalPrice(pricePerPack))
+    dispatch(setTotalEstimate(totalEstimate))
+
     return (
         <div className='w-[300px] fixed right-0 shadow-md h-full top-0 mt-[127px] nxl:mt-[80px]'>
             <div className='flex justify-center pt-[20px] pb-[12px] border-b-[1px]'>
@@ -33,7 +37,7 @@ const Cartpage = () => {
             </div>
             <div className='h-[calc(100vh-400px)] overflow-y-auto overflow-style'>
                 {
-                    cartitems?.map((item,index) => (
+                    cartitems?.map((item, index) => (
                         <div key={index} className='flex border-b-[1px] pt-[13px] pb-[9px] px-[12px] justify-between'>
                             <div className='flex'>
                                 <div className='mr-[20px]'>

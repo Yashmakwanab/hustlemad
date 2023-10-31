@@ -239,7 +239,7 @@ body {
   padding: 8px 20px;
   @apply font-mazzard;
 }
-.order-form .ant-picker #register_date{
+.order-form .ant-picker #order_form_delivery_date{
   font-size: 18px;
 }
 
