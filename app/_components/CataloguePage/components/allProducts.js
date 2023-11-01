@@ -27,6 +27,7 @@ const AllProduct = () => {
   }, []);
 
   const handleadd = (product) => {
+    console.log("vfhvdsahf",product)
     const isProductInCart = cartitems.some(
       (item) => item.name === product.name
     );

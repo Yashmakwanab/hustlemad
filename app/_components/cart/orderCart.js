@@ -23,7 +23,7 @@ const Cartpage = () => {
   };
 
   const pricePerPack = cartitems.reduce((acc, item) => {
-    return acc + parseFloat(item.price);
+    return acc + parseFloat(item.price[0].cost);
   }, 0);
 
   const totalEstimate = pricePerPack * quantity;
@@ -52,7 +52,7 @@ const Cartpage = () => {
                 <div className="flex">
                   <div className="mr-[20px]">
                     <ImageWrapper
-                      src={item.image}
+                       src={item.image[0]}
                       alt="img"
                       className="w-[72px] h-[60px]"
                     />
@@ -63,15 +63,15 @@ const Cartpage = () => {
                     </div>
                     <div className="text-[#0F143A] font-mazzardMedium text-[12px] leading-[12px] mb-[6px] opacity-90">
                       <span className="font-[600] opacity-80">₹ </span>
-                      {item.price}
+                      {item.price[0].cost}
                     </div>
                     <div className="text-[#0F143A] font-mazzardMedium text-[12px] leading-[12px] opacity-90">
-                      {item.category}
+                      {/* {item.category} */}
                     </div>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <button className="" onClick={() => handleremove(item.id)}>
+                <button className="" onClick={() => handleremove(item._id)}>
                     <ImageWrapper
                       src={"/Images/Catlog/delete-icon.svg"}
                       className="w-[18px] h-[18px]"
