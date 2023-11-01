@@ -76,7 +76,7 @@ const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
                 initialValues={intialValues}
             >
                 <div className={`border-b-[3px] order-form`}>
-                    <div className={`${submitRequest ? "hidden" : ""} max-w-[320px] sm:max-w-[520px] md:max-w-[600px] nxl:max-w-[1146px] ml-[54px] pb-[40px]`}>
+                    <div className={`${submitRequest ? "hidden" : ""} max-w-[320px] sm:max-w-[520px] md:max-w-[600px] nxl:max-w-[1146px] sm:ml-[54px] pb-[40px]`}>
                         <Form.Item
                             name="swagbox_quantity"
                             label="How many Swag packs do you want?"
