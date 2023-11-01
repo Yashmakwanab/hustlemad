@@ -5,6 +5,7 @@ import ImageWrapper from "../../ImageWrapper/ImageWrapper";
 import { useDispatch, useSelector } from "react-redux";
 import { add } from "../../../redux/slice/cartSlice";
 import { Modal } from "antd";
+import { selectAllProductList, setAllProductList } from "@/app/redux/slice/globleSlice";
 
 const AllProduct = () => {
   const [products, setproducts] = useState([]);
@@ -15,7 +16,9 @@ const AllProduct = () => {
     const res = await fetch("https://hustlemad-backend.herokuapp.com/productList");
     const data = await res.json();
     setproducts(data.products);
+    dispatch(setAllProductList(data.products));
   };
+  const allProducts = useSelector(selectAllProductList)
 
   console.log("products", products)
 
@@ -25,7 +28,7 @@ const AllProduct = () => {
 
   const handleadd = (product) => {
     const isProductInCart = cartitems.some(
-      (item) => item.title === product.title
+      (item) => item.name === product.name
     );
     if (isProductInCart !== true) {
       dispatch(add(product));
@@ -95,7 +98,7 @@ const AllProduct = () => {
   //     </div>
   //   </>
   // ));
-  const groupedProducts = products.reduce((acc, product) => {
+  const groupedProducts = allProducts.reduce((acc, product) => {
     if (!acc[product.categoryId]) {
       acc[product.categoryId] = [];
     }

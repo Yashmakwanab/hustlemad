@@ -59,7 +59,7 @@ const Cartpage = () => {
                   </div>
                   <div className="mr-[12px]">
                     <div className="text-[#0F143A] font-mazzardSemiBold text-[14px] leading-[14px] mb-[10px] w-[174px]">
-                      {item.title.substring(0, 22)}...
+                      {item.name.substring(0, 22)}...
                     </div>
                     <div className="text-[#0F143A] font-mazzardMedium text-[12px] leading-[12px] mb-[6px] opacity-90">
                       <span className="font-[600] opacity-80">₹ </span>
