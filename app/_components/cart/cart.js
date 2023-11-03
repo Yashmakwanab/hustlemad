@@ -25,7 +25,7 @@ const Cartpage = () => {
   };
 
   const pricePerPack = cartitems.reduce((acc, item) => {
-    return acc + parseFloat(item.price[0].cost);
+    return acc + parseFloat(item?.price?.[0]?.cost);
   }, 0);
 
   const totalEstimate = pricePerPack * quantity;
@@ -49,31 +49,31 @@ const Cartpage = () => {
             {cartitems?.map((item, index) => (
               <div
                 key={index}
-                className="flex border-b-[1px] pt-[13px] pb-[9px] px-[12px] justify-between"
+                className="flex border-b-[1px] pt-[13px] pb-[9px] px-[8px] justify-between"
               >
                 <div className="flex">
-                  <div className="mr-[20px]">
+                  <div className="mr-[7px]">
                     <ImageWrapper
-                      src={item.image[0]}
+                      src={item?.image?.[0]}
                       alt="img"
                       className="w-[72px] h-[60px]"
                     />
                   </div>
-                  <div className="mr-[12px]">
+                  <div className="mr-[7px]">
                     <div className="text-[#0F143A] font-mazzardSemiBold text-[14px] leading-[14px] mb-[10px] w-[174px]">
-                      {item.name.substring(0, 22)}...
+                      {item?.name.substring(0, 22)}...
                     </div>
                     <div className="text-[#0F143A] font-mazzardMedium text-[12px] leading-[12px] mb-[6px] opacity-90">
                       <span className="font-[600] opacity-80">₹ </span>
-                      {item.price[0].cost}
+                      {item?.price?.[0]?.cost}
                     </div>
                     <div className="text-[#0F143A] font-mazzardMedium text-[12px] leading-[12px] opacity-90">
-                      {/* {item.category} */}
+                      {item?.brandName}
                     </div>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <button className="" onClick={() => handleremove(item._id)}>
+                  <button className="" onClick={() => handleremove(item?._id)}>
                     <ImageWrapper
                       src={"/Images/Catlog/delete-icon.svg"}
                       className="w-[18px] h-[18px]"

@@ -138,7 +138,7 @@ const Categories = ({ selected, setSelected }) => {
   };
 
   const pricePerPack = cartitems.reduce((acc, item) => {
-    return acc + parseFloat(item.price);
+    return acc + parseFloat(item?.price?.[0]?.cost);
   }, 0);
 
   const totalEstimate = pricePerPack * quantity;

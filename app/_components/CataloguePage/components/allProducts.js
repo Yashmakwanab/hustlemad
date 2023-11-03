@@ -6,9 +6,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { add } from "../../../redux/slice/cartSlice";
 import { Modal } from "antd";
 import { selectAllProductList, setAllProductList } from "@/app/redux/slice/globleSlice";
+import CustomOrderModel from "../../models/customOrderModel";
 
 const AllProduct = () => {
   const [products, setproducts] = useState([]);
+  const [openModel, setOpenModel] = useState(false);
   const dispatch = useDispatch();
   const cartitems = useSelector((state) => state.cart);
   const [open, setOpen] = useState(false);
@@ -27,9 +29,9 @@ const AllProduct = () => {
   }, []);
 
   const handleadd = (product) => {
-    console.log("vfhvdsahf",product)
+    console.log("vfhvdsahf", product)
     const isProductInCart = cartitems.some(
-      (item) => item.name === product.name
+      (item) => item?.name === product?.name
     );
     if (isProductInCart !== true) {
       dispatch(add(product));
@@ -100,10 +102,10 @@ const AllProduct = () => {
   //   </>
   // ));
   const groupedProducts = allProducts.reduce((acc, product) => {
-    if (!acc[product.categoryId]) {
-      acc[product.categoryId] = [];
+    if (!acc[product?.categoryId]) {
+      acc[product?.categoryId] = [];
     }
-    acc[product.categoryId].push(product);
+    acc[product?.categoryId].push(product);
     return acc;
   }, {});
 
@@ -121,25 +123,25 @@ const AllProduct = () => {
                 <h2>{category}</h2>
                 <div className='productsWrapper flex flex-wrap'>
                   {categoryProducts.map((product) => (
-                    <div key={product._id} className="product_card ">
+                    <div key={product?._id} className="product_card ">
                       <div
                         className="product_image_container p-4"
                         onClick={() => setOpen(true)}
                       >
                         <ImageWrapper
-                          src={product.image[0]}
+                          src={product?.image?.[0]}
                           alt="img"
                           className="product_image"
                         />
                       </div>
-                      <p className="font-mazzardSemiBold text-[10px] py-[0.5em] text-white company_title text-center bg-[#0F143A]">
-                        HUSTLEMAD
+                      <p className="font-mazzardSemiBold text-[11px] py-[0.5em] text-white company_title text-center bg-[#0F143A] uppercase">
+                        {product?.brandName}
                       </p>
                       <div className="product_detail p-4 flex flex-col gap-1">
                         <div className="flex justify-between gap-4">
                           <div className="title_container w-[87%]">
                             <h4 className="font-mazzardMedium product_title title_container ">
-                              {product.name}
+                              {product?.name}
                             </h4>
                           </div>
                           <div
@@ -152,17 +154,23 @@ const AllProduct = () => {
                             />
                           </div>
                         </div>
-                        <h5 className={"font-mazzard"}>₹ {product.price[0].cost}</h5>
+                        <h5 className={"font-mazzard"}>₹ {product?.price?.[0]?.cost}</h5>
                       </div>
                     </div>
                   ))}
+                  <div className="product_card bg-[#0F143A14] cursor-pointer flex items-center" onClick={() => setOpenModel(true)}>
+                    <div className="px-[34px] py-[42px]">
+                    <div className="text-[#0F143A] text-[18px] leading-[27px] font-mazzardSemiBold text-center mb-[16px]">Looking for <br/> something else?</div>
+                    <div className="text-[#0F143ACC] text-[14px] leading-[21px] font-mazzardMedium text-center">If only we could read minds! :D You’ll have to tell us.</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
-
+      <CustomOrderModel openModel={openModel} setOpenModel={setOpenModel} />
 
       {/* {modalContainer} */}
       {/* <div id="apparels">
