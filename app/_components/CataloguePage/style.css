@@ -54,6 +54,16 @@
 .product_detail {
   height: 90px;
 }
+.mySwiper {
+  width: 250px !important;
+  margin: auto !important;
+}
+.swiper-wrapper {
+  align-items: center;
+}
+.swiper-slide {
+  padding: 0 !important;
+}
 .title_container {
   white-space: nowrap;
   overflow: hidden;

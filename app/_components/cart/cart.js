@@ -1,11 +1,11 @@
 "use client";
-import React, { useState } from 'react'
-import { remove } from '../../redux/slice/cartSlice';
-import ImageWrapper from '../ImageWrapper/ImageWrapper';
-import { Select } from 'antd';
-import Link from 'next/link';
-import { useDispatch, useSelector } from 'react-redux';
-import { setTotalEstimate, setTotalPrice } from '../../redux/slice/globleSlice';
+import React, { useState } from "react";
+import { remove } from "../../redux/slice/cartSlice";
+import ImageWrapper from "../ImageWrapper/ImageWrapper";
+import { Select } from "antd";
+import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { setTotalEstimate, setTotalPrice } from "../../redux/slice/globleSlice";
 import "./style.css";
 
 const Cartpage = () => {
@@ -13,10 +13,10 @@ const Cartpage = () => {
 
   const dispatch = useDispatch();
   const cartitems = useSelector((state) => state.cart);
-  console.log("dshfsdhf",cartitems)
+  console.log("dshfsdhf", cartitems);
 
   const handleremove = (id) => {
-    console.log(("gsdafhgdsaf",id));
+    console.log(("gsdafhgdsaf", id));
     dispatch(remove(id));
   };
 
@@ -30,12 +30,12 @@ const Cartpage = () => {
 
   const totalEstimate = pricePerPack * quantity;
 
-  dispatch(setTotalPrice(pricePerPack))
-  dispatch(setTotalEstimate(totalEstimate))
+  dispatch(setTotalPrice(pricePerPack));
+  dispatch(setTotalEstimate(totalEstimate));
 
   return (
     <div className="relative">
-      <div className=" hidden nxl:block nxl:fixed">
+      <div className="nxl:block nxl:fixed">
         <div className="w-[300px] fixed right-0 shadow-md h-full">
           <div className="flex justify-center pt-[20px] pb-[12px] border-b-[1px]">
             <div className="text-[#0F143A] font-mazzardMedium text-[18px] leading-[18px] mr-[8px]">
