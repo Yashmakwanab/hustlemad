@@ -213,11 +213,10 @@ const Cartpage = () => {
 
   const dispatch = useDispatch();
   const cartitems = useSelector((state) => state.cart);
-  console.log("dshfsdhf", cartitems);
 
   const handleremove = (id) => {
-    console.log(("gsdafhgdsaf", id));
-    dispatch(remove(id));
+    setQuantityvv(true);
+    // dispatch(remove(id));
   };
 
   const handleChange = (value) => {

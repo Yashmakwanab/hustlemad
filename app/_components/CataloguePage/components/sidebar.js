@@ -125,24 +125,7 @@ const Category = ({
 
 const Categories = ({ selected, setSelected }) => {
   const [showCart, setShowCart] = useState(false);
-  const [quantity, setQuantity] = useState(100);
 
-  const dispatch = useDispatch();
-  const cartitems = useSelector((state) => state.cart);
-
-  const handleremove = (id) => {
-    dispatch(remove(id));
-  };
-
-  const handleChange = (value) => {
-    setQuantity(value);
-  };
-
-  const pricePerPack = cartitems.reduce((acc, item) => {
-    return acc + parseFloat(item?.price?.[0]?.cost);
-  }, 0);
-
-  const totalEstimate = pricePerPack * quantity;
   return (
     <>
       <div className="  flex-col gap-6 justify-center hidden nxl:flex ">
@@ -204,7 +187,6 @@ const Categories = ({ selected, setSelected }) => {
 };
 
 const SideBarCatalogue = ({ selected, setSelected }) => {
-  console.log(selected);
   return (
     <div className="nxl:sidebar flex flex-col nxl:gap-5 xl:gap-10 nxl:w-[250px] bg-[#fff] relative nxl:h-[100vh] ">
       <Categories selected={selected} setSelected={setSelected} />
