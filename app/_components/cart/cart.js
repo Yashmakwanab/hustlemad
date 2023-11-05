@@ -5,18 +5,26 @@ import ImageWrapper from "../ImageWrapper/ImageWrapper";
 import { Select } from "antd";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
-import { setTotalEstimate, setTotalPrice } from "../../redux/slice/globleSlice";
+import { selectAllProductList, setAllProductList, setTotalEstimate, setTotalPrice } from "../../redux/slice/globleSlice";
 import "./style.css";
 
 const Cartpage = () => {
   const [quantity, setQuantity] = useState(100);
   const [show, setShow] = useState(false);
+  const allProducts = useSelector(selectAllProductList);
 
   const dispatch = useDispatch();
   const cartitems = useSelector((state) => state.cart);
 
   const handleremove = (id) => {
-    dispatch(remove(id));
+    dispatch(remove(id[0]));
+    if (id[1] === "TBD") {
+      const productToRemove = allProducts.find(product => product.name === id[0]);
+      if (productToRemove) {
+        const updatedProducts = allProducts.filter(product => product.name !== id[0]);
+        dispatch(setAllProductList(updatedProducts));
+      }
+    }
   };
 
   const handleChange = (value) => {
@@ -24,10 +32,14 @@ const Cartpage = () => {
   };
 
   const pricePerPack = cartitems.reduce((acc, item) => {
-    return acc + parseFloat(item?.price?.[0]?.cost);
+    if (item?.price?.[0]?.cost !== "TBD") {
+      return acc + parseFloat(item?.price?.[0]?.cost);
+    } else {
+      return acc;
+    }
   }, 0);
 
-  const totalEstimate = pricePerPack * quantity;
+  const totalEstimate = quantity !== "Custom" ? pricePerPack * quantity : pricePerPack;
 
   dispatch(setTotalPrice(pricePerPack));
   dispatch(setTotalEstimate(totalEstimate));
@@ -79,7 +91,7 @@ const Cartpage = () => {
                 </div>
               </div>
               <div className="flex items-center">
-                <button className="" onClick={() => handleremove(item?._id)}>
+                <button className="" onClick={() => handleremove([item?.name, item?.price?.[0]?.cost])}>
                   <ImageWrapper
                     src={"/Images/Catlog/delete-icon.svg"}
                     className="w-[18px] h-[18px]"

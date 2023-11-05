@@ -13,13 +13,34 @@ const CustomOrderModel = ({ openModel, setOpenModel }) => {
     const dispatch = useDispatch();
     const allProducts = useSelector(selectAllProductList)
 
+    function getCategoryName(category) {
+        switch (category) {
+          case "62d964b6f57e16db99387e6c":
+            return ["/Images/Catlog/custom_appareal.webp"];
+          case "62d964f7f57e16db99387e6f":
+            return ["/Images/Catlog/custom_drinkware.webp"];
+          case "62d9652ef57e16db99387e72":
+            return ["/Images/Catlog/custom_stationery.webp"];
+          case "62d96572f57e16db99387e75":
+            return ["/Images/Catlog/custom_accessories.webp"];
+          case "62d965b2f57e16db99387e78":
+            return ["/Images/Catlog/custom_games.webp"];
+          case "62d965eaf57e16db99387e7b":
+            return ["/Images/Catlog/custom_everything-else.webp"];
+          case "62d9662bf57e16db99387e7e":
+            return ["/Images/Catlog/custom_packaging.webp"];
+          default:
+            return "";
+        }
+      }
+
     const onFinish = (values) => {
         const staticValues = {
             brandName: 'Custom',
             price: [{
                 cost: "TBD"
             }],
-            image: ["https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/cd1d25ae-708e-4820-ee61-828a1a840500/public"]
+            image: [getCategoryName(values.categoryId)]
         };
 
         const finalFormValues = { ...values, ...staticValues };
@@ -27,6 +48,7 @@ const CustomOrderModel = ({ openModel, setOpenModel }) => {
         const updatedProducts = [...allProducts, newProduct];
         dispatch(setAllProductList(updatedProducts));
         dispatch(add(newProduct));
+        setOpenModel(false)
     };
 
     const intialValues = {
@@ -83,12 +105,11 @@ const CustomOrderModel = ({ openModel, setOpenModel }) => {
                                 >
                                     <Option value="62d964b6f57e16db99387e6c">Apparels</Option>
                                     <Option value="62d964f7f57e16db99387e6f">Drinkware</Option>
-                                    <Option value="62d965b2f57e16db99387e78">Stationery</Option>
-                                    <Option value="62d9662bf57e16db99387e7e">Accessories</Option>
-                                    <Option value="62d965eaf57e16db99387e7b">Games</Option>
-                                    <Option value="62d9652ef57e16db99387e72">Everything Else</Option>
-                                    <Option value="62d96572f57e16db99387e75">Packaging</Option>
-                                    <Option value="62d966b9f57e16db99387e81">Shipping</Option>
+                                    <Option value="62d9652ef57e16db99387e72">Stationery</Option>
+                                    <Option value="62d96572f57e16db99387e75">Accessories</Option>
+                                    <Option value="62d965b2f57e16db99387e78">Games</Option>
+                                    <Option value="62d965eaf57e16db99387e7b">Everything Else</Option>
+                                    <Option value="62d9662bf57e16db99387e7e">Packaging</Option>
                                 </Select>
                             </Form.Item>
                             <Form.Item

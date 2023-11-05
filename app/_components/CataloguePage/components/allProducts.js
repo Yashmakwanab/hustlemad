@@ -185,19 +185,21 @@ const AllProduct = () => {
                       </div>
                     </div>
                   ))}
-                  <div
-                    className="product_card bg-[#0F143A14] cursor-pointer flex items-center"
-                    onClick={() => setOpenModel(true)}
-                  >
-                    <div className="px-[34px] py-[42px]">
-                      <div className="text-[#0F143A] text-[18px] leading-[27px] font-mazzardSemiBold text-center mb-[16px]">
-                        Looking for <br /> something else?
-                      </div>
-                      <div className="text-[#0F143ACC] text-[14px] leading-[21px] font-mazzardMedium text-center">
-                        If only we could read minds! :D You’ll have to tell us.
+                  {category !== "62d966b9f57e16db99387e81" &&
+                    <div
+                      className="product_card bg-[#0F143A14] cursor-pointer flex items-center"
+                      onClick={() => setOpenModel(true)}
+                    >
+                      <div className="px-[34px] py-[42px]">
+                        <div className="text-[#0F143A] text-[18px] leading-[27px] font-mazzardSemiBold text-center mb-[16px]">
+                          Looking for <br /> something else?
+                        </div>
+                        <div className="text-[#0F143ACC] text-[14px] leading-[21px] font-mazzardMedium text-center">
+                          If only we could read minds! :D You’ll have to tell us.
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  }
                 </div>
               </div>
             )
