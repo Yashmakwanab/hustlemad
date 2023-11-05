@@ -215,8 +215,7 @@ const Cartpage = () => {
   const cartitems = useSelector((state) => state.cart);
 
   const handleremove = (id) => {
-    setQuantityvv(true);
-    // dispatch(remove(id));
+    dispatch(remove(id));
   };
 
   const handleChange = (value) => {
