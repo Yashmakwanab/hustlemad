@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { add } from "../../../redux/slice/cartSlice";
 import {
   selectAllProductList,
+  setProductDetail,
   setAllProductList,
 } from "@/app/redux/slice/globleSlice";
 import CustomOrderModel from "../../models/customOrderModel";
@@ -15,7 +16,6 @@ const AllProduct = () => {
   const [addCart, setAddCart] = useState([]);
   const [openModel, setOpenModel] = useState(false);
   const [openProductModel, setOpenProductModel] = useState(false);
-  const [productDetail, setProductDetail] = useState({});
   const dispatch = useDispatch();
   const cartitems = useSelector((state) => state.cart);
   const getproducts = async () => {
@@ -114,9 +114,6 @@ const AllProduct = () => {
         return "";
     }
   }
-
-  console.log("aaaaaaaaaaaaa", sortedGroupedProducts);
-  console.log("aaaaaaaaaaaaa", productDetail);
   return (
     <>
       <div className="flex flex-col items-start">
@@ -138,12 +135,12 @@ const AllProduct = () => {
                 </div>
                 <div className="productsWrapper gap-6 flex flex-wrap">
                   {categoryProducts.map((product, index) => (
-                    <div key={product?._id} className="product_card ">
+                    <div key={product?._id} className="product_card">
                       <div
                         className="product_image_container p-4"
                         onClick={() => {
                           setOpenProductModel(true);
-                          setProductDetail(product);
+                          dispatch(setProductDetail(product));
                         }}
                       >
                         <ImageWrapper
@@ -211,8 +208,6 @@ const AllProduct = () => {
       <ProductDetailModal
         openModel={openProductModel}
         setOpenModel={setOpenProductModel}
-        productDetail={productDetail}
-        setProductDetail={setProductDetail}
       />
     </>
   );
