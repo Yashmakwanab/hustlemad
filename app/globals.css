@@ -166,11 +166,13 @@ body {
   @apply !h-auto !text-[20px] !px-[20px] !py-[3px] sm:!py-[10px] !mb-2;
 }
 .customOrderModel-select .ant-select-selector {
-  font-size: 18px !important;
-  padding: 20px 20px !important;
+  font-size: 16px !important;
+  padding: 8px 14px !important;
   margin-bottom: 24px !important;
-  height: 45px !important;
   @apply font-mazzard;
+}
+.customOrderModel-select .ant-select-single {
+  height: 45px !important;
 }
 .cart-select .ant-select-selector {
   @apply !border-none;
@@ -180,7 +182,8 @@ body {
   @apply !top-[67%] sm:!top-[86%] !right-[5%];
 }
 .customOrderModel-select .ant-select-arrow {
-  @apply !top-[67%] sm:!top-[75%] !right-[5%];
+  top: 51%;
+  right: 5%;
 }
 .customOrderModel-select .ant-select-selection-item{
   @apply !font-mazzard text-[#0F143A];
@@ -271,11 +274,14 @@ body {
 
 .customOrderModel{
   justify-content: center;
+  width: auto !important;
 }
 
 .customOrderModel .ant-modal-content{
   padding: 30px 40px;
   width: 580px;
+  margin: auto;
+  border-radius: 20px !important;
 }
 .customOrderModel .ant-modal-footer{
   display: none;
@@ -345,6 +351,20 @@ body {
   .customOrderModel .ant-modal-content{
     padding: 30px 40px;
     width: 480px;
+    margin: auto;
+  }
+  .customOrderModel-form .ant-input {
+    font-size: 14px !important;
+    padding: 8px 14px;
+    @apply font-mazzard;
+  }
+  .customOrderModel-select .ant-select-selector {
+    font-size: 14px !important;
+    padding: 8px 14px !important;
+    margin-bottom: 24px !important;
+  }
+  .customOrderModel-select .ant-select-single {
+    height: 42px !important;
   }
 }
 
@@ -386,8 +406,11 @@ body {
     font-size: 12px !important;
     padding: 8px 14px !important;
     margin-bottom: 24px !important;
+  }
+  .customOrderModel-select .ant-select-single {
     height: 39px !important;
   }
+
 }
 .overflow-style::-webkit-scrollbar-track {
   border: none;

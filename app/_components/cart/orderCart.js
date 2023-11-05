@@ -33,7 +33,7 @@ const Cartpage = () => {
 
   return (
     <div className="absolute top-[58px] lg:top-0 ">
-      <div className="w-full sm:w-[300px] fixed right-0 shadow-md lg:h-full rounded-l-[16px] lg:rounded-none border-[20px] bg-white flex justify-center">
+      <div className="w-full sm:w-[300px] fixed right-0 shadow-md lg:h-full rounded-l-[16px] lg:rounded-none bg-white flex justify-center">
         <div className='max-w-[300px]'>
           <div className="flex justify-center pt-[20px] pb-[12px] border-b-[1px]">
             <div className="text-[#0F143A] font-mazzardMedium text-[18px] leading-[18px] mr-[8px]">
@@ -59,7 +59,7 @@ const Cartpage = () => {
                   </div>
                   <div className="mr-[7px]">
                     <div className="text-[#0F143A] font-mazzardSemiBold text-[14px] leading-[14px] mb-[10px] w-[174px]">
-                      {item?.name.substring(0, 22)}...
+                      {item?.name?.substring(0, 22)}...
                     </div>
                     <div className="text-[#0F143A] font-mazzardMedium text-[12px] leading-[12px] mb-[6px] opacity-90">
                       <span className="font-[600] opacity-80">₹ </span>
@@ -71,12 +71,12 @@ const Cartpage = () => {
                   </div>
                 </div>
                 <div className="flex items-center">
-                <button className="" onClick={() => handleremove(item?._id)}>
+                <div onClick={() => handleremove(item?._id)}>
                     <ImageWrapper
                       src={"/Images/Catlog/delete-icon.svg"}
                       className="w-[18px] h-[18px]"
                     />
-                  </button>
+                  </div>
                 </div>
               </div>
             ))}

@@ -7,7 +7,6 @@ const { Option } = Select;
 const RequestForm = () => {
   const [form] = Form.useForm();
   const onFinish = (values) => {
-    console.log("Received values of form: ", values);
     form.resetFields();
   };
 

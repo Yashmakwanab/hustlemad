@@ -7,7 +7,6 @@ import ImageWrapper from "../ImageWrapper/ImageWrapper";
 const SellerLead = () => {
   const [form] = Form.useForm();
   const onFinish = (values) => {
-    console.log("Received values of form: ", values);
     form.resetFields();
   };
   return (

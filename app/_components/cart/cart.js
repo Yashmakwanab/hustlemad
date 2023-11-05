@@ -10,14 +10,14 @@ import "./style.css";
 
 const Cartpage = () => {
   const [quantity, setQuantity] = useState(100);
+  const [quantityvv, setQuantityvv] = useState(false);
 
   const dispatch = useDispatch();
   const cartitems = useSelector((state) => state.cart);
-  console.log("dshfsdhf", cartitems);
 
   const handleremove = (id) => {
-    console.log(("gsdafhgdsaf", id));
-    dispatch(remove(id));
+    setQuantityvv(true)
+    // dispatch(remove(id));
   };
 
   const handleChange = (value) => {
@@ -72,13 +72,13 @@ const Cartpage = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center">
-                  <button className="" onClick={() => handleremove(item?._id)}>
+                <div className="flex items-center" onClick={()=>handleremove(item?._id)}>
+                  <div className={`${quantityvv ? "bg-black" : "bf-white"}`} >
                     <ImageWrapper
                       src={"/Images/Catlog/delete-icon.svg"}
                       className="w-[18px] h-[18px]"
                     />
-                  </button>
+                  </div>
                 </div>
               </div>
             ))}

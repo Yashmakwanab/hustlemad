@@ -5,7 +5,6 @@ import OrderRequest from "./orderRequestForm/orderRequest";
 
 export default function OrderPage() {
     const [showCart, setShowCart] = useState(false);
-    console.log("sjdhfjshdjf", showCart);
     return (
         <>
             <div className="w-full lg:w-[calc(100vw-300px)]">

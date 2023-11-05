@@ -8,7 +8,6 @@ import ImageWrapper from "../ImageWrapper/ImageWrapper";
 const ContactUs = () => {
   const [form] = Form.useForm();
   const onFinish = (values) => {
-    console.log("Received values of form: ", values);
     form.resetFields();
   };
 
