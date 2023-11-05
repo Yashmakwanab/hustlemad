@@ -44,12 +44,12 @@ const CustomOrderModel = ({ openModel, setOpenModel }) => {
                 footer={false}
                 open={openModel}
                 onCancel={() => setOpenModel(false)}
-                className='max-w-[580px]'
+                className='customOrderModel'
                 intialValues={intialValues}
             >
-                <div>
-                    <div><h1 className="text-[#0F143A] text-[28px] leading-[38px] font-recoleta text-center mb-[12px]">Add New Swag</h1>
-                        <div className="text-[#0F143ACC] text-[16px] leading-[24px] font-mazzardMedium text-center">Saw something cool elsewhere? <br />
+                <div className='customOrderModel-form'>
+                    <div className='mb-[20px] sm:mb-[32px]'><h1 className="text-[#0F143A] text-[18px] sm:text-[28px] leading-[24px] sm:leading-[38px] font-recoleta text-center mb-[10px] sm:mb-[12px]">Add New Swag</h1>
+                        <div className="text-[#0F143ACC] text-[10px] sm:text-[16px] leading-[15px] sm:leading-[24px] font-mazzardMedium text-center">Saw something cool elsewhere? <br />
                             Drop the link and we’ll get it for you.
                         </div>
                     </div>
@@ -68,7 +68,7 @@ const CustomOrderModel = ({ openModel, setOpenModel }) => {
                             <Form.Item
                                 name="categoryId"
                                 label="Category"
-                                className="home-select"
+                                className="customOrderModel-select"
                                 rules={[
                                     {
                                         required: true,
@@ -124,9 +124,9 @@ const CustomOrderModel = ({ openModel, setOpenModel }) => {
                             <Button
                                 type="primary"
                                 htmlType="submit"
-                                className="font-mazzardMedium bg-[#0F143A] py-3 px-7 text-[14px] sm:text-[18px] lg:text-[20px] xl:text-[26px] font-[500] h-full text-center xl:mt-4"
+                                className="font-mazzardMedium bg-[#0F143A] py-[10px] sm:py-[13px] px-[40px] text-[14px] font-[500] h-full text-center xl:mt-[12px]"
                             >
-                                Submit Request
+                                Add to Cart
                             </Button>
                         </Form.Item>
                     </Form>

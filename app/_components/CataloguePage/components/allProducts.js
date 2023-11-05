@@ -4,7 +4,6 @@ import "./../style.css";
 import ImageWrapper from "../../ImageWrapper/ImageWrapper";
 import { useDispatch, useSelector } from "react-redux";
 import { add } from "../../../redux/slice/cartSlice";
-import { Modal } from "antd";
 import {
   selectAllProductList,
   setAllProductList,
@@ -12,7 +11,7 @@ import {
 import CustomOrderModel from "../../models/customOrderModel";
 
 const AllProduct = () => {
-  const [products, setproducts] = useState([]);
+  const [addCart, setAddCart] = useState([]);
   const [openModel, setOpenModel] = useState(false);
   const dispatch = useDispatch();
   const cartitems = useSelector((state) => state.cart);
@@ -22,19 +21,15 @@ const AllProduct = () => {
       "https://hustlemad-backend.herokuapp.com/productList"
     );
     const data = await res.json();
-    setproducts(data.products);
     dispatch(setAllProductList(data.products));
   };
   const allProducts = useSelector(selectAllProductList);
-
-  console.log("products", products);
 
   useEffect(() => {
     getproducts();
   }, []);
 
   const handleadd = (product) => {
-    console.log("vfhvdsahf", product);
     const isProductInCart = cartitems.some(
       (item) => item?.name === product?.name
     );
@@ -43,6 +38,8 @@ const AllProduct = () => {
     }
   };
 
+  const customCategoryOrder = ['62d964b6f57e16db99387e6c', '62d964f7f57e16db99387e6f', '62d9652ef57e16db99387e72', "62d96572f57e16db99387e75", "62d965b2f57e16db99387e78", "62d965eaf57e16db99387e7b", "62d9662bf57e16db99387e7e", "62d966b9f57e16db99387e81"];
+
   const groupedProducts = allProducts.reduce((acc, product) => {
     if (!acc[product?.categoryId]) {
       acc[product?.categoryId] = [];
@@ -50,6 +47,18 @@ const AllProduct = () => {
     acc[product?.categoryId].push(product);
     return acc;
   }, {});
+
+  const categoryIds = Object.keys(groupedProducts).sort((a, b) => {
+    const indexOfA = customCategoryOrder.indexOf(a);
+    const indexOfB = customCategoryOrder.indexOf(b);
+    return indexOfA - indexOfB;
+  });
+
+  const sortedGroupedProducts = categoryIds.reduce((acc, categoryId) => {
+    acc[categoryId] = groupedProducts[categoryId];
+    return acc;
+  }, {});
+
   function getCategoryName(category) {
     switch (category) {
       case "62d964b6f57e16db99387e6c":
@@ -94,11 +103,13 @@ const AllProduct = () => {
         return "";
     }
   }
+
+  console.log("aaaaaaaaaaaaa", sortedGroupedProducts);
   return (
     <>
       <div className="flex flex-col items-start">
         <div className="productsWrapper w-[100%] m-auto cards items-center justify-center nxl:justify-start  py-10">
-          {Object.entries(groupedProducts)?.map(
+          {Object.entries(sortedGroupedProducts)?.map(
             ([category, categoryProducts]) => (
               <div
                 key={category}
@@ -114,7 +125,7 @@ const AllProduct = () => {
                   </h1>
                 </div>
                 <div className="productsWrapper gap-6 flex flex-wrap">
-                  {categoryProducts.map((product) => (
+                  {categoryProducts.map((product, index) => (
                     <div key={product?._id} className="product_card ">
                       <div
                         className="product_image_container p-4"
@@ -138,12 +149,23 @@ const AllProduct = () => {
                           </div>
                           <div
                             className="add_cart flex w-[13%] cursor-pointer"
-                            onClick={() => handleadd(product)}
+                            onClick={() => {
+                              handleadd(product)
+                              setAddCart(index)
+                            }}
                           >
-                            <ImageWrapper
-                              src={"/Images/categories/plus.webp"}
-                              className={"w-[24px] h-[24px] cursor-pointer"}
-                            />
+                            {cartitems ?
+                              <ImageWrapper
+                                src={"/Images/categories/selectedPlus.svg"}
+                                className={"w-[24px] h-[24px] cursor-pointer"}
+                              />
+                              :
+
+                              <ImageWrapper
+                                src={"/Images/categories/plus.webp"}
+                                className={"w-[24px] h-[24px] cursor-pointer"}
+                              />
+                            }
                           </div>
                         </div>
                         <h5 className={"font-mazzard"}>
