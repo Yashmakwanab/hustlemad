@@ -9,13 +9,15 @@ import {
   setAllProductList,
 } from "@/app/redux/slice/globleSlice";
 import CustomOrderModel from "../../models/customOrderModel";
+import ProductDetailModal from "../../models/productDetailModal";
 
 const AllProduct = () => {
   const [addCart, setAddCart] = useState([]);
   const [openModel, setOpenModel] = useState(false);
+  const [openProductModel, setOpenProductModel] = useState(false);
+  const [productDetail, setProductDetail] = useState({});
   const dispatch = useDispatch();
   const cartitems = useSelector((state) => state.cart);
-  const [open, setOpen] = useState(false);
   const getproducts = async () => {
     const res = await fetch(
       "https://hustlemad-backend.herokuapp.com/productList"
@@ -38,7 +40,16 @@ const AllProduct = () => {
     }
   };
 
-  const customCategoryOrder = ['62d964b6f57e16db99387e6c', '62d964f7f57e16db99387e6f', '62d9652ef57e16db99387e72', "62d96572f57e16db99387e75", "62d965b2f57e16db99387e78", "62d965eaf57e16db99387e7b", "62d9662bf57e16db99387e7e", "62d966b9f57e16db99387e81"];
+  const customCategoryOrder = [
+    "62d964b6f57e16db99387e6c",
+    "62d964f7f57e16db99387e6f",
+    "62d9652ef57e16db99387e72",
+    "62d96572f57e16db99387e75",
+    "62d965b2f57e16db99387e78",
+    "62d965eaf57e16db99387e7b",
+    "62d9662bf57e16db99387e7e",
+    "62d966b9f57e16db99387e81",
+  ];
 
   const groupedProducts = allProducts.reduce((acc, product) => {
     if (!acc[product?.categoryId]) {
@@ -105,6 +116,7 @@ const AllProduct = () => {
   }
 
   console.log("aaaaaaaaaaaaa", sortedGroupedProducts);
+  console.log("aaaaaaaaaaaaa", productDetail);
   return (
     <>
       <div className="flex flex-col items-start">
@@ -129,7 +141,10 @@ const AllProduct = () => {
                     <div key={product?._id} className="product_card ">
                       <div
                         className="product_image_container p-4"
-                        onClick={() => setOpen(true)}
+                        onClick={() => {
+                          setOpenProductModel(true);
+                          setProductDetail(product);
+                        }}
                       >
                         <ImageWrapper
                           src={product?.image?.[0]}
@@ -150,22 +165,21 @@ const AllProduct = () => {
                           <div
                             className="add_cart flex w-[13%] cursor-pointer"
                             onClick={() => {
-                              handleadd(product)
-                              setAddCart(index)
+                              handleadd(product);
+                              setAddCart(index);
                             }}
                           >
-                            {cartitems ?
+                            {cartitems ? (
                               <ImageWrapper
                                 src={"/Images/categories/selectedPlus.svg"}
                                 className={"w-[24px] h-[24px] cursor-pointer"}
                               />
-                              :
-
+                            ) : (
                               <ImageWrapper
                                 src={"/Images/categories/plus.webp"}
                                 className={"w-[24px] h-[24px] cursor-pointer"}
                               />
-                            }
+                            )}
                           </div>
                         </div>
                         <h5 className={"font-mazzard"}>
@@ -194,6 +208,12 @@ const AllProduct = () => {
         </div>
       </div>
       <CustomOrderModel openModel={openModel} setOpenModel={setOpenModel} />
+      <ProductDetailModal
+        openModel={openProductModel}
+        setOpenModel={setOpenProductModel}
+        productDetail={productDetail}
+        setProductDetail={setProductDetail}
+      />
     </>
   );
 };

@@ -1,6 +1,6 @@
 "use client";
 import ImageWrapper from "../../ImageWrapper/ImageWrapper";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./../style.css";
@@ -10,11 +10,6 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Navigation } from "swiper/modules";
-import { useDispatch, useSelector } from "react-redux";
-import { Select } from "antd";
-import Link from "next/link";
-import { remove } from "@/app/redux/slice/cartSlice";
-import Cartpage from "../../cart/cart";
 
 const Data = [
   {
@@ -153,7 +148,7 @@ const Categories = ({ selected, setSelected }) => {
         </h2>
         <div className="py-3 block nxl:hidden categories_slider">
           <Swiper
-            rewind={true}
+            loop={true}
             navigation={true}
             modules={[Navigation]}
             onSlideChange={(swiper) => {
