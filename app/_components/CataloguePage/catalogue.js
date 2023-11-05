@@ -18,7 +18,7 @@ export default function CataloguePage() {
         <div className="catalogue_container2 px-8">
           <AllProduct selected={selected} setSelected={setSelected} />
         </div>
-        <div className="catalogue_container3 relative fixed">
+        <div className="catalogue_container3  fixed">
           <Cartpage />
         </div>
       </div>

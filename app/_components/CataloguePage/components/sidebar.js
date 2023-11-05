@@ -32,8 +32,8 @@ const Data = [
     white_imageUrl: "/Images/categories/Drinkware_white.webp",
   },
   {
-    lable: "Stationary",
-    id: "Stationary",
+    lable: "Stationery",
+    id: "Stationery",
     bg: "#FFFACE",
     color_imageUrl: "/Images/categories/Stationary_color.webp",
     white_imageUrl: "/Images/categories/Stationary_white.webp",
@@ -197,24 +197,6 @@ const Categories = ({ selected, setSelected }) => {
               );
             })}
           </Swiper>
-        </div>
-        <div>
-          <div
-            className="z-[99999999] bg-[#0F143A] py-[20px] px-[32px] flex items-center justify-center top-[45px] md:top-[127px] nxl:top-[80px] right-0 block lg:hidden fixed cursor-pointer w-full sm:w-auto rounded-b-[12px] sm:rounded-bl-[12px] sm:!rounded-br-none"
-            onClick={() => setShowCart(!showCart)}
-          >
-            <div className="text-white font-mazzardMedium text-[18px] leading-[18px] hidden sm:block">
-              Expand Swag Pack
-            </div>
-            <div className="text-white font-mazzardMedium text-[18px] leading-[18px] sm:hidden">
-              View Swag Pack
-            </div>
-            {showCart && (
-              <div className="">
-                <Cartpage />
-              </div>
-            )}
-          </div>
         </div>
       </div>
     </>

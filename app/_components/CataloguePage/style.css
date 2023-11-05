@@ -100,7 +100,7 @@
 @media only screen and (max-width: 767px) {
   .swag_pack_button {
     width: 100vw;
-    top: 92% !important;
+    top: 91.54% !important;
     border-radius: 12px 12px 0px 0px;
   }
 }
@@ -108,7 +108,8 @@
   .swag_pack_container {
     width: 100vw;
     border-radius: 16px 16px 0px 0px;
-    bottom: 65px !important;
+    bottom: 50px !important;
+    top: 240px !important;
   }
   .swag_pack_content {
     width: 100vw;

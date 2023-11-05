@@ -103,7 +103,7 @@ const AllProduct = () => {
               <div
                 key={category}
                 id={getCategoryName(category)}
-                className="pt-20"
+                className="pt-[7em]"
               >
                 <div>
                   <h1 className="font-recoleta text-[24px] ">
@@ -172,108 +172,6 @@ const AllProduct = () => {
         </div>
       </div>
       <CustomOrderModel openModel={openModel} setOpenModel={setOpenModel} />
-
-      {/* {modalContainer} */}
-      {/* <div id="apparels">
-        <div className="flex flex-col items-start">
-          <div>
-            <h1 className="font-recoleta text-[24px] ">Apparels</h1>
-            <h1 className="font-mazzard text-[36px] ">Wear your Hustle!</h1>
-          </div>
-          <div className="productsWrapper w-[100%] m-auto cards items-center justify-center nxl:justify-start  py-10">
-            {products_content}
-          </div>
-        </div>
-      </div>
-      <div id="drinkware">
-        <div className="flex flex-col items-start">
-          <div>
-            <h1 className="font-recoleta text-[24px] ">Drinkware</h1>
-            <h1 className="font-mazzard text-[36px] ">Fuel up!!</h1>
-          </div>
-          <div className="productsWrapper w-[100%] m-auto cards items-center justify-center nxl:justify-start  py-10">
-            {products_content}
-          </div>
-        </div>
-      </div>
-      <div id="stationary">
-        <div className="flex flex-col items-start">
-          <div>
-            <h1 className="font-recoleta text-[24px] ">Stationary</h1>
-            <h1 className="font-mazzard text-[36px] ">
-              Scribble . Sort . Slay
-            </h1>
-          </div>
-          <div className="productsWrapper w-[100%] m-auto cards items-center justify-center nxl:justify-start  py-10">
-            {products_content}
-          </div>
-        </div>
-      </div>
-      <div id="accessories">
-        <div className="flex flex-col items-start">
-          <div>
-            <h1 className="font-recoleta text-[24px] ">Stationary</h1>
-            <h1 className="font-mazzard text-[36px] ">
-              Scribble . Sort . Slay
-            </h1>
-          </div>
-          <div className="productsWrapper w-[100%] m-auto cards items-center justify-center nxl:justify-start  py-10">
-            {products_content}
-          </div>
-        </div>
-      </div>
-      <div id="games">
-        <div className="flex flex-col items-start">
-          <div>
-            <h1 className="font-recoleta text-[24px] ">Stationary</h1>
-            <h1 className="font-mazzard text-[36px] ">
-              Scribble . Sort . Slay
-            </h1>
-          </div>
-          <div className="productsWrapper w-[100%] m-auto cards items-center justify-center nxl:justify-start  py-10">
-            {products_content}
-          </div>
-        </div>
-      </div>
-      <div id="everything">
-        <div className="flex flex-col items-start">
-          <div>
-            <h1 className="font-recoleta text-[24px] ">everything</h1>
-            <h1 className="font-mazzard text-[36px] ">
-              Scribble . Sort . Slay
-            </h1>
-          </div>
-          <div className="productsWrapper w-[100%] m-auto cards items-center justify-center nxl:justify-start  py-10">
-            {products_content}
-          </div>
-        </div>
-      </div>
-      <div id="packaging">
-        <div className="flex flex-col items-start">
-          <div>
-            <h1 className="font-recoleta text-[24px] ">packaging</h1>
-            <h1 className="font-mazzard text-[36px] ">
-              Scribble . Sort . Slay
-            </h1>
-          </div>
-          <div className="productsWrapper w-[100%] m-auto cards items-center justify-center nxl:justify-start  py-10">
-            {products_content}
-          </div>
-        </div>
-      </div>
-      <div id="shipping">
-        <div className="flex flex-col items-start">
-          <div>
-            <h1 className="font-recoleta text-[24px] ">Stationary</h1>
-            <h1 className="font-mazzard text-[36px] ">
-              Scribble . Sort . Slay
-            </h1>
-          </div>
-          <div className="productsWrapper w-[100%] m-auto cards items-center justify-center nxl:justify-start  py-10">
-            {products_content}
-          </div>
-        </div>
-      </div> */}
     </>
   );
 };
