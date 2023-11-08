@@ -35,8 +35,9 @@ const AllProduct = () => {
     const isProductInCart = cartitems.some(
       (item) => item?.name === product?.name
     );
+    let color = product?.variant?.[0]?.colorName
     if (isProductInCart !== true) {
-      dispatch(add(product));
+      dispatch(add({...product, color, choice:""}));
     }
   };
 

@@ -44,6 +44,27 @@ const Cartpage = () => {
   dispatch(setTotalPrice(pricePerPack));
   dispatch(setTotalEstimate(totalEstimate));
 
+  const getCartImage = (item) => {
+    const variantWithMatchingColor = item?.variant?.find(variant => variant?.colorName === item?.color);
+
+    if (variantWithMatchingColor) {
+      const [imageUrl] = variantWithMatchingColor?.images;
+      return imageUrl;
+    }else {
+      return item?.image?.[0];
+    }
+  };
+
+  const getColor = (item) => {
+    const variantWithMatchingColor = item?.variant?.find(variant => variant?.colorName === item?.color);
+    if (variantWithMatchingColor) {
+      const colorName = variantWithMatchingColor?.colorName;
+      return colorName;
+    } else {
+      return  item?.color
+    }
+  }
+  
   return (
     <>
       <div className="w-[300px] bg-white hidden nxl:block nxl:fixed right-0 shadow-md h-full">
@@ -72,21 +93,21 @@ const Cartpage = () => {
               <div className="flex">
                 <div className="mr-[7px]">
                   <ImageWrapper
-                    src={item?.image?.[0]}
+                    src={getCartImage(item)}
                     alt="img"
                     className="w-[72px] h-[60px]"
                   />
                 </div>
                 <div className="mr-[7px]">
                   <div className="text-[#0F143A] font-mazzardSemiBold text-[14px] leading-[14px] mb-[10px] w-[174px]">
-                    {item?.name.substring(0, 22)}...
+                    {item?.name?.substring(0, 22)}...
                   </div>
                   <div className="text-[#0F143A] font-mazzardMedium text-[12px] leading-[12px] mb-[6px] opacity-90">
                     <span className="font-[600] opacity-80">₹ </span>
                     {item?.price?.[0]?.cost}
                   </div>
                   <div className="text-[#0F143A] font-mazzardMedium text-[12px] leading-[12px] opacity-90">
-                    {item?.brandName}
+                    {item?.brandName} - {getColor(item)}
                   </div>
                 </div>
               </div>

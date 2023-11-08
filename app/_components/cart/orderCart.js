@@ -44,6 +44,27 @@ const Cartpage = () => {
   dispatch(setTotalPrice(pricePerPack))
   dispatch(setTotalEstimate(totalEstimate))
 
+  const getCartImage = (item) => {
+    const variantWithMatchingColor = item?.variant?.find(variant => variant?.colorName === item?.color);
+
+    if (variantWithMatchingColor) {
+      const [imageUrl] = variantWithMatchingColor?.images;
+      return imageUrl;
+    }else {
+      return item?.image?.[0];
+    }
+  };
+  
+  const getColor = (item) => {
+    const variantWithMatchingColor = item?.variant?.find(variant => variant?.colorName === item?.color);
+    if (variantWithMatchingColor) {
+      const colorName = variantWithMatchingColor?.colorName;
+      return colorName;
+    } else {
+      return  item.variant?.[0]?.colorName
+    }
+  }
+
   return (
     <div className="absolute top-[58px] lg:top-0 ">
       <div className="w-full sm:w-[300px] fixed right-0 shadow-md lg:h-full rounded-l-[16px] lg:rounded-none bg-white flex justify-center">
@@ -65,7 +86,7 @@ const Cartpage = () => {
                 <div className="flex">
                   <div className="mr-[7px]">
                     <ImageWrapper
-                       src={item?.image?.[0]}
+                       src={getCartImage(item)}
                       alt="img"
                       className="w-[72px] h-[60px]"
                     />
@@ -79,7 +100,7 @@ const Cartpage = () => {
                       {item?.price?.[0]?.cost}
                     </div>
                     <div className="text-[#0F143A] font-mazzardMedium text-[12px] leading-[12px] opacity-90">
-                    {item?.brandName}
+                    {item?.brandName} - {getColor(item)}
                     </div>
                   </div>
                 </div>

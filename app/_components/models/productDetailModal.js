@@ -9,14 +9,26 @@ import "swiper/css/navigation";
 import "./style.css";
 import { Navigation } from "swiper/modules";
 import { selectProductDetail } from "@/app/redux/slice/globleSlice";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { add } from "@/app/redux/slice/cartSlice";
 const ProductDetailModal = ({
   openModel,
   setOpenModel,
 }) => {
   const [selectVariant, setSelectVariant] = useState(null);
   const [selectVariantIndex, setSelectVariantIndex] = useState(null);
-  const productDetail = useSelector(selectProductDetail);
+  const product = useSelector(selectProductDetail);
+  const dispatch = useDispatch();
+
+  const handleadd = (productDetail) => {
+    const color = productDetail.colorName
+    // const isProductInCart = cartitems.some(
+    //   (item) => item?.name === product?.name
+    // );
+    // if (isProductInCart !== true) {
+      dispatch(add({...product, color,choice:""}));
+    // }
+  };
   return (
     <>
       <Modal
@@ -36,7 +48,7 @@ const ProductDetailModal = ({
                 src={
                   selectVariant
                     ? selectVariant?.images?.[0]
-                    : productDetail?.image?.[0]
+                    : product?.image?.[0]
                 }
               />
             </div>
@@ -50,10 +62,10 @@ const ProductDetailModal = ({
                 spaceBetween={10}
                 onSlideChange={(swiper) => {
                   console.log(swiper);
-                  setSelectVariant(productDetail?.variant[swiper?.realIndex]);
+                  setSelectVariant(product?.variant[swiper?.realIndex]);
                 }}
               >
-                {productDetail?.variant?.map((item, index) => {
+                {product?.variant?.map((item, index) => {
                   return (
                     <SwiperSlide key={index}>
                       <ImageWrapper src={item?.images?.[0]} />
@@ -64,13 +76,13 @@ const ProductDetailModal = ({
             </div>
           </div>
           <div className="flex flex-col gap-2 max-w-[500px]">
-            <p className="font-mazzardMedium text-xl"> {productDetail?.name}</p>
+            <p className="font-mazzardMedium text-xl"> {product?.name}</p>
             <h2 className="uppercase font-mazzardMedium text-md">
-              {productDetail?.brandName}
+              {product?.brandName}
             </h2>
             <p className="font-mazzardMedium"> Available Colors</p>
             <div className="flex gap-2">
-              {productDetail?.variant?.map((item, index) => {
+              {product?.variant?.map((item, index) => {
                 const divStyle = {
                   backgroundColor: item?.hexColor,
                   width: "20px",
@@ -94,19 +106,19 @@ const ProductDetailModal = ({
             <p className="font-mazzardMedium">Price</p>
             <p>
               <span className="font-mazzardSemiBold text-lg">
-                ₹{productDetail?.price?.[0]?.cost}
+                ₹{product?.price?.[0]?.cost}
               </span>
               /swag
             </p>
-            <button>add to cart</button>
+            <button className="" onClick={() => { handleadd(selectVariant) }}>add to cart</button>
 
             <p className="uppercase font-mazzardSemiBold text-md underline underline-offset-2">
               description
             </p>
-            <p>{productDetail?.description}</p>
+            <p>{product?.description}</p>
             <p>item details</p>
             <div>
-              {productDetail?.item_Details?.map((detail) => (
+              {product?.item_Details?.map((detail) => (
                 <p>{detail}</p>
               ))}
             </div>
