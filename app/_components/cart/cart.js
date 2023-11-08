@@ -5,7 +5,7 @@ import ImageWrapper from "../ImageWrapper/ImageWrapper";
 import { Select } from "antd";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
-import { selectAllProductList, setAllProductList, setTotalEstimate, setTotalPrice } from "../../redux/slice/globleSlice";
+import { selectAllProductList, setAllProductList, setQuantityNumber, setTotalEstimate, setTotalPrice } from "../../redux/slice/globleSlice";
 import "./style.css";
 
 const Cartpage = () => {
@@ -19,9 +19,9 @@ const Cartpage = () => {
   const handleremove = (id) => {
     dispatch(remove(id[0]));
     if (id[1] === "TBD") {
-      const productToRemove = allProducts.find(product => product.name === id[0]);
+      const productToRemove = allProducts.find(product => product?.name === id[0]);
       if (productToRemove) {
-        const updatedProducts = allProducts.filter(product => product.name !== id[0]);
+        const updatedProducts = allProducts.filter(product => product?.name !== id[0]);
         dispatch(setAllProductList(updatedProducts));
       }
     }
@@ -43,6 +43,7 @@ const Cartpage = () => {
 
   dispatch(setTotalPrice(pricePerPack));
   dispatch(setTotalEstimate(totalEstimate));
+  dispatch(setQuantityNumber(quantity));
 
   const getCartImage = (item) => {
     const variantWithMatchingColor = item?.variant?.find(variant => variant?.colorName === item?.color);
@@ -107,7 +108,7 @@ const Cartpage = () => {
                     {item?.price?.[0]?.cost}
                   </div>
                   <div className="text-[#0F143A] font-mazzardMedium text-[12px] leading-[12px] opacity-90">
-                    {item?.brandName} - {getColor(item)}
+                    {item?.brandName} { item?.color ? "-" : ""} {getColor(item)}
                   </div>
                 </div>
               </div>

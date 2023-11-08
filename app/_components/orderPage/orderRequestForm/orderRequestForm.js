@@ -4,17 +4,10 @@ import { Button, DatePicker, Form, Input } from "antd";
 import ImageWrapper from "../../ImageWrapper/ImageWrapper";
 import axios from "axios";
 import { useDispatch, useSelector } from 'react-redux';
-import { selectTotalEstimate, selectTotalPrice } from "@/app/redux/slice/globleSlice";
+import { selectQuantityNumber, selectTotalEstimate, selectTotalPrice } from "@/app/redux/slice/globleSlice";
+import CustomOrder from "../../customOrder/customOrder";
 
-const intialValues = {
-    swagbox_quantity: "",
-    delivery_date: "",
-    comment: "",
-    full_name: "",
-    company_name: "",
-    email: "",
-    phone: "",
-  };
+
 
 const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
     const [submitDetail, setsubmitDetail] = useState(false);
@@ -25,15 +18,27 @@ const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
     const onChange = (date, dateString) => {
         console.log(date, dateString);
     };
+    const defaultQuantityNumber = useSelector(selectQuantityNumber);
+
+    const intialValues = {
+        swagbox_quantity: defaultQuantityNumber,
+        delivery_date: "",
+        comment: "",
+        full_name: "",
+        company_name: "",
+        email: "",
+        phone: "",
+      };
 
     const onFinish = async (values) => {
+        const formattedDate = values.delivery_date ? new Date(values.delivery_date).toISOString().split('T')[0] : '';
         try {
           await axios
             .post(
                 "https://reqres.in/api/users",
               {
                 swagbox_quantity: values?.swagbox_quantity,
-                delivery_date: values?.delivery_date,
+                delivery_date: formattedDate,
                 comment: values?.comment,
                 full_name: values?.full_name,
                 company_name: values?.company_name,
@@ -65,6 +70,19 @@ const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
         }
       };
 
+      const handleContinueClick = () => {
+        form
+            .validateFields(["swagbox_quantity", "delivery_date", "comment"])
+            .then(() => {
+                // Validation successful, proceed to the next step or perform any action
+                setsubmitRequest(true);
+            })
+            .catch((error) => {
+                // Validation failed, display error messages or handle the error as needed
+                console.error("Validation failed:", error);
+            });
+    };
+
     return (
         <>
             <Form
@@ -76,11 +94,11 @@ const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
                 initialValues={intialValues}
             >
                 <div className={`border-b-[3px] order-form`}>
-                    <div className={`${submitRequest ? "hidden" : ""} max-w-[320px] sm:max-w-[520px] md:max-w-[600px] nxl:max-w-[1146px] sm:ml-[54px] pb-[40px]`}>
+                    <div className={`${submitRequest ? "hidden" : ""} sm:ml-[54px] pb-[40px]`}>
                         <Form.Item
                             name="swagbox_quantity"
                             label="How many Swag packs do you want?"
-                            className="mb-[20px] lg:mb-[32px]"
+                            className="mb-[20px] lg:mb-[32px] max-w-[320px] sm:max-w-[520px] md:max-w-[600px] nxl:max-w-[1146px]"
                             rules={[
                                 {
                                     required: true,
@@ -94,17 +112,24 @@ const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
                         <Form.Item
                             name="delivery_date"
                             label="Do you need these by a certain date?"
-                            className="mb-[20px] lg:mb-[32px] form-date"
+                            className="mb-[20px] lg:mb-[32px] form-date max-w-[320px] sm:max-w-[520px] md:max-w-[600px] nxl:max-w-[1146px]"
+                            rules={[
+                                {
+                                    required: true,
+                                    message: "Please input date!",
+                                },
+                            ]}
                         >
                             <DatePicker onChange={onChange} placeholder="Enter date ( dd-mm-yyyy)" className="w-full" format="DD-MM-YYYY" />
                         </Form.Item>
                         <div>
                             <div className='custom-label underline underline-offset-4 mb-[20px]'>Custom items added to your Pack</div>
+                            <CustomOrder/>
                         </div>
                         <Form.Item
                             name="comment"
                             label="Add Comments"
-                            className="mb-[20px] lg:mb-[32px]"
+                            className="mb-[20px] lg:mb-[32px] max-w-[320px] sm:max-w-[520px] md:max-w-[600px] nxl:max-w-[1146px]"
                             rules={[
                                 {
                                     required: true,
@@ -118,7 +143,7 @@ const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
 
                         <Button
                             type="primary"
-                            onClick={() => setsubmitRequest(true)}
+                            onClick={handleContinueClick}
                             className="font-mazzardSemiBold bg-[#0F143A] py-[14px] px-[72px] text-[18px] sm:text-[22px] lg:text-[24px] font-[600] h-full text-center mb-[68px] lg:mb-0"
                         >
                             Continue

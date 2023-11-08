@@ -136,7 +136,7 @@ const AllProduct = () => {
                 </div>
                 <div className="productsWrapper gap-6 flex flex-wrap">
                   {categoryProducts.map((product, index) => (
-                    <div key={product?._id} className="product_card">
+                    <div key={index} className="product_card">
                       <div
                         className="product_image_container p-4"
                         onClick={() => {
@@ -195,9 +195,16 @@ const AllProduct = () => {
                         <div className="text-[#0F143A] text-[18px] leading-[27px] font-mazzardSemiBold text-center mb-[16px]">
                           Looking for <br /> something else?
                         </div>
-                        <div className="text-[#0F143ACC] text-[14px] leading-[21px] font-mazzardMedium text-center">
+                        <div className="text-[#0F143ACC] text-[14px] leading-[21px] font-mazzardMedium text-center mb-[36px]">
                           If only we could read minds! :D You’ll have to tell us.
                         </div>
+                        <div className="flex justify-center">
+                                    <ImageWrapper
+                                        src={"/Images/Catlog/plusIcon.svg"}
+                                        alt="img"
+                                        className="w-[48px] h-[48px]"
+                                    />
+                                </div>
                       </div>
                     </div>
                   }

@@ -21,7 +21,7 @@ const ProductDetailModal = ({
   const dispatch = useDispatch();
 
   const handleadd = (productDetail) => {
-    const color = productDetail.colorName
+    const color = productDetail?.colorName
     // const isProductInCart = cartitems.some(
     //   (item) => item?.name === product?.name
     // );
@@ -93,6 +93,7 @@ const ProductDetailModal = ({
 
                 return (
                   <div
+                  key={index}
                     style={divStyle}
                     className="block"
                     onClick={() => {
@@ -110,7 +111,8 @@ const ProductDetailModal = ({
               </span>
               /swag
             </p>
-            <button className="" onClick={() => { handleadd(selectVariant) }}>add to cart</button>
+            <button className="" onClick={() => { handleadd(selectVariant)
+            setOpenModel(false); }}>add to cart</button>
 
             <p className="uppercase font-mazzardSemiBold text-md underline underline-offset-2">
               description
@@ -118,8 +120,8 @@ const ProductDetailModal = ({
             <p>{product?.description}</p>
             <p>item details</p>
             <div>
-              {product?.item_Details?.map((detail) => (
-                <p>{detail}</p>
+              {product?.item_Details?.map((detail,index) => (
+                <p key={index}>{detail}</p>
               ))}
             </div>
           </div>

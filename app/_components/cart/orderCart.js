@@ -5,16 +5,16 @@ import ImageWrapper from '../ImageWrapper/ImageWrapper';
 import { Select } from 'antd';
 import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectAllProductList, setAllProductList, setTotalEstimate, setTotalPrice } from '../../redux/slice/globleSlice';
+import { selectAllProductList, selectQuantityNumber, setAllProductList, setQuantityNumber, setTotalEstimate, setTotalPrice } from '../../redux/slice/globleSlice';
 import "./style.css";
 
 const Cartpage = () => {
   const [quantity, setQuantity] = useState(100);
   const allProducts = useSelector(selectAllProductList);
-
-
   const dispatch = useDispatch();
   const cartitems = useSelector((state) => state.cart);
+  const defaultQuantityNumber = useSelector(selectQuantityNumber);
+  dispatch(setQuantityNumber(quantity));
 
   const handleremove = (id) => {
     dispatch(remove(id[0]));
@@ -39,10 +39,11 @@ const Cartpage = () => {
     }
   }, 0);
 
-  const totalEstimate = quantity !== "Custom" ? pricePerPack *  quantity : pricePerPack;
+  const totalEstimate = defaultQuantityNumber !== "Custom" ? pricePerPack *  defaultQuantityNumber : pricePerPack;
 
   dispatch(setTotalPrice(pricePerPack))
   dispatch(setTotalEstimate(totalEstimate))
+  
 
   const getCartImage = (item) => {
     const variantWithMatchingColor = item?.variant?.find(variant => variant?.colorName === item?.color);
@@ -100,17 +101,17 @@ const Cartpage = () => {
                       {item?.price?.[0]?.cost}
                     </div>
                     <div className="text-[#0F143A] font-mazzardMedium text-[12px] leading-[12px] opacity-90">
-                    {item?.brandName} - {getColor(item)}
+                    {item?.brandName} { item?.color ? "-" : ""} {getColor(item)}
                     </div>
                   </div>
                 </div>
                 <div className="flex items-center">
-                <div onClick={() => handleremove(item?._id)}>
+                <button className="" onClick={() => handleremove([item?.name, item?.price?.[0]?.cost])}>
                     <ImageWrapper
                       src={"/Images/Catlog/delete-icon.svg"}
                       className="w-[18px] h-[18px]"
                     />
-                  </div>
+                  </button>
                 </div>
               </div>
             ))}

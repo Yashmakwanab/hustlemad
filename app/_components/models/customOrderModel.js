@@ -4,7 +4,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Button, Form, Input, InputNumber, Modal, Select } from 'antd';
-import { setAllProductList, selectAllProductList } from '../../redux/slice/globleSlice';
+import { setAllProductList, selectAllProductList, setCustomOrderList, selectCustomOrderList } from '../../redux/slice/globleSlice';
 import { add } from '../../redux/slice/cartSlice';
 const { Option } = Select;
 
@@ -13,7 +13,7 @@ const CustomOrderModel = ({ openModel, setOpenModel }) => {
     const dispatch = useDispatch();
     const allProducts = useSelector(selectAllProductList)
 
-    function getCategoryName(category) {
+    function getCategoryImage(category) {
         switch (category) {
           case "62d964b6f57e16db99387e6c":
             return ["/Images/Catlog/custom_appareal.webp"];
@@ -32,6 +32,29 @@ const CustomOrderModel = ({ openModel, setOpenModel }) => {
           default:
             return "";
         }
+    }
+
+    function getCategoryName(category) {
+        switch (category) {
+          case "62d964b6f57e16db99387e6c":
+            return "Apparels";
+          case "62d964f7f57e16db99387e6f":
+            return "Drinkware";
+          case "62d9652ef57e16db99387e72":
+            return "Stationery";
+          case "62d96572f57e16db99387e75":
+            return "Accessories";
+          case "62d965b2f57e16db99387e78":
+            return "Games";
+          case "62d965eaf57e16db99387e7b":
+            return "Everything Else";
+          case "62d9662bf57e16db99387e7e":
+            return "Packaging";
+          case "62d966b9f57e16db99387e81":
+            return "Shipping";
+          default:
+            return "";
+        }
       }
 
     const onFinish = (values) => {
@@ -40,7 +63,7 @@ const CustomOrderModel = ({ openModel, setOpenModel }) => {
             price: [{
                 cost: "TBD"
             }],
-            image: [getCategoryName(values.categoryId)]
+            image: [getCategoryImage(values.categoryId)]
         };
 
         const finalFormValues = { ...values, ...staticValues };
@@ -49,6 +72,11 @@ const CustomOrderModel = ({ openModel, setOpenModel }) => {
         dispatch(setAllProductList(updatedProducts));
         dispatch(add(newProduct));
         setOpenModel(false)
+        const productList ={
+            category: getCategoryName(values.categoryId),
+            swagName: values.name,
+            link: values.link
+        }
     };
 
     const intialValues = {
