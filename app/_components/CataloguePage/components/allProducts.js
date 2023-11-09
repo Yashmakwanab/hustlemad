@@ -11,6 +11,7 @@ import {
 } from "@/app/redux/slice/globleSlice";
 import CustomOrderModel from "../../models/customOrderModel";
 import ProductDetailModal from "../../models/productDetailModal";
+import axios from "axios";
 
 const AllProduct = () => {
   const [addCart, setAddCart] = useState([]);
@@ -19,11 +20,12 @@ const AllProduct = () => {
   const dispatch = useDispatch();
   const cartitems = useSelector((state) => state.cart);
   const getproducts = async () => {
-    const res = await fetch(
-      "https://hustlemad-backend.herokuapp.com/productList"
-    );
-    const data = await res.json();
-    dispatch(setAllProductList(data.products));
+    try {
+      const response = await axios.get('https://hustlemad-backend.herokuapp.com/productList');
+      dispatch(setAllProductList(response.data.products));
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
   };
   const allProducts = useSelector(selectAllProductList);
 

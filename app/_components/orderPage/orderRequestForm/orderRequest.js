@@ -18,7 +18,7 @@ export default function OrderRequest() {
                         <ImageWrapper src="/Images/Catlog/editIcon.svg" alt='img' className='w-[26px] h-[26px]' />
                     </div>
                     <div className='text-[#0F143A] font-recoleta text-[22px] sm:text-[30px] leading-[22px] sm:leading-[30px] font-[500] mr-[40px]'>Order Request Form</div>
-                    <div className='text-[#2A32FF] font-mazzardSemiBold text-[16px] leading-[16px] cursor-pointer' onClick={() => setsubmitRequest(false)}>Edit</div>
+                    <div className={`${submitRequest ? "" : "hidden"} text-[#2A32FF] font-mazzardSemiBold text-[16px] leading-[16px] cursor-pointer`} onClick={() => setsubmitRequest(false)}>Edit</div>
                 </div>
                 <div>
                     <OrderRequestForm setsubmitRequest={setsubmitRequest} submitRequest={submitRequest}/>

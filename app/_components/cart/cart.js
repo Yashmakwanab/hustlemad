@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { selectAllProductList, selectQuantityNumber, setAllProductList, setQuantityNumber, setTotalEstimate, setTotalPrice } from "../../redux/slice/globleSlice";
 import "./style.css";
+import { removeCustomProduct } from "@/app/redux/slice/customOrderSlice";
 
 const Cartpage = () => {
   const defaultQuantityNumber = useSelector(selectQuantityNumber);
@@ -19,10 +20,11 @@ const Cartpage = () => {
 
   const handleremove = (id) => {
     dispatch(remove(id[0]));
-    if (id[1] === "TBD") {
-      const productToRemove = allProducts.find(product => product?.name === id[0]);
+    dispatch(removeCustomProduct(id[1]))
+    if (id[2] === "TBD") {
+      const productToRemove = allProducts.find(product => product?.name === id[1]);
       if (productToRemove) {
-        const updatedProducts = allProducts.filter(product => product?.name !== id[0]);
+        const updatedProducts = allProducts.filter(product => product?.name !== id[1]);
         dispatch(setAllProductList(updatedProducts));
       }
     }
@@ -114,7 +116,7 @@ const Cartpage = () => {
                 </div>
               </div>
               <div className="flex items-center">
-                <button className="" onClick={() => handleremove([item?.name, item?.price?.[0]?.cost])}>
+                <button className="" onClick={() => handleremove([index,item?.name, item?.price?.[0]?.cost])}>
                   <ImageWrapper
                     src={"/Images/Catlog/delete-icon.svg"}
                     className="w-[18px] h-[18px]"
@@ -136,7 +138,7 @@ const Cartpage = () => {
               <div className="cart-select">
                 <Select
                   suffixIcon={<span className="custom-select-cart" />}
-                  defaultValue={100}
+                  defaultValue={defaultQuantityNumber}
                   popupClassName="cart-dropdown"
                   onChange={handleChange}
                   options={[

@@ -3,9 +3,10 @@
 "use client";
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { Button, Form, Input, InputNumber, Modal, Select } from 'antd';
-import { setAllProductList, selectAllProductList, setCustomOrderList, selectCustomOrderList } from '../../redux/slice/globleSlice';
+import { Button, Form, Input, Modal, Select } from 'antd';
+import { setAllProductList, selectAllProductList } from '../../redux/slice/globleSlice';
 import { add } from '../../redux/slice/cartSlice';
+import { addCustomProduct } from '@/app/redux/slice/customOrderSlice';
 const { Option } = Select;
 
 const CustomOrderModel = ({ openModel, setOpenModel }) => {
@@ -75,8 +76,11 @@ const CustomOrderModel = ({ openModel, setOpenModel }) => {
         const productList ={
             category: getCategoryName(values.categoryId),
             swagName: values.name,
-            link: values.link
+            link: values.link,
+            quantity: ""
         }
+        dispatch(addCustomProduct(productList));
+        form.resetFields();
     };
 
     const intialValues = {
@@ -163,6 +167,10 @@ const CustomOrderModel = ({ openModel, setOpenModel }) => {
                                         message: "Please input your link!",
                                         whitespace: true,
                                     },
+                                    {
+                                        type: "url",
+                                        message: "This field must be a valid url."
+                                    }
                                 ]}
                             >
                                 <Input placeholder="Link" />

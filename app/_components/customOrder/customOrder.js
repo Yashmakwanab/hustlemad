@@ -50,7 +50,7 @@ const CustomOrder = () => {
     return (
         <>
             <div className="flex flex-col items-start">
-                <div className="productsWrapper w-[100%] m-auto cards_order items-center justify-center nxl:justify-start pb-10">
+                <div className="productsWrapper w-[100%] m-auto cards_order items-center pb-10">
                     <div className="productsWrapper gap-[40px] flex flex-wrap">
                         {cartitems.map((product, index) => (
                             product?.price?.[0]?.cost === "TBD" && (

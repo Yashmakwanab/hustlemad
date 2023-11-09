@@ -19,6 +19,7 @@ const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
         console.log(date, dateString);
     };
     const defaultQuantityNumber = useSelector(selectQuantityNumber);
+    const custom_product_list = useSelector((state) => state.customOrder);
 
     const intialValues = {
         swagbox_quantity: defaultQuantityNumber,
@@ -51,7 +52,7 @@ const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
                 tbd: "YES",
                 total_estimate: totalEstimate,
                 total_price:totalPrice,
-                custom_product_list:[]
+                custom_product_list:custom_product_list
               },
             //   {
             //     headers: {
@@ -60,8 +61,9 @@ const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
             //   }
             )
             .then((res) => {
-              if (res.status == 200) {
+              if (res.status == 201) {
                 setsubmitDetail(true)
+                form.resetFields();
               }
             }
             );
