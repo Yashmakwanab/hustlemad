@@ -9,11 +9,11 @@ import { selectAllProductList, selectQuantityNumber, setAllProductList, setQuant
 import "./style.css";
 
 const Cartpage = () => {
-  const [quantity, setQuantity] = useState(100);
+  const defaultQuantityNumber = useSelector(selectQuantityNumber);
+  const [quantity, setQuantity] = useState(defaultQuantityNumber);
   const allProducts = useSelector(selectAllProductList);
   const dispatch = useDispatch();
   const cartitems = useSelector((state) => state.cart);
-  const defaultQuantityNumber = useSelector(selectQuantityNumber);
   dispatch(setQuantityNumber(quantity));
 
   const handleremove = (id) => {
@@ -128,7 +128,7 @@ const Cartpage = () => {
                 <div className="cart-select">
                   <Select
                     suffixIcon={<span className="custom-select-cart" />}
-                    defaultValue={100}
+                    defaultValue={defaultQuantityNumber}
                     popupClassName="cart-dropdown"
                     onChange={handleChange}
                     options={[

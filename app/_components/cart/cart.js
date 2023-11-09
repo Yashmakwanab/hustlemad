@@ -5,11 +5,12 @@ import ImageWrapper from "../ImageWrapper/ImageWrapper";
 import { Select } from "antd";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
-import { selectAllProductList, setAllProductList, setQuantityNumber, setTotalEstimate, setTotalPrice } from "../../redux/slice/globleSlice";
+import { selectAllProductList, selectQuantityNumber, setAllProductList, setQuantityNumber, setTotalEstimate, setTotalPrice } from "../../redux/slice/globleSlice";
 import "./style.css";
 
 const Cartpage = () => {
-  const [quantity, setQuantity] = useState(100);
+  const defaultQuantityNumber = useSelector(selectQuantityNumber);
+  const [quantity, setQuantity] = useState(defaultQuantityNumber);
   const [show, setShow] = useState(false);
   const allProducts = useSelector(selectAllProductList);
 
@@ -39,7 +40,7 @@ const Cartpage = () => {
     }
   }, 0);
 
-  const totalEstimate = quantity !== "Custom" ? pricePerPack * quantity : pricePerPack;
+  const totalEstimate = defaultQuantityNumber !== "Custom" ? pricePerPack * defaultQuantityNumber : pricePerPack;
 
   dispatch(setTotalPrice(pricePerPack));
   dispatch(setTotalEstimate(totalEstimate));
@@ -312,7 +313,7 @@ const Cartpage = () => {
                     <div className="cart-select">
                       <Select
                         suffixIcon={<span className="custom-select-cart" />}
-                        defaultValue={100}
+                        defaultValue={defaultQuantityNumber}
                         popupClassName="cart-dropdown"
                         onChange={handleChange}
                         options={[
