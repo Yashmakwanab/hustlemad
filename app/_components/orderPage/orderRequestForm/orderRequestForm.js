@@ -29,7 +29,11 @@ const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
         company_name: "",
         email: "",
         phone: "",
-      };
+    };
+
+    const filteredItems = cartitems.filter(item => {
+        return item.brandName !== "Custom";
+    });
 
     const onFinish = async (values) => {
         const formattedDate = values.delivery_date ? new Date(values.delivery_date).toISOString().split('T')[0] : '';
@@ -48,7 +52,7 @@ const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
                 budget_per_box: "",
                 items_count: cartitems.length,
                 preset_pack: "NO",
-                product_list: cartitems,
+                product_list: filteredItems,
                 tbd: "YES",
                 total_estimate: totalEstimate,
                 total_price:totalPrice,
