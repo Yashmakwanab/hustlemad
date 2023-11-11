@@ -22,7 +22,7 @@ const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
     const custom_product_list = useSelector((state) => state.customOrder);
 
     const intialValues = {
-        swagbox_quantity: defaultQuantityNumber,
+        swagbox_quantity: defaultQuantityNumber ? defaultQuantityNumber : 100,
         delivery_date: "",
         comment: "",
         full_name: "",
@@ -76,11 +76,9 @@ const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
         form
             .validateFields(["swagbox_quantity", "delivery_date", "comment"])
             .then(() => {
-                // Validation successful, proceed to the next step or perform any action
                 setsubmitRequest(true);
             })
             .catch((error) => {
-                // Validation failed, display error messages or handle the error as needed
                 console.error("Validation failed:", error);
             });
     };
@@ -100,21 +98,14 @@ const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
                         <Form.Item
                             name="swagbox_quantity"
                             label="How many Swag packs do you want?"
-                            className="mb-[20px] lg:mb-[32px] max-w-[320px] sm:max-w-[520px] md:max-w-[600px] nxl:max-w-[1146px]"
-                            rules={[
-                                {
-                                    required: true,
-                                    message: "Please input swag!",
-                                    whitespace: true,
-                                },
-                            ]}
+                            className="mb-[20px] lg:mb-[32px] max-w-[620px] sm:max-w-[520px] md:max-w-[826px] nxl:max-w-[1146px]"
                         >
                             <Input placeholder="Please input swag" />
                         </Form.Item>
                         <Form.Item
                             name="delivery_date"
                             label="Do you need these by a certain date?"
-                            className="mb-[20px] lg:mb-[32px] form-date max-w-[320px] sm:max-w-[520px] md:max-w-[600px] nxl:max-w-[1146px]"
+                            className="mb-[20px] lg:mb-[32px] form-date max-w-[620px] sm:max-w-[520px] md:max-w-[826px] nxl:max-w-[1146px]"
                             rules={[
                                 {
                                     required: true,
@@ -131,7 +122,7 @@ const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
                         <Form.Item
                             name="comment"
                             label="Add Comments"
-                            className="mb-[20px] lg:mb-[32px] max-w-[320px] sm:max-w-[520px] md:max-w-[600px] nxl:max-w-[1146px]"
+                            className="mb-[20px] lg:mb-[32px] max-w-[620px] sm:max-w-[620px] md:max-w-[826px] nxl:max-w-[1146px]"
                             rules={[
                                 {
                                     required: true,
@@ -146,20 +137,20 @@ const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
                         <Button
                             type="primary"
                             onClick={handleContinueClick}
-                            className="font-mazzardSemiBold bg-[#0F143A] py-[14px] px-[72px] text-[18px] sm:text-[22px] lg:text-[24px] font-[600] h-full text-center mb-[68px] lg:mb-0"
+                            className="font-mazzardSemiBold bg-[#0F143A] py-[14px] px-[72px] text-[18px] sm:text-[22px] lg:text-[24px] font-[600] h-full text-center"
                         >
                             Continue
                         </Button>
                     </div>
                 </div>
-                <div className="flex mb-[40px] items-center mt-[60px]">
+                <div className="flex mb-[40px] items-center mt-[40px] sm:mt-[60px]">
                     <div className='mr-[28px]'>
                         <ImageWrapper src="/Images/Catlog/editIcon.svg" alt='img' className='w-[26px] h-[26px]' />
                     </div>
-                    <div className='text-[#0F143A] font-recoleta text-[30px] leading-[30px] font-[500] mr-[40px]'>Contact Details</div>
+                    <div className='text-[#0F143A] font-recoleta text-[22px] sm:text-[30px] leading-[22px] sm:leading-[30px] font-[500] mr-[40px]'>Contact Details</div>
                 </div>
-                <div className={`${submitRequest ? "" : "hidden"} max-w-[320px] sm:max-w-[520px] md:max-w-[600px] nxl:max-w-[1146px] ml-[54px] mb-[30px]`}>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap:10 lg:gap-24 font-mazzard">
+                <div className={`${submitRequest ? "" : "hidden"} max-w-[620px] sm:max-w-[620px] md:max-w-[826px] nxl:max-w-[1146px] sm:ml-[54px] mb-[30px]`}>
+                    <div className="grid grid-cols-1 xll:grid-cols-2 gap:10 xll:gap-24 font-mazzard">
                         <Form.Item
                             name="full_name"
                             label="Enter your Full Name"
@@ -188,7 +179,7 @@ const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
                             <Input placeholder="Company Name" />
                         </Form.Item>
                     </div>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap:10 lg:gap-24 sm:mt-[16px] lg:mt-0">
+                    <div className="grid grid-cols-1 xll:grid-cols-2 gap:10 xll:gap-24 sm:mt-[16px] lg:mt-0">
                         <Form.Item
                             name="email"
                             label="Work Email Address"
@@ -218,7 +209,7 @@ const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
                             <Input
                                 prefix="+91-"
                                 placeholder="Phone Number"
-                                className="border-[#0f143acc] !border-[2px] !text-[14px] sm:!text-[20px] px-[10px] py-[7px] sm:py-[10px] numberInput"
+                                className="border-[#0f143acc] !border-[2px] !text-[14px] sm:!text-[18px] px-[20px] py-[7px] sm:py-[8px] numberInput"
                             />
                         </Form.Item>
                     </div>
@@ -226,7 +217,7 @@ const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
                         <Button
                             type="primary"
                             htmlType="submit"
-                            className="font-mazzardMedium bg-[#0F143A] py-[14px] px-[72px] text-[14px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-[500] h-full text-center xl:mt-4"
+                            className="font-mazzardMedium bg-[#0F143A] py-[14px] px-[72px] text-[14px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-[500] h-full text-center"
                         >
                             Submit Request
                         </Button>

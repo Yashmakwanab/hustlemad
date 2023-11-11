@@ -248,10 +248,14 @@ body {
 }
 
 .order-form .ant-form-item-label label,.custom-label {
-  font-size: 18px !important;
+  font-size: 20px !important;
   color: rgba(15, 20, 58, 0.8) !important;
   font-weight: 500;
   @apply font-mazzardMedium;
+}
+
+.order-form .ant-form-item {
+  margin-bottom: 36px;
 }
 .underlineCtm {
   color: #0f143a !important;
@@ -304,6 +308,9 @@ body {
   }
   .customOrderModel-form label {
     font-size: 16px !important;
+  }
+  .order-form .ant-input {
+    font-size: 18px !important;
   }
 }
 
@@ -410,6 +417,12 @@ body {
   .customOrderModel-select .ant-select-single {
     height: 39px !important;
   }
+  .order-form .ant-form-item-label label,.custom-label {
+    font-size: 16px !important;
+  }
+  .order-form .ant-form-item {
+    margin-bottom: 24px;
+  }
 
 }
 .overflow-style::-webkit-scrollbar-track {
@@ -429,4 +442,13 @@ body {
   border-radius: 20px;
   background-color: #0F143A;
   border: 1px solid rgba(15, 20, 58, 0.08);
+}
+
+.mask_layer{
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  pointer-events: none;
 }
