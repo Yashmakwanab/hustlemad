@@ -1,0 +1,45 @@
+.policy_title {
+    text-decoration: underline;
+}
+.policy_subTitle {
+    position: relative;
+    margin-bottom: 0.5em;
+    display: inline-block !important;
+}
+.policy_subTitle::after{
+    content: '';
+    width: 100%;
+    height:2px;
+    position: absolute;
+    bottom: 0.1em;
+    left: 0%;
+    background-color: black;
+}
+.policy_list_title  {
+    position: relative;
+    margin-bottom: 0.5em;
+    display: inline-block !important;
+}
+.policy_list_title::after{
+    content: '';
+    width: 100%;
+    height:2px;
+    position: absolute;
+    bottom: 0.1em;
+    left: 0%;
+    background-color: black;
+}
+/* <li>
+<div>
+  <h2 className="text-[12px] font-mazzard leading-[20px] sm:leading-[24px] md:leading-[28px] nxl:leading-[32px] sm:text-[14px] md:text-[16px] nxl:text-[20px]  font-[600] decoration-4 text-[#0F143A] opacity-80">
+    Comments or Questions
+  </h2>
+  <article className="text-[12px] font-mazzard leading-[20px] sm:leading-[24px] md:leading-[28px] nxl:leading-[32px] sm:text-[14px] md:text-[16px] nxl:text-[20px]  text-justify">
+    If you have any questions, comments or concerns arising from the
+    website or any other relevant terms and conditions, policies and
+    notices contact us at{" "}
+   
+    .
+  </article>
+</div>
+</li> */

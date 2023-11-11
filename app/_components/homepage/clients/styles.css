@@ -1,131 +1,122 @@
 .client_container {
-    background-color: #FFFDC5;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-
+  background-color: #fffdc5;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .marque_images {
-    width: 150px;
-    height: 50px;
-    object-fit: contain;
+  width: 200px;
+  height: 78px;
+  object-fit: contain;
+  margin: 0px 30px;
 }
-
-.underlineCtm {
-    color: #0F143A !important;
-    background: url('../../../../public/Images/heroSectionSvgs/client_underline.svg');
-    background-repeat: no-repeat;
-    background-position-y: bottom;
-    background-size: contain;
-
-}
-
 
 .client_content {
-    display: flex;
-    gap: 2em;
-    align-items: center;
-    width: 100%;
-    justify-content: space-evenly;
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 .slider {
-    height: 80px;
-    position: relative;
-    width: 100%;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
+  height: 80px;
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
 }
-
-
-
-
 
 /*  IMPORTANT CODE BELOW */
 
 .slide-track {
-    width: calc(150px * 15);
-    display: flex;
-    animation: scroll 20s linear infinite;
-    justify-content: space-between;
-    align-items: center;
+  width: calc(150px * 15);
+  display: flex;
+  animation: scroll 20s linear infinite;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .slide-track2 {
-    width: calc(150px * 10);
-    display: flex;
-    animation: scroll2 15s linear infinite;
-    justify-content: space-between;
+  width: calc(150px * 10);
+  display: flex;
+  animation: scroll2 15s linear infinite;
+  justify-content: space-between;
 }
 
 .slide {
-    width: 150px;
-    height: 60px;
+  width: 150px;
+  height: 60px;
 
-    display: grid;
-    place-items: center;
-    transition: 0.5s;
-    cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 .slide:hover {
-    transform: scale(0.8)
+  transform: scale(0.8);
 }
 
 @keyframes scroll {
-    0% {
-        transform: translateX(0px);
-    }
+  0% {
+    transform: translateX(0px);
+  }
 
-    100% {
-        transform: translateX(calc(-150px * 10));
-    }
+  100% {
+    transform: translateX(calc(-150px * 10));
+  }
 }
 
 @keyframes scroll2 {
-    0% {
-        transform: translateX(0px);
-    }
+  0% {
+    transform: translateX(0px);
+  }
 
-    100% {
-        transform: translateX(calc(-150px * 5));
-    }
+  100% {
+    transform: translateX(calc(-150px * 5));
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .slide-track {
-        width: calc(80px * 20);
+  .slide-track {
+    width: calc(80px * 20);
+  }
+
+  .slide-track2 {
+    width: calc(80px * 15);
+  }
+
+  .slide {
+    width: 80px;
+  }
+
+  .marque_images {
+    height: 50px;
+    margin: 0px 10px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0px);
     }
 
-    .slide-track2 {
-        width: calc(80px * 15);
+    100% {
+      transform: translateX(calc(-80px * 10));
+    }
+  }
+
+  @keyframes scroll2 {
+    0% {
+      transform: translateX(0px);
     }
 
-    .slide {
-        width: 80px;
+    100% {
+      transform: translateX(calc(-80px * 5));
     }
-
-    @keyframes scroll {
-        0% {
-            transform: translateX(0px);
-        }
-
-        100% {
-            transform: translateX(calc(-80px * 10));
-        }
-    }
-
-    @keyframes scroll2 {
-        0% {
-            transform: translateX(0px);
-        }
-
-        100% {
-            transform: translateX(calc(-80px * 5));
-        }
-    }
+  }
 }

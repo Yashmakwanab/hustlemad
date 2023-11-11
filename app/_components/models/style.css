@@ -1,0 +1,30 @@
+.swiper-button-prev::after {
+  color: #0f143a66;
+  font-size: 20px !important;
+}
+.swiper-button-next::after {
+  font-size: 20px !important;
+  color: #0f143a66;
+  right: -8px;
+}
+.swiper-button-prev {
+  left: -8px;
+}
+.swiper-button-next {
+  right: -8px;
+}
+.swiper-slide-prev {
+  opacity: 0.5;
+  border: 1px solid #ccc;
+}
+.swiper-slide-active {
+  border: 1px solid #000;
+}
+.swiper-slide-next {
+  opacity: 0.5;
+  border: 1px solid #ccc;
+}
+.swiper-slide {
+  border-radius: 15px !important;
+  overflow: hidden;
+}

@@ -1,7 +1,6 @@
 .swiper {
     width: 100%;
     height: 100%;
-
     margin: 50px auto;
 }
 
@@ -14,8 +13,6 @@
     width: 100%;
     padding: 20px;
     border-radius: 24px 6px 24px 6px;
-
-    /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;

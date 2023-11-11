@@ -1,19 +1,10 @@
 "use client"
-import React, { useState } from 'react';
-import {
-    Col,
-    Row,
-    Button,
-    Form,
-    Input,
-    Select,
-} from 'antd';
-const { Option } = Select;
+import React from 'react';
+import { Button, Form, Input } from 'antd';
 
 const WebRequestForm = () => {
     const [form] = Form.useForm();
     const onFinish = (values) => {
-        console.log('Received values of form: ', values);
         form.resetFields();
     };
 

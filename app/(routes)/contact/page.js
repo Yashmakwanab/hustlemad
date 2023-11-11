@@ -1,10 +1,11 @@
 import React from 'react';
+import ContactUs from '@/app/_components/contactus/contact';
 
 const Contact = () => {
     return (
         <>
-            <div className='h-[100vh] pt-[44px] md:pt-[127px] nxl:pt-[80px]'>
-                This is Contact page
+            <div className='pt-[44px] md:pt-[127px] nxl:pt-[80px]'>
+                <ContactUs />
             </div>
         </>
     )

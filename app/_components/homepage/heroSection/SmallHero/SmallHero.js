@@ -1,13 +1,12 @@
-'use client'
+"use client";
 
-import React from 'react';
-import hero_person2 from "../../../../../public/Images/heroSectionSvgs/hero_person2.png";
-import Image from 'next/image';
-import './style.css'
+import React from "react";
+import hero_person2 from "../../../../../public/Images/heroSectionSvgs/hero_person2.webp";
+import "./style.css";
+import ImageWrapper from "@/app/_components/ImageWrapper/ImageWrapper";
+
 const SmallHero = () => {
- 
-    return (<Image src={hero_person2} alt='Person Image' />
-  );
+  return <ImageWrapper src={hero_person2.src} alt="Person Image" />;
 };
 
 export default SmallHero;

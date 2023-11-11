@@ -1,0 +1,35 @@
+/* cards */
+  .cards_order {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .product_card_order {
+    width: 220px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    height: 212px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
+  .product_detail_order {
+    height: 90px;
+  }
+
+  .title_container_order {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .product_image_container_order {
+    width: 100%;
+    height: 132px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .product_image_order {
+    height: 100px;
+  }
+  

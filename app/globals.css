@@ -17,64 +17,69 @@
 }
 
 @font-face {
-  font-family: 'Recoleta';
-  src: url('../public/font/Recoleta-Black.woff');
+  font-family: "Recoleta";
+  src: url("../public/font/Recoleta-Black.woff");
   font-weight: 900;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'SpaceMonoBold';
-  src: url('../public/font/SpaceMono-Regular.ttf');
+  font-family: "SpaceMonoBold";
+  src: url("../public/font/SpaceMono-Regular.ttf");
   font-weight: 900;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'spaceMono';
-  src: url('../public/font/SpaceMono-Regular.ttf');
+  font-family: "spaceMono";
+  src: url("../public/font/SpaceMono-Regular.ttf");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Mazzard';
-  src: url('../public/font/mazzard/MazzardH-Regular.ttf');
+  font-family: "Mazzard";
+  src: url("../public/font/mazzard/MazzardH-Regular.ttf");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'MazzardMedium';
-  src: url('../public/font/mazzard/MazzardH-Medium.ttf');
+  font-family: "MazzardMedium";
+  src: url("../public/font/mazzard/MazzardH-Medium.ttf");
   font-weight: 500;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'SpaceMono';
-  src: url('../public/font/spacemono/SpaceMono-Regular.ttf');
+  font-family: "MazzardSemiBold";
+  src: url("../public/font/mazzard/MazzardH-SemiBold.ttf");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SpaceMono";
+  src: url("../public/font/spacemono/SpaceMono-Regular.ttf");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'SpaceMonoBold';
-  src: url('../public/font/spacemono/SpaceMono-Bold.ttf');
+  font-family: "SpaceMonoBold";
+  src: url("../public/font/spacemono/SpaceMono-Bold.ttf");
   font-weight: 700;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'headerFont';
-  src:
-    url("../public/font/Recoleta-Black.woff") format("woff"),
+  font-family: "headerFont";
+  src: url("../public/font/Recoleta-Black.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'taglineFont';
-  src:
-    url("../public/font/MazzardH-Regular.woff") format("woff"),
+  font-family: "taglineFont";
+  src: url("../public/font/MazzardH-Regular.woff") format("woff");
 }
 
 * {
@@ -88,6 +93,12 @@ body {
   background: #ffffff;
   color: #777777;
 }
+.sectionPadding {
+  @apply px-[16px] md:px-[32px] lg:px-[64] xl:px-[96px] pt-[20px] md:pt-[26px] lg:pt-[36px] xl:pt-[64px];
+}
+.sectionBottomPadding {
+  @apply pb-[20px] md:pb-[50px];
+}
 
 .ant-input {
   background-color: transparent;
@@ -97,34 +108,118 @@ body {
   @apply font-mazzard;
 }
 
+.customOrderModel-form .ant-input {
+  background-color: transparent;
+  border: 2px solid rgba(15, 20, 58, 0.8);
+  font-size: 16px !important;
+  padding: 8px 14px;
+  @apply font-mazzard;
+}
+
+.order-form .ant-input {
+  background-color: transparent;
+  border: 2px solid rgba(15, 20, 58, 0.8);
+  font-size: 18px;
+  padding: 8px 20px;
+  @apply font-mazzard;
+}
+
 .web-form .ant-input {
   background-color: white;
-  border: 2px solid #0E003D;
+  border: 2px solid #0e003d;
   border-radius: 8px;
   font-size: 20px;
   padding: 10px 20px;
+  margin-bottom: 32px;
   @apply font-spaceMono shadow-[-4px_4px_0px_0px_#272727];
 }
 
-.ant-select-selector {
-  @apply !h-auto !text-[20px] !px-[20px] !py-[3px] sm:!py-[10px] !mb-2
+.contactForm .ant-input {
+  background-color: white;
+  border: 2px solid rgba(15, 20, 58, 0.4);
+  font-size: 20px;
+  padding: 16px 20px;
+  @apply font-mazzardMedium;
 }
 
-.ant-select-arrow {
-  @apply !top-[67%] sm:!top-[86%] !right-[5%]
+.sellerLead .ant-input {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 2px solid #00691f;
+  font-size: 20px;
+  padding: 16px 20px;
+  @apply font-mazzardMedium;
+}
+.ant-input-affix-wrapper {
+  background-color: transparent;
+}
+.contactForm .ant-input:focus,
+.sellerLead .ant-input:focus,
+.web-form .ant-input:focus {
+  background-color: #ffffff !important;
 }
 
-.ant-select, .ant-select-selection-item, .ant-select-item-option, .ant-input-prefix {
+.sellerLead .ant-form-item {
+  margin-bottom: 32px;
+}
+
+.home-select .ant-select-selector {
+  @apply !h-auto !text-[20px] !px-[20px] !py-[3px] sm:!py-[10px] !mb-2;
+}
+.customOrderModel-select .ant-select-selector {
+  font-size: 16px !important;
+  padding: 8px 14px !important;
+  margin-bottom: 24px !important;
+  @apply font-mazzard;
+}
+.customOrderModel-select .ant-select-single {
+  height: 45px !important;
+}
+.cart-select .ant-select-selector {
+  @apply !border-none;
+}
+
+.home-select .ant-select-arrow {
+  @apply !top-[67%] sm:!top-[86%] !right-[5%];
+}
+.customOrderModel-select .ant-select-arrow {
+  top: 51%;
+  right: 5%;
+}
+.customOrderModel-select .ant-select-selection-item{
+  @apply !font-mazzard text-[#0F143A];
+}
+
+.ant-select,
+.ant-select-selection-item,
+.ant-select-item-option,
+.ant-input-prefix {
   @apply !font-mazzardMedium text-[#0F143A];
 }
 
 .custom-select-arrow {
-  background-image: url('../public/Images/landingPage/downArrowForm.svg');
+  background-image: url("../public/Images/landingPage/downArrowForm.svg");
   background-size: 16px 16px;
   background-repeat: no-repeat;
   background-position: right center;
   width: 16px;
   height: 16px;
+}
+
+.custom-select-cart {
+  background-image: url("../public/Images/Catlog/cart-arrow.svg");
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  width: 16px;
+  height: 16px;
+}
+
+.cart-dropdown{
+  width: 90px !important;
+}
+.cart-dropdown .ant-select-item-option-content{
+  justify-content: center;
+  display: flex
 }
 
 .numberInput .ant-input {
@@ -138,48 +233,222 @@ body {
   @apply font-mazzardMedium;
 }
 
+.customOrderModel-form label {
+  font-size: 16px !important;
+  color: rgba(15, 20, 58, 0.8) !important;
+  font-weight: 500;
+  @apply font-mazzardMedium;
+}
+
 .web-form .ant-form-item-label label {
   font-size: 24px !important;
-  color: #0E003D !important;
+  color: #0e003d !important;
   font-weight: 500;
   @apply font-spaceMonoBold;
 }
 
+.order-form .ant-form-item-label label,.custom-label {
+  font-size: 20px !important;
+  color: rgba(15, 20, 58, 0.8) !important;
+  font-weight: 500;
+  @apply font-mazzardMedium;
+}
+
+.order-form .ant-form-item {
+  margin-bottom: 36px;
+}
+.underlineCtm {
+  color: #0f143a !important;
+  background: url("../public/Images/heroSectionSvgs/client_underline.webp");
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: contain;
+}
+
+.order-form .ant-picker {
+  background-color: transparent;
+  border: 2px solid rgba(15, 20, 58, 0.8);
+  font-size: 18px;
+  padding: 8px 20px;
+  @apply font-mazzard;
+}
+.order-form .ant-picker #order_form_delivery_date{
+  font-size: 18px;
+}
+
+.customOrderModel{
+  justify-content: center;
+  width: auto !important;
+}
+
+.customOrderModel .ant-modal-content{
+  padding: 30px 40px;
+  width: 580px;
+  margin: auto;
+  border-radius: 20px !important;
+}
+.customOrderModel .ant-modal-footer{
+  display: none;
+}
+
 @media screen and (max-width: 1600px) {
-  .ant-form-item-label label,.web-form .ant-form-item-label label, .web-form .ant-input, .ant-input {
+  .ant-form-item-label label,
+  .web-form .ant-form-item-label label,
+  .web-form .ant-input,
+  .ant-input {
     font-size: 24px !important;
   }
-  .ant-input, .web-form .ant-input  {
+  .sellerLead .ant-input,
+  .contactForm .ant-input {
+    font-size: 20px !important;
+  }
+  .ant-input,
+  .web-form .ant-input {
     padding: 10px 20px;
+  }
+  .customOrderModel-form label {
+    font-size: 16px !important;
+  }
+  .order-form .ant-input {
+    font-size: 18px !important;
   }
 }
 
 @media screen and (max-width: 1279px) {
-  .ant-form-item-label label,.web-form .ant-form-item-label label, .web-form .ant-input, .ant-input {
+  .ant-form-item-label label,
+  .web-form .ant-form-item-label label,
+  .web-form .ant-input,
+  .ant-input {
     font-size: 21px !important;
   }
-  .ant-input, .web-form .ant-input  {
+  .sellerLead .ant-input,
+  .contactForm .ant-input {
+    font-size: 20px !important;
+  }
+  .ant-input,
+  .web-form .ant-input {
     padding: 10px 20px;
+  }
+  .customOrderModel-form label {
+    font-size: 16px !important;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  .ant-form-item-label label,.web-form .ant-form-item-label label, .web-form .ant-input, .ant-input {
+  .ant-form-item-label label,
+  .web-form .ant-form-item-label label,
+  .web-form .ant-input,
+  .ant-input {
     font-size: 22px !important;
   }
-  .ant-input, .web-form .ant-input  {
+  .sellerLead .ant-input,
+  .contactForm .ant-input {
+    font-size: 20px !important;
+  }
+  .ant-input,
+  .web-form .ant-input {
     padding: 10px 20px;
+  }
+  .customOrderModel-form label {
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .customOrderModel .ant-modal-content{
+    padding: 30px 40px;
+    width: 480px;
+    margin: auto;
+  }
+  .customOrderModel-form .ant-input {
+    font-size: 14px !important;
+    padding: 8px 14px;
+    @apply font-mazzard;
+  }
+  .customOrderModel-select .ant-select-selector {
+    font-size: 14px !important;
+    padding: 8px 14px !important;
+    margin-bottom: 24px !important;
+  }
+  .customOrderModel-select .ant-select-single {
+    height: 42px !important;
   }
 }
 
 @media screen and (max-width: 639px) {
-  .ant-form-item-label label,.web-form .ant-form-item-label label, .web-form .ant-input, .ant-input {
+  .ant-form-item-label label,
+  .web-form .ant-form-item-label label,
+  .web-form .ant-input,
+  .ant-input {
     font-size: 14px !important;
   }
-  .ant-input, .web-form .ant-input  {
+  .sellerLead .ant-input,
+  .contactForm .ant-input {
+    font-size: 16px !important;
+    padding: 9px 18px;
+  }
+  .ant-input,
+  .web-form .ant-input {
     padding: 7px 20px;
   }
-  .ant-select, .ant-select-selection-item {
+
+  .ant-select,
+  .ant-select-selection-item {
     font-size: 14px !important;
   }
+  .customOrderModel-form label {
+    font-size: 12px !important;
+  }
+  .customOrderModel .ant-modal-content{
+    padding: 20px 30px;
+    width: 320px;
+    margin: auto;
+  }
+  .customOrderModel-form .ant-input {
+    font-size: 12px !important;
+    padding: 8px 14px;
+    @apply font-mazzard;
+  }
+  .customOrderModel-select .ant-select-selector {
+    font-size: 12px !important;
+    padding: 8px 14px !important;
+    margin-bottom: 24px !important;
+  }
+  .customOrderModel-select .ant-select-single {
+    height: 39px !important;
+  }
+  .order-form .ant-form-item-label label,.custom-label {
+    font-size: 16px !important;
+  }
+  .order-form .ant-form-item {
+    margin-bottom: 24px;
+  }
+
+}
+.overflow-style::-webkit-scrollbar-track {
+  border: none;
+  margin: 0px 0px;
+  background-color: transparent;
+}
+
+.overflow-style::-webkit-scrollbar {
+  width: 4px;
+  margin-left: -10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.overflow-style::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #0F143A;
+  border: 1px solid rgba(15, 20, 58, 0.08);
+}
+
+.mask_layer{
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  pointer-events: none;
 }
