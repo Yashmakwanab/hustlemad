@@ -5,39 +5,39 @@ import ImageWrapper from "../../ImageWrapper/ImageWrapper";
 
 const testimonials = [
   {
-    name: "Abhishek Singh",
+    name: "Karan Prasad",
     description:
-      "“Swag ordering has always been a hassle, it’s difficult to trust vendors as the market is very opaque. Moreover, our team size is ever increasing which bounds us to store kits in our office.”",
-    companyName: "Magicbricks",
-    image: "/Images/landingPage/Test_Avtar_1.webp",
+      "“We loved the entire swag experience with Hustlemad. Everything from a wide range of options to regular progress updates and final output was loved by all of us. Keen to work sigain with them.”",
+    companyName: "Antler",
+    image: "https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/448448c1-c26d-4579-64c0-410c94c3d400/public",
   },
   {
-    name: "Joy Jackson",
+    name: "Nayna Yadav",
     description:
-      "“Introducing Stacksome, the revolutionary web development platform that streamlines the process of building and deploying websites. With its intuitive.”",
-    companyName: "Stacksome",
-    image: "/Images/landingPage/Test_Avtar_2.webp",
+      "“Love the quality of merchandise. Very excited for the team to see them. Great fit! 🙌”",
+    companyName: "Groww",
+    image: "https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/01d404b4-c420-4691-e52f-bebe0824a600/public",
   },
   {
-    name: "Wanda Ng",
+    name: "Nizar Mohammed",
     description:
-      "“Thorium is a naturally occurring radioactive element with the atomic number 90. It is a silvery-white metal that is slightly radioactive and has a high.”",
-    companyName: "Thorium",
-    image: "/Images/landingPage/Test_Avtar_3.webp",
+      "“With varied options in the market, continued increase in demands of our requests and working around within our budgets, the team was patient and helpful at every decision making step. To rightly say, your products were a perfect Swag for our Tribe. Thank you Hustlemad.”",
+    companyName: "Excelencia",
+    image: "https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/6d2d688b-a3b6-41ee-bf7d-0bf9fb3bfc00/public",
   },
   {
-    name: "Stephen Var",
+    name: "Preeti Ahuja",
     description:
-      "“The ignek boasts an array of impressive features that set it apart from its competitors. Equipped with state-of-the-art touch-sensitive controls, this device offersn.”",
-    companyName: "Ignek",
-    image: "/Images/landingPage/Test_Avtar_4.webp",
+      "“We loved working with Hustlemad. We have already done multiple orders with them. Never before have we been able to get so many brands together in one box. The option to choose from multiple DTC brands is a godsend.”",
+    companyName: "InMobi Technologies",
+    image: "https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/f1b06df2-9630-4f94-d22a-1d076423ce00/public",
   },
   {
-    name: "William Chu",
+    name: "Kaustubh Katdare",
     description:
-      "“Ymsofttech boasts a comprehensive suite of tools and functionalities that cater to various aspects of your business needs. From streamlining workflow.”",
-    companyName: "Ymsofttech",
-    image: "/Images/landingPage/Test_Avtar_5.webp",
+      "“The experience of partnering with Hustlemad was smooth. Aditya and his team promptly responded to our queries and helped build a custom solution we were looking for. Hustlemad team is professional and I'd definitely recommend them for your business.”",
+    companyName: "Gumlet",
+    image: "https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/b3d7a99e-32b6-484b-e0d0-626b72674200/public",
   },
 ];
 
@@ -87,7 +87,7 @@ function Testimonials() {
               alt="container"
             />
             <div className={Testimonialstyles.writingp2}>
-              <p className="font-mazzardMedium text-[24px] text-[#0F143A]">
+              <p className="font-mazzardMedium text-[20px] text-[#0F143A]">
                 {testimonials[index]?.description}
               </p>
               <ImageWrapper

@@ -9,48 +9,53 @@ const ClientLovesUs = () => {
   const Reviews = [
     {
       review:
-        "Love the quality of merchandise. Very excited for the team to see them. Great fit! 🙌",
-      reviewer: "Ankur, Magikbricks",
+        "We loved the entire swag experience with Hustlemad. Everything from a wide range of options to regular progress updates and final output was loved by all of us. Keen to work sigain with them.",
+      reviewer: "Karan Prasad",
     },
     {
       review:
         "Love the quality of merchandise. Very excited for the team to see them. Great fit! 🙌",
-      reviewer: "Ankur, Magikbricks",
+      reviewer: "Nayna Yadav",
     },
     {
       review:
-        "Love the quality of merchandise. Very excited for the team to see them. Great fit! 🙌",
-      reviewer: "Ankur, Magikbricks",
+        "With varied options in the market, continued increase in demands of our requests and working around within our budgets, the team was patient and helpful at every decision making step. To rightly say, your products were a perfect Swag for our Tribe. Thank you Hustlemad.",
+      reviewer: "Nizar Mohammed",
     },
     {
       review:
-        "Love the quality of merchandise. Very excited for the team to see them. Great fit! 🙌",
-      reviewer: "Ankur, Magikbricks",
+        "We loved working with Hustlemad. We have already done multiple orders with them. Never before have we been able to get so many brands together in one box. The option to choose from multiple DTC brands is a godsend.",
+      reviewer: "Preeti Ahuja",
     },
     {
       review:
-        "Love the quality of merchandise. Very excited for the team to see them. Great fit! 🙌",
-      reviewer: "Ankur, Magikbricks",
+        "Excellent! Aditya, and the Hustlemad team were really proactive, collaborative and accommodating throughout the process. As the showrunner of a design and brand cohort, I'm very particular about details and attention to quality - Hustlemad were the perfect partners to make this happen",
+      reviewer: "Sneha Sankar",
     },
     {
       review:
-        "Love the quality of merchandise. Very excited for the team to see them. Great fit! 🙌",
-      reviewer: "Ankur, Magikbricks",
+        "Amazing quality, timely delivery and reasonable pricing!",
+      reviewer: "Vijayalakshmi R",
     },
     {
       review:
-        "Love the quality of merchandise. Very excited for the team to see them. Great fit! 🙌",
-      reviewer: "Ankur, Magikbricks",
+        "The experience of partnering with Hustlemad was smooth. Aditya and his team promptly responded to our queries and helped build a custom solution we were looking for. Hustlemad team is professional and I'd definitely recommend them for your business.",
+      reviewer: "Kaustubh Katdare",
     },
     {
       review:
-        "Love the quality of merchandise. Very excited for the team to see them. Great fit! 🙌",
-      reviewer: "Ankur, Magikbricks",
+        "The experience with Hustlemad was great. They did a quick turnaround even for very limited quantities and were readily available. Much more responsive than any other venders we have tried. would recommend!",
+      reviewer: "Rahul Bhatnagar",
     },
     {
       review:
-        "Love the quality of merchandise. Very excited for the team to see them. Great fit! 🙌",
-      reviewer: "Ankur, Magikbricks",
+        "It was very efficient, no time was squandered, and the merchandise quality was excellent!",
+      reviewer: "Harshit Kataria",
+    },
+    {
+      review:
+        "Putting together a swag kit for the Squad is a difficult process. Hustlemad provided a wonderful experience. There are a plethora of D2C brand products to choose from. I'm excited to work with Hustlemad in the future.",
+      reviewer: "Deepali Rawat",
     },
   ];
   return (
@@ -79,8 +84,8 @@ const ClientLovesUs = () => {
                     src="/Images/latestWork/clientsLovesvg.svg"
                     alt="container"
                   />
-                  <div className={"writingp2 gap-5"}>
-                    <p className="font-mazzardMedium text-[14px] xs:text-[16px] sm:text-[18px] md:text-[20px] text-[#0F143A] opacity-80">
+                  <div className={"writingp2 gap-[5px]"}>
+                    <p className="font-mazzardMedium text-[10px] xs:text-[13px] sm:text-[16px] md:text-[16px] text-[#0F143A] opacity-80">
                       {review.review}
                     </p>
 

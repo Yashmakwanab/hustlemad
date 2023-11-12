@@ -36,98 +36,98 @@ export default function Web3Logo() {
           <ImageWrapper
             alt={"preset Cards"}
             className="w-full max-w-[220px] "
-            src={"/Images/web3Page/logo1.png"}
+            src={"https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/b7d6c757-0248-4bf6-b592-3fec25367500/public"}
           />
         </SwiperSlide>
         <SwiperSlide className=" ">
           <ImageWrapper
             alt={"preset Cards"}
             className="w-full max-w-[220px]"
-            src={"/Images/web3Page/logo2.png"}
+            src={"https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/7c5581c4-5c9c-4795-5b52-7c3be1ba5700/public"}
           />
         </SwiperSlide>
         <SwiperSlide className=" ">
           <ImageWrapper
             alt={"preset Cards"}
             className="w-full max-w-[220px]"
-            src={"/Images/web3Page/logo3.png"}
+            src={"https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/4c25241a-54cf-4e9f-99e4-fbe749f2af00/public"}
           />
         </SwiperSlide>
         <SwiperSlide className=" ">
           <ImageWrapper
             alt={"preset Cards"}
             className="w-full max-w-[220px]"
-            src={"/Images/web3Page/logo4.png"}
+            src={"https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/09d950c7-74c7-4783-e658-488459124600/public"}
           />
         </SwiperSlide>
         <SwiperSlide className=" ">
           <ImageWrapper
             alt={"preset Cards"}
             className="w-full max-w-[220px]"
-            src={"/Images/web3Page/logo5.png"}
+            src={"https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/fe52a5e4-b7f3-4ba5-dd63-49795fed4000/public"}
           />
         </SwiperSlide>
         <SwiperSlide className=" ">
           <ImageWrapper
             alt={"preset Cards"}
             className="w-full max-w-[220px]"
-            src={"/Images/web3Page/logo6.png"}
+            src={"https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/2076639f-2feb-4069-3ad5-b3fc9ad53100/public"}
           />
         </SwiperSlide>
         <SwiperSlide className=" ">
           <ImageWrapper
             alt={"preset Cards"}
             className="w-full max-w-[220px]"
-            src={"/Images/web3Page/logo7.png"}
+            src={"https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/c2a6b36a-40f7-4217-859e-e600f4780e00/public"}
           />
         </SwiperSlide>
         <SwiperSlide className=" ">
           <ImageWrapper
             alt={"preset Cards"}
             className="w-full max-w-[220px]"
-            src={"/Images/web3Page/logo8.png"}
+            src={"https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/2fb459d1-5a4e-43db-d08b-11e90f83f700/public"}
           />
         </SwiperSlide>
         <SwiperSlide className=" ">
           <ImageWrapper
             alt={"preset Cards"}
             className="w-full max-w-[220px]"
-            src={"/Images/web3Page/logo9.png"}
+            src={"https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/500d38c0-00bd-4b1a-75dc-2d278c601800/public"}
           />
         </SwiperSlide>
         <SwiperSlide className=" ">
           <ImageWrapper
             alt={"preset Cards"}
             className="w-full max-w-[220px]"
-            src={"/Images/web3Page/logo10.png"}
+            src={"https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/48a585c9-d54b-4bb3-c4b4-83ecc571e700/public"}
           />
         </SwiperSlide>
         <SwiperSlide className=" ">
           <ImageWrapper
             alt={"preset Cards"}
             className="w-full max-w-[220px]"
-            src={"/Images/web3Page/logo11.png"}
+            src={"https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/b3d33559-82ef-4022-9296-b1b6b52c9800/public"}
           />
         </SwiperSlide>
         <SwiperSlide className=" ">
           <ImageWrapper
             alt={"preset Cards"}
             className="w-full max-w-[220px]"
-            src={"/Images/web3Page/logo12.png"}
+            src={"https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/9259d22a-6b32-4e7b-b7dd-f557b5c32300/public"}
           />
         </SwiperSlide>
         <SwiperSlide className=" ">
           <ImageWrapper
             alt={"preset Cards"}
             className="w-full max-w-[220px]"
-            src={"/Images/web3Page/logo13.png"}
+            src={"https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/49c1a461-19fc-4f50-0532-97e21ead7800/public"}
           />
         </SwiperSlide>
         <SwiperSlide className=" ">
           <ImageWrapper
             alt={"preset Cards"}
             className="w-full max-w-[220px]"
-            src={"/Images/web3Page/logo14.png"}
+            src={"https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/fa75bf3f-5696-4f86-9ef1-96e5ee8af500/public"}
           />
         </SwiperSlide>
       </Swiper>
