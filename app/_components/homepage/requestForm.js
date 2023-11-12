@@ -111,7 +111,7 @@ const RequestForm = () => {
               <Input placeholder="Enter Work Email" />
             </Form.Item>
             <Form.Item
-              name="phone"
+              name="contact"
               label="Contact Phone Number"
               rules={[
                 {
