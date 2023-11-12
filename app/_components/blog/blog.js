@@ -1,8 +1,84 @@
+"use client"
 import Link from 'next/link'
 import ImageWrapper from '../ImageWrapper/ImageWrapper'
 import BlogCard from './blogCard'
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
+const data = [
+    {
+        name: "Community Building & Events Collection.",
+        tag: "Communities",
+        image: "/Images/blog/blogImage.png",
+        description: "Community building and event collections are important for any organization looking to establish a strong presence in their industry...",
+        readtime: "2 min read",
+        date: "Jan 31, 2023",
+        link: "/blog"
+    },
+    {
+        name: "Community Building & Events Collection.",
+        tag: "Communities",
+        image: "/Images/blog/blogImage.png",
+        description: "Community building and event collections are important for any organization looking to establish a strong presence in their industry...",
+        readtime: "2 min read",
+        date: "Jan 31, 2023",
+        link: "/blog"
+    },
+    {
+        name: "Community Building & Events Collection.",
+        tag: "Communities",
+        image: "/Images/blog/blogImage.png",
+        description: "Community building and event collections are important for any organization looking to establish a strong presence in their industry...",
+        readtime: "2 min read",
+        date: "Jan 31, 2023",
+        link: "/blog"
+    },
+    {
+        name: "Community Building & Events Collection.",
+        tag: "Communities",
+        image: "/Images/blog/blogImage.png",
+        description: "Community building and event collections are important for any organization looking to establish a strong presence in their industry...",
+        readtime: "2 min read",
+        date: "Jan 31, 2023",
+        link: "/blog"
+    },
+    {
+        name: "Community Building & Events Collection.",
+        tag: "Communities",
+        image: "/Images/blog/blogImage.png",
+        description: "Community building and event collections are important for any organization looking to establish a strong presence in their industry...",
+        readtime: "2 min read",
+        date: "Jan 31, 2023",
+        link: "/blog"
+    },
+    {
+        name: "Community Building & Events Collection.",
+        tag: "Communities",
+        image: "/Images/blog/blogImage.png",
+        description: "Community building and event collections are important for any organization looking to establish a strong presence in their industry...",
+        readtime: "2 min read",
+        date: "Jan 31, 2023",
+        link: "/blog"
+    },
+
+]
 
 export default function Blog() {
+    const [blogs, setBlogs] = useState();
+
+    const getBlogs = async () => {
+        try {
+            const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
+            setBlogs(response.data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    useEffect(() => {
+        getBlogs();
+    }, []);
+
     return (
         <div className='mt-[64px]'>
             <div className='mb-[28px] sm:mb-[40px]'>
@@ -49,7 +125,7 @@ export default function Blog() {
                 </div>
             </div>
             <div className="text-[22px] sm:text-[40px] 3xl:text-[48px] leading-[25px] sm:leading-[46px] 3xl:leading-[55px] text-[#0F143A] font-recoleta mb-[32px] sm:mb-[48px] mdl:mb-[72px] underline underline-offset-[7px] flex justify-center">New Blogs</div>
-            <BlogCard />
+            <BlogCard blogs={blogs && blogs} />
         </div>
     )
 }
