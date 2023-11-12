@@ -21,10 +21,12 @@ const AllProduct = () => {
   const cartitems = useSelector((state) => state.cart);
   const getproducts = async () => {
     try {
-      const response = await axios.get('https://hustlemad-backend.herokuapp.com/productList');
+      const response = await axios.get(
+        "https://hustlemad-backend.herokuapp.com/productList"
+      );
       dispatch(setAllProductList(response.data.products));
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error("Error fetching data:", error);
     }
   };
   const allProducts = useSelector(selectAllProductList);
@@ -37,9 +39,9 @@ const AllProduct = () => {
     const isProductInCart = cartitems.some(
       (item) => item?.name === product?.name
     );
-    let color = product?.variant?.[0]?.colorName
+    let color = product?.variant?.[0]?.colorName;
     if (isProductInCart !== true) {
-      dispatch(add({...product, color, choice:""}));
+      dispatch(add({ ...product, color, choice: "" }));
     }
   };
 
@@ -120,19 +122,19 @@ const AllProduct = () => {
   return (
     <>
       <div className="flex flex-col items-start">
-        <div className="productsWrapper w-[100%] m-auto cards items-center justify-center nxl:justify-start  py-10">
+        <div className="productsWrapper w-[100%] m-auto cards items-center justify-center nxl:justify-start ">
           {Object.entries(sortedGroupedProducts)?.map(
             ([category, categoryProducts]) => (
               <div
                 key={category}
                 id={getCategoryName(category)}
-                className="pt-[7em]"
+                className="product_card_list"
               >
                 <div>
-                  <h1 className="font-recoleta text-[24px] ">
+                  <h1 className="font-recoleta text-[18px] md:text-[24px]  ">
                     {getCategoryName(category)}
                   </h1>
-                  <h1 className="font-mazzard text-[36px] pb-4">
+                  <h1 className="font-mazzard text-[20px]  md:text-[36px] pb-4">
                     {getCategorySubTitle(category)}
                   </h1>
                 </div>
@@ -188,7 +190,7 @@ const AllProduct = () => {
                       </div>
                     </div>
                   ))}
-                  {category !== "62d966b9f57e16db99387e81" &&
+                  {category !== "62d966b9f57e16db99387e81" && (
                     <div
                       className="product_card bg-[#0F143A14] cursor-pointer flex items-center"
                       onClick={() => setOpenModel(true)}
@@ -198,18 +200,19 @@ const AllProduct = () => {
                           Looking for <br /> something else?
                         </div>
                         <div className="text-[#0F143ACC] text-[14px] leading-[21px] font-mazzardMedium text-center mb-[36px]">
-                          If only we could read minds! :D You’ll have to tell us.
+                          If only we could read minds! :D You’ll have to tell
+                          us.
                         </div>
                         <div className="flex justify-center">
-                                    <ImageWrapper
-                                        src={"/Images/Catlog/plusIcon.svg"}
-                                        alt="img"
-                                        className="w-[48px] h-[48px]"
-                                    />
-                                </div>
+                          <ImageWrapper
+                            src={"/Images/Catlog/plusIcon.svg"}
+                            alt="img"
+                            className="w-[48px] h-[48px]"
+                          />
+                        </div>
                       </div>
                     </div>
-                  }
+                  )}
                 </div>
               </div>
             )

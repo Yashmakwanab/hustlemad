@@ -15,19 +15,28 @@ const ProductDetailModal = ({ openModel, setOpenModel }) => {
   const [selectVariant, setSelectVariant] = useState(null);
   const [selectVariantIndex, setSelectVariantIndex] = useState(null);
   const product = useSelector(selectProductDetail);
+  const [swiper, setSwiper] = useState();
+
   const dispatch = useDispatch();
 
   const handleadd = (productDetail) => {
     const color = productDetail?.colorName;
     dispatch(add({ ...product, color, choice: "" }));
   };
+
+  const slideTo = (index) => {
+    if (swiper) {
+      swiper.slideTo(index); // Use the slideTo method provided by Swiper
+    }
+  };
+
   return (
     <>
       <Modal
-        centered
         footer={false}
         width={800}
         open={openModel}
+        className=" my-8 md:my-20"
         onCancel={() => {
           setOpenModel(false);
           setSelectVariant(null);
@@ -46,15 +55,15 @@ const ProductDetailModal = ({ openModel, setOpenModel }) => {
             </div>
             <div className="w-[250]">
               <Swiper
-                loop={true}
+                loop={false}
                 navigation={true}
                 modules={[Navigation]}
-                slidesPerView={3}
+                slidesPerView={4}
                 centeredSlides={true}
                 spaceBetween={10}
                 className="modalSwiper"
+                onSwiper={setSwiper}
                 onSlideChange={(swiper) => {
-                  console.log(swiper);
                   setSelectVariant(product?.variant[swiper?.realIndex]);
                 }}
               >
@@ -68,7 +77,7 @@ const ProductDetailModal = ({ openModel, setOpenModel }) => {
               </Swiper>
             </div>
           </div>
-          <div className="flex flex-col gap-2 max-w-[500px]">
+          <div className="flex flex-col gap-4 max-w-[500px] items-start ">
             <p className="font-mazzardMedium text-xl"> {product?.name}</p>
             <h2 className="uppercase font-mazzardMedium text-md">
               {product?.brandName}
@@ -90,6 +99,7 @@ const ProductDetailModal = ({ openModel, setOpenModel }) => {
                     style={divStyle}
                     className="block"
                     onClick={() => {
+                      slideTo(index);
                       setSelectVariant(item);
                       setSelectVariantIndex(index);
                     }}
@@ -105,7 +115,7 @@ const ProductDetailModal = ({ openModel, setOpenModel }) => {
               /swag
             </p>
             <button
-              className=""
+              className="border-2 rounded-md px-6 py-1 hover:bg-[#0F143A] hover:text-white"
               onClick={() => {
                 handleadd(selectVariant);
                 setOpenModel(false);

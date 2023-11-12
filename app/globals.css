@@ -185,7 +185,7 @@ body {
   top: 51%;
   right: 5%;
 }
-.customOrderModel-select .ant-select-selection-item{
+.customOrderModel-select .ant-select-selection-item {
   @apply !font-mazzard text-[#0F143A];
 }
 
@@ -214,12 +214,12 @@ body {
   height: 16px;
 }
 
-.cart-dropdown{
+.cart-dropdown {
   width: 90px !important;
 }
-.cart-dropdown .ant-select-item-option-content{
+.cart-dropdown .ant-select-item-option-content {
   justify-content: center;
-  display: flex
+  display: flex;
 }
 
 .numberInput .ant-input {
@@ -247,7 +247,8 @@ body {
   @apply font-spaceMonoBold;
 }
 
-.order-form .ant-form-item-label label,.custom-label {
+.order-form .ant-form-item-label label,
+.custom-label {
   font-size: 20px !important;
   color: rgba(15, 20, 58, 0.8) !important;
   font-weight: 500;
@@ -272,22 +273,22 @@ body {
   padding: 8px 20px;
   @apply font-mazzard;
 }
-.order-form .ant-picker #order_form_delivery_date{
+.order-form .ant-picker #order_form_delivery_date {
   font-size: 18px;
 }
 
-.customOrderModel{
+.customOrderModel {
   justify-content: center;
   width: auto !important;
 }
 
-.customOrderModel .ant-modal-content{
+.customOrderModel .ant-modal-content {
   padding: 30px 40px;
   width: 580px;
   margin: auto;
   border-radius: 20px !important;
 }
-.customOrderModel .ant-modal-footer{
+.customOrderModel .ant-modal-footer {
   display: none;
 }
 
@@ -355,7 +356,7 @@ body {
 }
 
 @media screen and (max-width: 840px) {
-  .customOrderModel .ant-modal-content{
+  .customOrderModel .ant-modal-content {
     padding: 30px 40px;
     width: 480px;
     margin: auto;
@@ -399,7 +400,7 @@ body {
   .customOrderModel-form label {
     font-size: 12px !important;
   }
-  .customOrderModel .ant-modal-content{
+  .customOrderModel .ant-modal-content {
     padding: 20px 30px;
     width: 320px;
     margin: auto;
@@ -417,13 +418,13 @@ body {
   .customOrderModel-select .ant-select-single {
     height: 39px !important;
   }
-  .order-form .ant-form-item-label label,.custom-label {
+  .order-form .ant-form-item-label label,
+  .custom-label {
     font-size: 16px !important;
   }
   .order-form .ant-form-item {
     margin-bottom: 24px;
   }
-
 }
 .overflow-style::-webkit-scrollbar-track {
   border: none;
@@ -440,15 +441,25 @@ body {
 
 .overflow-style::-webkit-scrollbar-thumb {
   border-radius: 20px;
-  background-color: #0F143A;
+  background-color: #0f143a;
   border: 1px solid rgba(15, 20, 58, 0.08);
 }
 
-.mask_layer{
+.mask_layer {
   position: fixed;
   inset: 0;
   z-index: 1000;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.45);
   pointer-events: none;
+}
+
+.swiper-button-prev::after {
+  color: #0f143a66 !important;
+  font-size: 20px !important;
+}
+.swiper-button-next::after {
+  font-size: 20px !important;
+  color: #0f143a66 !important;
+  right: -8px !important;
 }
