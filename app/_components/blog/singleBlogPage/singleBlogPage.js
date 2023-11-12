@@ -13,7 +13,7 @@ const blogs = [
         body: "Community building and event collections are important for any organization looking to establish a strong presence in their industry...",
         readtime: "2 min read",
         date: "Jan 31, 2023",
-        link: "/blog"
+        link: ""
     },
     {
         title: "Community Building & Events Collection.",
@@ -22,7 +22,7 @@ const blogs = [
         body: "Community building and event collections are important for any organization looking to establish a strong presence in their industry...",
         readtime: "2 min read",
         date: "Jan 31, 2023",
-        link: "/blog"
+        link: ""
     },
     {
         title: "Community Building & Events Collection.",
@@ -31,7 +31,7 @@ const blogs = [
         body: "Community building and event collections are important for any organization looking to establish a strong presence in their industry...",
         readtime: "2 min read",
         date: "Jan 31, 2023",
-        link: "/blog"
+        link: ""
     },
 
 ]
