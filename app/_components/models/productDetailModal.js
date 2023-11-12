@@ -11,23 +11,15 @@ import { Navigation } from "swiper/modules";
 import { selectProductDetail } from "@/app/redux/slice/globleSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { add } from "@/app/redux/slice/cartSlice";
-const ProductDetailModal = ({
-  openModel,
-  setOpenModel,
-}) => {
+const ProductDetailModal = ({ openModel, setOpenModel }) => {
   const [selectVariant, setSelectVariant] = useState(null);
   const [selectVariantIndex, setSelectVariantIndex] = useState(null);
   const product = useSelector(selectProductDetail);
   const dispatch = useDispatch();
 
   const handleadd = (productDetail) => {
-    const color = productDetail?.colorName
-    // const isProductInCart = cartitems.some(
-    //   (item) => item?.name === product?.name
-    // );
-    // if (isProductInCart !== true) {
-      dispatch(add({...product, color,choice:""}));
-    // }
+    const color = productDetail?.colorName;
+    dispatch(add({ ...product, color, choice: "" }));
   };
   return (
     <>
@@ -38,7 +30,7 @@ const ProductDetailModal = ({
         open={openModel}
         onCancel={() => {
           setOpenModel(false);
-          setSelectVariant(null)
+          setSelectVariant(null);
         }}
       >
         <div className="flex gap-8 select-none flex-col md:flex-row items-center	">
@@ -60,6 +52,7 @@ const ProductDetailModal = ({
                 slidesPerView={3}
                 centeredSlides={true}
                 spaceBetween={10}
+                className="modalSwiper"
                 onSlideChange={(swiper) => {
                   console.log(swiper);
                   setSelectVariant(product?.variant[swiper?.realIndex]);
@@ -93,7 +86,7 @@ const ProductDetailModal = ({
 
                 return (
                   <div
-                  key={index}
+                    key={index}
                     style={divStyle}
                     className="block"
                     onClick={() => {
@@ -111,8 +104,15 @@ const ProductDetailModal = ({
               </span>
               /swag
             </p>
-            <button className="" onClick={() => { handleadd(selectVariant)
-            setOpenModel(false); }}>add to cart</button>
+            <button
+              className=""
+              onClick={() => {
+                handleadd(selectVariant);
+                setOpenModel(false);
+              }}
+            >
+              add to cart
+            </button>
 
             <p className="uppercase font-mazzardSemiBold text-md underline underline-offset-2">
               description
@@ -120,7 +120,7 @@ const ProductDetailModal = ({
             <p>{product?.description}</p>
             <p>item details</p>
             <div>
-              {product?.item_Details?.map((detail,index) => (
+              {product?.item_Details?.map((detail, index) => (
                 <p key={index}>{detail}</p>
               ))}
             </div>

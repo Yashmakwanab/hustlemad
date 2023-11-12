@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Navigation } from "swiper/modules";
+import { Popover } from "antd";
 
 const Data = [
   {
@@ -146,36 +147,63 @@ const Categories = ({ selected, setSelected }) => {
         <h2 className="py-3  text-center w-[100vw] nxl:hidden  font-mazzardSemiBold text-lg border-b-2">
           Categegories
         </h2>
-        <div className="py-3 block nxl:hidden categories_slider">
-          <Swiper
-            loop={true}
-            navigation={true}
-            modules={[Navigation]}
-            onSlideChange={(swiper) => {
-              scrollToSection(Data[swiper.activeIndex].id);
-              setSelected(Data[swiper.activeIndex].lable);
-            }}
-            className="mySwiper w-[250px]"
-          >
-            {Data.map((data, index) => {
-              return (
-                <SwiperSlide key={index}>
-                  <div className="flex items-center justify-center">
-                    <Category
-                      key={index}
-                      selected={selected}
-                      setSelected={setSelected}
-                      bg={data.bg}
-                      color_imageUrl={data.color_imageUrl}
-                      white_imageUrl={data.white_imageUrl}
-                      lable={data.lable}
-                    />
-                  </div>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-        </div>
+        <Popover
+          trigger="click"
+          placement="bottom"
+          content={
+            <>
+              {" "}
+              <h2 className="py-3 hidden nxl:block  text-center font-mazzardSemiBold text-lg border-b-2">
+                Categegories
+              </h2>
+              {Data.map((data, index) => {
+                return (
+                  <Category
+                    key={index}
+                    selected={selected}
+                    setSelected={setSelected}
+                    bg={data.bg}
+                    color_imageUrl={data.color_imageUrl}
+                    white_imageUrl={data.white_imageUrl}
+                    lable={data.lable}
+                    id={data.id}
+                  />
+                );
+              })}
+            </>
+          }
+        >
+          <div className="py-3 block nxl:hidden categories_slider">
+            <Swiper
+              loop={true}
+              navigation={true}
+              modules={[Navigation]}
+              onSlideChange={(swiper) => {
+                scrollToSection(Data[swiper.activeIndex].id);
+                setSelected(Data[swiper.activeIndex].lable);
+              }}
+              className="mySwiper w-[250px]"
+            >
+              {Data.map((data, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <div className="flex items-center justify-center">
+                      <Category
+                        key={index}
+                        selected={selected}
+                        setSelected={setSelected}
+                        bg={data.bg}
+                        color_imageUrl={data.color_imageUrl}
+                        white_imageUrl={data.white_imageUrl}
+                        lable={data.lable}
+                      />
+                    </div>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div>
+        </Popover>
       </div>
     </>
   );
