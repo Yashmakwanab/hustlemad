@@ -261,7 +261,7 @@
   }
 
   .writingp2 p {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .writingp2 h2 {
@@ -309,8 +309,8 @@
 
 @media only screen and (max-width:720px) {
   .writingp2 {
-    margin-left: 40px;
-    margin-right: 0px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 }
 
@@ -374,7 +374,7 @@
   }
 
   .writingp2 p {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .writingp2 img {
