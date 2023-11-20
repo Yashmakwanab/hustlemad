@@ -19,21 +19,7 @@ const AllProduct = () => {
   const [openProductModel, setOpenProductModel] = useState(false);
   const dispatch = useDispatch();
   const cartitems = useSelector((state) => state.cart);
-  const getproducts = async () => {
-    try {
-      const response = await axios.get(
-        "https://hustlemad-backend.herokuapp.com/productList"
-      );
-      dispatch(setAllProductList(response.data.products));
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
   const allProducts = useSelector(selectAllProductList);
-
-  useEffect(() => {
-    getproducts();
-  }, []);
 
   const handleadd = (product) => {
     const isProductInCart = cartitems.some(

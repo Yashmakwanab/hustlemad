@@ -463,3 +463,34 @@ body {
   color: #0f143a66 !important;
   right: -8px !important;
 }
+.preset_swiper > .swiper-button-prev {
+  background-color: #cef6ff;
+  padding: 0em 1.3em;
+  border: 1px solid #0f143a3b;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 15em;
+}
+.preset_swiper > .swiper-button-next {
+  background-color: #cef6ff;
+  padding: 0em 1.3em;
+  border: 1px solid #0f143a3b;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 15em;
+}
+.preset_swiper > .swiper-button-prev::after {
+  color: #0f143ad4 !important;
+  font-weight: 900;
+}
+.preset_swiper > .swiper-button-next::after {
+  color: #0f143ad4 !important;
+  font-weight: 900;
+}
+.preset_swiper > .swiper-wrapper > .swiper-slide {
+  @apply w-[280px] sm:w-[320px] lg:w-[400px];
+}
+
+/* blog */
+.bottom_center {
+  right: 50%;
+  transform: translate(50%, 50%);
+}

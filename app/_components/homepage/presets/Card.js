@@ -4,7 +4,7 @@ import presetPhoto from "./../../../../public/Images/landingPage/preset.png";
 import "./styles.css";
 import ImageWrapper from "../../ImageWrapper/ImageWrapper";
 
-const Card = () => {
+const Card = ({ preset_name, content, price, cut_price, image_url }) => {
   const handleClick = () => {
     console.log("btn clicked");
   };
@@ -13,17 +13,14 @@ const Card = () => {
       <div className="presetImageContainer">
         <ImageWrapper
           className="presetImage"
-          src={presetPhoto.src}
+          src={image_url}
           alt="Preset Image"
         />
       </div>
       <hr className="solid" />
       <div>
-        <h3 className="font-recoleta underline productTitle">Basic Pack</h3>
-        <p className="text-[12px] md:text-[14px] lg:text-[16px]">
-          Hustlemad Crew Neck T-shirt, Borosil Insulated Bottle, Coffee Mug,
-          Papercoal A5 Notebook, Parker pen, Premium Boxing, Pan-India Shipping
-        </p>
+        <h3 className="font-recoleta underline productTitle">{preset_name}</h3>
+        <p className="text-[12px] md:text-[14px] lg:text-[16px]">{content}</p>
       </div>
       <hr className="solid" />
       <div>
@@ -31,7 +28,8 @@ const Card = () => {
           handleClick={handleClick}
           content={
             <p className="text-[12px] md:text-[14px] lg:text-[16px]">
-              Get at ₹ <span className="line-through">5000</span> 3499/Pack
+              Get at ₹ <span className="line-through">{price} </span>
+              {cut_price}/Pack
             </p>
           }
         />
