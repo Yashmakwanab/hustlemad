@@ -17,9 +17,17 @@ function Spinner() {
 
   return (
     <div>
+      {/* this is backdrop */}
       <Backdrop show={true} />
       <div style={{ backgroundColor: "#fff" }} className={styles.position}>
-        <Lottie options={defaultOptions} height={300} width={300} />
+        <div className="w-[150px] md:w-[200px] lg:w-[250px]">
+          <Lottie
+            animationData={animationData}
+            loop={true}
+            rendererSettings={{ preserveAspectRatio: "xMidYMid slice" }}
+          />
+        </div>
+        ;
       </div>
     </div>
   );

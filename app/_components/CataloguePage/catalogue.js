@@ -32,7 +32,7 @@ export default function CataloguePage() {
   const [selected, setSelected] = useState("Apparels");
   return (
     <>
-      {!allProducts ? (
+      {allProducts.length == 0 ? (
         <Spinner />
       ) : (
         <div className="catalogue_container ">
