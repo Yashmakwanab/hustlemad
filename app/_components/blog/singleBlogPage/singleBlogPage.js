@@ -96,10 +96,10 @@ const SingleBlogPage = () => {
                 Hustlemad (www.hustlemad.com) is a website (the “Website”)
                 operated by Hustlemad Brands Private Limited (Indian Private
                 Limited Company) (the “Website Owner”). The Website Owner,
-                including subsidiaries and affiliates (or "we" or "us" or "our")
+                including subsidiaries and affiliates (or &#34;we&#34; or &#34;us&#34; or &#34;our&#34;)
                 provides the information contained on this Website or any of the
-                pages comprising the Website to visitors ("Visitors")
-                (cumulatively referred to as "you" or "your" hereinafter)
+                pages comprising the Website to visitors (&#34;Visitors&#34;)
+                (cumulatively referred to as &#34;you&#34; or &#34;your&#34; hereinafter)
                 subject to the terms and conditions set out in these Website
                 terms and conditions, the privacy policy and any other relevant
                 terms and conditions, policies and notices which may be
@@ -108,7 +108,7 @@ const SingleBlogPage = () => {
                 using this website or by using any facilities or services made
                 available through it or by transacting through or on it, you are
                 agreeing to the terms and conditions that appear below (all of
-                which are called the "Agreement"). This Agreement is made
+                which are called the &#34;Agreement&#34;). This Agreement is made
                 between you and us.
               </article>
             </li>

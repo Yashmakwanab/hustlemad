@@ -237,7 +237,7 @@ const Categories = ({ selected, setSelected }) => {
               </h2>
               {Data.map((data, index) => {
                 return (
-                  <div onClick={() => setOpenPopOver && setOpenPopOver(false)}>
+                  <div key={index} onClick={() => setOpenPopOver && setOpenPopOver(false)}>
                     <Category
                       scrollToSection={scrollToSection}
                       slideTo={slideTo}
