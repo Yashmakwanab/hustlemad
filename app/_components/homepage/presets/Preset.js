@@ -20,6 +20,7 @@ export default function Preset() {
       cut_price: "2499",
       image_url:
         "https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/cd9fae32-19ee-4049-4fee-44de85517d00/public",
+      product_list:["62d9a4a188bbf0df799fdfcd","62d9a4a188bbf0df799fdfdc","62d9a4a188bbf0df799fdfe2","62d9a4a288bbf0df799fe039","62d9a4a288bbf0df799fe021","62e398ce1e53d25b9ee56b68"]
     },
     {
       name: "Delight Pack",
@@ -29,6 +30,7 @@ export default function Preset() {
       cut_price: "1750",
       image_url:
         "https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/ed192709-72df-4d6a-fafe-656fbf378000/public",
+        product_list:["62d9a4a188bbf0df799fdfcd","62d9a4a188bbf0df799fdfd3","62d9a4a288bbf0df799fe039","62d9a4a288bbf0df799fe030","62d9a4a288bbf0df799fe054"]
     },
     {
       name: "Event Elevate Bag",
@@ -38,6 +40,7 @@ export default function Preset() {
       cut_price: "2650",
       image_url:
         "https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/9b7bf677-0623-402f-34a2-9b416ab49900/public",
+        product_list:["62d9a4a188bbf0df799fdfc7","62d9a4a188bbf0df799fdfd3","62d9a4a288bbf0df799fe027","62d9a4a288bbf0df799fe051"]
     },
     {
       name: "Crypto Crate",
@@ -47,6 +50,7 @@ export default function Preset() {
       cut_price: "4800",
       image_url:
         "https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/6001d4f1-d597-40c7-1728-3f5cef876d00/public",
+        product_list:["62e398cd1e53d25b9ee56b0e","62d9a4a288bbf0df799fe027","62d9a4a288bbf0df799fe051","62d9a4a288bbf0df799fe00c"]
     },
     {
       name: "Token Treat",
@@ -56,6 +60,7 @@ export default function Preset() {
       cut_price: "3999",
       image_url:
         "https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/6f838796-e0a9-4d9e-0ff5-53550e562d00/public",
+        product_list:["62d9a4a288bbf0df799fe048","62d9a4a288bbf0df799fe07e","62e398ce1e53d25b9ee56b17","62e398ce1e53d25b9ee56b68"]
     },
     {
       name: "Tech Tribe Treasure",
@@ -65,6 +70,7 @@ export default function Preset() {
       cut_price: "4999",
       image_url:
         "https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/1f15b629-8258-4da8-4b28-90ef9ba2ca00/public",
+        product_list:["62d9a4a288bbf0df799fe045","62d9a4a288bbf0df799fe04b","62d9a4a288bbf0df799fe027","62d9a4a288bbf0df799fe081"]
     },
     {
       name: "Giveaway Gem",
@@ -74,6 +80,7 @@ export default function Preset() {
       cut_price: "999",
       image_url:
         "https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/bf07da71-b0ac-44a6-afb8-fcfeb77f9500/public",
+        product_list:["62d9a4a288bbf0df799fe00f","62e398ce1e53d25b9ee56b32","62d9a4a288bbf0df799fe081","62d9a4a288bbf0df799fe00c"]
     },
     {
       name: "Bond Box",
@@ -83,6 +90,7 @@ export default function Preset() {
       cut_price: "3500",
       image_url:
         "https://imagedelivery.net/aKDgfisBqvZNtFE3Wylbbg/24315064-b545-4b8f-7b9d-afc67aceb000/public",
+        product_list:["62d9a4a288bbf0df799fdff4","62d9a4a288bbf0df799fe024","62d9a4a188bbf0df799fdfc7","62d9a4a288bbf0df799fe039","62e398ce1e53d25b9ee56b68"]
     },
   ];
   return (
@@ -135,6 +143,7 @@ export default function Preset() {
                 image_url={preset.image_url}
                 cut_price={preset.cut_price}
                 price={preset.price}
+                product_list={preset.product_list}
               />
             </SwiperSlide>
           );
