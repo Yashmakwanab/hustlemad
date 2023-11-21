@@ -141,9 +141,7 @@ const Categories = ({ selected, setSelected }) => {
   const [showCart, setShowCart] = useState(false);
   const [openPopOver, setOpenPopOver] = useState(false);
   const [swiper, setSwiper] = useState();
-  const [constantInnerWidth, setConstantInnerWidth] = useState(
-    window.innerWidth
-  );
+  const [constantInnerWidth, setConstantInnerWidth] = useState(null);
 
   // Step 2: Use useEffect to add event listener for window resize
   useEffect(() => {
@@ -237,7 +235,10 @@ const Categories = ({ selected, setSelected }) => {
               </h2>
               {Data.map((data, index) => {
                 return (
-                  <div key={index} onClick={() => setOpenPopOver && setOpenPopOver(false)}>
+                  <div
+                    key={index}
+                    onClick={() => setOpenPopOver && setOpenPopOver(false)}
+                  >
                     <Category
                       scrollToSection={scrollToSection}
                       slideTo={slideTo}
