@@ -30,7 +30,7 @@ const CartSection = ({
 }) => {
   return (
     <div className="bg-white">
-      <div className="flex nxl:justify-center    items-center pt-[12px] pb-[12px] border-b-[1px]">
+      <div className="flex nxl:justify-center items-center pt-[12px] pb-[12px] border-b-[1px]">
         <div className="flex justify-center pt-[12px] pb-[12px] w-full">
           {" "}
           <div className="text-[#0F143A] font-mazzardMedium text-[18px] leading-[18px] mr-[8px]">
@@ -47,6 +47,7 @@ const CartSection = ({
         />
       </div>
       <div
+      className="overflow-style"
         style={{
           overflowY: "auto",
           height: `calc(100vh - ${heightOfCart}) `,

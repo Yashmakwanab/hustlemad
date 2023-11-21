@@ -5,16 +5,31 @@ import "./styles.css";
 import ImageWrapper from "../../ImageWrapper/ImageWrapper";
 import { add } from "@/app/redux/slice/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { selectAllProductList } from "@/app/redux/slice/globleSlice";
+import { selectAllProductList, setAllProductList } from "@/app/redux/slice/globleSlice";
+import { useRouter } from 'next/navigation';
+import axios from "axios";
+import { useEffect } from "react";
 
 const Card = ({ preset_name, content, price, cut_price, image_url,product_list }) => {
+  const getproducts = async () => {
+    try {
+      const response = await axios.get(
+        "https://hustlemad-backend.herokuapp.com/productList"
+      );
+      dispatch(setAllProductList(response.data.products));
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+  useEffect(() => {
+    getproducts();
+  }, []);
   const allProducts = useSelector(selectAllProductList);
+  const router = useRouter();
   const cartitems = useSelector((state) => state.cart);
-  console.log("ssasasasasas",cartitems)
   const dispatch = useDispatch();
   const handleClick = (productList) => {
     const productsToAdd = allProducts.filter(product => productList.includes(product._id));
-    console.log("ssssssssssssssssss",productsToAdd)
 
     productsToAdd.forEach(product => {
       const isProductInCart = cartitems.some(cartProduct => cartProduct._id === product._id);
@@ -22,6 +37,7 @@ const Card = ({ preset_name, content, price, cut_price, image_url,product_list }
         dispatch(add(product))
       }
     });
+    router.push("/catalogue");
   };
   return (
     <div className="card">

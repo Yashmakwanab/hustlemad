@@ -108,9 +108,8 @@ const Category = ({
         if (slideTo) {
           slideTo(index);
         }
-        console.log(index);
       }}
-      className="cursor-pointer select-none "
+      className="cursor-pointer select-none"
     >
       <div className="flex items-center gap-4 px-[10px] nxl:px-[20px]">
         <div
@@ -190,7 +189,6 @@ const Categories = ({ selected, setSelected }) => {
     }
   };
 
-  console.log(constantInnerWidth);
   const slideTo = (index) => {
     if (swiper) {
       swiper.slideTo(index); // Use the slideTo method provided by Swiper
@@ -200,7 +198,7 @@ const Categories = ({ selected, setSelected }) => {
   return (
     <>
       <div className="  flex-col gap-6 justify-center hidden nxl:flex  ">
-        <h2 className="py-3 hidden nxl:block  text-center font-mazzardSemiBold text-lg border-b-2">
+        <h2 className="py-3 hidden nxl:block  text-center font-mazzardSemiBold text-lg border-b-[1px]">
           Categories
         </h2>
         {Data.map((data, index) => {

@@ -25,7 +25,6 @@ export default function CataloguePage() {
     }
   };
   const allProducts = useSelector(selectAllProductList);
-  console.log(allProducts);
   useEffect(() => {
     getproducts();
   }, []);
@@ -37,7 +36,7 @@ export default function CataloguePage() {
       ) : (
         <div className="catalogue_container ">
           <div className="catalogue_container1">
-            <div className="nxl:fixed  nxl:border-r-2">
+            <div className="nxl:fixed nxl:shadow-md">
               <SideBarCatalogue selected={selected} setSelected={setSelected} />
             </div>
           </div>
