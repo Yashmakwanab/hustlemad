@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import CustomOrderModel from "../models/customOrderModel";
 import { selectAllProductList, setAllProductList } from "@/app/redux/slice/globleSlice";
 import { remove } from "@/app/redux/slice/cartSlice";
+import { removeCustomProduct } from "@/app/redux/slice/customOrderSlice";
 
 const CustomOrder = () => {
     const [openModel, setOpenModel] = useState(false);
@@ -15,12 +16,13 @@ const CustomOrder = () => {
 
     const handleremove = (id) => {
         dispatch(remove(id[0]));
-        if (id[1] === "TBD") {
-            const productToRemove = allProducts.find(product => product?.name === id[0]);
-            if (productToRemove) {
-                const updatedProducts = allProducts.filter(product => product?.name !== id[0]);
-                dispatch(setAllProductList(updatedProducts));
-            }
+        dispatch(removeCustomProduct(id[1]))
+        if (id[2] === "TBD") {
+          const productToRemove = allProducts.find(product => product?.name === id[1]);
+          if (productToRemove) {
+            const updatedProducts = allProducts.filter(product => product?.name !== id[1]);
+            dispatch(setAllProductList(updatedProducts));
+          }
         }
     };
 
@@ -73,8 +75,8 @@ const CustomOrder = () => {
                                                 </h4>
                                             </div>
                                             <div
-                                                className="add_cart flexcursor-pointer"
-                                                onClick={() => handleremove([product?.name, product?.price?.[0]?.cost])}
+                                                className="add_cart flex cursor-pointer"
+                                                onClick={() => handleremove([index, product?.name, product?.price?.[0]?.cost])}
                                             >
                                                 <ImageWrapper
                                                     src={"/Images/Catlog/delete.svg"}
