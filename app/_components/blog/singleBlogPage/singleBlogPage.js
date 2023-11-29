@@ -69,10 +69,10 @@ const SingleBlogPage = () => {
             </div>
           </div>
           <div className="max-w-[1800px] m-auto p-5 sm:p-10 lg:p-20  flex flex-col gap-5 md:gap-10">
-            {singleBlogData?.article.map((item) => {
+            {singleBlogData?.article.map((item,index) => {
               console.log(item);
               return (
-                <div>
+                <div key={index}>
                   <h2 className="font-mazzard flex justify-start policy_subTitle text-[16px] sm:text-[20px] md:text-[24px] nxl:text-[30px] font-[600] leading-[40px] md:leading-[54px] text-[#0F143A]   decoration-4">
                     {item.title}
                   </h2>
@@ -87,9 +87,9 @@ const SingleBlogPage = () => {
                   )}
 
                   <ul className="list-disc ml-5">
-                    {item.bulletPoints?.map((point) => {
+                    {item.bulletPoints?.map((point, index) => {
                       return (
-                        <li>
+                        <li key={index}>
                           <article className="text-[12px] font-mazzard leading-[20px] sm:leading-[24px] md:leading-[28px] nxl:leading-[32px] sm:text-[14px] md:text-[16px] nxl:text-[20px]  text-justify">
                             {point}
                           </article>
