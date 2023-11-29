@@ -11,7 +11,7 @@ const HeroSection = () => {
   return (
     <div className="flex justify-center bg-[#B3FFFA] sectionBottomPadding">
       <div
-        className={`${style.hero_section} w-full grid grid-cols-1 lg:grid-cols-2 container relative sectionPadding`}
+        className={`${style.hero_section} w-full grid grid-cols-1 lg:grid-cols-2 container relative sectionPadding justify-center items-center`}
       >
         <div
           className={`${style.hero_text_section} w-full flex flex-col	items-center lg:items-start order-last lg:order-first`}

@@ -266,7 +266,7 @@ const Categories = ({ selected, setSelected }) => {
                 setSelected(Data[swiper.activeIndex].label);
               }}
               onSwiper={setSwiper}
-              className="mySwiper w-[250px]"
+              className="sideBar_swiper w-[250px]"
             >
               {Data.map((data, index) => {
                 return (
