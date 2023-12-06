@@ -40,7 +40,7 @@ const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
         try {
           await axios
             .post(
-                "https://reqres.in/api/users",
+                "https://hustlemad-backend.herokuapp.com/Admin/orderedProduct/",
               {
                 swagbox_quantity: values?.swagbox_quantity,
                 delivery_date: formattedDate,
@@ -65,7 +65,7 @@ const OrderRequestForm = ({ setsubmitRequest, submitRequest }) => {
             //   }
             )
             .then((res) => {
-              if (res.status == 201) {
+              if (res.status == 200) {
                 setsubmitDetail(true)
                 form.resetFields();
               }

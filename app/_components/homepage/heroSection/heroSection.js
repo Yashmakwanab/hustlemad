@@ -14,7 +14,7 @@ const HeroSection = () => {
         className={`${style.hero_section} w-full grid grid-cols-1 lg:grid-cols-2 container relative sectionPadding justify-center items-center`}
       >
         <div
-          className={`${style.hero_text_section} w-full flex flex-col	items-center lg:items-start order-last lg:order-first`}
+          className={`${style.hero_text_section} w-full flex flex-col	items-center lg:items-start order-last lg:order-first m-auto`}
         >
           <h1
             className={`${style.hero_title} max-w-[540px]  text-[32px] 6xl:text-[76px] 5xl:text-[72px]  md:text-[64px] text-center lg:text-left`}

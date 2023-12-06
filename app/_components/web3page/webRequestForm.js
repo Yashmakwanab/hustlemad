@@ -1,11 +1,32 @@
 "use client"
 import React from 'react';
 import { Button, Form, Input } from 'antd';
+import axios from 'axios';
 
 const WebRequestForm = () => {
     const [form] = Form.useForm();
-    const onFinish = (values) => {
-        form.resetFields();
+    const onFinish = async (values) => {
+        try {
+            await axios
+              .post(
+                "https://hustlemad-backend.herokuapp.com/feed/send/",
+                {
+                  companyname: values.companyname,
+                  contact: values.contact,
+                  email: values.email,
+                  name: values.name,
+                  message: "This information is coming from web3 request information form"
+                },
+              )
+              .then((res) => {
+                if (res.status == 201) {
+                  form.resetFields();
+                }
+              }
+              );
+          } catch (e) {
+            console.log("e");
+          }
     };
 
     return (
@@ -70,7 +91,7 @@ const WebRequestForm = () => {
                             <Input placeholder='Enter Work Email' />
                         </Form.Item>
                         <Form.Item
-                            name="phone"
+                            name="contact"
                             label="Phone Number"
                             rules={[
                                 {

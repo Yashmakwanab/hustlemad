@@ -2,12 +2,34 @@
 import React from "react";
 import { Button, Form, Input, Select } from "antd";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
+import axios from "axios";
 const { Option } = Select;
 
 const RequestForm = () => {
   const [form] = Form.useForm();
-  const onFinish = (values) => {
-    form.resetFields();
+  const onFinish = async (values) => {
+    try {
+      await axios
+        .post(
+          "https://hustlemad-backend.herokuapp.com/feed/post/",
+          {
+            companyname: values.companyname,
+            contact: values.contact,
+            email: values.email,
+            name: values.name,
+            preference: values.preference,
+            swagpacks: values.swagpacks
+          },
+        )
+        .then((res) => {
+          if (res.status == 201) {
+            form.resetFields();
+          }
+        }
+        );
+    } catch (e) {
+      console.log("e");
+    }
   };
 
   return (

@@ -4,11 +4,32 @@ import { Button, Form, Input } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import Link from "next/link";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
+import axios from "axios";
 
 const ContactUs = () => {
   const [form] = Form.useForm();
-  const onFinish = (values) => {
-    form.resetFields();
+  const onFinish = async (values) => {
+    try {
+      await axios
+        .post(
+          "https://hustlemad-backend.herokuapp.com/feed/send/",
+          {
+            companyname: values.companyname,
+            contact: values.contact,
+            email: values.email,
+            name: values.name,
+            message: values.message
+          },
+        )
+        .then((res) => {
+          if (res.status == 201) {
+            form.resetFields();
+          }
+        }
+        );
+    } catch (e) {
+      console.log("e");
+    }
   };
 
   return (
@@ -162,7 +183,7 @@ const ContactUs = () => {
                   <Input placeholder="Email Address" />
                 </Form.Item>
                 <Form.Item
-                  name="phone"
+                  name="contact"
                   className="mb-[20px] lg:mb-[32px]"
                   rules={[
                     {
@@ -174,7 +195,7 @@ const ContactUs = () => {
                   <Input placeholder="Contact number" />
                 </Form.Item>
                 <Form.Item
-                  name="description"
+                  name="message"
                   className="mb-[28px] lg:mb-[44px]"
                 >
                   <TextArea

@@ -3,11 +3,33 @@ import React from "react";
 import { Button, Form, Input } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
+import axios from "axios";
 
 const SellerLead = () => {
   const [form] = Form.useForm();
-  const onFinish = (values) => {
-    form.resetFields();
+  const onFinish = async (values) => {
+    try {
+      await axios
+        .post(
+          "https://hustlemad-backend.herokuapp.com/sellerdata",
+          {
+            company_name: values.company_name,
+            contact: values.contact,
+            email: values.email,
+            message: values.message,
+            name: values.name,
+            website_link: values.website_link
+          },
+        )
+        .then((res) => {
+          if (res.status == 200) {
+            form.resetFields();
+          }
+        }
+        );
+    } catch (e) {
+      console.log("e");
+    }
   };
   return (
     <>
@@ -66,7 +88,7 @@ const SellerLead = () => {
                       <Input placeholder="Your name" />
                     </Form.Item>
                     <Form.Item
-                      name="companyname"
+                      name="company_name"
                       rules={[
                         {
                           required: true,
@@ -78,7 +100,7 @@ const SellerLead = () => {
                       <Input placeholder="Company name" />
                     </Form.Item>
                     <Form.Item
-                      name="websitename"
+                      name="website_link"
                       rules={[
                         {
                           required: true,
@@ -105,7 +127,7 @@ const SellerLead = () => {
                       <Input placeholder="Email Address" />
                     </Form.Item>
                     <Form.Item
-                      name="phone"
+                      name="contact"
                       rules={[
                         {
                           required: true,
@@ -115,7 +137,7 @@ const SellerLead = () => {
                     >
                       <Input placeholder="Phone Number" />
                     </Form.Item>
-                    <Form.Item name="description">
+                    <Form.Item name="message">
                       <TextArea
                         rows={5}
                         placeholder="Leave a message here (optional)"
