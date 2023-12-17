@@ -84,7 +84,7 @@ const ImageGrid = () => {
 
   const imageDivs = imageGroups.map((group, groupIndex) => (
     <div
-      className="parent max-w-[332px] sm:max-w-[590px] md:max-w-[728px] lg:max-w-[940px] xll:max-w-[1100px] 3xl:max-w-[1348px] gap-x-[4px] sm:gap-x-[10px] md:gap-x-[16px] lg:gap-x-[20px] gap-y-[4px] sm:gap-y-[10px] md:gap-y-[16px] lg:gap-y-[20px]"
+      className="parent max-w-[332px] sm:max-w-[590px] md:max-w-[728px] lg:max-w-[940px] xll:max-w-[1100px] 3xl:max-w-[1348px] gap-x-[4px] sm:gap-x-[10px] md:gap-x-[16px] lg:gap-x-[20px] gap-y-[4px] sm:gap-y-[10px] md:gap-y-[16px] lg:gap-y-[20px] !w-full m-auto mb-[4px] sm:mb-[10px] md:mb-[16px] lg:mb-[20px]"
       key={groupIndex}
     >
       {group.map((images, index) => {
@@ -110,7 +110,7 @@ const ImageGrid = () => {
   ));
 
   return (
-    <div className="flex flex-col gap-[4px] sm:gap-[10px] md:gap-[16px] lg:gap-[20px] py-[30px] lg:py-[60px]">
+    <div className="flex flex-col py-[30px] lg:py-[60px] !w-full">
       {imageDivs}
     </div>
   );

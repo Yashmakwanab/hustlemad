@@ -122,11 +122,11 @@ export default function Partners() {
             {PartnersData.map((Partnervvv, index) => (
               <React.Fragment key={index}>
                 {value === index && (
-                  <div className="grid grid-cols-4 2xl:grid-cols-8 border-[2px] border-[#2A3DA0] border-solid rounded-[6px]">
+                  <div className="grid grid-cols-4 2xl:grid-cols-8 border-l-2 border-[#2A3DA0]">
                     {Partnervvv.images.map((image, index) => (
                       <div
                         key={index}
-                        className="font-mazzard text-[20px] text-[#0F143ACC] font-[400] border-[#2A3DA0] border-[1px]"
+                        className="font-mazzard text-[20px] text-[#0F143ACC] font-[400] border-[#2A3DA0] border-t-2 border-r-2 border-b-2 mb-[-2px]"
                       >
                         <ImageWrapper
                           src={image}
