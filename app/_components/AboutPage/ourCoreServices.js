@@ -39,8 +39,9 @@ const OurCoreServices = () => {
           return (
             <div
               key={index}
-              className={`flex items-center justify-center gap-5 w-full sm:max-w-[90%] nxl:flex-col  ${index % 2 == 0 ? style.alternateFlex : ""
-                }`}
+              className={`flex items-center justify-center gap-5 w-full sm:max-w-[90%] nxl:flex-col  ${
+                index % 2 == 0 ? style.alternateFlex : ""
+              }`}
             >
               <ImageWrapper
                 width={300}
@@ -51,15 +52,17 @@ const OurCoreServices = () => {
               />
 
               <div
-                className={`flex  flex-col gap-2 items-end sm:gap-5 nxl:items-center nxl:min-h-[350px] ${index % 2 == 0 ? style.alternateBox : ""
-                  }`}
+                className={`flex  flex-col gap-2 items-end sm:gap-5 nxl:items-center nxl:min-h-[350px] ${
+                  index % 2 == 0 ? style.alternateBox : ""
+                }`}
               >
                 <h2 className="text-[#702100]  font-mazzardSemiBold underline underline-offset-[5px] text-[20px] sm:text-[28px] md:text-[32px] nxl:text-[40px] ">
                   {data.title}
                 </h2>
                 <p
-                  className={`text-right nxl:text-center text-[#702100] font-mazzard text-[14px] leading-6 sm:text-[20px] sm:leading-8 md:text-[24px] nxl:text-[28px]	md:leading-10 ${index % 2 == 0 ? style.alternateFlex : ""
-                    }`}
+                  className={`text-right nxl:text-center text-[#702100] font-mazzard text-[14px] leading-6 sm:text-[20px] sm:leading-8 md:text-[24px] nxl:text-[28px]	md:leading-10 ${
+                    index % 2 == 0 ? style.alternateFlex : ""
+                  }`}
                 >
                   {data.values}
                 </p>
@@ -70,7 +73,7 @@ const OurCoreServices = () => {
       </div>
       <div className="absolute bottom-0 w-full z-[99]">
         <ImageWrapper
-          src="/Images/landingPage/purpleBorder.webp"
+          src="/Images/landingPage/purpleBorder.svg"
           className="w-full absolute bottom-[-1px] md:top-[-4px] xl:top-[-8px]"
           alt="Green Border"
           width={1000}

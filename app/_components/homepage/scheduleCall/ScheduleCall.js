@@ -1,5 +1,5 @@
 "use client";
-import scheduleImage from "./../../../../public/Images/landingPage/scheduleCall.webp";
+import scheduleImage from "./../../../../public/Images/landingPage/scheduleCall.png";
 import ButtonPrimary from "../../commonComponents/ButtonPrimary";
 import "./styles.css";
 import ImageWrapper from "../../ImageWrapper/ImageWrapper";
