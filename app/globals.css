@@ -374,6 +374,11 @@ body {
   .customOrderModel-select .ant-select-single {
     height: 42px !important;
   }
+  .web-form .ant-form-item {
+    margin-bottom: 0px !important;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
 }
 
 @media screen and (max-width: 639px) {
