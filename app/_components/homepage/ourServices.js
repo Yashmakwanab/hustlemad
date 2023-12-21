@@ -94,14 +94,14 @@ export default function OurServices() {
             height={500}
             src="/Images/landingPage/serviceRightArrow.webp"
             alt="arrow"
-            className="absolute w-[36px] sm:w-[49px] top-[39.5%] xs:top-[40%] sm:top-[50%] ml-[calc(68%-0px)] xs:ml-[calc(68%-0px)] sm:ml-[calc(72%-4px)] md:ml-[calc(69%+1px)] lg:hidden"
+            className="absolute w-[36px] sm:w-[49px] top-[39.5%] xs:top-[40%] sm:top-[52%] ml-[calc(68%-0px)] xs:ml-[calc(68%-0px)] sm:ml-[calc(72%-4px)] md:ml-[calc(69%+1px)] lg:hidden"
           />
           <ImageWrapper
             width={500}
             height={500}
             src="/Images/landingPage/serviceLeftArrow.webp"
             alt="arrow"
-            className="absolute w-[36px] sm:w-[49px] top-[39.5%] xs:top-[40%] sm:top-[50%] ml-[calc(21%-0px)] xs:ml-[calc(21%-0px)] sm:ml-[calc(22%-4px)] md:ml-[calc(26%+1px)] lg:hidden"
+            className="absolute w-[36px] sm:w-[49px] top-[39.5%] xs:top-[40%] sm:top-[52%] ml-[calc(21%-0px)] xs:ml-[calc(21%-0px)] sm:ml-[calc(22%-4px)] md:ml-[calc(26%+1px)] lg:hidden"
           />
           {Services.map((Service, index) => (
             <React.Fragment key={index}>

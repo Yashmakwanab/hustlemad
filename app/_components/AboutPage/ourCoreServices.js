@@ -76,7 +76,7 @@ const OurCoreServices = () => {
           src="/Images/landingPage/purpleBorder.svg"
           className="w-full absolute bottom-[-1px] md:top-[-4px] xl:top-[-8px]"
           alt="Green Border"
-          width={1000}
+          width={2000}
           height={200}
         />
       </div>

@@ -84,10 +84,10 @@
 }
 
 .writingp2 img {
-  margin-top: 32px;
+  margin-top: 15px;
   /* width: 360px;
   height: 6px; */
-  padding-bottom: 24px;
+  padding-bottom: 15px;
 }
 
 .writingp2 h2 {
@@ -367,7 +367,7 @@
   }
 
   .writingp2 {
-    margin-top: -6px;
+    margin-top: -18px;
     margin-left: 20px;
     margin-right: 20px;
     width: 280px;
@@ -379,8 +379,8 @@
 
   .writingp2 img {
     width: 240px;
-    margin-top: 12px;
-    padding-bottom: 12px;
+    margin-top: 6px;
+    padding-bottom: 8px;
   }
 
   .writingp2 h2 {

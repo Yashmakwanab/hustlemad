@@ -26,7 +26,7 @@ const WeLoveSwag = () => {
       </div>
       <div className="absolute bottom-0 w-full z-[99]">
         <ImageWrapper
-          width={1000}
+          width={2000}
           height={20}
           src="/Images/landingPage/purpleBorder.svg"
           className="w-full absolute top-[-1px] md:top-[-4px] xl:top-[-8px]"
