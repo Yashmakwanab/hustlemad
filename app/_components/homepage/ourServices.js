@@ -146,7 +146,7 @@ export default function OurServices() {
                 <div
                   className={`text-center lg:text-start transition duration-300 px-[16px]`}
                 >
-                  <div className="min-h-[120px]">
+                  <div className="">
                     <h2 className="font-recoleta text-[24px] sm:text-[40px] lg:text-[48px] xl:text-[52px] font-[900] leading-[27px] sm:leading-[46px] lg:leading-[55px] xl:leading-[60px] text-[#0F143A] mb-2 sm:mb-3 lg:mb-4 xl:mb-6">
                       {Service.title}
                     </h2>
