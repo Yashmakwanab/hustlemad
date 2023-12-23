@@ -18,7 +18,7 @@ const SingleBlogPage = () => {
     try {
       console.log("hello");
       const response = await axios.get(
-        `http://192.168.0.115:4000/blog/details/${singleblog}`
+        `http://https://hustlemad-backend.herokuapp.com/blog/details/${singleblog}`
       );
       setSingleBlogData(response.data);
     } catch (error) {
@@ -29,7 +29,9 @@ const SingleBlogPage = () => {
 
   const getBlogs = async () => {
     try {
-      const response = await axios.get("http://192.168.0.115:4000/blog");
+      const response = await axios.get(
+        "https://hustlemad-backend.herokuapp.com/blog"
+      );
       setBlogs(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -69,7 +71,7 @@ const SingleBlogPage = () => {
             </div>
           </div>
           <div className="max-w-[1800px] m-auto p-5 sm:p-10 lg:p-20  flex flex-col gap-5 md:gap-10">
-            {singleBlogData?.article.map((item,index) => {
+            {singleBlogData?.article.map((item, index) => {
               console.log(item);
               return (
                 <div key={index}>

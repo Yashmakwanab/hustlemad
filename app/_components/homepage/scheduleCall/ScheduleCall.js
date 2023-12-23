@@ -3,6 +3,7 @@ import scheduleImage from "./../../../../public/Images/landingPage/scheduleCall.
 import ButtonPrimary from "../../commonComponents/ButtonPrimary";
 import "./styles.css";
 import ImageWrapper from "../../ImageWrapper/ImageWrapper";
+import { useRouter } from "next/navigation";
 
 const ScheduleCall = ({
   bgColor,
@@ -11,8 +12,9 @@ const ScheduleCall = ({
   buttonContent,
   showBorder,
 }) => {
+  let router = useRouter();
   const handleClick = () => {
-    console.log("btn clicked");
+    router.push("/catalogue");
   };
   return (
     <div className="relative ">

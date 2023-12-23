@@ -11,7 +11,9 @@ export default function Blog() {
 
   const getBlogs = async () => {
     try {
-      const response = await axios.get("http://192.168.0.115:4000/blog");
+      const response = await axios.get(
+        "https://hustlemad-backend.herokuapp.com/blog"
+      );
       setBlogs(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -23,7 +25,7 @@ export default function Blog() {
     try {
       console.log("hello");
       const response = await axios.get(
-        `http://192.168.0.115:4000/blog/details/656767b9d0a0dece56180162`
+        `https://hustlemad-backend.herokuapp.com/blog/details/656767b9d0a0dece56180162`
       );
       setSingleBlogData(response.data);
     } catch (error) {

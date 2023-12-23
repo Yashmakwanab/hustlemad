@@ -1,10 +1,10 @@
 "use client";
 import "swiper/css";
-import "swiper/css/free-mode";
 import "./style.css";
+import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
-
+import { Navigation } from "swiper/modules";
 const ClientLovesUs = () => {
   const Reviews = [
     {
@@ -33,8 +33,7 @@ const ClientLovesUs = () => {
       reviewer: "Sneha Sankar",
     },
     {
-      review:
-        "Amazing quality, timely delivery and reasonable pricing!",
+      review: "Amazing quality, timely delivery and reasonable pricing!",
       reviewer: "Vijayalakshmi R",
     },
     {
@@ -67,13 +66,39 @@ const ClientLovesUs = () => {
         <div className="py-5">
           <Swiper
             slidesPerView={"auto"}
-            centeredSlides={true}
+            spaceBetween={10}
+            centeredSlides={false}
             loop={true}
-            spaceBetween={30}
-            pagination={{
-              clickable: true,
+            freeMode={true}
+            navigation={true}
+            breakpoints={{
+              400: {
+                slidesPerView: 1.5,
+                spaceBetween: 20,
+              },
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 2.5,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+              1180: {
+                slidesPerView: 3.5,
+                spaceBetween: 30,
+              },
+              1400: {
+                slidesPerView: 4.5,
+                spaceBetween: 40,
+              },
             }}
-            className="mySwiper "
+            modules={[Navigation]}
+            className="preset_swiper"
           >
             {Reviews.map((review, index) => (
               <SwiperSlide key={index}>

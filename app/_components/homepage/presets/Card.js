@@ -5,12 +5,22 @@ import "./styles.css";
 import ImageWrapper from "../../ImageWrapper/ImageWrapper";
 import { add } from "@/app/redux/slice/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { selectAllProductList, setAllProductList } from "@/app/redux/slice/globleSlice";
-import { useRouter } from 'next/navigation';
+import {
+  selectAllProductList,
+  setAllProductList,
+} from "@/app/redux/slice/globleSlice";
+import { useRouter } from "next/navigation";
 import axios from "axios";
 import { useEffect } from "react";
 
-const Card = ({ preset_name, content, price, cut_price, image_url,product_list }) => {
+const Card = ({
+  preset_name,
+  content,
+  price,
+  cut_price,
+  image_url,
+  product_list,
+}) => {
   const getproducts = async () => {
     try {
       const response = await axios.get(
@@ -29,18 +39,22 @@ const Card = ({ preset_name, content, price, cut_price, image_url,product_list }
   const cartitems = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const handleClick = (productList) => {
-    const productsToAdd = allProducts.filter(product => productList.includes(product._id));
+    const productsToAdd = allProducts.filter((product) =>
+      productList.includes(product._id)
+    );
 
-    productsToAdd.forEach(product => {
-      const isProductInCart = cartitems.some(cartProduct => cartProduct._id === product._id);
-      if(!isProductInCart){
-        dispatch(add(product))
+    productsToAdd.forEach((product) => {
+      const isProductInCart = cartitems.some(
+        (cartProduct) => cartProduct._id === product._id
+      );
+      if (!isProductInCart) {
+        dispatch(add(product));
       }
     });
     router.push("/catalogue");
   };
   return (
-    <div className="card">
+    <div className="presetCard">
       <div className="presetImageContainer">
         <ImageWrapper
           className="presetImage"
@@ -56,7 +70,7 @@ const Card = ({ preset_name, content, price, cut_price, image_url,product_list }
       <hr className="solid" />
       <div>
         <ButtonPrimary
-          handleClick={()=>handleClick(product_list)}
+          handleClick={() => handleClick(product_list)}
           content={
             <p className="text-[12px] md:text-[14px] lg:text-[16px]">
               Get at ₹ <span className="line-through">{price} </span>

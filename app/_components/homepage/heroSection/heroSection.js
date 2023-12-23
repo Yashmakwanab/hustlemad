@@ -3,10 +3,11 @@ import ButtonPrimary from "../../commonComponents/ButtonPrimary";
 import style from "./heroSection.module.css";
 import SmallHero from "./SmallHero/SmallHero";
 import BigHero from "./BigHero/BigHero";
-
+import { useRouter } from "next/navigation";
 const HeroSection = () => {
+  let router = useRouter();
   const handleClick = () => {
-    console.log("hello");
+    router.push("/catalogue");
   };
   return (
     <div className="flex justify-center bg-[#B3FFFA] sectionBottomPadding">
