@@ -5,15 +5,19 @@ import style from "./footer.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
-import { usePathname } from 'next/navigation';
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const pathname = usePathname();
-  const isCataloguePage = pathname === '/catalogue';
-  const isOrderPage = pathname === '/order';
+  const isCataloguePage = pathname === "/catalogue";
+  const isOrderPage = pathname === "/order";
 
   return (
-    <div className={`${isCataloguePage || isOrderPage ? "hidden" : "" } relative max-w-[1400px] m-auto`}>
+    <div
+      className={`${
+        isCataloguePage || isOrderPage ? "hidden" : ""
+      } relative max-w-[1400px] m-auto`}
+    >
       <div className={style.footer_section}>
         <section className={style.footer_middle}>
           <div className={style.hustlemad_logo_container}>
@@ -34,9 +38,12 @@ export default function Footer() {
                 Catalogue
               </Link>
               <p>
-                <a className={`${style.footer_social_link} text-reset`}>
+                <Link
+                  href={"/blog"}
+                  className={`${style.footer_social_link} text-reset`}
+                >
                   Blogs
-                </a>
+                </Link>
               </p>
               <Link
                 className={`${style.footer_social_link} text-reset`}
@@ -54,23 +61,25 @@ export default function Footer() {
             <div className={style.footer_last}>
               <div className={style.links}>
                 <div className={style.footer_links_header}>Contact</div>
-                <p>
-                  <a className={`${style.footer_social_link} text-reset`}>
-                    Schedule a Call
-                  </a>
-                </p>
+
+                <Link
+                  className={`${style.footer_social_link} text-reset`}
+                  href="/contact"
+                >
+                  Schedule a Call
+                </Link>
                 <Link
                   className={`${style.footer_social_link} text-reset`}
                   href="/partner"
                 >
                   Be our Partner
                 </Link>
-
-                <p>
-                  <a className={`${style.footer_social_link} text-reset`}>
-                    Contact Us
-                  </a>
-                </p>
+                <Link
+                  className={`${style.footer_social_link} text-reset`}
+                  href="/contact"
+                >
+                  Contact Us
+                </Link>
               </div>
               <div className={style.links}>
                 <div className={style.footer_links_header}>Legal</div>
