@@ -27,7 +27,6 @@ function Spinner() {
             rendererSettings={{ preserveAspectRatio: "xMidYMid slice" }}
           />
         </div>
-        ;
       </div>
     </div>
   );

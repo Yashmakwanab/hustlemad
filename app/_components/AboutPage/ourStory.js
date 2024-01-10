@@ -37,7 +37,7 @@ const OurStory = () => {
         <ImageWrapper
           width={2000}
           height={200}
-          src="/Images/landingPage/purpleBorder.svg"
+          src="/Images/landingPage/purpleBorder.webp"
           className="w-full absolute bottom-[-1px] md:top-[-4px] xl:top-[-8px]"
           alt="Green Border"
         />
