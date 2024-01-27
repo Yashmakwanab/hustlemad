@@ -11,7 +11,6 @@ import {
 } from "@/app/redux/slice/globleSlice";
 import CustomOrderModel from "../../models/customOrderModel";
 import ProductDetailModal from "../../models/productDetailModal";
-import axios from "axios";
 
 const AllProduct = () => {
   const [addCart, setAddCart] = useState([]);
@@ -114,9 +113,9 @@ const AllProduct = () => {
               <div
                 key={category}
                 id={getCategoryName(category)}
-                className="product_card_list"
+                className="product_card_list flex flex-col item-center justify-center"
               >
-                <div>
+                <div className="productsWrapper flex flex-col items-center md:items-start">
                   <h1 className="font-recoleta text-[18px] md:text-[24px]  ">
                     {getCategoryName(category)}
                   </h1>
@@ -124,7 +123,7 @@ const AllProduct = () => {
                     {getCategorySubTitle(category)}
                   </h1>
                 </div>
-                <div className="productsWrapper gap-6 flex flex-wrap">
+                <div className="productsWrapper gap-6 flex flex-wrap justify-center md:justify-start ">
                   {categoryProducts.map((product, index) => (
                     <div key={index} className="product_card">
                       <div
