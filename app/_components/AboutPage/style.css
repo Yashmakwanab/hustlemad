@@ -6,7 +6,7 @@
   border-radius: 10px;
   justify-content: center;
 }
-.person-image{
+.person-image {
   border: 1px solid black;
   border-radius: 10px;
 }
@@ -41,14 +41,15 @@
     width: 412px;
     height: 512px;
   }
-  .flip-card-front,.flip-card-back{
+  .flip-card-front,
+  .flip-card-back {
     padding: 31px 31px 31px 31px;
   }
   .dot::before {
     width: 30px;
     height: 30px;
   }
-  .name-plate{
+  .name-plate {
     margin-top: 36px;
     font-size: 36px;
     line-height: 36px;
@@ -56,16 +57,17 @@
   .text-container {
     padding: 25px;
   }
-  .person-image, .text-container{
+  .person-image,
+  .text-container {
     height: 360px;
   }
-  .description{
+  .description {
     font-size: 22px;
     line-height: 32px;
     margin-bottom: 20px;
     line-height: 36px;
   }
-  .container-gap{
+  .container-gap {
     gap: 100px;
   }
 }
@@ -76,14 +78,15 @@
     width: 360px;
     height: 440px;
   }
-  .flip-card-front,.flip-card-back{
+  .flip-card-front,
+  .flip-card-back {
     padding: 26px 26px 26px 26px;
   }
   .dot::before {
     width: 30px;
     height: 30px;
   }
-  .name-plate{
+  .name-plate {
     margin-top: 30px;
     font-size: 30px;
     line-height: 30px;
@@ -91,14 +94,15 @@
   .text-container {
     padding: 24px;
   }
-  .person-image, .text-container{
+  .person-image,
+  .text-container {
     height: 320px;
   }
-  .description{
+  .description {
     font-size: 22px;
     line-height: 28px;
   }
-  .container-gap{
+  .container-gap {
     gap: 100px;
   }
 }
@@ -109,14 +113,15 @@
     width: 295px;
     height: 360px;
   }
-  .flip-card-front,.flip-card-back{
+  .flip-card-front,
+  .flip-card-back {
     padding: 26px 26px 26px 26px;
   }
   .dot::before {
     width: 30px;
     height: 30px;
   }
-  .name-plate{
+  .name-plate {
     margin-top: 22px;
     font-size: 24px;
     line-height: 24px;
@@ -124,14 +129,15 @@
   .text-container {
     padding: 12px;
   }
-  .person-image, .text-container{
+  .person-image,
+  .text-container {
     height: 264px;
   }
-  .description{
+  .description {
     font-size: 18px;
     line-height: 24px;
   }
-  .container-gap{
+  .container-gap {
     gap: 100px;
   }
 }
@@ -141,14 +147,15 @@
     width: 240px;
     height: 292px;
   }
-  .flip-card-front,.flip-card-back{
+  .flip-card-front,
+  .flip-card-back {
     padding: 20px 20px 20px 20px;
   }
   .dot::before {
     width: 18px;
     height: 18px;
   }
-  .name-plate{
+  .name-plate {
     margin-top: 14px;
     font-size: 20px;
     line-height: 20px;
@@ -156,14 +163,15 @@
   .text-container {
     padding: 10px;
   }
-  .person-image, .text-container{
+  .person-image,
+  .text-container {
     height: 220px;
   }
-  .description{
+  .description {
     font-size: 14px;
     line-height: 22px;
   }
-  .container-gap{
+  .container-gap {
     gap: 60px;
   }
 }
@@ -172,14 +180,15 @@
     width: 220px;
     height: 264px;
   }
-  .flip-card-front,.flip-card-back{
+  .flip-card-front,
+  .flip-card-back {
     padding: 12px 12px 12px 12px;
   }
   .dot::before {
     width: 18px;
     height: 18px;
   }
-  .name-plate{
+  .name-plate {
     margin-top: 10px;
     font-size: 16px;
     line-height: 16px;
@@ -187,14 +196,15 @@
   .text-container {
     padding: 10px;
   }
-  .person-image, .text-container{
+  .person-image,
+  .text-container {
     height: 208px;
   }
-  .description{
+  .description {
     font-size: 13px;
     line-height: 21px;
   }
-  .container-gap{
+  .container-gap {
     gap: 32px;
   }
 }
@@ -218,6 +228,8 @@
 
 .flip-card:hover .flip-card-inner,
 .flip-card:focus .flip-card-inner {
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
@@ -241,6 +253,9 @@
 .flip-card-back {
   background: white;
   color: white;
+
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
   z-index: 1;
   display: flex;
