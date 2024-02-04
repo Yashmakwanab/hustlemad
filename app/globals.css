@@ -22,6 +22,11 @@
   font-weight: 900;
   font-display: swap;
 }
+@font-face {
+  font-family: "RecoletaSemiBold";
+  src: url("../public/font/Recoleta/Recoleta-SemiBold.ttf");
+  font-display: swap;
+}
 
 @font-face {
   font-family: "SpaceMonoBold";
@@ -498,4 +503,18 @@ body {
 .bottom_center {
   right: 50%;
   transform: translate(50%, 50%);
+}
+.greenBorderStyle {
+  background: url("./../public/Images/landingPage/greenBorder.svg");
+  background-repeat: repeat-x;
+  height: 20px;
+  width: 100%;
+  background-size: contain;
+}
+.purpleBorderStyle {
+  background: url("./../public/Images/landingPage/purpleBorder.svg");
+  background-repeat: repeat-x;
+  height: 20px;
+  width: 100%;
+  background-size: contain;
 }

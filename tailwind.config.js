@@ -30,6 +30,7 @@ module.exports = {
     },
     fontFamily: {
       recoleta: ["Recoleta"],
+      recoletaSemiBold: ["RecoletaSemiBold"],
       mazzard: ["Mazzard"],
       mazzardMedium: ["MazzardMedium"],
       mazzardSemiBold: ["MazzardSemiBold"],

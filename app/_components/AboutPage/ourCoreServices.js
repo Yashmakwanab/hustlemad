@@ -72,13 +72,7 @@ const OurCoreServices = () => {
         })}
       </div>
       <div className="absolute bottom-0 w-full z-[99]">
-        <ImageWrapper
-          src="/Images/landingPage/purpleBorder.webp"
-          className="w-full absolute bottom-[-1px] md:top-[-4px] xl:top-[-8px]"
-          alt="Green Border"
-          width={2000}
-          height={200}
-        />
+        <div className="purpleBorderStyle"></div>
       </div>
     </div>
   );

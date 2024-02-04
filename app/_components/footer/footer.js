@@ -16,7 +16,7 @@ export default function Footer() {
     <div
       className={`${
         isCataloguePage || isOrderPage ? "hidden" : ""
-      } relative max-w-[1400px] m-auto`}
+      } relative max-w-[2000px] m-auto`}
     >
       <div className={style.footer_section}>
         <section className={style.footer_middle}>

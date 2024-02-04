@@ -47,7 +47,7 @@ const CartSection = ({
         />
       </div>
       <div
-      className="overflow-style"
+        className="overflow-style"
         style={{
           overflowY: "auto",
           height: `calc(100vh - ${heightOfCart}) `,
@@ -272,7 +272,7 @@ const Cartpage = ({ className }) => {
 
   return (
     <div className={className}>
-      <div className="w-[300px] bg-white hidden nxl:block fixed  right-0 shadow-md h-full">
+      <div className="w-[300px] bg-white hidden nxl:block fixed  shadow-md h-full">
         <CartSection
           cartitems={cartitems}
           defaultQuantityNumber={defaultQuantityNumber}

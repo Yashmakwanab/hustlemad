@@ -20,13 +20,7 @@ const ScheduleCall = ({
     <div className="relative ">
       {showBorder && (
         <div className="absolute top-0 w-full ">
-          <ImageWrapper
-            width={2000}
-            height={100}
-            src="/Images/landingPage/greenBorder.webp"
-            className="w-full absolute top-[-1px] md:top-[-4px] xl:top-[-8px]"
-            alt="Green Border"
-          />
+          <div className="greenBorderStyle"></div>
         </div>
       )}
       <div

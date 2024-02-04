@@ -10,23 +10,19 @@ const RequestForm = () => {
   const onFinish = async (values) => {
     try {
       await axios
-        .post(
-          "https://hustlemad-backend.herokuapp.com/feed/post/",
-          {
-            companyname: values.companyname,
-            contact: values.contact,
-            email: values.email,
-            name: values.name,
-            preference: values.preference,
-            swagpacks: values.swagpacks
-          },
-        )
+        .post("https://hustlemad-backend.herokuapp.com/feed/post/", {
+          companyname: values.companyname,
+          contact: values.contact,
+          email: values.email,
+          name: values.name,
+          preference: values.preference,
+          swagpacks: values.swagpacks,
+        })
         .then((res) => {
           if (res.status == 201) {
             form.resetFields();
           }
-        }
-        );
+        });
     } catch (e) {
       console.log("e");
     }
@@ -109,9 +105,14 @@ const RequestForm = () => {
                 className="[&>*]:!border-[#0f143acc] [&>div]:!border-[2px] !font-mazzard"
               >
                 <Option value="Custom">Custom Pack</Option>
-                <Option value="Essential">Essential Box</Option>
-                <Option value="Delight">Delight Box</Option>
-                <Option value="Patriot">The Patriot Box</Option>
+                <Option value="EssentialPack">Essential Pack</Option>
+                <Option value="DelightPack">Delight Pack</Option>
+                <Option value="EventElevateBag">Event Elevate Bag</Option>
+                <Option value="CryptoCrate">Crypto Crate</Option>
+                <Option value="TokenTreat">Token Treat</Option>
+                <Option value="TechTribeTreasure">Tech Tribe Treasure</Option>
+                <Option value="GiveawayGem">Giveaway Gem</Option>
+                <Option value="BondBox">Bond Box</Option>
               </Select>
             </Form.Item>
           </div>
@@ -161,13 +162,7 @@ const RequestForm = () => {
         </Form>
       </div>
       <div className="z-[99] absolute bottom-0 w-full">
-        <ImageWrapper
-          src="/Images/landingPage/footerBorder.webp"
-          width={2000}
-          height={10}
-          className="w-full absolute top-[-4px] md:top-[-7px] xl:top-[-12px]"
-          alt="Footer Border"
-        />
+        <div className="purpleBorderStyle"></div>
       </div>
     </div>
   );

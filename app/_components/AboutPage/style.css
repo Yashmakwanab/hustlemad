@@ -228,9 +228,9 @@
 
 .flip-card:hover .flip-card-inner,
 .flip-card:focus .flip-card-inner {
-  -webkit-transform: perspective(1000px) translate3d(0, 0, 0) rotateY(-180deg);
-  -ms-transform: perspective(1000px) translate3d(0, 0, 0) rotateY(-180deg);
-  transform: perspective(1000px) translate3d(0, 0, 0) rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
 }
 
 .flip-card-front,
@@ -253,9 +253,10 @@
 .flip-card-back {
   background: white;
   color: white;
-  -webkit-transform: perspective(1000px) translate3d(0, 0, 0) rotateY(-180deg);
-  -ms-transform: perspective(1000px) translate3d(0, 0, 0) rotateY(-180deg);
-  transform: perspective(1000px) translate3d(0, 0, 0) rotateY(-180deg);
+
+  -webkit-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
   z-index: 1;
   display: flex;
   justify-content: center;

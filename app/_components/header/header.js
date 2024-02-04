@@ -45,7 +45,7 @@ const menuItems = [
     label: "Latest Works",
     directUrl: ["/works"],
   },
-  ];
+];
 const Header = () => {
   const [show, setShow] = useState(false);
   const [activeHeader, setActiveHeader] = useState(5);
@@ -157,6 +157,7 @@ const Header = () => {
                                 key={subIndex}
                                 className="border-b-[1px] px-[14px] border-[#0F143AB8] last:border-none"
                                 onMouseEnter={() => setActiveHeaderIndex(index)}
+                                onClick={() => setActiveHeaderIndex(null)}
                               >
                                 <Link
                                   className=""
@@ -280,7 +281,10 @@ const Header = () => {
                                     onMouseEnter={() =>
                                       setActiveHeaderIndex(index)
                                     }
-                                    onClick={() => setShow(false)}
+                                    onClick={() => {
+                                      setShow(false),
+                                        setActiveHeaderIndex(null);
+                                    }}
                                   >
                                     <Link
                                       className=""

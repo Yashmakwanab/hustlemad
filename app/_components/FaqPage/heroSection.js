@@ -18,7 +18,7 @@ function Accordion({ title, content }) {
           expanded ? "pb-4" : ""
         }  px-6 py-8 xl:px-10 text-left items-center select-none flex justify-between flex-row`}
       >
-        <h5 className="flex-1 text-[#0F143A] font-recoleta w-full text-[16px]  md:text-[22px] nxl:text-[28px] xl:text-[28px]   max-w-[90%] ">
+        <h5 className="flex-1 text-[#0F143A] font-recoletaSemiBold w-full text-[16px]  md:text-[22px] nxl:text-[28px] xl:text-[28px]   max-w-[90%] ">
           {title}
         </h5>
         <div className="flex-none pl-2 ">
@@ -64,7 +64,7 @@ const FaqHero = () => {
       <div className="relative">
         <div className=" flex flex-col gap-2 items-center">
           <ImageWrapper
-            src="/Images/faq/faqHero.webp"
+            src="/Images/faq/faqHero.svg"
             alt="faq"
             width={200}
             height={200}
