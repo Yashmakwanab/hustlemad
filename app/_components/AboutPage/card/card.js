@@ -4,8 +4,12 @@ import "./flip-transition.css";
 
 function Card({onClick}) {
   return (
-     <div className="flex flex-col items-center justify-center sm:flex-row container-gap card" onClick={onClick}>
-     <div className="">
+    // <div className="card" onClick={onClick}>
+    //   <div className="card-back">Back</div>
+    //   <div className="card-front">Front</div>
+    // </div>
+     <div className="flex flex-col items-center justify-center sm:flex-row container-gap card flip-card" onClick={onClick}>
+     {/* <div className="">
        <div className="flip-card " tabIndex="0">
          <div className="flip-card-inner ">
            <div className="flip-card-front dot card-front">
@@ -59,10 +63,10 @@ function Card({onClick}) {
            </div>
          </div>
        </div>
-     </div>
-     <div className="">
+     </div> */}
+     {/* <div className="">
        <div className="flip-card" tabIndex="0">
-         <div className="flip-card-inner">
+         <div className="flip-card-inner"> */}
            <div className="flip-card-front dot card-front">
              <div className="flex flex-col">
                <ImageWrapper
@@ -111,9 +115,9 @@ function Card({onClick}) {
                </p>
              </div>
            </div>
-         </div>
+         {/* </div>
        </div>
-     </div>
+     </div> */}
    </div>
   );
 }

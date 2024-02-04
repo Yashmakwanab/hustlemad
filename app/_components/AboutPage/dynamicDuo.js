@@ -133,6 +133,7 @@ const DynamicDuo = () => {
           </div>
         </div>
       </div>
+      <div className="w-full flex justify-center">
       <div className="flippable-card-container">
         <CSSTransition
           in={showFront}
@@ -144,6 +145,8 @@ const DynamicDuo = () => {
           }} />
         </CSSTransition>
       </div>
+      </div>
+      
     </>
   );
 };
