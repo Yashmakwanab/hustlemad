@@ -2,7 +2,7 @@
   /* Sizing */
   height: 100%;
   width: 100%;
-  
+
   transform-style: preserve-3d;
 
   /* Content Alignment */
@@ -32,16 +32,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* Content Styling */
-  font-family: Montserrat;
-  font-weight: 800;
-  font-size: 60px;
-  color: white;
 }
 
-.card-front {
-}
+.card-front {}
 
 .card-back {
   transform: rotateY(180deg);

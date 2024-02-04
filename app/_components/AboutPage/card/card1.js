@@ -2,28 +2,27 @@ import ImageWrapper from "../../ImageWrapper/ImageWrapper";
 import "./card.css";
 import "./flip-transition.css";
 
-function Card({ onClick }) {
+function Card1({ onClick }) {
   return (
     <div className="flex flex-col items-center justify-center sm:flex-row container-gap card flip-card" onClick={onClick}>
       <div className="flip-card-front dot card-front">
         <div className="flex flex-col">
           <ImageWrapper
-            src={"/Images/aboutPage/adityaImage.webp"}
+            src={"/Images/aboutPage/anuragImage.webp"}
             className="person-image"
           />
           <p className="font-recoleta text-[#001636] text-center opacity-80 name-plate">
-            Aditya Agrawal
+            Anurag Singh
           </p>
         </div>
       </div>
       <div className="flip-card-back dot2 card-back">
-        <div className="">
-          <div className="text-container bg-[#E3FFC0]">
+        <div className="relative">
+          <div className="text-container bg-[#FFDCC8] mb-2">
             <p className="text-center text-[#001636] font-mazzardMedium description">
-              Aditya is a true blue first-principles guy. An avid
-              trekker, he has worked at the intersection of finance &
-              tech for 7 years. Take your half baked ideas to him and
-              you’ve lost him.
+              Brand logo quiz winner. Loves music, football &
+              motor-racing. Reach out to Anurag for all your crazy
+              ideas, you will find the perfect audience in him.
             </p>
             <div className="flex items-center gap-2">
               <div className="flex items-end justify-center">
@@ -50,7 +49,7 @@ function Card({ onClick }) {
             </div>
           </div>
           <p className="font-recoleta text-[#001636] text-center opacity-80 name-plate">
-            Aditya Agrawal
+            Anurag Singh
           </p>
         </div>
       </div>
@@ -58,4 +57,4 @@ function Card({ onClick }) {
   );
 }
 
-export default Card;
+export default Card1;
