@@ -296,7 +296,20 @@ body {
 .customOrderModel .ant-modal-footer {
   display: none;
 }
-
+.greenBorderStyle {
+  background: url("./../public/Images/landingPage/greenBorder.svg");
+  background-repeat: repeat-x;
+  height: 20px;
+  width: 100%;
+  background-size: contain;
+}
+.purpleBorderStyle {
+  background: url("./../public/Images/landingPage/purpleBorder.svg");
+  background-repeat: repeat-x;
+  height: 20px;
+  width: 100%;
+  background-size: contain;
+}
 @media screen and (max-width: 1600px) {
   .ant-form-item-label label,
   .web-form .ant-form-item-label label,
@@ -445,6 +458,12 @@ body {
   .order-form .ant-form-item {
     margin-bottom: 24px;
   }
+  .greenBorderStyle {
+    height: 8px !important;
+  }
+  .purpleBorderStyle {
+    height: 8px !important;
+  }
 }
 .overflow-style::-webkit-scrollbar-track {
   border: none;
@@ -513,18 +532,4 @@ body {
 .bottom_center {
   right: 50%;
   transform: translate(50%, 50%);
-}
-.greenBorderStyle {
-  background: url("./../public/Images/landingPage/greenBorder.svg");
-  background-repeat: repeat-x;
-  height: 20px;
-  width: 100%;
-  background-size: contain;
-}
-.purpleBorderStyle {
-  background: url("./../public/Images/landingPage/purpleBorder.svg");
-  background-repeat: repeat-x;
-  height: 20px;
-  width: 100%;
-  background-size: contain;
 }
