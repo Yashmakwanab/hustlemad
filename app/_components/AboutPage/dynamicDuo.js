@@ -1,9 +1,20 @@
 "use client";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
 import "./style.css";
-import React from "react";
+import React, { useState } from "react";
 
 const DynamicDuo = () => {
+  const [isTouch, setIsTouch] = useState(false);
+
+  // Function to handle touch start event
+  const handleTouchStart = () => {
+    setIsTouch(true);
+  };
+
+  // Function to handle touch end event
+  const handleTouchEnd = () => {
+    setIsTouch(false);
+  };
   return (
     <div className="p-5 md:p-20 pb-20 flex flex-col gap-10 xl:gap-20  items-center bg-[#fff]">
       <div>
@@ -17,7 +28,7 @@ const DynamicDuo = () => {
       </div>
       <div className="flex flex-col items-center justify-center sm:flex-row container-gap">
         <div className="">
-          <div className="flip-card " tabIndex="0">
+          <div className="flip-card " tabIndex="0" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
             <div className="flip-card-inner ">
               <div className="flip-card-front dot">
                 <div className="flex flex-col">
@@ -72,7 +83,7 @@ const DynamicDuo = () => {
           </div>
         </div>
         <div className="">
-          <div className="flip-card" tabIndex="0">
+          <div className="flip-card" tabIndex="0" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
             <div className="flip-card-inner">
               <div className="flip-card-front dot">
                 <div className="flex flex-col">
