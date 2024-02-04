@@ -10,7 +10,7 @@ function Accordion({ title, content }) {
 
   return (
     <div
-      className="my-2 sm:my-4 md:my-2 shadow-sm cursor-pointer bg-white  border-[1px] border-[#001636ac] rounded-[16px] flex flex-col	"
+      className="my-2  sm:my-4 md:my-2 shadow-sm cursor-pointer bg-white  border-[1px] border-[#001636ac] rounded-[16px] flex flex-col	"
       onClick={toggleExpanded}
     >
       <div
@@ -61,7 +61,7 @@ const FaqHero = () => {
   return (
     <div>
       {" "}
-      <div className="relative">
+      <div className="relative mt-16">
         <div className=" flex flex-col gap-2 items-center">
           <ImageWrapper
             src="/Images/faq/faqHero.svg"

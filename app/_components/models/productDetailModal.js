@@ -43,7 +43,7 @@ const ProductDetailModal = ({ openModel, setOpenModel }) => {
         }}
       >
         <div className="flex gap-8 select-none flex-col md:flex-row items-center	">
-          <div className="w-[300px]">
+          <div className="max-w-[300px]">
             <div>
               <ImageWrapper
                 src={
@@ -53,7 +53,7 @@ const ProductDetailModal = ({ openModel, setOpenModel }) => {
                 }
               />
             </div>
-            <div className="w-[250]">
+            <div className="max-w-[250]">
               <Swiper
                 loop={false}
                 navigation={true}
@@ -77,7 +77,7 @@ const ProductDetailModal = ({ openModel, setOpenModel }) => {
               </Swiper>
             </div>
           </div>
-          <div className="flex flex-col gap-4 max-w-[500px] items-start ">
+          <div className="flex flex-col gap-4 w-full md:max-w-[500px] items-start ">
             <p className="font-mazzardMedium text-xl"> {product?.name}</p>
             <h2 className="uppercase font-mazzardMedium text-md">
               {product?.brandName}
