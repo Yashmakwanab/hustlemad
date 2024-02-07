@@ -1,0 +1,42 @@
+.flippable-card-container {
+    /* === Sizing === */
+    height: 500px;
+    width: 412px;
+    perspective: 1000px;
+  }
+  @media screen and (min-width: 1560px) {
+    .flippable-card-container  {
+      background-color: transparent;
+      width: 412px;
+      height: 512px;
+    }
+  }
+  
+  @media screen and (max-width: 1559px) {
+    .flippable-card-container {
+      background-color: transparent;
+      width: 360px;
+      height: 440px;
+    }
+  }
+  
+  @media screen and (max-width: 1119px) {
+    .flippable-card-container {
+      background-color: transparent;
+      width: 295px;
+      height: 360px;
+    }
+  }
+  @media screen and (max-width: 959px) {
+    .flippable-card-container {
+      background-color: transparent;
+      width: 240px;
+      height: 292px;
+    }
+  }
+  @media screen and (max-width: 639px) {
+    .flippable-card-container {
+      width: 220px;
+      height: 264px;
+    }
+  }
