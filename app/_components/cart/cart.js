@@ -199,10 +199,9 @@ const CartSection = ({
     </div>
   );
 };
-const Cartpage = ({ className }) => {
+const Cartpage = ({ className, show, setShow }) => {
   const defaultQuantityNumber = useSelector(selectQuantityNumber);
   const [quantity, setQuantity] = useState(defaultQuantityNumber);
-  const [show, setShow] = useState(false);
   const allProducts = useSelector(selectAllProductList);
 
   const dispatch = useDispatch();
@@ -269,7 +268,6 @@ const Cartpage = ({ className }) => {
       return item?.color;
     }
   };
-
   return (
     <div className={className}>
       <div className="w-[300px] bg-white hidden nxl:block fixed  shadow-md h-full">
@@ -292,7 +290,12 @@ const Cartpage = ({ className }) => {
         onClick={() => setShow((prev) => !prev)}
       >
         <div className=" text-white font-mazzardSemiBold flex items-center justify-center   nxl:hidden ">
-          <p className="hidden md:block">Expand Swag Pack</p>
+          <p className="hidden md:flex items-center gap-4">
+            Expand Swag Pack
+            <div className="text-[#9397ff] font-recoleta text-[18px] leading-[18px] font-[500]">
+              [{cartitems?.length}]
+            </div>
+          </p>
           {!show ? (
             <p className="block md:hidden">View Swag Pack</p>
           ) : (

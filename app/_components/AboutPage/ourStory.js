@@ -4,14 +4,12 @@ import ImageWrapper from "../ImageWrapper/ImageWrapper";
 const OurStory = () => {
   return (
     <div className="p-10 md:p-20 flex flex-col gap-5 xl:gap-10 items-center bg-[#fff] relative">
-      <h1 className="font-recoleta relative flex justify-center text-[24px] sm:text-[40px] lg:text-[48px] xl:text-[52px] font-[700] leading-[32px] sm:leading-[54px] lg:leading-[65px] xl:leading-[70px] underline underline-offset-[11px] text-[#0F143A] mb-[20px] sm:mb-[45px] md:mb-[55px] xl:mb-[80px] decoration-4">
-        Our Story
-        <div
-          className="h-[90%] absolute bottom-[-120%] left-0 w-full bg-top bg-no-repeat bg-contain"
-          style={{ backgroundImage: 'url("/Images/aboutPage/storyLeaf.svg")' }}
-        ></div>
-      </h1>
-
+      <div className="flex flex-col items-center">
+        <h1 className="font-recoleta relative flex justify-center text-[24px] sm:text-[40px] lg:text-[48px] xl:text-[52px] font-[700] leading-[32px] sm:leading-[54px] underline underline-offset-[11px] text-[#0F143A] mb-[40px]   decoration-4">
+          Our Story
+        </h1>
+        <img src="/Images/aboutPage/storyLeaf.svg" className="w-[30px]" />
+      </div>
       <p
         className={` text-[#0F143A] max-w-[1000px] font-mazzardMedium opacity-80 text-center text-[14px] sm:text-[24px] md:text-[28px] font-normal`}
       >
