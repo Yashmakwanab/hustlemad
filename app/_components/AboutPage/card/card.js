@@ -2,9 +2,9 @@ import ImageWrapper from "../../ImageWrapper/ImageWrapper";
 import "./card.css";
 import "./flip-transition.css";
 
-function Card({ onClick }) {
+function Card({ onMouseEnter, onMouseLeave }) {
   return (
-    <div className="flex flex-col items-center justify-center sm:flex-row container-gap card flip-card" onClick={onClick}>
+    <div className="flex flex-col items-center justify-center sm:flex-row container-gap card flip-card" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
       <div className="flip-card-front dot card-front">
         <div className="flex flex-col">
           <ImageWrapper

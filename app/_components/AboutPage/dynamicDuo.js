@@ -8,8 +8,8 @@ import React, { useState } from "react";
 import Card1 from "./card/card1";
 
 const DynamicDuo = () => {
-  const [showFront, setShowFront] = useState(true);
-  const [showFront1, setShowFront1] = useState(true);
+  const [showFront, setShowFront] = useState(false);
+  const [showFront1, setShowFront1] = useState(false);
 
 
   return (
@@ -31,12 +31,15 @@ const DynamicDuo = () => {
               timeout={300}
               classNames='flip'
             >
-              <Card onClick={() => {
-                setShowFront((v) => !v);
-                if (!showFront1) {
-                  setShowFront1((v) => !v);
-                }
-              }} />
+              <Card 
+              
+              onMouseEnter={() => {
+                setShowFront(false);
+              }}
+              onMouseLeave={() => {
+                setShowFront(true);
+              }}
+               />
             </CSSTransition>
           </div>
           <div className="flippable-card-container">
@@ -45,12 +48,13 @@ const DynamicDuo = () => {
               timeout={300}
               classNames='flip'
             >
-              <Card1 onClick={() => {
-                setShowFront1((v) => !v);
-                if (!showFront) {
-                  setShowFront((v) => !v);
-                }
-              }} />
+              <Card1    onMouseEnter={() => {
+                setShowFront1(false);
+              }}
+              onMouseLeave={() => {
+                setShowFront1(true);
+              }}
+              />
             </CSSTransition>
           </div>
         </div>

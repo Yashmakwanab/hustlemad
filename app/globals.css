@@ -373,16 +373,6 @@ body {
   }
 }
 
-.flip-card:hover,
-.flip-card.touch-hover {
-  /* transform: rotateY(180deg); */
-}
-
-.flip-card-inner {
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
-}
-
 @media screen and (max-width: 840px) {
   .customOrderModel .ant-modal-content {
     padding: 30px 40px;
