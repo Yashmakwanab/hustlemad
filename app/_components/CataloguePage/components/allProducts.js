@@ -12,14 +12,14 @@ import {
 import CustomOrderModel from "../../models/customOrderModel";
 import ProductDetailModal from "../../models/productDetailModal";
 
-const AllProduct = () => {
+const AllProduct = ({ show }) => {
   const [addCart, setAddCart] = useState([]);
   const [openModel, setOpenModel] = useState(false);
   const [openProductModel, setOpenProductModel] = useState(false);
   const dispatch = useDispatch();
   const cartitems = useSelector((state) => state.cart);
   const allProducts = useSelector(selectAllProductList);
-
+  console.log(show);
   const handleadd = (product) => {
     const isProductInCart = cartitems.some(
       (item) => item?.name === product?.name
@@ -106,6 +106,7 @@ const AllProduct = () => {
   }
   return (
     <>
+      <span className={show ? "overlay" : ""}></span>
       <div className="flex flex-col items-start">
         <div className="productsWrapper w-[100%] m-auto cards items-center justify-center nxl:justify-start ">
           {Object.entries(sortedGroupedProducts)?.map(
@@ -116,7 +117,7 @@ const AllProduct = () => {
                 className="product_card_list flex flex-col item-center justify-center"
               >
                 <div className="productsWrapper flex flex-col items-center md:items-start">
-                  <h1 className="font-recoleta text-[18px] md:text-[24px]  ">
+                  <h1 className="font-recoleta text-[18px] text-[#0F143A] md:text-[24px]  ">
                     {getCategoryName(category)}
                   </h1>
                   <h1 className="font-mazzard text-[20px]  md:text-[36px] pb-4">

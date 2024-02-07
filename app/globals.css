@@ -533,3 +533,12 @@ body {
   right: 50%;
   transform: translate(50%, 50%);
 }
+
+.overlay {
+  background: #0f143a41 !important;
+  height: 100vh !important;
+  width: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

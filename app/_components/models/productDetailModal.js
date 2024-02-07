@@ -42,7 +42,7 @@ const ProductDetailModal = ({ openModel, setOpenModel }) => {
           setSelectVariant(null);
         }}
       >
-        <div className="flex gap-8 select-none flex-col md:flex-row items-center	">
+        <div className="flex gap-8 select-none flex-col md:flex-row items-start ">
           <div className="max-w-[300px]">
             <div>
               <ImageWrapper
@@ -77,35 +77,41 @@ const ProductDetailModal = ({ openModel, setOpenModel }) => {
               </Swiper>
             </div>
           </div>
-          <div className="flex flex-col gap-4 w-full md:max-w-[500px] items-start ">
+          <div className="flex flex-col gap-4 w-full md:max-w-[500px] items-start overflow-auto h-[400px]">
             <p className="font-mazzardMedium text-xl"> {product?.name}</p>
             <h2 className="uppercase font-mazzardMedium text-md">
               {product?.brandName}
             </h2>
-            <p className="font-mazzardMedium"> Available Colors</p>
+            {product?.variant && product?.variant[0]?.hexColor ? (
+              <p className="font-mazzardMedium"> Available Colors</p>
+            ) : (
+              <></>
+            )}
             <div className="flex gap-2">
-              {product?.variant?.map((item, index) => {
-                const divStyle = {
-                  backgroundColor: item?.hexColor,
-                  width: "20px",
-                  height: "20px",
-                  border: "1px solid #ccc",
-                  borderRadius: "50%",
-                };
+              {product?.variant &&
+                product?.variant[0]?.hexColor &&
+                product?.variant?.map((item, index) => {
+                  const divStyle = {
+                    backgroundColor: item?.hexColor,
+                    width: "20px",
+                    height: "20px",
+                    border: "1px solid #ccc",
+                    borderRadius: "50%",
+                  };
 
-                return (
-                  <div
-                    key={index}
-                    style={divStyle}
-                    className="block"
-                    onClick={() => {
-                      slideTo(index);
-                      setSelectVariant(item);
-                      setSelectVariantIndex(index);
-                    }}
-                  ></div>
-                );
-              })}
+                  return (
+                    <div
+                      key={index}
+                      style={divStyle}
+                      className="block"
+                      onClick={() => {
+                        slideTo(index);
+                        setSelectVariant(item);
+                        setSelectVariantIndex(index);
+                      }}
+                    ></div>
+                  );
+                })}
             </div>
             <p className="font-mazzardMedium">Price</p>
             <p>
@@ -121,7 +127,7 @@ const ProductDetailModal = ({ openModel, setOpenModel }) => {
                 setOpenModel(false);
               }}
             >
-              add to cart
+              Add to Cart
             </button>
 
             <p className="uppercase font-mazzardSemiBold text-md underline underline-offset-2">

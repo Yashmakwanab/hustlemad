@@ -29,6 +29,8 @@ export default function CataloguePage() {
     getproducts();
   }, []);
   const [selected, setSelected] = useState("Apparels");
+  const [show, setShow] = useState(false);
+
   return (
     <>
       {allProducts.length == 0 ? (
@@ -41,9 +43,17 @@ export default function CataloguePage() {
             </div>
           </div>
           <div className="catalogue_container2">
-            <AllProduct selected={selected} setSelected={setSelected} />
+            <AllProduct
+              selected={selected}
+              setSelected={setSelected}
+              show={show}
+            />
           </div>
-          <Cartpage className="catalogue_container3" />
+          <Cartpage
+            className="catalogue_container3"
+            show={show}
+            setShow={setShow}
+          />
         </div>
       )}
     </>
