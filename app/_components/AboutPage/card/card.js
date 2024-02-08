@@ -4,8 +4,12 @@ import "./flip-transition.css";
 
 function Card({ onMouseEnter, onMouseLeave }) {
   return (
-    <div className="flex flex-col items-center justify-center sm:flex-row container-gap card flip-card" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-      <div className="flip-card-front dot card-front">
+    <div
+      className="flex flex-col profile-card items-center justify-center sm:flex-row container-gap card flip-card"
+      // onMouseEnter={onMouseEnter}
+      // onMouseLeave={onMouseLeave}
+    >
+      <div className="profile-card-front  flip-card-front dot card-front">
         <div className="flex flex-col">
           <ImageWrapper
             src={"/Images/aboutPage/adityaImage.webp"}
@@ -16,14 +20,13 @@ function Card({ onMouseEnter, onMouseLeave }) {
           </p>
         </div>
       </div>
-      <div className="flip-card-back dot2 card-back">
+      <div className="profile-card-back flip-card-back dot2 card-back">
         <div className="">
           <div className="text-container bg-[#E3FFC0]">
             <p className="text-center text-[#001636] font-mazzardMedium description">
-              Aditya is a true blue first-principles guy. An avid
-              trekker, he has worked at the intersection of finance &
-              tech for 7 years. Take your half baked ideas to him and
-              you’ve lost him.
+              Aditya is a true blue first-principles guy. An avid trekker, he
+              has worked at the intersection of finance & tech for 7 years. Take
+              your half baked ideas to him and you’ve lost him.
             </p>
             <div className="flex items-center gap-2">
               <div className="flex items-end justify-center">

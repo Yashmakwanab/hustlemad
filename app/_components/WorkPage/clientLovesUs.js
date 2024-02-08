@@ -66,7 +66,7 @@ const ClientLovesUs = () => {
         <div className="py-5">
           <Swiper
             slidesPerView={"auto"}
-            spaceBetween={10}
+            spaceBetween={5}
             centeredSlides={false}
             loop={true}
             freeMode={true}
@@ -74,7 +74,7 @@ const ClientLovesUs = () => {
             breakpoints={{
               400: {
                 slidesPerView: 1.5,
-                spaceBetween: 20,
+                spaceBetween: 10,
               },
               640: {
                 slidesPerView: 2,

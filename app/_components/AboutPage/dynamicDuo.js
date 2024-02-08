@@ -6,7 +6,6 @@ import Card from "./card/card";
 import { CSSTransition } from "react-transition-group";
 import React, { useState } from "react";
 import Card1 from "./card/card1";
-import Demo from "./card/demo";
 
 const DynamicDuo = () => {
   const [showFront, setShowFront] = useState(false);

@@ -169,7 +169,6 @@
   margin-left: 60px;
 }
 
-
 @media only screen and (min-width: 1720px) {
   .leftdiv img {
     width: 288px;
@@ -192,8 +191,6 @@
     width: 360px;
     height: 360px;
   }
-
-
 }
 
 @media only screen and (max-width: 1400px) {
@@ -214,8 +211,6 @@
   }
 }
 
-
-
 @media only screen and (max-width: 1000px) {
   .testimonial h1 {
     font-size: 40px;
@@ -234,8 +229,6 @@
   .leftdiv {
     left: -20px;
   }
-
-
 
   .middlediv {
     width: 560px;
@@ -281,9 +274,7 @@
   }
 }
 
-@media only screen and (max-width:880px) {
-
-
+@media only screen and (max-width: 880px) {
   .writingp2 {
     margin-left: 40px;
     margin-right: 40px;
@@ -300,21 +291,21 @@
   }
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width: 800px) {
   .writingp2 {
     margin-left: 35px;
     margin-right: 10px;
   }
 }
 
-@media only screen and (max-width:720px) {
+@media only screen and (max-width: 720px) {
   .writingp2 {
     margin-left: 30px;
     margin-right: 30px;
   }
 }
 
-@media only screen and (max-width:690px) {
+@media only screen and (max-width: 690px) {
   .testimonial {
     padding-bottom: 0px;
   }
@@ -432,13 +423,9 @@
     cursor: pointer;
     margin-left: 24px;
   }
-
-
 }
 
-@media only screen and (max-width:550px) {
-
-
+@media only screen and (max-width: 550px) {
   .rightdiv {
     right: -35px;
   }
@@ -456,7 +443,7 @@
   }
 }
 
-@media only screen and (max-width:450px) {
+@media only screen and (max-width: 450px) {
   .writingp2 {
     margin-right: 35px;
     margin-left: 35px;
@@ -479,7 +466,7 @@
   }
 }
 
-@media only screen and (max-width:400px) {
+@media only screen and (max-width: 400px) {
   .writingp2 {
     margin-right: 19px;
     margin-left: 19px;

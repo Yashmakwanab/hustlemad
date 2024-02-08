@@ -47,7 +47,7 @@ const Partners = () => {
         </div>
       </div>
       <h1 className="font-recoleta font-[700] text-[#0F143A] text-center text-[24px] sm:text-[48px] md:text-[60px] mb-[36px] sm:mb-[52px]">
-        We get you the Best
+        We work with the Best
       </h1>
       <div className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 nxl:grid-cols-4 xll:grid-cols-5 3xl:grid-cols-6 5xl:grid-cols-7 items-center justify-center w-fit m-auto border-l-2 border-[#001636EB]">
         {PartnersData.map((data, index) => (
