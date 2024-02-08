@@ -1,16 +1,16 @@
 "use client";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
 import "./style.css";
-import './flippable-card.css';
-import Card from './card/card';
-import { CSSTransition } from 'react-transition-group';
+import "./flippable-card.css";
+import Card from "./card/card";
+import { CSSTransition } from "react-transition-group";
 import React, { useState } from "react";
 import Card1 from "./card/card1";
+import Demo from "./card/demo";
 
 const DynamicDuo = () => {
   const [showFront, setShowFront] = useState(false);
   const [showFront1, setShowFront1] = useState(false);
-
 
   return (
     <>
@@ -26,38 +26,31 @@ const DynamicDuo = () => {
         </div>
         <div className="w-full flex flex-col items-center justify-center sm:flex-row container-gap">
           <div className="flippable-card-container">
-            <CSSTransition
-              in={showFront}
-              timeout={300}
-              classNames='flip'
-            >
-              <Card 
-              
-              onMouseEnter={() => {
-                setShowFront(false);
-              }}
-              onMouseLeave={() => {
-                setShowFront(true);
-              }}
-               />
+            <CSSTransition in={showFront} timeout={300} classNames="flip">
+              <Card
+                onMouseEnter={() => {
+                  setShowFront(false);
+                }}
+                onMouseLeave={() => {
+                  setShowFront(true);
+                }}
+              />
             </CSSTransition>
           </div>
           <div className="flippable-card-container">
-            <CSSTransition
-              in={showFront1}
-              timeout={300}
-              classNames='flip'
-            >
-              <Card1    onMouseEnter={() => {
-                setShowFront1(false);
-              }}
-              onMouseLeave={() => {
-                setShowFront1(true);
-              }}
+            <CSSTransition in={showFront1} timeout={300} classNames="flip">
+              <Card1
+                onMouseEnter={() => {
+                  setShowFront1(false);
+                }}
+                onMouseLeave={() => {
+                  setShowFront1(true);
+                }}
               />
             </CSSTransition>
           </div>
         </div>
+        {/* <Demo /> */}
       </div>
     </>
   );

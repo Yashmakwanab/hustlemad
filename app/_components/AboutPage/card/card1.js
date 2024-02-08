@@ -2,10 +2,10 @@ import ImageWrapper from "../../ImageWrapper/ImageWrapper";
 import "./card.css";
 import "./flip-transition.css";
 
-function Card1({ onMouseEnter,onMouseLeave }) {
+function Card1({ onMouseEnter, onMouseLeave }) {
   return (
-    <div className="flex flex-col items-center justify-center sm:flex-row container-gap card flip-card" onMouseEnter={onMouseEnter}  onMouseLeave={onMouseLeave}>
-      <div className="flip-card-front dot card-front">
+    <div className="flex flex-col profile-card items-center justify-center sm:flex-row container-gap card flip-card">
+      <div className="profile-card-front flip-card-front dot card-front">
         <div className="flex flex-col">
           <ImageWrapper
             src={"/Images/aboutPage/anuragImage.webp"}
@@ -16,13 +16,13 @@ function Card1({ onMouseEnter,onMouseLeave }) {
           </p>
         </div>
       </div>
-      <div className="flip-card-back dot2 card-back">
+      <div className="profile-card-back flip-card-back dot2 card-back">
         <div className="relative">
           <div className="text-container bg-[#FFDCC8] mb-2">
             <p className="text-center text-[#001636] font-mazzardMedium description">
-              Brand logo quiz winner. Loves music, football &
-              motor-racing. Reach out to Anurag for all your crazy
-              ideas, you will find the perfect audience in him.
+              Brand logo quiz winner. Loves music, football & motor-racing.
+              Reach out to Anurag for all your crazy ideas, you will find the
+              perfect audience in him.
             </p>
             <div className="flex items-center gap-2">
               <div className="flex items-end justify-center">
