@@ -4,7 +4,7 @@ const Demo = () => {
   return (
     <div>
       <div className="card-section">
-        <div>
+        {/* <div>
           <h1 className="card-title">Meet Our Exceptional Team Members</h1>
           <p className="card-subtitle">
             Discover the dedicated individuals who collaborate seamlessly,
@@ -298,7 +298,7 @@ const Demo = () => {
               </footer>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

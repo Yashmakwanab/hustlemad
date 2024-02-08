@@ -268,7 +268,6 @@ h3 {
   position: relative;
   perspective: 150rem;
   -moz-perspective: 150rem;
-  transition: all 0.1s;
 }
 
 .profile-card-face {
@@ -290,7 +289,6 @@ h3 {
 
 .profile-card:hover .profile-card-back {
   transform: rotateY(0);
-  transition: all 0.3s;
 }
 
 /* Profile card front */
